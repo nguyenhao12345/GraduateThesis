@@ -81,7 +81,6 @@
 		938BB98C25FB3CA300AC664C /* AKSampler+moreSFZ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938BB98925FB3CA300AC664C /* AKSampler+moreSFZ.swift */; };
 		938BB98D25FB3CA300AC664C /* ConductorTmp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938BB98A25FB3CA300AC664C /* ConductorTmp.swift */; };
 		938BB98E25FB3CA300AC664C /* FileManagerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938BB98B25FB3CA300AC664C /* FileManagerUtils.swift */; };
-		938BB99025FB3D8900AC664C /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 938BB98F25FB3D8900AC664C /* Sounds */; };
 		938F4299253580B300160DCA /* SearchNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938F4297253580B300160DCA /* SearchNavigationView.swift */; };
 		938F429A253580B300160DCA /* SearchNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 938F4298253580B300160DCA /* SearchNavigationView.xib */; };
 		93A6D41F261729230064498D /* NewsDetailNewsFeedHeaderSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A6D41E261729230064498D /* NewsDetailNewsFeedHeaderSectionController.swift */; };
@@ -238,6 +237,7 @@
 		93E2DBBF26171AA700C86495 /* PlayerConfigurationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E2DBBE26171AA700C86495 /* PlayerConfigurationExample.swift */; };
 		93EEDE012614808B0071E807 /* EditRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93EEDDFF2614808B0071E807 /* EditRecordViewController.xib */; };
 		93EEDE022614808B0071E807 /* EditRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EEDE002614808B0071E807 /* EditRecordViewController.swift */; };
+		93EFA2F7261C09380025477A /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 93EFA2F6261C09380025477A /* Sounds */; };
 		CC00A7622235904900B261FE /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC00A7612235904900B261FE /* CustomSegmentedControl.swift */; };
 		CC3913B722417B12008B2E0D /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3913B622417B12008B2E0D /* ExtensionUIViewController.swift */; };
 		CC3913BA22417D70008B2E0D /* ExtensionUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3913B922417D70008B2E0D /* ExtensionUITextField.swift */; };
@@ -452,7 +452,6 @@
 		938BB98925FB3CA300AC664C /* AKSampler+moreSFZ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AKSampler+moreSFZ.swift"; sourceTree = "<group>"; };
 		938BB98A25FB3CA300AC664C /* ConductorTmp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConductorTmp.swift; sourceTree = "<group>"; };
 		938BB98B25FB3CA300AC664C /* FileManagerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerUtils.swift; sourceTree = "<group>"; };
-		938BB98F25FB3D8900AC664C /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = "../../SamplerDemo-master/Sounds"; sourceTree = "<group>"; };
 		938F4297253580B300160DCA /* SearchNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationView.swift; sourceTree = "<group>"; };
 		938F4298253580B300160DCA /* SearchNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchNavigationView.xib; sourceTree = "<group>"; };
 		93A6D41E261729230064498D /* NewsDetailNewsFeedHeaderSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailNewsFeedHeaderSectionController.swift; sourceTree = "<group>"; };
@@ -606,6 +605,7 @@
 		93E2DBBE26171AA700C86495 /* PlayerConfigurationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerConfigurationExample.swift; sourceTree = "<group>"; };
 		93EEDDFF2614808B0071E807 /* EditRecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditRecordViewController.xib; sourceTree = "<group>"; };
 		93EEDE002614808B0071E807 /* EditRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRecordViewController.swift; sourceTree = "<group>"; };
+		93EFA2F6261C09380025477A /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		A95C325493C77F7089CAE81C /* Pods_Piano_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Piano_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4BD7F963C1452793738AABB /* Pods-Piano_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piano_App.release.xcconfig"; path = "Target Support Files/Pods-Piano_App/Pods-Piano_App.release.xcconfig"; sourceTree = "<group>"; };
 		CC00A7612235904900B261FE /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
@@ -1929,11 +1929,11 @@
 		CCC881CF21711D5F00DC6CB7 /* Piano_App */ = {
 			isa = PBXGroup;
 			children = (
+				93EFA2F6261C09380025477A /* Sounds */,
 				93E2DBB726171A6800C86495 /* ModernAVPlayer */,
 				93CCB91B2612D3D9003889AE /* Models */,
 				93D0B05B2603014D00394BE8 /* RomPlayer */,
 				93D0B01B25FF650300394BE8 /* CommonUI */,
-				938BB98F25FB3D8900AC664C /* Sounds */,
 				938BB98825FB3C6100AC664C /* AudioKit */,
 				CC391399223F9B8E008B2E0D /* Piano_App.entitlements */,
 				93DC282F25FA0B080045F927 /* ScreenRecorder */,
@@ -2350,6 +2350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9319B929260D8E82009E56CC /* CustomAVPlayer2.xib in Resources */,
+				93EFA2F7261C09380025477A /* Sounds in Resources */,
 				93CCBA0B2612E798003889AE /* NewsFeedReactionCell.xib in Resources */,
 				CC80FFA822154A7A004E3C79 /* GoogleService-Info.plist in Resources */,
 				CCF4A9B0252F7A5800897ECF /* EmptyDataCell.xib in Resources */,
@@ -2373,7 +2374,6 @@
 				936F5263260AEE1F00BDA614 /* UserAccountCell.xib in Resources */,
 				936F5271260B1B7900BDA614 /* ChangeColorAppViewController.xib in Resources */,
 				CCF4A9A8252F7A5800897ECF /* FullLineCell.xib in Resources */,
-				938BB99025FB3D8900AC664C /* Sounds in Resources */,
 				93C5BF4225344CCE00DA172A /* TopMusicsCell.xib in Resources */,
 				930F69C82530378900DE4F79 /* PracticeViewController.xib in Resources */,
 				CCC881DB21711D6000DC6CB7 /* LaunchScreen.storyboard in Resources */,
