@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Jjm-C9-Zvz" customClass="TopMusicsCell" customModule="Piano_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="339" height="206"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Bv-YR-UPV">
+                <rect key="frame" x="0.0" y="0.0" width="339" height="206"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3z3-AO-0wm">
+                        <rect key="frame" x="0.0" y="0.0" width="339" height="206"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eIJ-cf-oK1">
+                                <rect key="frame" x="0.0" y="0.0" width="339" height="206"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top bài hát được dùng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7K-gN-0u1">
+                                <rect key="frame" x="24" y="12" width="198" height="21.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pPI-Oi-UTy">
+                                <rect key="frame" x="0.0" y="45.5" width="339" height="148.5"/>
+                                <color key="backgroundColor" red="0.79215686269999996" green="0.83529411760000005" blue="0.90980392160000001" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kM3-PV-nmB">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.79215686269999996" green="0.83529411760000005" blue="0.90980392160000001" alpha="0.0" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="k7K-gN-0u1" firstAttribute="leading" secondItem="eIJ-cf-oK1" secondAttribute="leading" constant="24" id="0L2-wT-1kS"/>
+                            <constraint firstItem="pPI-Oi-UTy" firstAttribute="bottom" secondItem="eIJ-cf-oK1" secondAttribute="bottom" constant="-12" id="1et-oo-1n9"/>
+                            <constraint firstItem="eIJ-cf-oK1" firstAttribute="top" secondItem="3z3-AO-0wm" secondAttribute="top" id="HEo-9n-lKW"/>
+                            <constraint firstAttribute="trailing" secondItem="eIJ-cf-oK1" secondAttribute="trailing" id="Nk5-eo-lSn"/>
+                            <constraint firstAttribute="bottom" secondItem="eIJ-cf-oK1" secondAttribute="bottom" id="PLK-6d-sRa"/>
+                            <constraint firstItem="k7K-gN-0u1" firstAttribute="top" secondItem="eIJ-cf-oK1" secondAttribute="top" constant="12" id="QDD-P8-aBn"/>
+                            <constraint firstItem="pPI-Oi-UTy" firstAttribute="top" secondItem="k7K-gN-0u1" secondAttribute="bottom" constant="12" id="YBi-eR-1mP"/>
+                            <constraint firstAttribute="trailing" secondItem="pPI-Oi-UTy" secondAttribute="trailing" id="cRI-hD-jmg"/>
+                            <constraint firstItem="eIJ-cf-oK1" firstAttribute="leading" secondItem="3z3-AO-0wm" secondAttribute="leading" id="dl7-eQ-QNX"/>
+                            <constraint firstItem="pPI-Oi-UTy" firstAttribute="leading" secondItem="3z3-AO-0wm" secondAttribute="leading" id="r8M-LL-FQd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3z3-AO-0wm" firstAttribute="top" secondItem="4Bv-YR-UPV" secondAttribute="top" id="Bae-pG-UhA"/>
+                    <constraint firstItem="3z3-AO-0wm" firstAttribute="leading" secondItem="4Bv-YR-UPV" secondAttribute="leading" id="LUx-z9-YCC"/>
+                    <constraint firstAttribute="bottom" secondItem="3z3-AO-0wm" secondAttribute="bottom" id="jKJ-VM-mJH"/>
+                    <constraint firstAttribute="trailing" secondItem="3z3-AO-0wm" secondAttribute="trailing" id="zsi-kv-inw"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="339" height="206"/>
+            <connections>
+                <outlet property="collectionView" destination="pPI-Oi-UTy" id="Gc4-ce-Aj7"/>
+            </connections>
+            <point key="canvasLocation" x="345.6521739130435" y="143.97321428571428"/>
+        </collectionViewCell>
+    </objects>
+</document>

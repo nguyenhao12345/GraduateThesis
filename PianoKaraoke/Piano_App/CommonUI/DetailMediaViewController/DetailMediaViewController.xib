@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailMediaViewController" customModule="Piano_Karaoke" customModuleProvider="target">
+            <connections>
+                <outlet property="btnDissmiss" destination="mOZ-ZB-wlF" id="5hO-Xc-bdP"/>
+                <outlet property="imageView" destination="qbA-uQ-GbS" id="dyU-Jb-88M"/>
+                <outlet property="scrollView" destination="vcA-hV-aZX" id="7re-az-wVp"/>
+                <outlet property="view" destination="PBX-YJ-Uxf" id="R7A-VB-hhh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="PBX-YJ-Uxf">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGW-vN-SJc">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcA-hV-aZX">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <subviews>
+                                <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="69181568_715889532167965_421473829475319808_n" translatesAutoresizingMaskIntoConstraints="NO" id="qbA-uQ-GbS">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="qbA-uQ-GbS" firstAttribute="top" secondItem="vcA-hV-aZX" secondAttribute="top" id="Ff5-H4-sGf"/>
+                                <constraint firstAttribute="bottom" secondItem="qbA-uQ-GbS" secondAttribute="bottom" id="UZL-4x-tP7"/>
+                                <constraint firstAttribute="trailing" secondItem="qbA-uQ-GbS" secondAttribute="trailing" id="qtc-OA-7kV"/>
+                                <constraint firstItem="qbA-uQ-GbS" firstAttribute="leading" secondItem="vcA-hV-aZX" secondAttribute="leading" id="tv9-E8-1dt"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="vcA-hV-aZX" firstAttribute="top" secondItem="aGW-vN-SJc" secondAttribute="top" id="0Bg-PN-a6C"/>
+                        <constraint firstAttribute="bottom" secondItem="vcA-hV-aZX" secondAttribute="bottom" id="3bB-T8-gYO"/>
+                        <constraint firstItem="qbA-uQ-GbS" firstAttribute="width" secondItem="aGW-vN-SJc" secondAttribute="width" id="4Kf-nr-Kec"/>
+                        <constraint firstItem="qbA-uQ-GbS" firstAttribute="height" secondItem="aGW-vN-SJc" secondAttribute="height" id="YDd-fe-huF"/>
+                        <constraint firstAttribute="trailing" secondItem="vcA-hV-aZX" secondAttribute="trailing" id="Zmm-I8-Vvg"/>
+                        <constraint firstItem="vcA-hV-aZX" firstAttribute="leading" secondItem="aGW-vN-SJc" secondAttribute="leading" id="tqt-h1-56e"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOZ-ZB-wlF">
+                    <rect key="frame" x="12" y="56.5" width="25" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="K6n-dj-WdZ"/>
+                        <constraint firstAttribute="height" constant="25" id="grB-mG-09A"/>
+                    </constraints>
+                    <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" backgroundImage="xmark.circle.fill" catalog="system"/>
+                    <connections>
+                        <action selector="clickDissmiss:" destination="-1" eventType="touchUpInside" id="Det-i9-WBk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="aGW-vN-SJc" secondAttribute="trailing" id="6sl-PR-biV"/>
+                <constraint firstItem="aGW-vN-SJc" firstAttribute="leading" secondItem="PBX-YJ-Uxf" secondAttribute="leading" id="AK0-KF-eRP"/>
+                <constraint firstItem="mOZ-ZB-wlF" firstAttribute="leading" secondItem="PBX-YJ-Uxf" secondAttribute="leading" constant="12" id="Pig-cx-Qe6"/>
+                <constraint firstItem="mOZ-ZB-wlF" firstAttribute="top" secondItem="vZu-da-SGd" secondAttribute="top" constant="12" id="bbI-ou-HGy"/>
+                <constraint firstAttribute="bottom" secondItem="aGW-vN-SJc" secondAttribute="bottom" id="gd8-0s-ARC"/>
+                <constraint firstItem="aGW-vN-SJc" firstAttribute="top" secondItem="PBX-YJ-Uxf" secondAttribute="top" id="w8a-7W-JqX"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vZu-da-SGd"/>
+            <point key="canvasLocation" x="136.80000000000001" y="109.29535232383809"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="69181568_715889532167965_421473829475319808_n" width="16" height="16"/>
+        <image name="xmark.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
+</document>

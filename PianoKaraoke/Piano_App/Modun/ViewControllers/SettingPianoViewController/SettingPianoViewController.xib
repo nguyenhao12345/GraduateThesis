@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingPianoViewController" customModule="Piano_Karaoke" customModuleProvider="target">
+            <connections>
+                <outlet property="attackKnob" destination="jPl-ci-FQM" id="4hj-Mr-83F"/>
+                <outlet property="autoPanRateKnob" destination="o0c-od-mK2" id="ODW-Ik-E5y"/>
+                <outlet property="autoPanToggle" destination="Z8c-Be-CQI" id="doV-aG-zNG"/>
+                <outlet property="changeSample" destination="5kW-K7-jqc" id="0Qw-Gs-Uer"/>
+                <outlet property="crushKnob" destination="N9Y-Sm-0tt" id="TMg-rX-eht"/>
+                <outlet property="delayFeedbackKnob" destination="P3K-av-NIw" id="Ue4-Lz-BfF"/>
+                <outlet property="delayMixKnob" destination="E8h-d0-uri" id="Jeq-Y1-rSp"/>
+                <outlet property="delayTimeKnob" destination="LhY-nN-gr7" id="oFV-PG-wes"/>
+                <outlet property="delayToggle" destination="Iw4-M4-bx3" id="DKo-HA-dd4"/>
+                <outlet property="distortKnob" destination="gwy-2C-R94" id="Dm4-Yg-Fna"/>
+                <outlet property="distortionToggle" destination="rVy-Ii-vEC" id="SfI-uQ-yNU"/>
+                <outlet property="fattenToggle" destination="xFz-eY-OPJ" id="g1M-7l-VHY"/>
+                <outlet property="filterToggle" destination="3Kn-Hj-Dex" id="IUw-2L-PCt"/>
+                <outlet property="freqKnob" destination="Ded-K0-bfx" id="TUy-EE-m0Q"/>
+                <outlet property="lfoAmtKnob" destination="0Mf-3z-imT" id="XNX-oD-RSU"/>
+                <outlet property="lfoRateKnob" destination="w8e-2u-tx4" id="aFA-wK-lyK"/>
+                <outlet property="masterVolume" destination="Mnz-hT-in0" id="jal-Ad-H1Y"/>
+                <outlet property="navView" destination="2Pk-Nt-2w4" id="6ce-IW-dqO"/>
+                <outlet property="outputLabel" destination="2g7-7u-gbI" id="Ao5-nd-qKT"/>
+                <outlet property="releaseKnob" destination="mmt-b9-M4n" id="Zzz-D5-u3f"/>
+                <outlet property="reverbAmtKnob" destination="ZZ9-6r-oB0" id="CG0-IA-8ED"/>
+                <outlet property="reverbMixKnob" destination="xNb-2Y-SRN" id="P58-A1-Qyi"/>
+                <outlet property="reverbToggle" destination="smk-to-xDA" id="QGo-uE-1xV"/>
+                <outlet property="rezKnob" destination="Uuq-eg-SCc" id="aWO-sC-AEs"/>
+                <outlet property="soundChange" destination="ZZV-z1-Zwu" id="npd-91-TTy"/>
+                <outlet property="sub24Toggle" destination="Z8c-Be-CQI" id="VQq-g5-6fB"/>
+                <outlet property="toneChange" destination="Tu3-Ir-HAe" id="oHV-sj-Txr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="vol1Knob" destination="0hM-Ql-UAi" id="kOW-dQ-Iu3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Pk-Nt-2w4">
+                    <rect key="frame" x="0.0" y="44" width="414" height="48"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7Z-rl-rxY">
+                            <rect key="frame" x="12" y="5" width="30" height="38"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="OEi-uJ-MNd"/>
+                            </constraints>
+                            <state key="normal" image="backBtn-1"/>
+                            <connections>
+                                <action selector="clickBack:" destination="-1" eventType="touchUpInside" id="XY7-vh-Mye"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" text="Cài đặt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2g7-7u-gbI">
+                            <rect key="frame" x="42" y="13.5" width="330" height="21.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.27450980390000002" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XXB-wm-Ds1">
+                            <rect key="frame" x="260" y="7" width="142" height="34"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kW-K7-jqc" customClass="SynthUIButton" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="42" height="34"/>
+                                    <color key="backgroundColor" red="0.30578243729999999" green="0.30552494530000002" blue="0.3262246251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="16"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <state key="normal" title="Mix">
+                                        <color key="titleColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <state key="selected">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tu3-Ir-HAe" customClass="SynthUIButton" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="50" y="0.0" width="42" height="34"/>
+                                    <color key="backgroundColor" red="0.30578243729999999" green="0.30552494530000002" blue="0.3262246251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="16"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <state key="normal" title="Tone">
+                                        <color key="titleColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <state key="selected">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZV-z1-Zwu" customClass="SynthUIButton" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="100" y="0.0" width="42" height="34"/>
+                                    <color key="backgroundColor" red="0.30578243729999999" green="0.30552494530000002" blue="0.3262246251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="16"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <state key="normal" title="Sounds">
+                                        <color key="titleColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <state key="selected">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="2g7-7u-gbI" firstAttribute="centerX" secondItem="2Pk-Nt-2w4" secondAttribute="centerX" id="0uh-5j-SL6"/>
+                        <constraint firstAttribute="trailing" secondItem="XXB-wm-Ds1" secondAttribute="trailing" constant="12" id="2wf-BS-pMX"/>
+                        <constraint firstItem="2g7-7u-gbI" firstAttribute="centerY" secondItem="2Pk-Nt-2w4" secondAttribute="centerY" id="LcD-XL-Mrh"/>
+                        <constraint firstItem="w7Z-rl-rxY" firstAttribute="leading" secondItem="2Pk-Nt-2w4" secondAttribute="leading" constant="12" id="Vxi-co-vqN"/>
+                        <constraint firstItem="2g7-7u-gbI" firstAttribute="leading" secondItem="w7Z-rl-rxY" secondAttribute="trailing" id="Y5N-tb-nSM"/>
+                        <constraint firstItem="w7Z-rl-rxY" firstAttribute="centerY" secondItem="2Pk-Nt-2w4" secondAttribute="centerY" id="aB1-8L-oC8"/>
+                        <constraint firstAttribute="height" constant="48" id="ahY-sD-VOa"/>
+                        <constraint firstItem="XXB-wm-Ds1" firstAttribute="centerY" secondItem="2Pk-Nt-2w4" secondAttribute="centerY" id="f5r-ti-kDk"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pjt-6s-xKf">
+                    <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcB-AA-qPr">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="165.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delay" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SQ-f7-CTn">
+                                    <rect key="frame" x="12" y="12" width="390" height="27.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view tag="110" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="LhY-nN-gr7" customClass="MIDIKnob" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="57" y="57.5" width="60" height="60"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view tag="110" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="E8h-d0-uri" customClass="MIDIKnob" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="297" y="57.5" width="60" height="60"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view tag="110" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="P3K-av-NIw" customClass="MIDIKnob" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="177" y="57.5" width="60" height="60"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="P3K-av-NIw" secondAttribute="height" multiplier="1:1" id="AaW-vh-Oix"/>
+                                        <constraint firstAttribute="height" constant="60" id="QqL-Sg-30x"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WiB-So-wSC">
+                                    <rect key="frame" x="75" y="129.5" width="24" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fP-uO-dra">
+                                    <rect key="frame" x="184" y="129.5" width="46.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mix" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUb-7C-dQP">
+                                    <rect key="frame" x="318" y="129.5" width="18.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iw4-M4-bx3" customClass="LedButton" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="370" y="12" width="32" height="26"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="26" id="Fac-Wv-A32"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="NZg-0n-rxp"/>
+                                        <constraint firstAttribute="width" constant="32" id="QmI-N6-YSq"/>
+                                        <constraint firstAttribute="height" constant="26" id="at7-PV-Tnr"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.90662749474789917" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Iw4-M4-bx3" firstAttribute="top" secondItem="bcB-AA-qPr" secondAttribute="top" constant="12" id="07e-h5-hSC"/>
+                                <constraint firstItem="WiB-So-wSC" firstAttribute="top" secondItem="LhY-nN-gr7" secondAttribute="bottom" constant="12" id="1bV-2c-a11"/>
+                                <constraint firstItem="4fP-uO-dra" firstAttribute="centerX" secondItem="P3K-av-NIw" secondAttribute="centerX" id="2Pc-eg-PE0"/>
+                                <constraint firstItem="FUb-7C-dQP" firstAttribute="top" secondItem="4fP-uO-dra" secondAttribute="top" id="4uX-qz-lAg"/>
+                                <constraint firstItem="P3K-av-NIw" firstAttribute="centerX" secondItem="bcB-AA-qPr" secondAttribute="centerX" id="7dg-mg-wak"/>
+                                <constraint firstItem="E8h-d0-uri" firstAttribute="top" secondItem="P3K-av-NIw" secondAttribute="top" id="Dh7-Ni-A4I"/>
+                                <constraint firstItem="P3K-av-NIw" firstAttribute="leading" secondItem="LhY-nN-gr7" secondAttribute="trailing" constant="60" id="RBC-V2-c7P"/>
+                                <constraint firstItem="4fP-uO-dra" firstAttribute="top" secondItem="WiB-So-wSC" secondAttribute="top" id="UHa-MK-kxf"/>
+                                <constraint firstItem="WiB-So-wSC" firstAttribute="centerX" secondItem="LhY-nN-gr7" secondAttribute="centerX" id="a9G-CS-W3R"/>
+                                <constraint firstItem="P3K-av-NIw" firstAttribute="top" secondItem="0SQ-f7-CTn" secondAttribute="bottom" constant="18" id="bJl-KX-icb"/>
+                                <constraint firstItem="0SQ-f7-CTn" firstAttribute="top" secondItem="bcB-AA-qPr" secondAttribute="top" constant="12" id="cVm-nM-xpr"/>
+                                <constraint firstItem="E8h-d0-uri" firstAttribute="leading" secondItem="P3K-av-NIw" secondAttribute="trailing" constant="60" id="d3A-6F-HFh"/>
+                                <constraint firstAttribute="trailing" secondItem="0SQ-f7-CTn" secondAttribute="trailing" constant="12" id="eBO-A2-RDs"/>
+                                <constraint firstItem="E8h-d0-uri" firstAttribute="height" secondItem="P3K-av-NIw" secondAttribute="height" id="gO0-wd-zYp"/>
+                                <constraint firstItem="E8h-d0-uri" firstAttribute="width" secondItem="P3K-av-NIw" secondAttribute="width" id="guL-y4-4f3"/>
+                                <constraint firstAttribute="bottom" secondItem="P3K-av-NIw" secondAttribute="bottom" constant="48" id="hHa-qM-1Zp"/>
+                                <constraint firstItem="LhY-nN-gr7" firstAttribute="height" secondItem="P3K-av-NIw" secondAttribute="height" id="hts-kY-sHi"/>
+                                <constraint firstAttribute="trailing" secondItem="Iw4-M4-bx3" secondAttribute="trailing" constant="12" id="lBe-cW-YgA"/>
+                                <constraint firstItem="LhY-nN-gr7" firstAttribute="width" secondItem="P3K-av-NIw" secondAttribute="width" id="mXN-GZ-ArU"/>
+                                <constraint firstItem="0SQ-f7-CTn" firstAttribute="leading" secondItem="bcB-AA-qPr" secondAttribute="leading" constant="12" id="pi3-p3-sIF"/>
+                                <constraint firstItem="LhY-nN-gr7" firstAttribute="top" secondItem="P3K-av-NIw" secondAttribute="top" id="rSS-x8-8LB"/>
+                                <constraint firstItem="FUb-7C-dQP" firstAttribute="centerX" secondItem="E8h-d0-uri" secondAttribute="centerX" id="wHu-yX-vPC"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQ6-vi-U8a">
+                            <rect key="frame" x="0.0" y="169.5" width="414" height="179.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverb" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScX-LT-JkP">
+                                    <rect key="frame" x="12" y="12" width="402" height="27.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view tag="110" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ9-6r-oB0" customClass="MIDIKnob" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="57" y="74.5" width="60" height="60"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="ZZ9-6r-oB0" secondAttribute="height" multiplier="1:1" id="JRg-O3-EGq"/>
+                                        <constraint firstAttribute="height" constant="60" id="aJG-JA-wbf"/>
+                                    </constraints>
+                                </view>
+                                <view tag="110" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="xNb-2Y-SRN" customClass="MIDIKnob" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="297" y="74.5" width="60" height="60"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="GwC-y4-D1u"/>
+                                        <constraint firstAttribute="width" secondItem="xNb-2Y-SRN" secondAttribute="height" multiplier="1:1" id="aRq-Ck-Akl"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mix" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZc-J6-uFa">
+                                    <rect key="frame" x="318" y="146.5" width="18.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Off" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqo-Xk-fOU">
+                                    <rect key="frame" x="29" y="126.5" width="14.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cayon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmO-RZ-Lu5">
+                                    <rect key="frame" x="126.5" y="131.5" width="30.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Studio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5M-Ge-41W">
+                                    <rect key="frame" x="71" y="43" width="32" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hall" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0q-b6-sl0">
+                                    <rect key="frame" x="135" y="95" width="20" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chamber" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ni-3c-q5C">
+                                    <rect key="frame" x="126.5" y="58.5" width="45.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvY-iO-hTt">
+                                    <rect key="frame" x="18.5" y="68.5" width="29" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smk-to-xDA" customClass="LedButton" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="370" y="12" width="32" height="26"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="32" id="0uv-JS-5JV"/>
+                                        <constraint firstAttribute="height" constant="26" id="Gmk-Tm-OHb"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.90662749470000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="xNb-2Y-SRN" firstAttribute="top" secondItem="ScX-LT-JkP" secondAttribute="bottom" constant="35" id="3LP-XT-8w6"/>
+                                <constraint firstItem="8Ni-3c-q5C" firstAttribute="leading" secondItem="hmO-RZ-Lu5" secondAttribute="leading" id="7nD-Bx-gq5"/>
+                                <constraint firstItem="f5M-Ge-41W" firstAttribute="centerX" secondItem="ZZ9-6r-oB0" secondAttribute="centerX" id="8vZ-i3-8vj"/>
+                                <constraint firstItem="M0q-b6-sl0" firstAttribute="top" secondItem="8Ni-3c-q5C" secondAttribute="bottom" constant="17" id="Ca3-8M-GJ4"/>
+                                <constraint firstItem="ScX-LT-JkP" firstAttribute="top" secondItem="gQ6-vi-U8a" secondAttribute="top" constant="12" id="GUG-ed-bSv"/>
+                                <constraint firstItem="xvY-iO-hTt" firstAttribute="top" secondItem="8Ni-3c-q5C" secondAttribute="top" constant="10" id="IBh-pX-sca"/>
+                                <constraint firstItem="ZZ9-6r-oB0" firstAttribute="top" secondItem="f5M-Ge-41W" secondAttribute="bottom" constant="12" id="IJ5-Rr-B83"/>
+                                <constraint firstItem="smk-to-xDA" firstAttribute="top" secondItem="gQ6-vi-U8a" secondAttribute="top" constant="12" id="KhJ-PJ-2Lf"/>
+                                <constraint firstItem="M0q-b6-sl0" firstAttribute="centerY" secondItem="ZZ9-6r-oB0" secondAttribute="centerY" id="M1b-6j-vK0"/>
+                                <constraint firstItem="ZZ9-6r-oB0" firstAttribute="top" secondItem="xNb-2Y-SRN" secondAttribute="top" id="NfO-Xa-rda"/>
+                                <constraint firstItem="iqo-Xk-fOU" firstAttribute="leading" secondItem="ZZ9-6r-oB0" secondAttribute="leading" constant="-28" id="NkG-DK-Dz6"/>
+                                <constraint firstItem="xvY-iO-hTt" firstAttribute="trailing" secondItem="iqo-Xk-fOU" secondAttribute="trailing" constant="4" id="Xfl-Af-T5K"/>
+                                <constraint firstItem="iqo-Xk-fOU" firstAttribute="top" secondItem="ZZ9-6r-oB0" secondAttribute="bottom" constant="-8" id="Y5U-VL-FNK"/>
+                                <constraint firstItem="ScX-LT-JkP" firstAttribute="leading" secondItem="gQ6-vi-U8a" secondAttribute="leading" constant="12" id="Z1U-uH-wTV"/>
+                                <constraint firstItem="hmO-RZ-Lu5" firstAttribute="trailing" secondItem="ZZ9-6r-oB0" secondAttribute="trailing" constant="40" id="Zj3-bo-bid"/>
+                                <constraint firstItem="cZc-J6-uFa" firstAttribute="centerX" secondItem="xNb-2Y-SRN" secondAttribute="centerX" id="a5p-zl-x71"/>
+                                <constraint firstAttribute="trailing" secondItem="ScX-LT-JkP" secondAttribute="trailing" id="cb6-4Y-xPE"/>
+                                <constraint firstAttribute="bottom" secondItem="ZZ9-6r-oB0" secondAttribute="bottom" constant="45" id="kGm-MC-5B3"/>
+                                <constraint firstItem="hmO-RZ-Lu5" firstAttribute="top" secondItem="iqo-Xk-fOU" secondAttribute="top" constant="5" id="p6T-ef-6ko"/>
+                                <constraint firstAttribute="trailing" secondItem="smk-to-xDA" secondAttribute="trailing" constant="12" id="qgQ-pc-e7u"/>
+                                <constraint firstItem="M0q-b6-sl0" firstAttribute="leading" secondItem="ZZ9-6r-oB0" secondAttribute="trailing" constant="18" id="seJ-sD-ScO"/>
+                                <constraint firstItem="cZc-J6-uFa" firstAttribute="top" secondItem="xNb-2Y-SRN" secondAttribute="bottom" constant="12" id="tPz-Ep-02c"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U1f-6a-aqz">
+                            <rect key="frame" x="0.0" y="353" width="414" height="126"/>
+                            <subviews>
+                                <view tag="110" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ded-K0-bfx" customClass="MIDIKnob" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="90.5" y="23" width="62.5" height="62"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Ded-K0-bfx" secondAttribute="height" multiplier="1:1" id="ZIj-qC-x2B"/>
+                                    </constraints>
+                                </view>
+                                <view tag="110" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Mf-3z-imT" customClass="MIDIKnob" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="261" y="30" width="48" height="48"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view tag="110" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Uuq-eg-SCc" customClass="MIDIKnob" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="183" y="30" width="48" height="48"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Uuq-eg-SCc" secondAttribute="height" multiplier="1:1" id="2vE-Ue-lTO"/>
+                                        <constraint firstAttribute="height" constant="48" id="NAw-1z-LdD"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cutoff" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxQ-0d-Ae5">
+                                    <rect key="frame" x="107" y="97" width="29.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rez" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBS-hQ-lkb">
+                                    <rect key="frame" x="198.5" y="90" width="17.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LFO Amt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ID-Rr-n8a">
+                                    <rect key="frame" x="264.5" y="90" width="41" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view tag="110" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="w8e-2u-tx4" customClass="MIDIKnob" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="339" y="30" width="48" height="48"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LFO Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Dx-eo-gyq">
+                                    <rect key="frame" x="341.5" y="90" width="43" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FILTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stH-X9-7Z2">
+                                    <rect key="frame" x="31" y="80" width="31" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Kn-Hj-Dex" customClass="ToggleButton" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="32.5" y="40" width="28" height="28"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="28" id="1Kh-lN-8gQ"/>
+                                        <constraint firstAttribute="width" constant="28" id="I03-om-Lfn"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.90662749470000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="0Mf-3z-imT" firstAttribute="height" secondItem="Uuq-eg-SCc" secondAttribute="height" id="0Ie-Ov-ZLH"/>
+                                <constraint firstItem="Ded-K0-bfx" firstAttribute="leading" secondItem="3Kn-Hj-Dex" secondAttribute="trailing" constant="30" id="72V-nD-qbm"/>
+                                <constraint firstItem="w8e-2u-tx4" firstAttribute="width" secondItem="0Mf-3z-imT" secondAttribute="width" id="8WV-KR-Ofe"/>
+                                <constraint firstItem="w8e-2u-tx4" firstAttribute="top" secondItem="0Mf-3z-imT" secondAttribute="top" id="Ba6-oz-tkB"/>
+                                <constraint firstItem="Uuq-eg-SCc" firstAttribute="top" secondItem="U1f-6a-aqz" secondAttribute="top" constant="30" id="Fqv-yJ-O5a"/>
+                                <constraint firstAttribute="bottom" secondItem="Uuq-eg-SCc" secondAttribute="bottom" constant="48" id="Ift-iO-FC4"/>
+                                <constraint firstItem="VBS-hQ-lkb" firstAttribute="top" secondItem="Uuq-eg-SCc" secondAttribute="bottom" constant="12" id="Jbe-ja-SYa"/>
+                                <constraint firstItem="3Kn-Hj-Dex" firstAttribute="centerY" secondItem="Ded-K0-bfx" secondAttribute="centerY" id="KXc-3F-p2j"/>
+                                <constraint firstItem="Uuq-eg-SCc" firstAttribute="leading" secondItem="Ded-K0-bfx" secondAttribute="trailing" constant="30" id="LFX-FF-ppP"/>
+                                <constraint firstItem="3ID-Rr-n8a" firstAttribute="centerX" secondItem="0Mf-3z-imT" secondAttribute="centerX" id="LfE-mG-EQx"/>
+                                <constraint firstItem="Ded-K0-bfx" firstAttribute="centerY" secondItem="Uuq-eg-SCc" secondAttribute="centerY" id="QMB-QQ-Y8t"/>
+                                <constraint firstItem="stH-X9-7Z2" firstAttribute="centerX" secondItem="3Kn-Hj-Dex" secondAttribute="centerX" id="R6N-Ie-xdz"/>
+                                <constraint firstItem="stH-X9-7Z2" firstAttribute="top" secondItem="3Kn-Hj-Dex" secondAttribute="bottom" constant="12" id="TTl-6P-IPX"/>
+                                <constraint firstItem="0Mf-3z-imT" firstAttribute="leading" secondItem="Uuq-eg-SCc" secondAttribute="trailing" constant="30" id="YMK-Bu-vGf"/>
+                                <constraint firstItem="hxQ-0d-Ae5" firstAttribute="top" secondItem="Ded-K0-bfx" secondAttribute="bottom" constant="12" id="bTW-lS-eEl"/>
+                                <constraint firstItem="3ID-Rr-n8a" firstAttribute="top" secondItem="VBS-hQ-lkb" secondAttribute="top" id="bmQ-tb-sM7"/>
+                                <constraint firstItem="VBS-hQ-lkb" firstAttribute="centerX" secondItem="Uuq-eg-SCc" secondAttribute="centerX" id="byl-Cy-ZKo"/>
+                                <constraint firstItem="0Mf-3z-imT" firstAttribute="top" secondItem="Uuq-eg-SCc" secondAttribute="top" id="dGF-Rj-zmG"/>
+                                <constraint firstItem="Uuq-eg-SCc" firstAttribute="centerX" secondItem="U1f-6a-aqz" secondAttribute="centerX" id="eEp-UV-tOb"/>
+                                <constraint firstItem="w8e-2u-tx4" firstAttribute="leading" secondItem="0Mf-3z-imT" secondAttribute="trailing" constant="30" id="ee1-hn-myn"/>
+                                <constraint firstItem="w8e-2u-tx4" firstAttribute="height" secondItem="0Mf-3z-imT" secondAttribute="height" id="fvf-04-wMO"/>
+                                <constraint firstItem="5Dx-eo-gyq" firstAttribute="centerX" secondItem="w8e-2u-tx4" secondAttribute="centerX" id="haF-DO-wao"/>
+                                <constraint firstItem="Ded-K0-bfx" firstAttribute="width" secondItem="Uuq-eg-SCc" secondAttribute="width" multiplier="1.3" id="hcz-Tg-0Lc"/>
+                                <constraint firstItem="hxQ-0d-Ae5" firstAttribute="centerX" secondItem="Ded-K0-bfx" secondAttribute="centerX" id="iwo-XU-Jul"/>
+                                <constraint firstItem="0Mf-3z-imT" firstAttribute="width" secondItem="Uuq-eg-SCc" secondAttribute="width" id="kM8-Pb-Wz1"/>
+                                <constraint firstItem="5Dx-eo-gyq" firstAttribute="top" secondItem="VBS-hQ-lkb" secondAttribute="top" id="vB7-D9-5bK"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8VE-uO-f1I">
+                            <rect key="frame" x="0.0" y="483" width="414" height="126"/>
+                            <subviews>
+                                <view tag="110" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="o0c-od-mK2" customClass="MIDIKnob" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="105" y="30" width="48" height="48"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="o0c-od-mK2" secondAttribute="height" multiplier="1:1" id="QBe-Mp-tzh"/>
+                                    </constraints>
+                                </view>
+                                <view tag="110" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="mmt-b9-M4n" customClass="MIDIKnob" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="261" y="30" width="48" height="48"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view tag="110" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="jPl-ci-FQM" customClass="MIDIKnob" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="183" y="30" width="48" height="48"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="jPl-ci-FQM" secondAttribute="height" multiplier="1:1" id="GdY-Me-S3E"/>
+                                        <constraint firstAttribute="height" constant="48" id="Xb7-TF-Lt4"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto Pan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqV-GU-DMA">
+                                    <rect key="frame" x="107.5" y="90" width="43.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6d-EM-ifJ">
+                                    <rect key="frame" x="192.5" y="90" width="29.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yc-Xo-2dd">
+                                    <rect key="frame" x="266" y="90" width="38" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8c-Be-CQI" customClass="ToggleButton" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="47" y="40" width="28" height="28"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="28" id="NOi-cL-5FM"/>
+                                        <constraint firstAttribute="height" constant="28" id="cxD-Er-s4T"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFz-eY-OPJ" customClass="ToggleButton" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="339" y="40" width="28" height="28"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="28" id="9xL-DB-o4P"/>
+                                        <constraint firstAttribute="width" constant="28" id="hNF-r5-g3C"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stereo Widen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkQ-GQ-bsA">
+                                    <rect key="frame" x="320" y="80" width="66" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.90662749470000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="m6d-EM-ifJ" firstAttribute="centerX" secondItem="jPl-ci-FQM" secondAttribute="centerX" id="0gh-Qp-d59"/>
+                                <constraint firstItem="m6d-EM-ifJ" firstAttribute="top" secondItem="jPl-ci-FQM" secondAttribute="bottom" constant="12" id="24c-Rf-Ttp"/>
+                                <constraint firstItem="o0c-od-mK2" firstAttribute="leading" secondItem="Z8c-Be-CQI" secondAttribute="trailing" constant="30" id="772-2b-q02"/>
+                                <constraint firstItem="7yc-Xo-2dd" firstAttribute="top" secondItem="m6d-EM-ifJ" secondAttribute="top" id="7WF-dH-NEz"/>
+                                <constraint firstItem="xkQ-GQ-bsA" firstAttribute="top" secondItem="xFz-eY-OPJ" secondAttribute="bottom" constant="12" id="7as-Tq-mwF"/>
+                                <constraint firstItem="xFz-eY-OPJ" firstAttribute="leading" secondItem="mmt-b9-M4n" secondAttribute="trailing" constant="30" id="DM1-4w-80y"/>
+                                <constraint firstItem="o0c-od-mK2" firstAttribute="centerY" secondItem="jPl-ci-FQM" secondAttribute="centerY" id="EUt-tc-UrY"/>
+                                <constraint firstItem="jPl-ci-FQM" firstAttribute="top" secondItem="8VE-uO-f1I" secondAttribute="top" constant="30" id="EXc-M8-wm7"/>
+                                <constraint firstItem="mmt-b9-M4n" firstAttribute="height" secondItem="jPl-ci-FQM" secondAttribute="height" id="Eoe-AF-FUL"/>
+                                <constraint firstItem="jPl-ci-FQM" firstAttribute="leading" secondItem="o0c-od-mK2" secondAttribute="trailing" constant="30" id="Mdr-HK-czW"/>
+                                <constraint firstItem="7yc-Xo-2dd" firstAttribute="centerX" secondItem="mmt-b9-M4n" secondAttribute="centerX" id="WzR-7i-IG3"/>
+                                <constraint firstItem="eqV-GU-DMA" firstAttribute="centerX" secondItem="o0c-od-mK2" secondAttribute="centerX" id="dVr-Qh-vDG"/>
+                                <constraint firstItem="eqV-GU-DMA" firstAttribute="top" secondItem="o0c-od-mK2" secondAttribute="bottom" constant="12" id="fbx-xg-c8W"/>
+                                <constraint firstItem="mmt-b9-M4n" firstAttribute="top" secondItem="jPl-ci-FQM" secondAttribute="top" id="k7J-Dr-c3T"/>
+                                <constraint firstAttribute="bottom" secondItem="jPl-ci-FQM" secondAttribute="bottom" constant="48" id="lrX-wr-iDx"/>
+                                <constraint firstItem="jPl-ci-FQM" firstAttribute="centerX" secondItem="8VE-uO-f1I" secondAttribute="centerX" id="oZY-xl-hus"/>
+                                <constraint firstItem="xFz-eY-OPJ" firstAttribute="centerY" secondItem="mmt-b9-M4n" secondAttribute="centerY" id="pOw-t7-IKI"/>
+                                <constraint firstItem="Z8c-Be-CQI" firstAttribute="centerY" secondItem="o0c-od-mK2" secondAttribute="centerY" id="q13-nI-JNP"/>
+                                <constraint firstItem="mmt-b9-M4n" firstAttribute="leading" secondItem="jPl-ci-FQM" secondAttribute="trailing" constant="30" id="r0j-Ug-Kyx"/>
+                                <constraint firstItem="xkQ-GQ-bsA" firstAttribute="centerX" secondItem="xFz-eY-OPJ" secondAttribute="centerX" id="rnC-re-hGN"/>
+                                <constraint firstItem="mmt-b9-M4n" firstAttribute="width" secondItem="jPl-ci-FQM" secondAttribute="width" id="sTO-Be-ob7"/>
+                                <constraint firstItem="o0c-od-mK2" firstAttribute="width" secondItem="jPl-ci-FQM" secondAttribute="width" id="snB-ws-lhH"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1R-Mm-iaP">
+                            <rect key="frame" x="0.0" y="613" width="414" height="126"/>
+                            <subviews>
+                                <view tag="110" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="0hM-Ql-UAi" customClass="MIDIKnob" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="105" y="30" width="48" height="48"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="0hM-Ql-UAi" secondAttribute="height" multiplier="1:1" id="fCj-zs-UsP"/>
+                                    </constraints>
+                                </view>
+                                <view tag="110" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="N9Y-Sm-0tt" customClass="MIDIKnob" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="261" y="30" width="48" height="48"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view tag="110" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mnz-hT-in0" customClass="MIDIKnob" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="183" y="30" width="48" height="48"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Mnz-hT-in0" secondAttribute="height" multiplier="1:1" id="Fy4-jG-WXu"/>
+                                        <constraint firstAttribute="height" constant="48" id="X2q-ij-umH"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample Vol" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYC-Qe-B6B">
+                                    <rect key="frame" x="101.5" y="90" width="55" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Master Vol" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsG-tE-8UZ">
+                                    <rect key="frame" x="181.5" y="90" width="51.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bit Crush" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MH-dm-N8C">
+                                    <rect key="frame" x="263" y="90" width="44.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view tag="110" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="gwy-2C-R94" customClass="MIDIKnob" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="339" y="30" width="48" height="48"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distortion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmK-gb-wau">
+                                    <rect key="frame" x="339" y="90" width="48.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                    <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVy-Ii-vEC" customClass="LedButton" customModule="Piano_Karaoke" customModuleProvider="target">
+                                    <rect key="frame" x="370" y="104" width="32" height="26"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="26" id="1jO-Qs-zvX"/>
+                                        <constraint firstAttribute="width" constant="32" id="JIh-MY-jfE"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.90662749470000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="0hM-Ql-UAi" firstAttribute="centerY" secondItem="Mnz-hT-in0" secondAttribute="centerY" id="2a7-hA-bGJ"/>
+                                <constraint firstItem="gwy-2C-R94" firstAttribute="leading" secondItem="N9Y-Sm-0tt" secondAttribute="trailing" constant="30" id="3jp-pP-rOL"/>
+                                <constraint firstItem="DsG-tE-8UZ" firstAttribute="centerX" secondItem="Mnz-hT-in0" secondAttribute="centerX" id="5XG-GN-gBJ"/>
+                                <constraint firstItem="DsG-tE-8UZ" firstAttribute="top" secondItem="Mnz-hT-in0" secondAttribute="bottom" constant="12" id="CH4-Py-dWE"/>
+                                <constraint firstItem="N9Y-Sm-0tt" firstAttribute="height" secondItem="Mnz-hT-in0" secondAttribute="height" id="GNp-Yb-m1s"/>
+                                <constraint firstItem="N9Y-Sm-0tt" firstAttribute="top" secondItem="Mnz-hT-in0" secondAttribute="top" id="GpR-Bi-l0z"/>
+                                <constraint firstItem="N9Y-Sm-0tt" firstAttribute="width" secondItem="Mnz-hT-in0" secondAttribute="width" id="HKr-9G-uli"/>
+                                <constraint firstAttribute="bottom" secondItem="Mnz-hT-in0" secondAttribute="bottom" constant="48" id="I2j-Vx-lQe"/>
+                                <constraint firstItem="Mnz-hT-in0" firstAttribute="top" secondItem="i1R-Mm-iaP" secondAttribute="top" constant="30" id="Mzc-ZZ-qRR"/>
+                                <constraint firstAttribute="trailing" secondItem="rVy-Ii-vEC" secondAttribute="trailing" constant="12" id="Obe-7s-emg"/>
+                                <constraint firstItem="7MH-dm-N8C" firstAttribute="centerX" secondItem="N9Y-Sm-0tt" secondAttribute="centerX" id="PPs-RC-vTu"/>
+                                <constraint firstItem="CmK-gb-wau" firstAttribute="centerX" secondItem="gwy-2C-R94" secondAttribute="centerX" id="SAS-WX-psO"/>
+                                <constraint firstItem="gwy-2C-R94" firstAttribute="top" secondItem="N9Y-Sm-0tt" secondAttribute="top" id="Uf9-bG-EJE"/>
+                                <constraint firstItem="7MH-dm-N8C" firstAttribute="top" secondItem="DsG-tE-8UZ" secondAttribute="top" id="cVB-1H-27m"/>
+                                <constraint firstItem="Mnz-hT-in0" firstAttribute="leading" secondItem="0hM-Ql-UAi" secondAttribute="trailing" constant="30" id="dIM-xr-vp7"/>
+                                <constraint firstItem="fYC-Qe-B6B" firstAttribute="top" secondItem="0hM-Ql-UAi" secondAttribute="bottom" constant="12" id="eTs-6c-LKT"/>
+                                <constraint firstAttribute="bottom" secondItem="rVy-Ii-vEC" secondAttribute="bottom" constant="-4" id="ed8-5o-xQF"/>
+                                <constraint firstItem="N9Y-Sm-0tt" firstAttribute="leading" secondItem="Mnz-hT-in0" secondAttribute="trailing" constant="30" id="jS7-s2-cr2"/>
+                                <constraint firstItem="gwy-2C-R94" firstAttribute="width" secondItem="N9Y-Sm-0tt" secondAttribute="width" id="m7j-HE-5to"/>
+                                <constraint firstItem="CmK-gb-wau" firstAttribute="top" secondItem="DsG-tE-8UZ" secondAttribute="top" id="oKi-hO-PKf"/>
+                                <constraint firstItem="fYC-Qe-B6B" firstAttribute="centerX" secondItem="0hM-Ql-UAi" secondAttribute="centerX" id="qbD-FT-qLG"/>
+                                <constraint firstItem="Mnz-hT-in0" firstAttribute="centerX" secondItem="i1R-Mm-iaP" secondAttribute="centerX" id="vQJ-WG-xeh"/>
+                                <constraint firstItem="gwy-2C-R94" firstAttribute="height" secondItem="N9Y-Sm-0tt" secondAttribute="height" id="veR-pw-Hhk"/>
+                                <constraint firstItem="0hM-Ql-UAi" firstAttribute="width" secondItem="Mnz-hT-in0" secondAttribute="width" id="yIV-Zm-vzs"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="i1R-Mm-iaP" firstAttribute="leading" secondItem="Pjt-6s-xKf" secondAttribute="leading" id="1Le-0b-K9y"/>
+                        <constraint firstItem="gQ6-vi-U8a" firstAttribute="top" secondItem="bcB-AA-qPr" secondAttribute="bottom" constant="4" id="1mG-dK-fq3"/>
+                        <constraint firstItem="bcB-AA-qPr" firstAttribute="top" secondItem="Pjt-6s-xKf" secondAttribute="top" id="5TX-4p-gPe"/>
+                        <constraint firstAttribute="trailing" secondItem="bcB-AA-qPr" secondAttribute="trailing" id="M2M-k9-iAY"/>
+                        <constraint firstItem="i1R-Mm-iaP" firstAttribute="top" secondItem="8VE-uO-f1I" secondAttribute="bottom" constant="4" id="M53-HY-GTu"/>
+                        <constraint firstAttribute="trailing" secondItem="U1f-6a-aqz" secondAttribute="trailing" id="Oyq-u1-qkj"/>
+                        <constraint firstItem="8VE-uO-f1I" firstAttribute="top" secondItem="U1f-6a-aqz" secondAttribute="bottom" constant="4" id="QUn-53-SJb"/>
+                        <constraint firstAttribute="trailing" secondItem="8VE-uO-f1I" secondAttribute="trailing" id="QVP-as-nHl"/>
+                        <constraint firstItem="ZZ9-6r-oB0" firstAttribute="centerX" secondItem="LhY-nN-gr7" secondAttribute="centerX" id="TXR-sv-GPd"/>
+                        <constraint firstItem="gQ6-vi-U8a" firstAttribute="leading" secondItem="Pjt-6s-xKf" secondAttribute="leading" id="YG4-JN-JDQ"/>
+                        <constraint firstItem="U1f-6a-aqz" firstAttribute="leading" secondItem="Pjt-6s-xKf" secondAttribute="leading" id="dfa-dI-a2P"/>
+                        <constraint firstAttribute="trailing" secondItem="gQ6-vi-U8a" secondAttribute="trailing" id="hsQ-rj-S0h"/>
+                        <constraint firstItem="xNb-2Y-SRN" firstAttribute="centerX" secondItem="E8h-d0-uri" secondAttribute="centerX" id="iXw-Z5-fTM"/>
+                        <constraint firstItem="8VE-uO-f1I" firstAttribute="leading" secondItem="Pjt-6s-xKf" secondAttribute="leading" id="l87-Da-Hzl"/>
+                        <constraint firstAttribute="trailing" secondItem="i1R-Mm-iaP" secondAttribute="trailing" id="mw8-uf-9GY"/>
+                        <constraint firstItem="U1f-6a-aqz" firstAttribute="top" secondItem="gQ6-vi-U8a" secondAttribute="bottom" constant="4" id="wgJ-mm-ZOp"/>
+                        <constraint firstItem="bcB-AA-qPr" firstAttribute="leading" secondItem="Pjt-6s-xKf" secondAttribute="leading" id="xGK-xV-3lN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Pjt-6s-xKf" secondAttribute="bottom" id="9aX-Af-wWN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Pjt-6s-xKf" secondAttribute="trailing" id="CAr-aG-Oov"/>
+                <constraint firstItem="Pjt-6s-xKf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Hl1-hJ-8yE"/>
+                <constraint firstItem="Pjt-6s-xKf" firstAttribute="top" secondItem="2Pk-Nt-2w4" secondAttribute="bottom" id="QDh-5r-e6T"/>
+                <constraint firstItem="2Pk-Nt-2w4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="fG1-74-HTO"/>
+                <constraint firstItem="2Pk-Nt-2w4" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="l1a-X5-ZEl"/>
+                <constraint firstItem="2Pk-Nt-2w4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uTm-iG-IQN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backBtn-1" width="31" height="38"/>
+    </resources>
+</document>

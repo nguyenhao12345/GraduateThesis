@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailSongViewController" customModule="Piano_Karaoke" customModuleProvider="target">
+            <connections>
+                <outlet property="btnDownLoad" destination="nIm-6g-zST" id="M4T-ey-B4C"/>
+                <outlet property="collectionView" destination="Zwr-Lo-yHS" id="2Ab-vD-FJc"/>
+                <outlet property="view" destination="iN0-l3-epB" id="dlh-ZZ-qfJ"/>
+                <outlet property="viewContainer" destination="Oor-Rd-IkR" id="Lds-Gb-t1v"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oor-Rd-IkR">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Zwr-Lo-yHS">
+                            <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Z2-s8-NTL">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <button hidden="YES" opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIm-6g-zST">
+                            <rect key="frame" x="366" y="50" width="36" height="36"/>
+                            <color key="backgroundColor" red="0.95283776519999996" green="0.95300072430000005" blue="0.95282751320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="36" id="5eP-IW-cRC"/>
+                                <constraint firstAttribute="width" secondItem="nIm-6g-zST" secondAttribute="height" id="LxP-1f-OJf"/>
+                            </constraints>
+                            <color key="tintColor" red="0.4941176471" green="0.4941176471" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" image="icloud.and.arrow.down.fill" catalog="system">
+                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="18"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="clickDownLoad:" destination="-1" eventType="touchUpInside" id="4NQ-Ir-bkg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWk-ln-m6L">
+                            <rect key="frame" x="12" y="50" width="34" height="34"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.12094603466386554" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="34" id="JTQ-di-VKL"/>
+                                <constraint firstAttribute="width" secondItem="ZWk-ln-m6L" secondAttribute="height" id="mcN-ie-muj"/>
+                            </constraints>
+                            <state key="normal" image="backBtn-1"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="17"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="clickBack:" destination="-1" eventType="touchUpInside" id="t1P-xC-kKq"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="nIm-6g-zST" firstAttribute="width" secondItem="nIm-6g-zST" secondAttribute="height" id="6we-qI-q1R"/>
+                        <constraint firstAttribute="bottom" secondItem="Zwr-Lo-yHS" secondAttribute="bottom" id="TBq-19-8Hv"/>
+                        <constraint firstItem="ZWk-ln-m6L" firstAttribute="top" secondItem="Zwr-Lo-yHS" secondAttribute="top" constant="6" id="YTZ-XZ-LRk"/>
+                        <constraint firstItem="Zwr-Lo-yHS" firstAttribute="leading" secondItem="Oor-Rd-IkR" secondAttribute="leading" id="dpm-Y9-QPV"/>
+                        <constraint firstAttribute="trailing" secondItem="Zwr-Lo-yHS" secondAttribute="trailing" id="gQL-Ww-Tn2"/>
+                        <constraint firstAttribute="trailing" secondItem="nIm-6g-zST" secondAttribute="trailing" constant="12" id="nXs-cq-Asn"/>
+                        <constraint firstItem="nIm-6g-zST" firstAttribute="top" secondItem="ZWk-ln-m6L" secondAttribute="top" id="yCU-UQ-YbT"/>
+                        <constraint firstItem="ZWk-ln-m6L" firstAttribute="leading" secondItem="Zwr-Lo-yHS" secondAttribute="leading" constant="12" id="yDv-zh-887"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Oor-Rd-IkR" firstAttribute="centerX" secondItem="HhE-od-CSb" secondAttribute="centerX" id="Dc9-bc-MnA"/>
+                <constraint firstAttribute="bottom" secondItem="Oor-Rd-IkR" secondAttribute="bottom" id="SVc-sK-XDo"/>
+                <constraint firstItem="Oor-Rd-IkR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WAN-dM-jft"/>
+                <constraint firstItem="Oor-Rd-IkR" firstAttribute="leading" secondItem="HhE-od-CSb" secondAttribute="leading" id="d99-KB-y01"/>
+                <constraint firstItem="HhE-od-CSb" firstAttribute="top" secondItem="Zwr-Lo-yHS" secondAttribute="top" id="tpJ-c3-nK2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="HhE-od-CSb"/>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backBtn-1" width="31" height="38"/>
+        <image name="icloud.and.arrow.down.fill" catalog="system" width="64" height="56"/>
+    </resources>
+</document>

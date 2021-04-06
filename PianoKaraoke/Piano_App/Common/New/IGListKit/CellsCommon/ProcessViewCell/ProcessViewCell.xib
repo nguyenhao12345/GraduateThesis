@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="KoHo-SemiBold.ttf">
+            <string>KoHo-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Jjm-C9-Zvz" customClass="ProcessViewCell" customModule="NewsFeed" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="556" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Bv-YR-UPV">
+                <rect key="frame" x="0.0" y="0.0" width="556" height="115"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17i-gK-4Yc">
+                        <rect key="frame" x="0.0" y="0.0" width="556" height="115"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Đang đăng tin..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oX0-hl-P6m">
+                                <rect key="frame" x="24" y="12" width="120" height="91"/>
+                                <fontDescription key="fontDescription" name="KoHo-SemiBold" family="KoHo SemiBold" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.086274509799999996" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="MTh-2O-rx9">
+                                <rect key="frame" x="152" y="0.0" width="20" height="115"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="color" red="1" green="0.086274509799999996" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzT-B1-JyI">
+                                <rect key="frame" x="518" y="12" width="26" height="26"/>
+                                <state key="normal" image="ic_rm">
+                                    <color key="titleColor" white="0.50420168070000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickRemove:" destination="Jjm-C9-Zvz" eventType="touchUpInside" id="O6I-Z5-qvf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oX0-hl-P6m" firstAttribute="leading" secondItem="17i-gK-4Yc" secondAttribute="leading" constant="24" id="3nH-Vl-Lzh"/>
+                            <constraint firstItem="oX0-hl-P6m" firstAttribute="top" secondItem="17i-gK-4Yc" secondAttribute="top" constant="12" id="FKe-eP-U16"/>
+                            <constraint firstAttribute="bottom" secondItem="oX0-hl-P6m" secondAttribute="bottom" constant="12" id="HvW-bk-kWv"/>
+                            <constraint firstItem="MTh-2O-rx9" firstAttribute="top" secondItem="17i-gK-4Yc" secondAttribute="top" id="Jxz-CK-ur8"/>
+                            <constraint firstAttribute="trailing" secondItem="wzT-B1-JyI" secondAttribute="trailing" constant="12" id="K8e-s4-yAf"/>
+                            <constraint firstItem="MTh-2O-rx9" firstAttribute="leading" secondItem="oX0-hl-P6m" secondAttribute="trailing" constant="8" id="SNG-tJ-1VI"/>
+                            <constraint firstItem="wzT-B1-JyI" firstAttribute="top" secondItem="17i-gK-4Yc" secondAttribute="top" constant="12" id="khT-bf-SjP"/>
+                            <constraint firstAttribute="bottom" secondItem="MTh-2O-rx9" secondAttribute="bottom" id="o0s-UY-FDf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="17i-gK-4Yc" firstAttribute="leading" secondItem="4Bv-YR-UPV" secondAttribute="leading" id="0ny-aH-Hnu"/>
+                    <constraint firstAttribute="bottom" secondItem="17i-gK-4Yc" secondAttribute="bottom" id="BkC-Kh-2Hu"/>
+                    <constraint firstAttribute="trailing" secondItem="17i-gK-4Yc" secondAttribute="trailing" id="R9J-r8-tFl"/>
+                    <constraint firstItem="17i-gK-4Yc" firstAttribute="top" secondItem="4Bv-YR-UPV" secondAttribute="top" id="zKW-hG-7ny"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="556" height="115"/>
+            <connections>
+                <outlet property="buttonRemove" destination="wzT-B1-JyI" id="S27-R9-C9y"/>
+                <outlet property="loadIndicator" destination="MTh-2O-rx9" id="6Nw-1C-FqR"/>
+                <outlet property="mesStatus" destination="oX0-hl-P6m" id="tal-KH-ZQU"/>
+            </connections>
+            <point key="canvasLocation" x="504.34782608695656" y="113.50446428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_rm" width="26" height="26"/>
+    </resources>
+</document>

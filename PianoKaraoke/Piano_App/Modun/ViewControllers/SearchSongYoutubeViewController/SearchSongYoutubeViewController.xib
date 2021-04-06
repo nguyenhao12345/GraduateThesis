@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchSongYoutubeViewController" customModule="Piano_App" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="Zwr-Lo-yHS" id="2Ab-vD-FJc"/>
+                <outlet property="navigationView" destination="w5D-Fw-TW3" id="aRw-ws-71J"/>
+                <outlet property="view" destination="iN0-l3-epB" id="dlh-ZZ-qfJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Zwr-Lo-yHS">
+                    <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Z2-s8-NTL">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w5D-Fw-TW3" customClass="SearchNavigationView" customModule="Piano_App" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ic0-lU-UxK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Zwr-Lo-yHS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="GOj-SL-9Bz"/>
+                <constraint firstAttribute="trailing" secondItem="w5D-Fw-TW3" secondAttribute="trailing" id="I9s-Kc-ESp"/>
+                <constraint firstItem="w5D-Fw-TW3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="T3S-Mz-4jN"/>
+                <constraint firstItem="Zwr-Lo-yHS" firstAttribute="top" secondItem="w5D-Fw-TW3" secondAttribute="bottom" id="gFL-TV-99g"/>
+                <constraint firstItem="w5D-Fw-TW3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="mpa-Ga-NKz"/>
+                <constraint firstItem="Zwr-Lo-yHS" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="s7R-5F-cLF"/>
+                <constraint firstItem="Zwr-Lo-yHS" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="x1Z-ax-b1d"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </view>
+    </objects>
+</document>

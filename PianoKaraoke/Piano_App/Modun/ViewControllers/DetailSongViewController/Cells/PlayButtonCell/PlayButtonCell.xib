@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Jjm-C9-Zvz" customClass="PlayButtonCell" customModule="Piano_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="356" height="78"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Bv-YR-UPV">
+                <rect key="frame" x="0.0" y="0.0" width="356" height="78"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZY-eg-sxh" customClass="ViewRound" customModule="Piano_App" customModuleProvider="target">
+                        <rect key="frame" x="12" y="0.0" width="120" height="78"/>
+                        <subviews>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBk-P1-3Qa">
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="QNO-IV-TU4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Vào chơi">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.27450980392156865" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="eBk-P1-3Qa" secondAttribute="bottom" id="4gA-ab-GWO"/>
+                            <constraint firstItem="eBk-P1-3Qa" firstAttribute="top" secondItem="gZY-eg-sxh" secondAttribute="top" id="JZS-xw-P3k"/>
+                            <constraint firstItem="eBk-P1-3Qa" firstAttribute="leading" secondItem="gZY-eg-sxh" secondAttribute="leading" id="VJv-ue-BMH"/>
+                            <constraint firstAttribute="trailing" secondItem="eBk-P1-3Qa" secondAttribute="trailing" id="rVA-dD-Blh"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="gZY-eg-sxh" secondAttribute="bottom" id="Cvy-Dg-q2t"/>
+                    <constraint firstItem="gZY-eg-sxh" firstAttribute="top" secondItem="4Bv-YR-UPV" secondAttribute="top" id="R1z-6e-FsM"/>
+                    <constraint firstItem="gZY-eg-sxh" firstAttribute="leading" secondItem="4Bv-YR-UPV" secondAttribute="leading" constant="12" id="isR-y6-5zm"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="356" height="78"/>
+            <point key="canvasLocation" x="359.4202898550725" y="101.11607142857143"/>
+        </collectionViewCell>
+    </objects>
+</document>

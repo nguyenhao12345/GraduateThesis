@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Jjm-C9-Zvz" customClass="HeaderSimpleCell" customModule="Piano_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="267" height="52"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Bv-YR-UPV">
+                <rect key="frame" x="0.0" y="0.0" width="267" height="52"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6Z-Hx-CnR" customClass="DTAttributedLabel">
+                        <rect key="frame" x="0.0" y="0.0" width="267" height="52"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="K6Z-Hx-CnR" firstAttribute="top" secondItem="4Bv-YR-UPV" secondAttribute="top" id="1AD-AV-Yxz"/>
+                    <constraint firstAttribute="bottom" secondItem="K6Z-Hx-CnR" secondAttribute="bottom" id="LsZ-r3-EbC"/>
+                    <constraint firstItem="K6Z-Hx-CnR" firstAttribute="leading" secondItem="4Bv-YR-UPV" secondAttribute="leading" id="O1F-E7-3Es"/>
+                    <constraint firstAttribute="trailing" secondItem="K6Z-Hx-CnR" secondAttribute="trailing" id="nbF-Yu-9sc"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <size key="customSize" width="267" height="52"/>
+            <connections>
+                <outlet property="coreText" destination="K6Z-Hx-CnR" id="9JM-ln-Lnb"/>
+            </connections>
+            <point key="canvasLocation" x="294.92753623188406" y="92.410714285714278"/>
+        </collectionViewCell>
+    </objects>
+</document>

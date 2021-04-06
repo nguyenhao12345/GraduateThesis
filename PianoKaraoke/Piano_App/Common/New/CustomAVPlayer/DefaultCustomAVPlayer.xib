@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DefaultCustomAVPlayer" customModule="Piano_Karaoke" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundImageView" destination="Pd5-OQ-Ai0" id="NNk-63-TfV"/>
+                <outlet property="contentView" destination="2aV-C6-iIu" id="AtR-oh-7ub"/>
+                <outlet property="indicatorView" destination="sdE-LY-Cwb" id="XRo-Ac-XDL"/>
+                <outlet property="playButton" destination="ZnH-dR-mBp" id="5F1-vg-1Dy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2aV-C6-iIu">
+            <rect key="frame" x="0.0" y="0.0" width="419" height="289"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pd5-OQ-Ai0">
+                    <rect key="frame" x="0.0" y="0.0" width="419" height="289"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sdE-LY-Cwb">
+                    <rect key="frame" x="191" y="131" width="37" height="37"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" red="1" green="0.086274509799999996" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </activityIndicatorView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnH-dR-mBp">
+                    <rect key="frame" x="190.5" y="125.5" width="38" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ZnH-dR-mBp" secondAttribute="height" multiplier="1:1" id="Blp-hw-xbo"/>
+                        <constraint firstAttribute="height" constant="38" id="HNB-2D-DTH"/>
+                    </constraints>
+                    <state key="normal" image="play"/>
+                    <connections>
+                        <action selector="playButtonActionHandler:" destination="-1" eventType="touchUpInside" id="SXc-dK-xng"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ZnH-dR-mBp" firstAttribute="centerY" secondItem="Pd5-OQ-Ai0" secondAttribute="centerY" id="5e9-rh-a2g"/>
+                <constraint firstItem="sdE-LY-Cwb" firstAttribute="centerX" secondItem="9qA-OM-6oQ" secondAttribute="centerX" id="I2i-1c-FFK"/>
+                <constraint firstAttribute="bottom" secondItem="Pd5-OQ-Ai0" secondAttribute="bottom" id="R3a-NK-FI2"/>
+                <constraint firstItem="ZnH-dR-mBp" firstAttribute="centerX" secondItem="Pd5-OQ-Ai0" secondAttribute="centerX" id="TSr-sm-A21"/>
+                <constraint firstAttribute="trailing" secondItem="Pd5-OQ-Ai0" secondAttribute="trailing" id="Tdh-PO-LFk"/>
+                <constraint firstItem="Pd5-OQ-Ai0" firstAttribute="top" secondItem="2aV-C6-iIu" secondAttribute="top" id="Yf3-Da-KTw"/>
+                <constraint firstItem="Pd5-OQ-Ai0" firstAttribute="leading" secondItem="2aV-C6-iIu" secondAttribute="leading" id="ZzT-L6-mwF"/>
+                <constraint firstItem="sdE-LY-Cwb" firstAttribute="centerY" secondItem="9qA-OM-6oQ" secondAttribute="centerY" id="iwo-Ej-VKq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="9qA-OM-6oQ"/>
+            <point key="canvasLocation" x="141.30434782608697" y="-99.441964285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="play" width="25" height="25"/>
+    </resources>
+</document>

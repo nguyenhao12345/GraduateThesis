@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Jjm-C9-Zvz" customClass="NewsFeedInfoCell" customModule="Piano_Karaoke" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="586" height="144"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Bv-YR-UPV">
+                <rect key="frame" x="0.0" y="0.0" width="586" height="144"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMG-s4-R7X">
+                        <rect key="frame" x="0.0" y="0.0" width="586" height="144"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundGreen" translatesAutoresizingMaskIntoConstraints="NO" id="7LJ-KO-1og" customClass="ImageViewRound" customModule="Piano_Karaoke" customModuleProvider="target">
+                                <rect key="frame" x="12" y="12" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7LJ-KO-1og" secondAttribute="height" id="Cp3-bb-qcE"/>
+                                    <constraint firstAttribute="height" constant="48" id="YgQ-0M-2N0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMf-gx-DNH">
+                                <rect key="frame" x="551" y="4" width="31" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="BaF-y3-s4q"/>
+                                    <constraint firstAttribute="width" constant="31" id="Lc9-sb-BEq"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="more_vertical_white"/>
+                                <connections>
+                                    <action selector="clickMore:" destination="Jjm-C9-Zvz" eventType="touchUpInside" id="jf7-Gd-N1J"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSc-x8-wd7">
+                                <rect key="frame" x="68" y="16" width="475" height="19.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.27450980390000002" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xem trang cá nhân" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jm1-F2-p8x">
+                                <rect key="frame" x="68" y="35.5" width="475" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="qLS-Ce-B56"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.27450980390000002" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YSc-x8-wd7" firstAttribute="top" secondItem="7LJ-KO-1og" secondAttribute="top" constant="4" id="Uf4-7d-hGR"/>
+                            <constraint firstItem="7LJ-KO-1og" firstAttribute="leading" secondItem="QMG-s4-R7X" secondAttribute="leading" constant="12" id="Uta-Zs-ZQh"/>
+                            <constraint firstAttribute="trailing" secondItem="bMf-gx-DNH" secondAttribute="trailing" constant="4" id="XSg-Vp-yC5"/>
+                            <constraint firstItem="bMf-gx-DNH" firstAttribute="leading" secondItem="YSc-x8-wd7" secondAttribute="trailing" constant="8" id="XXf-J7-ecR"/>
+                            <constraint firstItem="jm1-F2-p8x" firstAttribute="trailing" secondItem="YSc-x8-wd7" secondAttribute="trailing" id="YOk-f8-tgp"/>
+                            <constraint firstItem="bMf-gx-DNH" firstAttribute="top" secondItem="7LJ-KO-1og" secondAttribute="top" constant="-8" id="fVY-ps-Mqc"/>
+                            <constraint firstItem="jm1-F2-p8x" firstAttribute="leading" secondItem="YSc-x8-wd7" secondAttribute="leading" id="oTD-y2-B58"/>
+                            <constraint firstItem="jm1-F2-p8x" firstAttribute="top" secondItem="YSc-x8-wd7" secondAttribute="bottom" id="rxK-Am-EbO"/>
+                            <constraint firstItem="7LJ-KO-1og" firstAttribute="top" secondItem="QMG-s4-R7X" secondAttribute="top" constant="12" id="teR-uA-iBm"/>
+                            <constraint firstItem="YSc-x8-wd7" firstAttribute="leading" secondItem="7LJ-KO-1og" secondAttribute="trailing" constant="8" id="uW6-ii-aXk"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QMG-s4-R7X" firstAttribute="top" secondItem="4Bv-YR-UPV" secondAttribute="top" id="Ak7-op-SLR"/>
+                    <constraint firstAttribute="bottom" secondItem="QMG-s4-R7X" secondAttribute="bottom" id="Opb-yf-KE5"/>
+                    <constraint firstAttribute="trailing" secondItem="QMG-s4-R7X" secondAttribute="trailing" id="Ykb-lD-Wff"/>
+                    <constraint firstItem="QMG-s4-R7X" firstAttribute="leading" secondItem="4Bv-YR-UPV" secondAttribute="leading" id="boU-OL-nXd"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="586" height="144"/>
+            <connections>
+                <outlet property="avtUserImg" destination="7LJ-KO-1og" id="vFY-dZ-BNO"/>
+                <outlet property="dateLbl" destination="jm1-F2-p8x" id="nfK-hO-Ueh"/>
+                <outlet property="userNameLbl" destination="YSc-x8-wd7" id="BQ9-L9-xmD"/>
+            </connections>
+            <point key="canvasLocation" x="524.63768115942037" y="123.21428571428571"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="backgroundGreen" width="852" height="480"/>
+        <image name="more_vertical_white" width="30.5" height="30.5"/>
+    </resources>
+</document>

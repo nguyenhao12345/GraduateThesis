@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="Jjm-C9-Zvz" customClass="MusicSimpleCell" customModule="Piano_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="299" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Bv-YR-UPV">
+                <rect key="frame" x="0.0" y="0.0" width="299" height="250"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TgU-A8-jhi">
+                        <rect key="frame" x="0.0" y="0.0" width="299" height="250"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dER-rJ-bgY">
+                                <rect key="frame" x="0.0" y="0.0" width="299" height="218"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="cham-day-noi-dau" translatesAutoresizingMaskIntoConstraints="NO" id="mSv-Pq-bGU">
+                                        <rect key="frame" x="0.0" y="0.0" width="299" height="218"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="deJ-WI-nFF">
+                                        <rect key="frame" x="270" y="189.5" width="25" height="24"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.93333333330000001" green="0.94901960780000005" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="N9N-eE-DAn"/>
+                                            <constraint firstAttribute="width" constant="25" id="xmx-vO-K16"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="mSv-Pq-bGU" firstAttribute="leading" secondItem="dER-rJ-bgY" secondAttribute="leading" id="7bk-4e-yXL"/>
+                                    <constraint firstAttribute="trailing" secondItem="mSv-Pq-bGU" secondAttribute="trailing" id="Bhp-dA-Gsv"/>
+                                    <constraint firstAttribute="trailing" secondItem="deJ-WI-nFF" secondAttribute="trailing" constant="4" id="Hht-kv-o4A"/>
+                                    <constraint firstAttribute="bottom" secondItem="deJ-WI-nFF" secondAttribute="bottom" constant="4" id="iWe-z6-7ko"/>
+                                    <constraint firstAttribute="bottom" secondItem="mSv-Pq-bGU" secondAttribute="bottom" id="vsO-WK-PQR"/>
+                                    <constraint firstItem="mSv-Pq-bGU" firstAttribute="top" secondItem="dER-rJ-bgY" secondAttribute="top" id="xbT-9F-7AV"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Em gái mưa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIy-DY-0hv">
+                                <rect key="frame" x="0.0" y="226" width="299" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.27450980390000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.79215686269999996" green="0.83529411760000005" blue="0.90980392160000001" alpha="0.0" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dER-rJ-bgY" firstAttribute="leading" secondItem="TgU-A8-jhi" secondAttribute="leading" id="Ahj-cS-TLY"/>
+                            <constraint firstItem="dER-rJ-bgY" firstAttribute="top" secondItem="TgU-A8-jhi" secondAttribute="top" id="AtK-Am-vsf"/>
+                            <constraint firstAttribute="trailing" secondItem="AIy-DY-0hv" secondAttribute="trailing" id="SOi-FG-wJH"/>
+                            <constraint firstItem="AIy-DY-0hv" firstAttribute="top" secondItem="dER-rJ-bgY" secondAttribute="bottom" constant="8" id="T4T-e9-zsH"/>
+                            <constraint firstAttribute="bottom" secondItem="AIy-DY-0hv" secondAttribute="bottom" constant="4" id="WeT-Pe-eqb"/>
+                            <constraint firstAttribute="trailing" secondItem="dER-rJ-bgY" secondAttribute="trailing" id="oNK-I1-Pec"/>
+                            <constraint firstItem="AIy-DY-0hv" firstAttribute="leading" secondItem="TgU-A8-jhi" secondAttribute="leading" id="wVf-lt-pGV"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="TgU-A8-jhi" secondAttribute="trailing" id="Dum-8S-btF"/>
+                    <constraint firstAttribute="bottom" secondItem="TgU-A8-jhi" secondAttribute="bottom" id="Dun-yw-yK3"/>
+                    <constraint firstItem="TgU-A8-jhi" firstAttribute="top" secondItem="4Bv-YR-UPV" secondAttribute="top" id="Mwm-9v-qbK"/>
+                    <constraint firstItem="TgU-A8-jhi" firstAttribute="leading" secondItem="4Bv-YR-UPV" secondAttribute="leading" id="VX8-vA-SOR"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="299" height="250"/>
+            <connections>
+                <outlet property="imageView" destination="mSv-Pq-bGU" id="Poi-pc-X0N"/>
+                <outlet property="nameSongLbl" destination="AIy-DY-0hv" id="9Ae-XO-82b"/>
+                <outlet property="viewMedia" destination="dER-rJ-bgY" id="4ZO-zS-APA"/>
+            </connections>
+            <point key="canvasLocation" x="260.14492753623188" y="158.70535714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cham-day-noi-dau" width="426.66665649414062" height="240"/>
+        <image name="play.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
+</document>

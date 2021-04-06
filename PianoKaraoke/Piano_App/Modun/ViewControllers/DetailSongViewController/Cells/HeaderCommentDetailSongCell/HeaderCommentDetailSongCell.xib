@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Jjm-C9-Zvz" customClass="HeaderCommentDetailSongCell" customModule="Piano_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="408" height="174"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Bv-YR-UPV">
+                <rect key="frame" x="0.0" y="0.0" width="408" height="174"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LmV-J2-9Wb">
+                        <rect key="frame" x="0.0" y="0.0" width="408" height="174"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3U-26-vu7">
+                                <rect key="frame" x="0.0" y="0.0" width="408" height="174"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9cG-rp-tht">
+                                    <rect key="frame" x="0.0" y="0.0" width="408" height="174"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bình luận" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fII-N7-hHh">
+                                <rect key="frame" x="12" y="23" width="384" height="21.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.27450980390000002" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EgF-ad-GzI">
+                                <rect key="frame" x="114" y="8" width="180" height="3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.10317095588235294" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="BY6-N6-sqm"/>
+                                    <constraint firstAttribute="width" constant="180" id="CPu-fO-ojH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fII-N7-hHh" firstAttribute="top" secondItem="EgF-ad-GzI" secondAttribute="bottom" constant="12" id="0nI-Ej-k2D"/>
+                            <constraint firstAttribute="bottom" secondItem="D3U-26-vu7" secondAttribute="bottom" id="2DF-hL-9hd"/>
+                            <constraint firstItem="EgF-ad-GzI" firstAttribute="centerX" secondItem="LmV-J2-9Wb" secondAttribute="centerX" id="ATx-PO-AzX"/>
+                            <constraint firstItem="D3U-26-vu7" firstAttribute="leading" secondItem="LmV-J2-9Wb" secondAttribute="leading" id="T0m-5L-rdh"/>
+                            <constraint firstItem="D3U-26-vu7" firstAttribute="top" secondItem="LmV-J2-9Wb" secondAttribute="top" id="dmJ-a1-Xga"/>
+                            <constraint firstItem="EgF-ad-GzI" firstAttribute="top" secondItem="LmV-J2-9Wb" secondAttribute="top" constant="8" id="eO6-cD-50z"/>
+                            <constraint firstItem="fII-N7-hHh" firstAttribute="leading" secondItem="LmV-J2-9Wb" secondAttribute="leading" constant="12" id="exs-AS-kf2"/>
+                            <constraint firstAttribute="trailing" secondItem="D3U-26-vu7" secondAttribute="trailing" id="tUO-wh-HoH"/>
+                            <constraint firstAttribute="trailing" secondItem="fII-N7-hHh" secondAttribute="trailing" constant="12" id="xXD-tO-5T5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="LmV-J2-9Wb" secondAttribute="trailing" id="CRc-cX-6As"/>
+                    <constraint firstAttribute="bottom" secondItem="LmV-J2-9Wb" secondAttribute="bottom" id="JmR-6q-MfA"/>
+                    <constraint firstItem="LmV-J2-9Wb" firstAttribute="leading" secondItem="4Bv-YR-UPV" secondAttribute="leading" id="Lht-hB-HbR"/>
+                    <constraint firstItem="LmV-J2-9Wb" firstAttribute="top" secondItem="4Bv-YR-UPV" secondAttribute="top" id="Snq-Jy-tLC"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="408" height="174"/>
+            <connections>
+                <outlet property="containerView" destination="LmV-J2-9Wb" id="dl9-Xe-WNN"/>
+            </connections>
+            <point key="canvasLocation" x="281.15942028985512" y="133.25892857142856"/>
+        </collectionViewCell>
+    </objects>
+</document>

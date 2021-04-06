@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Jjm-C9-Zvz" customClass="SearchKeyWordCell" customModule="Piano_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="259" height="28"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Bv-YR-UPV">
+                <rect key="frame" x="0.0" y="0.0" width="259" height="28"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dxf-Bw-fyD" customClass="DTAttributedLabel">
+                        <rect key="frame" x="0.0" y="0.0" width="259" height="28"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Dxf-Bw-fyD" firstAttribute="leading" secondItem="4Bv-YR-UPV" secondAttribute="leading" id="8EP-6Q-h9M"/>
+                    <constraint firstAttribute="trailing" secondItem="Dxf-Bw-fyD" secondAttribute="trailing" id="DaT-8m-k4s"/>
+                    <constraint firstItem="Dxf-Bw-fyD" firstAttribute="top" secondItem="4Bv-YR-UPV" secondAttribute="top" id="GIF-iU-Vcn"/>
+                    <constraint firstAttribute="bottom" secondItem="Dxf-Bw-fyD" secondAttribute="bottom" id="i40-Xi-wFe"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="259" height="28"/>
+            <connections>
+                <outlet property="coreText" destination="Dxf-Bw-fyD" id="Cv2-YE-GuO"/>
+            </connections>
+            <point key="canvasLocation" x="289.13043478260875" y="84.375"/>
+        </collectionViewCell>
+    </objects>
+</document>

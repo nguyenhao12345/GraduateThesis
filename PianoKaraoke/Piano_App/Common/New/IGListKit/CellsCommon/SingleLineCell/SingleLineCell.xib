@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SingleLineCell" customModule="HaloApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="231" height="84"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="231" height="84"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view tag="119" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Xk-uT-y4B">
+                        <rect key="frame" x="0.0" y="0.0" width="231" height="84"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mjP-a7-gv2">
+                                <rect key="frame" x="16" y="83.5" width="199" height="0.5"/>
+                                <color key="backgroundColor" white="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="xVw-zO-sEb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mjP-a7-gv2" secondAttribute="trailing" constant="16" id="04y-fd-zzC"/>
+                            <constraint firstAttribute="bottom" secondItem="mjP-a7-gv2" secondAttribute="bottom" id="0Q6-8c-xZj"/>
+                            <constraint firstItem="mjP-a7-gv2" firstAttribute="leading" secondItem="7Xk-uT-y4B" secondAttribute="leading" constant="16" id="uoO-57-fVf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="7Xk-uT-y4B" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" identifier="ctnl" id="0Pi-Xc-I6P"/>
+                <constraint firstAttribute="bottom" secondItem="7Xk-uT-y4B" secondAttribute="bottom" id="Ead-qh-bYc"/>
+                <constraint firstAttribute="trailing" secondItem="7Xk-uT-y4B" secondAttribute="trailing" identifier="ctnt" id="ip6-Jn-52V"/>
+                <constraint firstItem="7Xk-uT-y4B" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tmz-01-mf4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="231" height="84"/>
+            <point key="canvasLocation" x="282.39999999999998" y="169.11544227886057"/>
+        </collectionViewCell>
+    </objects>
+</document>

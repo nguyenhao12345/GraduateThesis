@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Jjm-C9-Zvz" customClass="MediaDefaultCell" customModule="Piano_Karaoke" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="233" height="305"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Bv-YR-UPV">
+                <rect key="frame" x="0.0" y="0.0" width="233" height="305"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npz-JC-Hp7">
+                        <rect key="frame" x="0.0" y="0.0" width="233" height="305"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="makro-muzyka-miksher" translatesAutoresizingMaskIntoConstraints="NO" id="Yfh-rm-jce" customClass="HImageView" customModule="Piano_Karaoke" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="233" height="305"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPK-xy-nFv">
+                                <rect key="frame" x="96.5" y="132.5" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.33623293069999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yPK-xy-nFv" secondAttribute="height" multiplier="1:1" id="8cs-cK-8fe"/>
+                                    <constraint firstAttribute="height" constant="40" id="YgJ-7f-kEE"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <state key="normal" image="play.fill" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickPlay:" destination="Jjm-C9-Zvz" eventType="touchUpInside" id="DX8-cy-m9B"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Yfh-rm-jce" secondAttribute="bottom" id="1jP-N7-tpb"/>
+                            <constraint firstItem="Yfh-rm-jce" firstAttribute="top" secondItem="npz-JC-Hp7" secondAttribute="top" id="6ne-Lq-QSs"/>
+                            <constraint firstAttribute="trailing" secondItem="Yfh-rm-jce" secondAttribute="trailing" id="S3p-ae-8mP"/>
+                            <constraint firstItem="yPK-xy-nFv" firstAttribute="centerY" secondItem="Yfh-rm-jce" secondAttribute="centerY" id="ZdG-x4-tE3"/>
+                            <constraint firstItem="yPK-xy-nFv" firstAttribute="centerX" secondItem="Yfh-rm-jce" secondAttribute="centerX" id="kia-dR-TYb"/>
+                            <constraint firstItem="Yfh-rm-jce" firstAttribute="leading" secondItem="npz-JC-Hp7" secondAttribute="leading" id="lCU-Pe-8E2"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="npz-JC-Hp7" firstAttribute="leading" secondItem="4Bv-YR-UPV" secondAttribute="leading" id="4ol-JZ-5wX"/>
+                    <constraint firstAttribute="trailing" secondItem="npz-JC-Hp7" secondAttribute="trailing" id="aaG-ty-WL0"/>
+                    <constraint firstAttribute="bottom" secondItem="npz-JC-Hp7" secondAttribute="bottom" id="azL-cA-Aga"/>
+                    <constraint firstItem="npz-JC-Hp7" firstAttribute="top" secondItem="4Bv-YR-UPV" secondAttribute="top" id="eKd-8H-qrZ"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="233" height="305"/>
+            <connections>
+                <outlet property="img" destination="Yfh-rm-jce" id="K6Y-ow-GaW"/>
+            </connections>
+            <point key="canvasLocation" x="270.28985507246381" y="177.12053571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="makro-muzyka-miksher" width="444" height="283.33334350585938"/>
+        <image name="play.fill" catalog="system" width="58" height="64"/>
+    </resources>
+</document>

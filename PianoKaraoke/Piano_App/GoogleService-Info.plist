@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>503305161102-hsq8epssr6j88qql5gu2djardful3h06.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.503305161102-hsq8epssr6j88qql5gu2djardful3h06</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBNfZdRu3WBtIeK-AuoduGL13F82jVovCM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>503305161102</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Piano-App</string>
+	<key>PROJECT_ID</key>
+	<string>pianoapp-48598</string>
+	<key>STORAGE_BUCKET</key>
+	<string>pianoapp-48598.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:503305161102:ios:e2ac21286d5ad5b1</string>
+	<key>DATABASE_URL</key>
+	<string>https://pianoapp-48598.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ManualLoadingCell" customModule="HaloApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="41"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="41"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LYF-uu-uYS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="41"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVk-4a-23D">
+                                <rect key="frame" x="202" y="27" width="10" height="10"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="MQX-ro-Wrq"/>
+                                    <constraint firstAttribute="width" secondItem="XVk-4a-23D" secondAttribute="height" multiplier="1:1" id="Ye9-D4-znQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMy-Yr-KRS">
+                                <rect key="frame" x="0.0" y="-16" width="414" height="57"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="TOUCH TO LOAD MORE">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadMore:" destination="gTV-IL-0wX" eventType="touchUpInside" id="uZ8-eC-kc5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NMy-Yr-KRS" firstAttribute="top" secondItem="LYF-uu-uYS" secondAttribute="top" constant="-16" id="DPx-xB-CMj"/>
+                            <constraint firstItem="XVk-4a-23D" firstAttribute="centerX" secondItem="LYF-uu-uYS" secondAttribute="centerX" id="IVU-bT-cVJ"/>
+                            <constraint firstAttribute="trailing" secondItem="NMy-Yr-KRS" secondAttribute="trailing" id="IZh-sf-YEN"/>
+                            <constraint firstItem="NMy-Yr-KRS" firstAttribute="leading" secondItem="LYF-uu-uYS" secondAttribute="leading" id="ZSg-je-YGK"/>
+                            <constraint firstAttribute="bottom" secondItem="NMy-Yr-KRS" secondAttribute="bottom" id="hhK-8c-x6k"/>
+                            <constraint firstAttribute="bottom" secondItem="XVk-4a-23D" secondAttribute="bottom" constant="4" id="sx4-fS-Tyc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="LYF-uu-uYS" secondAttribute="bottom" id="9jH-sB-N3o"/>
+                <constraint firstItem="LYF-uu-uYS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="CmK-zn-x2V"/>
+                <constraint firstItem="LYF-uu-uYS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="FHF-8O-y5c"/>
+                <constraint firstAttribute="trailing" secondItem="LYF-uu-uYS" secondAttribute="trailing" id="RBj-vO-6ai"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="414" height="40"/>
+            <point key="canvasLocation" x="201.59999999999999" y="46.326836581709152"/>
+        </collectionViewCell>
+    </objects>
+</document>
