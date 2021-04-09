@@ -6,6 +6,13 @@
 //  Copyright © 2019 com.nguyenhieu.demo. All rights reserved.
 //
 
+import Foundation
+import Firebase
+import UIKit
+import FirebaseAuth
+import DateToolsSwift
+import Mapper
+
 enum NameCell: String {
     case LocalSongs = "LocalSongs"
     case OnlineSongs = "OnlineSongs"
@@ -128,4 +135,13 @@ enum Tone: Int {
     }
     
     
+}
+enum LoginResul {
+    case error(message: String)
+    case success(data: AuthDataResult)
+}
+
+enum RegistResul {
+    case error(message: String)
+    case success(data: AuthDataResult)
 }

@@ -76,7 +76,8 @@ class DetailSongSectionController: SectionController<DetailSongSectionModel> {
                   typeCellInitViewController: (sectionModel?.isLocalLoad ?? false) ? TypeCell.CellLocal : TypeCell.CellOnline)
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .fullScreen
-
+        vc.youtubeModel = nil
+        vc.detailSongModel = sectionModel?.dataModel
         viewController?.present(vc, animated: true, completion: nil)
     }
 }

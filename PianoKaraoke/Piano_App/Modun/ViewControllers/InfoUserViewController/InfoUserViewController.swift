@@ -2,7 +2,7 @@
 //  InfoUserViewController.swift
 //  Piano_App
 //
-//  Created by Azibai on 25/03/2021.
+//  Created by Azibai on 06/04/2021.
 //  Copyright © 2021 com.nguyenhieu.demo. All rights reserved.
 //
 
@@ -11,33 +11,41 @@ import IGListKit
 
 class InfoUserViewController: AziBaseViewController {
     
-    var frameImageLast: CGRect = .zero
-    
     //MARK: Outlets
-    @IBOutlet weak var avtImgView: ImageViewRound!
-    @IBOutlet weak var navView: UIView!
-    @IBOutlet weak var backGround1View: UIView!
-    @IBOutlet weak var backGround2View: UIView!
-    @IBOutlet weak var viewContent: UIView!
-    @IBOutlet weak var btnSave: UIButton!
-    @IBOutlet weak var userName: UITextField!
-    @IBOutlet weak var phone: UITextField!
-    @IBOutlet weak var address: UILabel!
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var nav: UIView!
+    @IBOutlet weak var btnEdit: UIButton!
         
-        print("self.frameImageLast: \(self.frameImageLast)")
-        viewContent.transform = CGAffineTransform(translationX: -500, y: 0)
-        btnSave.transform = CGAffineTransform(translationX: 0, y: 500)
-        avtImgView.transform = CGAffineTransform(translationX: 500, y: 0)
-        UIView.animate(withDuration: 0.6) {
-            self.viewContent.transform = .identity
-            self.btnSave.transform = .identity
-            self.avtImgView.transform = .identity
+    var userModel: UserModel?
+    var isEdit: Bool = false {
+        didSet {
+            if self.view == nil || self.collectionView == nil { return }
+            guard userModel != nil else { return }
+            self.dataSource = [
+                InfoUserDetailSectionModel(userModel: self.userModel, isEdit: self.isEdit),
+                InfoUserSectionModel(userModel: self.userModel, isEdit: self.isEdit),
+                InfoUserAddressSectionModel(userModel: self.userModel, isEdit: self.isEdit),
+                InfoUserEducationSectionModel(userModel: self.userModel, isEdit: self.isEdit),
+                InfoUserJobSectionModel(userModel: self.userModel, isEdit: self.isEdit),
+                SendOutPutEditSectionModel(userModel: self.userModel, isEdit: self.isEdit)
+            ]
+            self.adapter.performUpdates(animated: true, completion: nil)
         }
     }
 
+    @IBAction func clickEdit(_ sender: Any?) {
+//        self.dismiss(animated: true, completion: nil)
+        isEdit = !isEdit
+    }
+
+    @IBAction func clickBack(_ sender: Any?) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    //MARK: Properties
+    private var isFetchingMore: Bool = false
+    var adapter: ListAdapter!
+    var dataSource: [AziBaseSectionModel] = [LoadingSectionModel()]
+    var uidUser: String = ""
     //MARK: Init
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -47,46 +55,121 @@ class InfoUserViewController: AziBaseViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @IBAction func clickBack(_ sender: Any?) {
-        print("self.frameImageLast: \(self.frameImageLast)")
-
-        UIView.animate(withDuration: 0.6, animations: {
-            self.viewContent.transform = CGAffineTransform(translationX: 500, y: 0)
-            self.btnSave.transform = CGAffineTransform(translationX: 0, y: 500)
-            self.avtImgView.transform = CGAffineTransform(translationX: -500, y: 0)
-        }) { _ in
-            self.dismiss(animated: false, completion: nil)
-        }
-    }
     override func initUIVariable() {
         super.initUIVariable()
+//        self.allowAutoPlay = true
         self.hidesNavigationbar = true
         self.hidesToolbar = true
+        self.addPansGesture = true
+//        self.colorStatusBar = .black
     }
     
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         viewIsReady()
-
+        fetchData()
     }
     
     //MARK: Method
     func viewIsReady() {
-        if let currentUser = AppAccount.shared.getUserLogin() {
-            avtImgView.setImageURL(URL(string: currentUser.avata))
-            address.text = currentUser.address
-            phone.text = currentUser.phone
-            userName.text = currentUser.name
+        nav.addShadow(location: .bottom)
+        let layout = SectionBackgroundCardLayout2()
+        collectionView.collectionViewLayout = layout
+        collectionView.contentInset = UIEdgeInsets(top: 9, left: 16, bottom: 9, right: 16)
+        adapter = ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 5)
+        adapter.collectionView = collectionView
+        adapter.dataSource = self
+        adapter.delegate = self
+        adapter.scrollViewDelegate = self
+        if uidUser == AppAccount.shared.getUserLogin()?.uid {
+            btnEdit.isHidden = false
+        } else {
+            btnEdit.isHidden = true
         }
-        AppColor.shared.colorBackGround.subscribe(onNext: { [weak self] (hex) in
-            UIView.animate(withDuration: 0.7) {
-                self?.btnSave.backgroundColor = UIColor.hexStringToUIColor(hex: hex, alpha: 1)
-                self?.navView.backgroundColor = UIColor.hexStringToUIColor(hex: hex, alpha: 1)
-                self?.backGround2View.backgroundColor = UIColor.hexStringToUIColor(hex: hex, alpha: 1)
-                self?.backGround1View.backgroundColor = UIColor.hexStringToUIColor(hex: hex, alpha: 1)
-            }
-        }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: rx.disposeBag)
     }
+    
+    override func loadMore() {
+        
+    }
+    
+    func fetchData() {
+        ServiceOnline.share.getDataUser(uid: uidUser) { (data) in
+            guard let data = data as? [String: Any] else { return }
+            self.userModel = UserModel(data: data)
+            self.dataSource = [
+                InfoUserDetailSectionModel(userModel: self.userModel, isEdit: self.isEdit),
+                InfoUserSectionModel(userModel: self.userModel, isEdit: self.isEdit),
+                InfoUserAddressSectionModel(userModel: self.userModel, isEdit: self.isEdit),
+                InfoUserEducationSectionModel(userModel: self.userModel, isEdit: self.isEdit),
+                InfoUserJobSectionModel(userModel: self.userModel, isEdit: self.isEdit),
+                SendOutPutEditSectionModel(userModel: self.userModel, isEdit: self.isEdit)
+            ]
+            self.adapter.performUpdates(animated: true, completion: nil)
+        }
+    }
+    
+    @objc override func handleRefresh(_ refreshControl: UIRefreshControl) {
+        refreshControl.endRefreshing()
+        dataSource = [LoadingSectionModel()]
+        self.adapter.performUpdates(animated: true, completion: nil)
+        fetchData()
+    }
+    
+    override func getScrollView() -> UIScrollView? {
+        return collectionView
+    }
+    
+    override func getTypeAction() -> AziBaseViewController.TypeAction {
+        return .LoadMoreAndRefresh
+    }
+    
 }
 
+//MARK: ListAdapterDataSource
+extension InfoUserViewController: ListAdapterDataSource {
+    
+    func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
+        return dataSource
+    }
+    
+    func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
+        return sectionBuilder.getSection(object: object, presenter: self)
+    }
+    
+    func emptyView(for listAdapter: ListAdapter) -> UIView? {
+        return nil
+    }
+    
+}
+
+//MARK: IGListAdapterDelegate
+extension InfoUserViewController: IGListAdapterDelegate {
+    
+    func listAdapter(_ listAdapter: ListAdapter, willDisplay object: Any, at index: Int) {
+        if dataSource.count < 1 { return }
+        if index >= dataSource.count - 1 && !isFetchingMore {
+            loadMore()
+        }
+    }
+    
+    func listAdapter(_ listAdapter: ListAdapter, didEndDisplaying object: Any, at index: Int) {
+        
+    }
+    
+}
+extension InfoUserViewController: SendOutPutEditSectionDelegate {
+    func done() {
+        guard let uid = AppAccount.shared.getUserLogin()?.uid, let userModel = userModel else { return }
+        ServiceOnline.share.changeInfoUser(uid: uid, data: userModel)
+        isEdit = false
+        showToast(string: "Đã cập nhật thông tin cá nhân", duration: 2.0, position: .top)
+        handleRefresh(refreshControl)
+    }
+    
+    func cancel() {
+        isEdit = false
+    }
+    
+    
+}

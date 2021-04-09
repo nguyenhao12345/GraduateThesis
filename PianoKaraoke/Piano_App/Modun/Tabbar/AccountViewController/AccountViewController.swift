@@ -40,8 +40,9 @@ class AccountViewController: AziBaseViewController {
     }
     
     @IBAction func gotoLocal(_ sender: Any?) {
-        let vc = LocalSongsViewController()
-        self.navigationController?.push(vc, animation: true)
+//        let vc = LocalSongsViewController()
+//        self.navigationController?.push(vc, animation: true)
+        AppRouter.shared.gotoLocalSongs(viewController:  self)
     }
     
     @IBAction func changeKeyYoutube(_ sender: Any?) {
@@ -52,16 +53,13 @@ class AccountViewController: AziBaseViewController {
     }
     
     @IBAction func gotoSearchYoutube(_ sender: Any?) {
-        let vc = SearchSongYoutubeViewController()
-        vc.modalTransitionStyle = .crossDissolve
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+        AppRouter.shared.gotoSearchSongYoutube(viewController: self)
     }
     
     @IBAction func clickPlayYoutubeLocal(_ sender: Any?) {
                let vc = PianoCustomViewController()
          vc.config(link: LocalVideoManager.shared.getURLVideoLocal(key: LocalVideoManager.shared.VideoYoutube),
-                   nameSong: "YouTube",
+                   nameSong: "",
                    typeCellInitViewController: TypeCell.CellYoutube)
          vc.modalTransitionStyle = .crossDissolve
          vc.modalPresentationStyle = .fullScreen
@@ -147,13 +145,7 @@ extension AccountViewController: IGListAdapterDelegate {
 }
 extension AccountViewController: SearchNavigationViewDelegate {
     func clickSearch() {
-        let vcOld = self
-        let vc = SearchSongYoutubeViewController()
-        vc.modalTransitionStyle = .crossDissolve
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: false) {
-            vcOld.nav.hiddenBtnCancel()
-        }
+        AppRouter.shared.gotoSearchSongYoutube(viewController: self)
     }
     
     func clickDismiss() {

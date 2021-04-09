@@ -434,7 +434,9 @@ extension AziBaseViewController: UIGestureRecognizerDelegate {
                 ManagerModernAVPlayer.shared.stop()
                 Hero.shared.finish() }
             else
-            if progressX + recognizer.velocity(in: nil).x / view.bounds.width > 0.5 { Hero.shared.finish() }
+            if progressX + recognizer.velocity(in: nil).x / view.bounds.width > 0.5 {
+                ManagerModernAVPlayer.shared.stop()
+                Hero.shared.finish() }
             else {
                 if navigationController != nil {
                     self.navigationController?.heroModalAnimationType = .pageOut(direction: .right)

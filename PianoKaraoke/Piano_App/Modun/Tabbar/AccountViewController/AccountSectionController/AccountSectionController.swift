@@ -48,28 +48,15 @@ class AccountSectionController: SectionController<AccountSectionModel>, ChangeCo
         guard let cellDefault = cellModels[index] as? DefaultIconTextCellModel else { return }
         switch cellDefault.type {
         case .Practice:
-            if #available(iOS 13.0, *) {
-                let vc = PianoPracticeViewController()
-                isDarkSoftUIView = true
-                vc.modalPresentationStyle = .overFullScreen
-                viewController?.present(vc, animated: true, completion: nil)
-            } else {
-                break
-                // Fallback on earlier versions
-            }
+            AppRouter.shared.gotoPianoPractice(viewController: viewController)
         case .ChangePass:
-            let vc = ResetPasswdViewController()
-            vc.modalPresentationStyle = .overFullScreen
-            viewController?.present(vc, animated: false, completion: nil)
-
+            guard let viewController = viewController else { return }
+            AppRouter.shared.gotoResetPassWord(viewController: viewController)
         case .LocalSongs:
-            let vc = LocalSongsViewController()
-            viewController?.navigationController?.push(vc, animation: true)
+            guard let viewController = viewController else { return }
+            AppRouter.shared.gotoLocalSongs(viewController: viewController)
         case .ChangeColor:
-            let vc = ChangeColorAppViewController()
-            vc.modalPresentationStyle = .overFullScreen
-            vc.delegate = self
-            viewController?.present(vc, animated: false, completion: nil)
+            AppRouter.shared.gotoChangeColor(viewController: viewController, delegate: self)
         case .InfoSupport:
             break
         case .Rule:
@@ -77,24 +64,20 @@ class AccountSectionController: SectionController<AccountSectionModel>, ChangeCo
         case .Login:
             break
         case .Logout:
+            guard let viewController = viewController else { return }
             REALM_HELPER.deleteDatabase()
-            let vc = AuthenticateViewController()
-            vc.modalPresentationStyle = .overFullScreen
-            viewController?.present(vc, animated: true, completion: nil)
+            AppRouter.shared.gotoLogin(viewController: viewController)
         case .ChangeInfoUser:
-            break
+            guard let viewController = viewController,
+                let uidUser = AppAccount.shared.getUserLogin()?.uid else { return }
+            AppRouter.shared.gotoEditInfoUser(uidUser: uidUser, viewController: viewController)
         case .InfoUser:
-            guard let cell1 = cellModels.filter({ $0 is UserAccountCellModel}).first as? UserAccountCellModel,
-            let cellView = cell1.getCellView() as? UserAccountCell else { return }
-            let vc = InfoUserViewController()
-            vc.frameImageLast = cellView.avataImg.globalFrame ?? .zero
-            vc.modalPresentationStyle = .overFullScreen
-            viewController?.present(vc, animated: false, completion: nil)
+            guard let viewController = viewController,
+                let uidUser = AppAccount.shared.getUserLogin()?.uid else { return }
+            AppRouter.shared.gotoInfoUser(uidUser: uidUser, viewController: viewController)
         case .SearchYoutube:
-            let vc = SearchSongYoutubeViewController()
-            vc.modalTransitionStyle = .crossDissolve
-            vc.modalPresentationStyle = .fullScreen
-            viewController?.present(vc, animated: true, completion: nil)
+            guard let viewController = viewController else { return }
+            AppRouter.shared.gotoSearchSongYoutube(viewController: viewController)
         case .NONE:
             break
         case .ActiveKey:

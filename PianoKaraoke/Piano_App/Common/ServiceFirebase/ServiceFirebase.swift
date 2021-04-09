@@ -12,17 +12,9 @@ import UIKit
 import FirebaseAuth
 import DateToolsSwift
 import Mapper
+import YoutubeKit
 
 //ID news, ID Comment = timeTamp + UID user
-enum LoginResul {
-    case error(message: String)
-    case success(data: AuthDataResult)
-}
-
-enum RegistResul {
-    case error(message: String)
-    case success(data: AuthDataResult)
-}
 
 class ServiceOnline {
     static var share = ServiceOnline()
@@ -32,6 +24,60 @@ class ServiceOnline {
         let dic = ["key": key, "name": text] as [String : Any]
         ref.child("Search").child(text).setValue(dic)
     }
+    
+    func deleteNews(news: NewsFeedModel, completion: @escaping (Bool)->()) {
+        let storage = Storage.storage()
+        guard let uidUser = AppAccount.shared.getUserLogin()?.uid,
+        let url = news.media?.urlMp3 else { return }
+        let storageRef = storage.reference(forURL: url)
+
+        LOADING_HELPER.show()
+        //Removes image from storage
+        storageRef.delete { error in
+            LOADING_HELPER.dismiss()
+            if error != nil {
+                completion(false)
+            } else {
+                // File deleted successfully
+                self.ref.child("NewsFeed").child(news.commentId).removeValue()
+                self.ref.child("UserWalls").child(uidUser).child(news.commentId).removeValue()
+                self.ref.child("CommentNews").child(uidUser).child(news.commentId).removeValue()
+//                self.ref.child("UserWalls").child(uidUser).child(idNews).setValue(dic)
+                completion(true)
+            }
+        }
+
+    }
+    func createPostNews(title: String, content: String, urlMp3: String, youtubeModel: SearchResult?, detailSongModel: DetailInfoSong?) {
+        
+        let timestamp = NSDate().timeIntervalSince1970
+        guard let uidUser = AppAccount.shared.getUserLogin()?.uid else { return }
+        let idNews: String = "\(timestamp.int)-\(uidUser)"
+        
+        var urlImage: String = ""
+        if let _youtubeModel = youtubeModel {
+            urlImage = _youtubeModel.snippet.thumbnails.high.url ?? ""
+        } else if let _detailSongModel = detailSongModel {
+            urlImage = _detailSongModel.imageSong
+        }
+        
+        
+        let dic: [String : Any] = [
+            "ID": timestamp.int,
+            "comments": idNews,
+            "media": ["urlImage": urlImage,
+                      "urlMp3": urlMp3,
+                      "urlVideo": urlMp3],
+            "title": title,
+            "content": content,
+            "user": AppAccount.shared.getUserLogin().asDictionary() ?? [:]
+        ]
+//        let dicPost: [String : Any] = ["\(idNews)": dic]
+//        ref.child("NewsFeed").setValue(dicPost)
+        ref.child("NewsFeed").child(idNews).setValue(dic)
+        ref.child("UserWalls").child(uidUser).child(idNews).setValue(dic)
+    }
+
     
     func updateLikeNews(news: NewsFeedModel, isLike: Bool) {
         
@@ -118,6 +164,24 @@ class ServiceOnline {
                                                "phone": data.phone,
                                                "address": data.address])
     }
+    
+    func changeInfoUser(uid: String, data: UserModel) {
+        ref.child("User").child(uid).setValue(["UID":data.uid,
+                                               "address": data.address,
+                                               "avata": data.avata,
+                                               "birth": data.birth,
+                                               "education": data.education,
+                                               "email": data.email,
+                                               "homeTown": data.homeTown,
+                                               "infoIntro": data.infoIntro,
+                                               "interests": data.interests,
+                                               "job": data.job,
+                                               "sex": data.sex,
+                                               "userName": data.userName,
+                                               "name": data.name,
+                                               "phone": data.phone])
+    }
+
     
     func registAccount(email: String, password: String, completion: @escaping (RegistResul) -> ()) {
 
@@ -242,63 +306,4 @@ class ServiceOnline {
         ref.child("CommentSongs").child(id).child(time).setValue(dic)
         
     }
-}
-
-
-class AppAccount: NSObject {
-    static let shared: AppAccount = AppAccount()
-    private var user: UserModel? {
-        return REALM_HELPER.getObjects(type: UserModel.self)?.filter("id = 1").first
-    }
-
-    func updateUserModel(user: UserModel) {
-//        self.user = user
-        REALM_HELPER.editObjects(user)
-
-        LocalVideoManager.shared.removeAllLocalFile()
-        AppDelegate.shared.setUpScreenNavigation()
-//        let vc = TabbarViewController()
-//        AppDelegate.shared.window?.rootViewController = vc
-//        AppDelegate.shared.window?.makeKeyAndVisible()
-//
-//        AppColor.shared.colorBackGround.subscribe(onNext: { (hex) in
-//            UIView.animate(withDuration: 0.7) {
-//                UIApplication.shared.statusBarView?.backgroundColor = UIColor.hexStringToUIColor(hex: hex, alpha: 1)
-//            }
-//        }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: rx.disposeBag)
-
-    }
-    
-    func getUserLogin() -> UserModel? {
-        return user
-    }
-}
-import RealmSwift
-
-public class UserModel: Object, Codable {
-    @objc dynamic public var id: Int = 1
-    @objc dynamic public var avata: String = "https://firebasestorage.googleapis.com/v0/b/pianoapp-48598.appspot.com/o/images%2Fhongkong-1.jpg?alt=media&token=638461be-609f-45fe-bef0-5efc0ea7de9f"
-    @objc dynamic public var name: String = "hieu dai ca"
-    @objc dynamic public var phone: String = "0359341128"
-    @objc dynamic public var email: String = ""
-    @objc dynamic public var address: String = ""
-    @objc dynamic public var uid: String = ""
-    @objc dynamic public var userName: String = ""
-    @objc dynamic public var infoIntro: String = ""
-
-    
-    public convenience required init(data: [String: Any]) {
-        self.init()
-        self.name = data["name"] as? String ?? ""
-        self.avata = data["avata"] as? String ?? ""
-        self.phone = data["phone"] as? String ?? ""
-        self.userName = data["userName"] as? String ?? ""
-        self.uid = data["UID"] as? String ?? data["uid"] as? String ?? ""
-        self.address = data["address"] as? String ?? ""
-        self.infoIntro = data["infoIntro"] as? String ?? ""
-    }
-    public override static func primaryKey() -> String? {
-        return "id"
-    }
-    
 }

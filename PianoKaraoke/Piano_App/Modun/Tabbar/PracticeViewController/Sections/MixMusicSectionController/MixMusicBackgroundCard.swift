@@ -58,3 +58,31 @@ class DiagonalCustomView: UIView {
         layer.mask = shapeLayer
     }
 }
+
+class ViewMenuRound: UIView {
+    var path: UIBezierPath!
+
+    override func draw(_ rect: CGRect) {
+        path = UIBezierPath(roundedRect: bounds,
+                            byRoundingCorners: [UIRectCorner.bottomLeft],
+                            cornerRadii: CGSize(width: 2*self.frame.width, height: 2*self.frame.height))
+
+
+        // Specify the fill color and apply it to the path.
+        UIColor.orange.setFill()
+        path.fill()
+
+        // Specify a border (stroke) color.
+        UIColor.purple.setStroke()
+        path.stroke()
+
+    }
+}
+extension BinaryInteger {
+    var degreesToRadians: CGFloat { CGFloat(self) * .pi / 180 }
+}
+
+extension FloatingPoint {
+    var degreesToRadians: Self { self * .pi / 180 }
+    var radiansToDegrees: Self { self * 180 / .pi }
+}

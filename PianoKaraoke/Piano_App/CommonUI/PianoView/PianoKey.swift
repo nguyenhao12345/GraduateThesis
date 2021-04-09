@@ -23,9 +23,10 @@ public final class PianoKey {
     public var isDown = false
     public var noteLayer: NoteNameLayer?
     public var resetsHighLight: Bool = true
-
+    var label: String = ""
     init(color: UIColor, rect: CGRect, type: PianoKeyType, cornerRadius: CGFloat, showNotes: Bool, noteNumber: Int, label: String?, blackKeyWidth: CGFloat = 0, blackKeyHeight: CGFloat = 0) {
         self.noteNumber = noteNumber
+        self.label = label ?? ""
         self.type = type
         let x: CGFloat = 1.0
         let rect = CGRect(x: rect.minX, y: rect.minY - (cornerRadius * 2.0), width: rect.width, height: rect.height + (cornerRadius * 2.0))

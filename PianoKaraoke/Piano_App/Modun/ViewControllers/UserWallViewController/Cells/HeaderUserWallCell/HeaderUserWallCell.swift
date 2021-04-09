@@ -62,6 +62,12 @@ class HeaderUserWallCell: CellModelView<HeaderUserWallCellModel> {
         
     }
     
+    @IBAction func clickViewMoreUser(_ sender: Any?) {
+        guard let viewController = parentViewController,
+            let uidUser = cellModel?.user?.uid else { return }
+        AppRouter.shared.gotoInfoUser(uidUser: uidUser, viewController: viewController)
+    }
+    
     override func bindCellModel(_ cellModel: HeaderUserWallCellModel) {
         super.bindCellModel(cellModel)
         //TODO

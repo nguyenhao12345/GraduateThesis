@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocalSongsViewController" customModule="Piano_App" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocalSongsViewController" customModule="Piano_Karaoke" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="Zwr-Lo-yHS" id="2Ab-vD-FJc"/>
                 <outlet property="navLbl" destination="NHj-sG-sdD" id="aBR-cy-iC3"/>
@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Zwr-Lo-yHS">
-                    <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                    <rect key="frame" x="0.0" y="92" width="414" height="804"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Z2-s8-NTL">
                         <size key="itemSize" width="50" height="50"/>
@@ -82,10 +82,10 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="OrN-uJ-8ar" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Chp-m3-vzS"/>
+                <constraint firstAttribute="bottom" secondItem="Zwr-Lo-yHS" secondAttribute="bottom" id="EBe-Lw-OEY"/>
                 <constraint firstItem="OrN-uJ-8ar" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="PMX-TL-bEx"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OrN-uJ-8ar" secondAttribute="trailing" id="dDI-UK-oaq"/>
                 <constraint firstItem="Zwr-Lo-yHS" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="dxB-QT-WRD"/>
-                <constraint firstItem="Zwr-Lo-yHS" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="fWB-91-yIM"/>
                 <constraint firstItem="Zwr-Lo-yHS" firstAttribute="top" secondItem="OrN-uJ-8ar" secondAttribute="bottom" id="gTM-WD-HHk"/>
                 <constraint firstItem="Zwr-Lo-yHS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hWf-Lf-HCc"/>
             </constraints>

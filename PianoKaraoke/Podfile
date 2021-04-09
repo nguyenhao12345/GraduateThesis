@@ -40,6 +40,7 @@ target 'Piano_App' do
   pod 'Firebase/Analytics'
   pod "FDWaveformView"
   pod 'ModernAVPlayer'
+  pod "PryntTrimmerView"
 #  pod 'UICircularProgressRing'
 
 #  pod 'AlamofireNetworkActivityIndicator', '2.4.0'

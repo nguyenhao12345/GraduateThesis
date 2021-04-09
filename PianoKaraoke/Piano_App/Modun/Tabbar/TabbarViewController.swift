@@ -90,7 +90,7 @@ class TabbarViewController: ESTabBarController {
 
         v3.tabBarItem = ESTabBarItem.init(ExampleTipsBasicContentView(), title: "Trang chủ", image: UIImage(named: "27home"), selectedImage: UIImage(named: "28homed"))
         v1.tabBarItem = ESTabBarItem.init(ExampleTipsBasicContentView(), title: "Khám phá", image: UIImage(named: "Vectorkhampha"), selectedImage: UIImage(named: "khamphaed"))
-        v4.tabBarItem = ESTabBarItem.init(ExampleTipsBasicContentView(), title: "Quản lý", image: UIImage(named: "Artboard 1 copy 34"), selectedImage: UIImage(named: "Artboard 1 copy 34"))
+        v4.tabBarItem = ESTabBarItem.init(ExampleTipsBasicContentView(), title: "Quản lý", image: UIImage(named: "Category3"), selectedImage: UIImage(named: "Category"))
 
         let nav1 = UINavigationController(rootViewController: v1)
         

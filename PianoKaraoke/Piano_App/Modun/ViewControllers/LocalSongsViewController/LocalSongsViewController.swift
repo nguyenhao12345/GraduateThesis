@@ -58,7 +58,7 @@ class LocalSongsViewController: AziBaseViewController {
     }
     
     @IBAction func clickBack(_ sender: Any?) {
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     //MARK: Life cycle
     override func viewDidLoad() {

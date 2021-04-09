@@ -12,8 +12,6 @@
 		9305ECA5254BFB7500E30F64 /* PlayButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305ECA3254BFB7500E30F64 /* PlayButtonCell.swift */; };
 		930EFEE5260C748100CEDF98 /* ResetPasswdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930EFEE3260C748000CEDF98 /* ResetPasswdViewController.swift */; };
 		930EFEE6260C748100CEDF98 /* ResetPasswdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930EFEE4260C748000CEDF98 /* ResetPasswdViewController.xib */; };
-		930EFEEC260C841F00CEDF98 /* InfoUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930EFEEA260C841F00CEDF98 /* InfoUserViewController.swift */; };
-		930EFEED260C841F00CEDF98 /* InfoUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930EFEEB260C841F00CEDF98 /* InfoUserViewController.xib */; };
 		930F69A9253034B500DE4F79 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930F69A7253034B500DE4F79 /* TabbarViewController.swift */; };
 		930F69AA253034B500DE4F79 /* TabbarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930F69A8253034B500DE4F79 /* TabbarViewController.xib */; };
 		930F69C52530378900DE4F79 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930F69BA2530378900DE4F79 /* AccountViewController.xib */; };
@@ -238,6 +236,25 @@
 		93EEDE012614808B0071E807 /* EditRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93EEDDFF2614808B0071E807 /* EditRecordViewController.xib */; };
 		93EEDE022614808B0071E807 /* EditRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EEDE002614808B0071E807 /* EditRecordViewController.swift */; };
 		93EFA2F7261C09380025477A /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 93EFA2F6261C09380025477A /* Sounds */; };
+		93EFA2FA261C1DA30025477A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFA2F9261C1DA20025477A /* AppDelegate.swift */; };
+		93EFA2FC261C1DC70025477A /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFA2FB261C1DC70025477A /* AppRouter.swift */; };
+		93EFA2FE261C1DE70025477A /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFA2FD261C1DE70025477A /* AppColor.swift */; };
+		93EFA301261C1E1E0025477A /* SoftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFA300261C1E1E0025477A /* SoftUIView.swift */; };
+		93EFA304261C1E620025477A /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFA303261C1E620025477A /* RealmHelper.swift */; };
+		93EFA306261C1E8B0025477A /* AppAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFA305261C1E8B0025477A /* AppAccount.swift */; };
+		93EFA308261C1EAA0025477A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFA307261C1EAA0025477A /* UserModel.swift */; };
+		93EFA310261C1F9B0025477A /* InfoUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFA30E261C1F9B0025477A /* InfoUserViewController.swift */; };
+		93EFA311261C1F9B0025477A /* InfoUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93EFA30F261C1F9B0025477A /* InfoUserViewController.xib */; };
+		93EFA317261C23000025477A /* InfoUserSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFA316261C23000025477A /* InfoUserSectionController.swift */; };
+		93EFA328261C274F0025477A /* InfoUserAddressSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFA321261C274E0025477A /* InfoUserAddressSectionController.swift */; };
+		93EFA329261C274F0025477A /* InfoUserJobSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFA323261C274E0025477A /* InfoUserJobSectionController.swift */; };
+		93EFA32A261C274F0025477A /* InfoUserDetailSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFA325261C274E0025477A /* InfoUserDetailSectionController.swift */; };
+		93EFA32B261C274F0025477A /* InfoUserEducationSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFA327261C274F0025477A /* InfoUserEducationSectionController.swift */; };
+		93EFA332261C34A00025477A /* EditButtonRightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93EFA330261C34A00025477A /* EditButtonRightCell.xib */; };
+		93EFA333261C34A00025477A /* EditButtonRightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFA331261C34A00025477A /* EditButtonRightCell.swift */; };
+		93EFA338261C3AFB0025477A /* SendOutPutEditSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFA337261C3AFB0025477A /* SendOutPutEditSectionController.swift */; };
+		93EFA33E261C3B7D0025477A /* SendOutPutEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFA33C261C3B7C0025477A /* SendOutPutEditCell.swift */; };
+		93EFA33F261C3B7D0025477A /* SendOutPutEditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93EFA33D261C3B7C0025477A /* SendOutPutEditCell.xib */; };
 		CC00A7622235904900B261FE /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC00A7612235904900B261FE /* CustomSegmentedControl.swift */; };
 		CC3913B722417B12008B2E0D /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3913B622417B12008B2E0D /* ExtensionUIViewController.swift */; };
 		CC3913BA22417D70008B2E0D /* ExtensionUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3913B922417D70008B2E0D /* ExtensionUITextField.swift */; };
@@ -248,7 +265,6 @@
 		CCAC39CD2215AAE800D89162 /* ServiceFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAC39CC2215AAE800D89162 /* ServiceFirebase.swift */; };
 		CCC5574D21739E7C0021844A /* ExtensionUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC5574C21739E7C0021844A /* ExtensionUIButton.swift */; };
 		CCC557642173CD8E0021844A /* ExtensionCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC557632173CD8E0021844A /* ExtensionCollection.swift */; };
-		CCC881D121711D6000DC6CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC881D021711D6000DC6CB7 /* AppDelegate.swift */; };
 		CCC881D821711D6000DC6CB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCC881D721711D6000DC6CB7 /* Assets.xcassets */; };
 		CCC881DB21711D6000DC6CB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCC881D921711D6000DC6CB7 /* LaunchScreen.storyboard */; };
 		CCC882862172375400DC6CB7 /* KeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC882842172375300DC6CB7 /* KeyButton.swift */; };
@@ -380,8 +396,6 @@
 		9305ECA3254BFB7500E30F64 /* PlayButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButtonCell.swift; sourceTree = "<group>"; };
 		930EFEE3260C748000CEDF98 /* ResetPasswdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswdViewController.swift; sourceTree = "<group>"; };
 		930EFEE4260C748000CEDF98 /* ResetPasswdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPasswdViewController.xib; sourceTree = "<group>"; };
-		930EFEEA260C841F00CEDF98 /* InfoUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoUserViewController.swift; sourceTree = "<group>"; };
-		930EFEEB260C841F00CEDF98 /* InfoUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoUserViewController.xib; sourceTree = "<group>"; };
 		930F69A7253034B500DE4F79 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		930F69A8253034B500DE4F79 /* TabbarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabbarViewController.xib; sourceTree = "<group>"; };
 		930F69BA2530378900DE4F79 /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
@@ -606,6 +620,25 @@
 		93EEDDFF2614808B0071E807 /* EditRecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditRecordViewController.xib; sourceTree = "<group>"; };
 		93EEDE002614808B0071E807 /* EditRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRecordViewController.swift; sourceTree = "<group>"; };
 		93EFA2F6261C09380025477A /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		93EFA2F9261C1DA20025477A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		93EFA2FB261C1DC70025477A /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		93EFA2FD261C1DE70025477A /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		93EFA300261C1E1E0025477A /* SoftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftUIView.swift; sourceTree = "<group>"; };
+		93EFA303261C1E620025477A /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		93EFA305261C1E8B0025477A /* AppAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAccount.swift; sourceTree = "<group>"; };
+		93EFA307261C1EAA0025477A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		93EFA30E261C1F9B0025477A /* InfoUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoUserViewController.swift; sourceTree = "<group>"; };
+		93EFA30F261C1F9B0025477A /* InfoUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoUserViewController.xib; sourceTree = "<group>"; };
+		93EFA316261C23000025477A /* InfoUserSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoUserSectionController.swift; sourceTree = "<group>"; };
+		93EFA321261C274E0025477A /* InfoUserAddressSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoUserAddressSectionController.swift; sourceTree = "<group>"; };
+		93EFA323261C274E0025477A /* InfoUserJobSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoUserJobSectionController.swift; sourceTree = "<group>"; };
+		93EFA325261C274E0025477A /* InfoUserDetailSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoUserDetailSectionController.swift; sourceTree = "<group>"; };
+		93EFA327261C274F0025477A /* InfoUserEducationSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoUserEducationSectionController.swift; sourceTree = "<group>"; };
+		93EFA330261C34A00025477A /* EditButtonRightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditButtonRightCell.xib; sourceTree = "<group>"; };
+		93EFA331261C34A00025477A /* EditButtonRightCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditButtonRightCell.swift; sourceTree = "<group>"; };
+		93EFA337261C3AFB0025477A /* SendOutPutEditSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendOutPutEditSectionController.swift; sourceTree = "<group>"; };
+		93EFA33C261C3B7C0025477A /* SendOutPutEditCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendOutPutEditCell.swift; sourceTree = "<group>"; };
+		93EFA33D261C3B7C0025477A /* SendOutPutEditCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendOutPutEditCell.xib; sourceTree = "<group>"; };
 		A95C325493C77F7089CAE81C /* Pods_Piano_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Piano_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4BD7F963C1452793738AABB /* Pods-Piano_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piano_App.release.xcconfig"; path = "Target Support Files/Pods-Piano_App/Pods-Piano_App.release.xcconfig"; sourceTree = "<group>"; };
 		CC00A7612235904900B261FE /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
@@ -620,7 +653,6 @@
 		CCC5574C21739E7C0021844A /* ExtensionUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIButton.swift; sourceTree = "<group>"; };
 		CCC557632173CD8E0021844A /* ExtensionCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionCollection.swift; sourceTree = "<group>"; };
 		CCC881CD21711D5F00DC6CB7 /* Piano Karaoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Piano Karaoke.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCC881D021711D6000DC6CB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCC881D721711D6000DC6CB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCC881DA21711D6000DC6CB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCC881DC21711D6000DC6CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -781,15 +813,6 @@
 				930EFEE4260C748000CEDF98 /* ResetPasswdViewController.xib */,
 			);
 			path = ResetPasswdViewController;
-			sourceTree = "<group>";
-		};
-		930EFEE9260C841F00CEDF98 /* InfoUserViewController */ = {
-			isa = PBXGroup;
-			children = (
-				930EFEEA260C841F00CEDF98 /* InfoUserViewController.swift */,
-				930EFEEB260C841F00CEDF98 /* InfoUserViewController.xib */,
-			);
-			path = InfoUserViewController;
 			sourceTree = "<group>";
 		};
 		930F69A62530342B00DE4F79 /* Tabbar */ = {
@@ -1051,6 +1074,7 @@
 		935D7DD32536DC8C0076C7F7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				93EFA30D261C1F9B0025477A /* InfoUserViewController */,
 				93EEDDFE2614808B0071E807 /* EditRecordViewController */,
 				93ABA7192614653800B73F63 /* DetailNewsFeedViewController */,
 				93ABA7042614483300B73F63 /* UserWallViewController */,
@@ -1058,7 +1082,6 @@
 				93CCB9962612D52B003889AE /* SearchSongsViewController */,
 				93CCB9A72612D52C003889AE /* SearchSongYoutubeViewController */,
 				93CCB9042612D376003889AE /* PianoCustomViewController */,
-				930EFEE9260C841F00CEDF98 /* InfoUserViewController */,
 				930EFEE2260C748000CEDF98 /* ResetPasswdViewController */,
 				936F5283260B51F800BDA614 /* AuthenticateViewController */,
 				936F5275260B23CF00BDA614 /* PianoPracticeViewController */,
@@ -1493,6 +1516,7 @@
 				93CCB9202612D45D003889AE /* ModelSongLocal.swift */,
 				93CCB9212612D45D003889AE /* ProtocolModel.swift */,
 				93ABA6F2261352E300B73F63 /* NewsFeed.swift */,
+				93EFA307261C1EAA0025477A /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1675,6 +1699,7 @@
 		93D0B01B25FF650300394BE8 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				93EFA2FF261C1E150025477A /* SoftUIView */,
 				9331A15C261B0A16003B0BEC /* DetailMediaViewController */,
 				93A6D4252618483F0064498D /* PopUpIG */,
 				931287152616DC1C0022ACE9 /* DetailNewsFeed */,
@@ -1798,6 +1823,132 @@
 				93EEDE002614808B0071E807 /* EditRecordViewController.swift */,
 			);
 			path = EditRecordViewController;
+			sourceTree = "<group>";
+		};
+		93EFA2F8261C1D760025477A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				93EFA2F9261C1DA20025477A /* AppDelegate.swift */,
+				93EFA2FB261C1DC70025477A /* AppRouter.swift */,
+				93EFA2FD261C1DE70025477A /* AppColor.swift */,
+				93EFA305261C1E8B0025477A /* AppAccount.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		93EFA2FF261C1E150025477A /* SoftUIView */ = {
+			isa = PBXGroup;
+			children = (
+				93EFA300261C1E1E0025477A /* SoftUIView.swift */,
+			);
+			path = SoftUIView;
+			sourceTree = "<group>";
+		};
+		93EFA302261C1E570025477A /* REALM */ = {
+			isa = PBXGroup;
+			children = (
+				93EFA303261C1E620025477A /* RealmHelper.swift */,
+			);
+			path = REALM;
+			sourceTree = "<group>";
+		};
+		93EFA30D261C1F9B0025477A /* InfoUserViewController */ = {
+			isa = PBXGroup;
+			children = (
+				93EFA32C261C347D0025477A /* Cells */,
+				93EFA312261C22E70025477A /* Sections */,
+				93EFA30E261C1F9B0025477A /* InfoUserViewController.swift */,
+				93EFA30F261C1F9B0025477A /* InfoUserViewController.xib */,
+			);
+			path = InfoUserViewController;
+			sourceTree = "<group>";
+		};
+		93EFA312261C22E70025477A /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				93EFA336261C3AFB0025477A /* SendOutPutEditSectionController */,
+				93EFA320261C274E0025477A /* InfoUserAddressSectionController */,
+				93EFA324261C274E0025477A /* InfoUserDetailSectionController */,
+				93EFA326261C274F0025477A /* InfoUserEducationSectionController */,
+				93EFA322261C274E0025477A /* InfoUserJobSectionController */,
+				93EFA315261C23000025477A /* InfoUserSectionController */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		93EFA315261C23000025477A /* InfoUserSectionController */ = {
+			isa = PBXGroup;
+			children = (
+				93EFA316261C23000025477A /* InfoUserSectionController.swift */,
+			);
+			path = InfoUserSectionController;
+			sourceTree = "<group>";
+		};
+		93EFA320261C274E0025477A /* InfoUserAddressSectionController */ = {
+			isa = PBXGroup;
+			children = (
+				93EFA321261C274E0025477A /* InfoUserAddressSectionController.swift */,
+			);
+			path = InfoUserAddressSectionController;
+			sourceTree = "<group>";
+		};
+		93EFA322261C274E0025477A /* InfoUserJobSectionController */ = {
+			isa = PBXGroup;
+			children = (
+				93EFA323261C274E0025477A /* InfoUserJobSectionController.swift */,
+			);
+			path = InfoUserJobSectionController;
+			sourceTree = "<group>";
+		};
+		93EFA324261C274E0025477A /* InfoUserDetailSectionController */ = {
+			isa = PBXGroup;
+			children = (
+				93EFA325261C274E0025477A /* InfoUserDetailSectionController.swift */,
+			);
+			path = InfoUserDetailSectionController;
+			sourceTree = "<group>";
+		};
+		93EFA326261C274F0025477A /* InfoUserEducationSectionController */ = {
+			isa = PBXGroup;
+			children = (
+				93EFA327261C274F0025477A /* InfoUserEducationSectionController.swift */,
+			);
+			path = InfoUserEducationSectionController;
+			sourceTree = "<group>";
+		};
+		93EFA32C261C347D0025477A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				93EFA33B261C3B7C0025477A /* SendOutPutEditCell */,
+				93EFA32F261C34A00025477A /* EditButtonRightCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		93EFA32F261C34A00025477A /* EditButtonRightCell */ = {
+			isa = PBXGroup;
+			children = (
+				93EFA330261C34A00025477A /* EditButtonRightCell.xib */,
+				93EFA331261C34A00025477A /* EditButtonRightCell.swift */,
+			);
+			path = EditButtonRightCell;
+			sourceTree = "<group>";
+		};
+		93EFA336261C3AFB0025477A /* SendOutPutEditSectionController */ = {
+			isa = PBXGroup;
+			children = (
+				93EFA337261C3AFB0025477A /* SendOutPutEditSectionController.swift */,
+			);
+			path = SendOutPutEditSectionController;
+			sourceTree = "<group>";
+		};
+		93EFA33B261C3B7C0025477A /* SendOutPutEditCell */ = {
+			isa = PBXGroup;
+			children = (
+				93EFA33C261C3B7C0025477A /* SendOutPutEditCell.swift */,
+				93EFA33D261C3B7C0025477A /* SendOutPutEditCell.xib */,
+			);
+			path = SendOutPutEditCell;
 			sourceTree = "<group>";
 		};
 		CC3913B522417AFF008B2E0D /* UIViewController */ = {
@@ -1929,6 +2080,8 @@
 		CCC881CF21711D5F00DC6CB7 /* Piano_App */ = {
 			isa = PBXGroup;
 			children = (
+				93EFA302261C1E570025477A /* REALM */,
+				93EFA2F8261C1D760025477A /* Application */,
 				93EFA2F6261C09380025477A /* Sounds */,
 				93E2DBB726171A6800C86495 /* ModernAVPlayer */,
 				93CCB91B2612D3D9003889AE /* Models */,
@@ -1939,7 +2092,6 @@
 				93DC282F25FA0B080045F927 /* ScreenRecorder */,
 				CCC557682173EF3B0021844A /* Common */,
 				CCC557562173C7F70021844A /* Modun */,
-				CCC881D021711D6000DC6CB7 /* AppDelegate.swift */,
 				CC80FFA722154A7A004E3C79 /* GoogleService-Info.plist */,
 				CCC881D721711D6000DC6CB7 /* Assets.xcassets */,
 				CCC881D921711D6000DC6CB7 /* LaunchScreen.storyboard */,
@@ -2361,12 +2513,12 @@
 				93ABA7082614483300B73F63 /* UserWallViewController.xib in Resources */,
 				930F69F325304D5C00DE4F79 /* FeedHeaderSlidePageCell.xib in Resources */,
 				93CCBA092612E798003889AE /* NewsFeedMeCommentCell.xib in Resources */,
+				93EFA33F261C3B7D0025477A /* SendOutPutEditCell.xib in Resources */,
 				93CCB9C82612D7FA003889AE /* PianoCustomViewController.xib in Resources */,
 				93491B23253805C500A49BDE /* CommentBackgroundCardCell.xib in Resources */,
 				CCF4A9B7252F7A5800897ECF /* BottomCompactCell.xib in Resources */,
 				93C5BF4F25345F2300DA172A /* TopMusicCell.xib in Resources */,
 				93ABA7152614515E00B73F63 /* HeaderUserWallCell.xib in Resources */,
-				930EFEED260C841F00CEDF98 /* InfoUserViewController.xib in Resources */,
 				930F69C52530378900DE4F79 /* AccountViewController.xib in Resources */,
 				93C5BF26253403E300DA172A /* VietSongDetailCell.xib in Resources */,
 				93C5BF2D253415A400DA172A /* LoadingSuggestCell.xib in Resources */,
@@ -2406,6 +2558,7 @@
 				93C5C0BE253499CA00DA172A /* SearchGlobalCell.xib in Resources */,
 				93CCB9B42612D52C003889AE /* SearchSongYoutubeViewController.xib in Resources */,
 				930F69F925304EAF00DE4F79 /* FeedHeaderDetailFSPagerCell.xib in Resources */,
+				93EFA332261C34A00025477A /* EditButtonRightCell.xib in Resources */,
 				93491B112537EC5200A49BDE /* ReactionMusicCell.xib in Resources */,
 				CCF4A9AC252F7A5800897ECF /* ManualLoadingCell.xib in Resources */,
 				931287192616DC3C0022ACE9 /* DetailNewsFeedViewBottom.xib in Resources */,
@@ -2428,6 +2581,7 @@
 				93491B2A25380B2600A49BDE /* CommentUserCell.xib in Resources */,
 				CCF4A9B5252F7A5800897ECF /* BlockShadowCell.xib in Resources */,
 				93CCB9AC2612D52C003889AE /* HotKeyWordCell.xib in Resources */,
+				93EFA311261C1F9B0025477A /* InfoUserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2522,6 +2676,7 @@
 				936F526B260AF47D00BDA614 /* DefaultIconTextCell.swift in Sources */,
 				93ABA6F3261352E300B73F63 /* NewsFeed.swift in Sources */,
 				CCF4A979252F7A5800897ECF /* Data.swift in Sources */,
+				93EFA308261C1EAA0025477A /* UserModel.swift in Sources */,
 				938BB98E25FB3CA300AC664C /* FileManagerUtils.swift in Sources */,
 				CCF4A97B252F7A5800897ECF /* NSObject+Rx.swift in Sources */,
 				93E2DBBF26171AA700C86495 /* PlayerConfigurationExample.swift in Sources */,
@@ -2558,6 +2713,7 @@
 				93D0B082260308BE00394BE8 /* Fatten.swift in Sources */,
 				93ABA6FF2613792600B73F63 /* PostNewsFeedCell.swift in Sources */,
 				CCF4A968252F7A5800897ECF /* UIImage.swift in Sources */,
+				93EFA32A261C274F0025477A /* InfoUserDetailSectionController.swift in Sources */,
 				93D0B083260308BE00394BE8 /* AutoPan.swift in Sources */,
 				CCF4A965252F7A5800897ECF /* UITableView.swift in Sources */,
 				931507F02537026300444CD2 /* DetailMediaCell.swift in Sources */,
@@ -2573,6 +2729,7 @@
 				93D0B09A260308BE00394BE8 /* KnobStyleKit2.swift in Sources */,
 				93D0B0372601DD3F00394BE8 /* LocalSongsYoutubeSectionController.swift in Sources */,
 				CCF4A9AE252F7A5800897ECF /* TopCompactCell.swift in Sources */,
+				93EFA306261C1E8B0025477A /* AppAccount.swift in Sources */,
 				93CCB9B02612D52C003889AE /* HotKeyWordSearchSectionController.swift in Sources */,
 				CCF4A952252F7A5800897ECF /* Sequence.swift in Sources */,
 				CCC882A8217272C900DC6CB7 /* Tangent.swift in Sources */,
@@ -2586,6 +2743,7 @@
 				CCF4A9B3252F7A5800897ECF /* ProcessViewCell.swift in Sources */,
 				93D0B08D260308BE00394BE8 /* RadioButton.swift in Sources */,
 				93C5C0BD253499CA00DA172A /* SearchGlobalCell.swift in Sources */,
+				93EFA317261C23000025477A /* InfoUserSectionController.swift in Sources */,
 				CCF4A981252F7A5800897ECF /* Int-Extension.swift in Sources */,
 				93C5BF2E253415A400DA172A /* LoadingSuggestCell.swift in Sources */,
 				CCC5574D21739E7C0021844A /* ExtensionUIButton.swift in Sources */,
@@ -2596,6 +2754,8 @@
 				930EFEE5260C748100CEDF98 /* ResetPasswdViewController.swift in Sources */,
 				CCF4A982252F7A5800897ECF /* UILabel-Extension.swift in Sources */,
 				CCF4A95F252F7A5800897ECF /* NSLayoutConstraint.swift in Sources */,
+				93EFA338261C3AFB0025477A /* SendOutPutEditSectionController.swift in Sources */,
+				93EFA2FA261C1DA30025477A /* AppDelegate.swift in Sources */,
 				930F69C92530378900DE4F79 /* FeedsViewController.swift in Sources */,
 				93C5C0AA253473C800DA172A /* SegmentedMenuPresenter.swift in Sources */,
 				936F52562609D3A500BDA614 /* MeCommentCell.swift in Sources */,
@@ -2606,6 +2766,8 @@
 				93D0B096260308BE00394BE8 /* FlatKnobStyleKit.swift in Sources */,
 				CCF4A955252F7A5800897ECF /* CGFloat.swift in Sources */,
 				CCF4A96E252F7A5800897ECF /* UIApplication.swift in Sources */,
+				93EFA33E261C3B7D0025477A /* SendOutPutEditCell.swift in Sources */,
+				93EFA310261C1F9B0025477A /* InfoUserViewController.swift in Sources */,
 				CCF4A9BE252F7A5800897ECF /* FullTextContentSection.swift in Sources */,
 				930F69EB25304D3D00DE4F79 /* FSPagerViewObjcCompat.m in Sources */,
 				CC63C2B82219CEBD00780259 /* LoadImage.swift in Sources */,
@@ -2616,6 +2778,7 @@
 				93D0B094260308BE00394BE8 /* MIDILearnable.swift in Sources */,
 				93CCB9CA2612D7FA003889AE /* StopVideoRecordingWindow.swift in Sources */,
 				93C5BF5B25346EC500DA172A /* HeaderMixMusicCell.swift in Sources */,
+				93EFA2FE261C1DE70025477A /* AppColor.swift in Sources */,
 				CCF4A998252F7A5800897ECF /* AZVideoPlayerManager.swift in Sources */,
 				93A6D42F261848DF0064498D /* CommentChangeAuthorsViewController.swift in Sources */,
 				CCF4A975252F7A5800897ECF /* UICollectionViewCell.swift in Sources */,
@@ -2654,8 +2817,8 @@
 				CCF4A97D252F7A5800897ECF /* UserDefaults.swift in Sources */,
 				93C5C0AF253473C800DA172A /* SegmentedMenuRouter.swift in Sources */,
 				CCF4A969252F7A5800897ECF /* UIViewController.swift in Sources */,
-				CCC881D121711D6000DC6CB7 /* AppDelegate.swift in Sources */,
 				93C5BF352534215F00DA172A /* LoadingSongCell.swift in Sources */,
+				93EFA329261C274F0025477A /* InfoUserJobSectionController.swift in Sources */,
 				930F69E625304D3D00DE4F79 /* FSPageViewTransformer.swift in Sources */,
 				CCF4A9AA252F7A5800897ECF /* BlankSpaceCell.swift in Sources */,
 				93D0B092260308BE00394BE8 /* MIDIButton.swift in Sources */,
@@ -2672,6 +2835,7 @@
 				CCF4A9B8252F7A5800897ECF /* BottomCompactCell.swift in Sources */,
 				93C5C0D42535459F00DA172A /* HImageViewConfigure.swift in Sources */,
 				930F69E525304D3D00DE4F79 /* FSPagerView.swift in Sources */,
+				93EFA328261C274F0025477A /* InfoUserAddressSectionController.swift in Sources */,
 				93A6D42B261848890064498D /* PopupIGSectionController.swift in Sources */,
 				93D0B08A260308BE00394BE8 /* SynthUIButton.swift in Sources */,
 				93491B172537FC6400A49BDE /* CommentDetailSongSectionController.swift in Sources */,
@@ -2690,6 +2854,7 @@
 				93CCBA0A2612E798003889AE /* NewsFeedReactionCell.swift in Sources */,
 				93D0B08C260308BE00394BE8 /* LedButton.swift in Sources */,
 				93A6D41F261729230064498D /* NewsDetailNewsFeedHeaderSectionController.swift in Sources */,
+				93EFA304261C1E620025477A /* RealmHelper.swift in Sources */,
 				93CCB9BD2612D6AB003889AE /* Note.swift in Sources */,
 				93C5BF5025345F2300DA172A /* TopMusicCell.swift in Sources */,
 				93CCB9272612D45E003889AE /* ModelListSongs.swift in Sources */,
@@ -2705,6 +2870,7 @@
 				93CCB92C2612D45E003889AE /* ProtocolModel.swift in Sources */,
 				CCF4A985252F7A5800897ECF /* UIApplication-Helper.swift in Sources */,
 				CCF4A972252F7A5800897ECF /* Color.swift in Sources */,
+				93EFA333261C34A00025477A /* EditButtonRightCell.swift in Sources */,
 				93C5C0D52535459F00DA172A /* HUIImageView.swift in Sources */,
 				CCF4A961252F7A5800897ECF /* UISearchBar.swift in Sources */,
 				CCF4A9BB252F7A5800897ECF /* ManualLoadingSection.swift in Sources */,
@@ -2714,9 +2880,9 @@
 				93CCB9BB2612D6AB003889AE /* PianoKey.swift in Sources */,
 				936F5264260AEE1F00BDA614 /* UserAccountCell.swift in Sources */,
 				930F69A9253034B500DE4F79 /* TabbarViewController.swift in Sources */,
+				93EFA301261C1E1E0025477A /* SoftUIView.swift in Sources */,
 				93491B2925380B2600A49BDE /* CommentUserCell.swift in Sources */,
 				CC3913BA22417D70008B2E0D /* ExtensionUITextField.swift in Sources */,
-				930EFEEC260C841F00CEDF98 /* InfoUserViewController.swift in Sources */,
 				93D0B090260308BE00394BE8 /* StepperStyleKit.swift in Sources */,
 				93CCB92D2612D45E003889AE /* ModelLayoutCell.swift in Sources */,
 				93EEDE022614808B0071E807 /* EditRecordViewController.swift in Sources */,
@@ -2734,12 +2900,14 @@
 				93E2DBB926171A7600C86495 /* MediaResource.swift in Sources */,
 				93D0B08F260308BE00394BE8 /* Stepper.swift in Sources */,
 				93ABA6F026133EA800B73F63 /* MediaDefaultCell.swift in Sources */,
+				93EFA2FC261C1DC70025477A /* AppRouter.swift in Sources */,
 				93D0B00325FF096C00394BE8 /* LocalVideoManager.swift in Sources */,
 				CCF4A9AF252F7A5800897ECF /* EmptyDataCell.swift in Sources */,
 				93ABA6F82613789B00B73F63 /* PostNewsSectionController.swift in Sources */,
 				CCF4A9A4252F7A5800897ECF /* LoadingCellShimmer.swift in Sources */,
 				CCF4A98A252F7A5800897ECF /* FileManager.swift in Sources */,
 				CCF4A963252F7A5800897ECF /* UIAlertController+Customization.swift in Sources */,
+				93EFA32B261C274F0025477A /* InfoUserEducationSectionController.swift in Sources */,
 				9319B928260D8E82009E56CC /* CustomAVPlayer2.swift in Sources */,
 				CCF4A974252F7A5800897ECF /* UINavigationController.swift in Sources */,
 				93C5C0AB253473C800DA172A /* SegmentedMenuView.swift in Sources */,

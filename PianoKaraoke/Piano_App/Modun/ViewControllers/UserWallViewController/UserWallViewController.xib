@@ -22,8 +22,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Zwr-Lo-yHS">
-                    <rect key="frame" x="0.0" y="94" width="414" height="768"/>
-                    <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="0.0" y="94" width="414" height="802"/>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Z2-s8-NTL">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -73,10 +73,10 @@
             <constraints>
                 <constraint firstItem="Xvd-Vb-k2b" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Azf-nC-ihs"/>
                 <constraint firstItem="Zwr-Lo-yHS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Kq4-fF-z4p"/>
-                <constraint firstItem="Zwr-Lo-yHS" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="LpU-os-Ty6"/>
                 <constraint firstItem="Zwr-Lo-yHS" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Md5-3F-qay"/>
                 <constraint firstItem="Zwr-Lo-yHS" firstAttribute="top" secondItem="Xvd-Vb-k2b" secondAttribute="bottom" id="Tti-qV-fvG"/>
                 <constraint firstItem="Xvd-Vb-k2b" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="c9L-i1-btS"/>
+                <constraint firstAttribute="bottom" secondItem="Zwr-Lo-yHS" secondAttribute="bottom" id="jB3-Jy-5Cm"/>
                 <constraint firstAttribute="trailing" secondItem="Xvd-Vb-k2b" secondAttribute="trailing" id="vvC-B4-f8V"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

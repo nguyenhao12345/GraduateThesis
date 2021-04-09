@@ -27,10 +27,10 @@ public class ScreenRecorder
         case best = 2.0
     }
     
-    public var recordingQua : recordingQuality = .high
-    var assetWriter:AVAssetWriter!
-    var videoInput:AVAssetWriterInput!
-    var audioInput:AVAssetWriterInput!
+    public var recordingQua : recordingQuality = .normal
+    var assetWriter:AVAssetWriter?
+//    var videoInput:AVAssetWriterInput?
+    var audioInput:AVAssetWriterInput?
     
     var recordCompleted:((Error?) ->Void)?
     
@@ -57,43 +57,47 @@ public class ScreenRecorder
 
                 ] as [String : Any]
             
-            let videoSettings = [
-                AVVideoCodecKey : AVVideoCodecType.h264,
-                AVVideoWidthKey : UIScreen.main.bounds.size.width * recordingQua.rawValue,
-                AVVideoHeightKey : UIScreen.main.bounds.size.height * recordingQua.rawValue
-                ] as [String : Any]
-            videoInput  = AVAssetWriterInput (mediaType: AVMediaType.video, outputSettings: videoSettings)
+//            let videoSettings = [
+//                AVVideoCodecKey : AVVideoCodecType.h264,
+//                AVVideoWidthKey : UIScreen.main.bounds.size.width * recordingQua.rawValue,
+//                AVVideoHeightKey : UIScreen.main.bounds.size.height * recordingQua.rawValue
+//                ] as [String : Any]
+//            videoInput  = AVAssetWriterInput (mediaType: AVMediaType.video, outputSettings: videoSettings)
             
-            videoInput.expectsMediaDataInRealTime = true
+//            videoInput?.expectsMediaDataInRealTime = true
             
             audioInput = AVAssetWriterInput (mediaType: AVMediaType.audio, outputSettings: audioSettings)
             
-            audioInput.expectsMediaDataInRealTime = true
+            audioInput?.expectsMediaDataInRealTime = true
             
             
-            if assetWriter.canAdd(audioInput) {
-                assetWriter.add(audioInput)
+            if let _audioInput = audioInput {
+                if assetWriter?.canAdd(_audioInput) ?? false {
+                    assetWriter?.add(_audioInput)
+                }
             }
-            
-            if assetWriter.canAdd(videoInput) {
-                assetWriter.add(videoInput)
-            }
+//            if let _videoInput = videoInput {
+//                if assetWriter?.canAdd(_videoInput) ?? false {
+//                    assetWriter?.add(_videoInput)
+//                }
+//            }
+
             RPScreenRecorder.shared().startCapture(handler: { (sample, bufferType, error) in
-                print(bufferType.rawValue)
+                print("bufferType.rawValue \(bufferType.rawValue)")
                 
                 recordingHandler(error)
                 
                 DispatchQueue.main.async { [weak self] in
                     if CMSampleBufferDataIsReady(sample)
                     {
-                        if self?.assetWriter.status == .unknown
+                        if self?.assetWriter?.status == .unknown
                         {
-                            self?.assetWriter.startWriting()
-                            self?.assetWriter.startSession(atSourceTime: CMSampleBufferGetPresentationTimeStamp(sample))
+                            self?.assetWriter?.startWriting()
+                            self?.assetWriter?.startSession(atSourceTime: CMSampleBufferGetPresentationTimeStamp(sample))
                         }
                         
-                        if self?.assetWriter.status == .failed {
-                            print("Error occured, status = \(String(describing: self?.assetWriter.status.rawValue)), \(String(describing: self?.assetWriter.error!.localizedDescription)) \(String(describing: self?.assetWriter.error))")
+                        if self?.assetWriter?.status == .failed {
+                            print("Error occured, status = \(String(describing: self?.assetWriter?.status.rawValue)), \(String(describing: self?.assetWriter?.error!.localizedDescription)) \(String(describing: self?.assetWriter?.error))")
                             
                             
                             self?.stopRecording { (error) in
@@ -104,18 +108,18 @@ public class ScreenRecorder
                             
                             return
                         }
-                        if (bufferType == .video)
-                        {
-                            if self?.videoInput.isReadyForMoreMediaData ?? false
+//                        if (bufferType == .video)
+//                        {
+//                            if self?.videoInput?.isReadyForMoreMediaData ?? false
+//                            {
+//                                self?.videoInput?.append(sample)
+//                                print("video")
+//                            }
+//                        }
+                        if (bufferType == .audioApp){
+                            if self?.audioInput?.isReadyForMoreMediaData ?? false
                             {
-                                self?.videoInput.append(sample)
-                                print("video")
-                            }
-                        }
-                        if (bufferType == .audioMic){
-                            if self?.audioInput.isReadyForMoreMediaData ?? false
-                            {
-                                self?.audioInput.append(sample)
+                                self?.audioInput?.append(sample)
                                 print("audio")
                             }
                         }
@@ -140,8 +144,14 @@ public class ScreenRecorder
             RPScreenRecorder.shared().stopCapture
                 {    (error) in
                     handler(error)
-                    self.assetWriter.finishWriting
+//                    self.videoInput?.markAsFinished()
+                    self.audioInput?.markAsFinished()
+                    self.assetWriter?.finishWriting
                         {
+//                            self.videoInput = nil
+                            self.audioInput = nil
+                            self.assetWriter = nil
+
                     }
             }
         } else {
@@ -219,7 +229,7 @@ final public class ScreenRecorder2 {
     } catch {}
 
     do {
-      try videoWriter = AVAssetWriter(outputURL: newVideoOutputURL, fileType: AVFileType.mp4)
+        try videoWriter = AVAssetWriter(outputURL: newVideoOutputURL, fileType: AVFileType.mov)
     } catch let writerError as NSError {
       error(writerError)
       videoWriter = nil
@@ -237,10 +247,17 @@ final public class ScreenRecorder2 {
     }
 
     if #available(iOS 11.0, *) {
-        let videoSettings: [String: Any] = [AVVideoCodecKey: AVVideoCodecType.h264,
-                                            AVVideoWidthKey: passingSize.width,
-                                            AVVideoHeightKey: passingSize.height]
-        let newVideoWriterInput = AVAssetWriterInput(mediaType: AVMediaType.video, outputSettings: videoSettings)
+        let videoSettings = [
+            AVFormatIDKey : kAudioFormatFLAC,
+            AVNumberOfChannelsKey : 1,
+            AVSampleRateKey : 12000,
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+
+            ] as [String : Any]
+//        let videoSettings: [String: Any] = [AVVideoCodecKey: AVVideoCodecType.h264,
+//                                            AVVideoWidthKey: passingSize.width,
+//                                            AVVideoHeightKey: passingSize.height]
+        let newVideoWriterInput = AVAssetWriterInput(mediaType: AVMediaType.audio, outputSettings: videoSettings)
         self.videoWriterInput = newVideoWriterInput
         videoWriter?.add(newVideoWriterInput)
 
@@ -260,6 +277,8 @@ final public class ScreenRecorder2 {
             
             switch sampleType {
             case .video:
+                break
+            case .audioApp:
                 self.handleSampleBuffer(sampleBuffer: sampleBuffer)
             default:
                 break
@@ -269,6 +288,7 @@ final public class ScreenRecorder2 {
         // Fallback on earlier versions
     }
   }
+    
 
   private func handleSampleBuffer(sampleBuffer: CMSampleBuffer) {
     if self.videoWriter?.status == AVAssetWriter.Status.unknown {
@@ -279,13 +299,14 @@ final public class ScreenRecorder2 {
       self.videoWriterInput?.append(sampleBuffer)
     }
   }
+    
 
   /**
    Stops recording the content of the application screen, after calling startRecording
 
   - Parameter errorHandler: Called when an error is found
   */
-  public func stoprecording(errorHandler: @escaping (Error) -> Void) {
+  public func stoprecording(errorHandler: @escaping (Error) -> Void, completionHandler handler: @escaping () -> Void) {
     if #available(iOS 11.0, *) {
         RPScreenRecorder.shared().stopCapture( handler: { error in
             if let error = error {
@@ -298,6 +319,7 @@ final public class ScreenRecorder2 {
 
     self.videoWriterInput?.markAsFinished()
     self.videoWriter?.finishWriting {
+        handler()
       self.saveVideoToCameraRoll(errorHandler: errorHandler)
     }
   }

@@ -128,6 +128,10 @@ open class CellBuilder: BaseCellBuilder {
         self.cellModels.safeAppend(cellModel)
     }
     
+    public func addEditButtonRight() {
+        let cellModel = EditButtonRightCellModel()
+        self.cellModels.safeAppend(cellModel)
+    }
     public func addBlankSpace(_ height: CGFloat = 8, width: CGFloat? = nil, color: UIColor = UIColor.white){
         let cellModel = BlankSpaceCellModel(height: height, _width: width)
         cellModel.color = color

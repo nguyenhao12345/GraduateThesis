@@ -16,10 +16,14 @@ protocol PopupIGSectionDelegate: class {
 class PopupIGSectionModel: AziBaseSectionModel {
     var dataModels: [String] = []
     var attributes: [NSAttributedString.Key : Any]? = nil
+    var txthightLight: String = ""
+
     init(dataModels: [String] = [],
-         attributes: [NSAttributedString.Key : Any]? = nil) {
+         attributes: [NSAttributedString.Key : Any]? = nil,
+         txthightLight: String = "") {
         self.dataModels = dataModels
         self.attributes = attributes
+        self.txthightLight = txthightLight
         if self.attributes == nil {
             self.attributes = [.font : UIFont.kohoMedium16,
                                .foregroundColor : UIColor.init(hexString: "A1A1A1")]
@@ -52,7 +56,7 @@ class PopupIGSectionController: SectionController<PopupIGSectionModel> {
     override func didSelectItem(at index: Int) {
         guard let cell = cellModelAtIndex(index) as? HeaderSimpleCellModel,
             let viewController = viewController as? PopupIGViewController else { return }
-        viewController.completionHandle?(cell.attributed?.string ?? "")
+        viewController.completionHandle?(cell.attributed?.string ?? "", sectionModel?.dataModels.firstIndex(of: cell.attributed?.string ?? "") ?? 0)
     }
 
 }
@@ -64,7 +68,12 @@ class PopupIGCellBuilder: CellBuilder {
         addBlankSpace(6, color: .clear)
         for (index, i) in sectionModel.dataModels.enumerated() {
             addBlankSpace(12, color: .clear)
-            addSimpleText(NSMutableAttributedString(string: i, attributes: sectionModel.attributes), height: nil)
+            if i == sectionModel.txthightLight {
+                addSimpleText(NSMutableAttributedString(string: i, attributes: [.font : UIFont.HelveticaNeueBold16,
+                                                                                .foregroundColor : UIColor.red]), height: nil)
+            } else {
+                addSimpleText(NSMutableAttributedString(string: i, attributes: sectionModel.attributes), height: nil)
+            }
             addBlankSpace(12, color: .clear)
             if index != sectionModel.dataModels.count - 1 {
                 addSingleLine(true)

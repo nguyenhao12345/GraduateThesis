@@ -94,11 +94,13 @@ class InstrumentSuggestCell: CellModelView<InstrumentSuggestCellModel>, UIGestur
         if ((cellModel.dataModel?.youtubeModel) != nil) {
             imagePlay.isHidden = true
             viewLevel.isHidden = true
-            text3Lbl.text = "Nguồn: Youtube"
+            text3Lbl.text = ""
+            nameSongLbl.numberOfLines = 3
         } else {
             imagePlay.isHidden = false
             viewLevel.isHidden = false
             text3Lbl.text = "Độ khó"
+            nameSongLbl.numberOfLines = 2
         }
         imagePlay.isHidden = cellModel.isHiddenImagePlay
         rightConst.constant = -self.height

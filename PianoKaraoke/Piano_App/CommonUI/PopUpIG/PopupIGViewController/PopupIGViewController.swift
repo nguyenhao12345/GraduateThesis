@@ -12,25 +12,26 @@ import IGListKit
 class PopupIGViewController: CommentChangeAuthorsViewController {
     
     //MARK: Outlets
-    var completionHandle: ((String) -> Void)? = nil
+    var completionHandle: ((String, Int) -> Void)? = nil
     //MARK: Properties
 //    var titlePop: String = ""
-    
+    var txthightLight: String = ""
     //MARK: Init
     
     class func showAlert(viewController: UIViewController?,
                          title: String,
                          dataSource: [String],
                          hightLight: String = "",
-                         attributes: [NSAttributedString.Key : Any]? = nil, completion: ((String) -> Void)? = nil) {
+                         attributes: [NSAttributedString.Key : Any]? = nil, completion: ((String, Int) -> Void)? = nil) {
         let vc = PopupIGViewController()
         vc.modalPresentationStyle = .overFullScreen
         vc.titlePop = title
-        vc.dataSource.append(PopupIGSectionModel(dataModels: dataSource, attributes: attributes))
-        vc.completionHandle = { value in
+        vc.txthightLight = hightLight
+        vc.dataSource.append(PopupIGSectionModel(dataModels: dataSource, attributes: attributes, txthightLight: hightLight))
+        vc.completionHandle = { (value, index) in
             vc.dismiss(animated: false) {
                 DispatchQueue.main.async {
-                    completion?(value)
+                    completion?(value, index)
                 }
             }
         }

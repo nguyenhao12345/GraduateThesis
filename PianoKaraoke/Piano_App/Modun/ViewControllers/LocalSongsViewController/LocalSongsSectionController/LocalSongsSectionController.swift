@@ -93,7 +93,7 @@ class LocalSongsCellBuilder: CellBuilder {
         }
         addBlankSpace(12, width: nil, color: .clear)
         addSimpleText(Helper.getAttributesStringWithFontAndColor(
-            string: "Songs Default:", font: .HelveticaNeueBold16, color: .defaultText), height: nil, spaceWitdh: 30)
+            string: "Đã kiểm duyệt", font: .HelveticaNeueBold16, color: .defaultText), height: nil, spaceWitdh: 30)
         addBlankSpace(12, width: nil, color: .clear)
         for i in dataModels {
             let cell = InstrumentSuggestCellModel()

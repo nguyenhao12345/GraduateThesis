@@ -86,19 +86,23 @@ extension ResultSearchYoutubeSectionController: LocalVideoManagerDelegate {
             //LocalTmp
             let vc = PianoCustomViewController()
             vc.config(link: LocalVideoManager.shared.getURLVideoLocal(key: LocalVideoManager.shared.VideoYoutube),
-                       nameSong: "YouTube",
+                       nameSong: "",
                        typeCellInitViewController: TypeCell.CellYoutube)
              vc.modalTransitionStyle = .crossDissolve
              vc.modalPresentationStyle = .fullScreen
+            vc.youtubeModel = sectionModel?.dataModel
+            vc.detailSongModel = nil
              viewController?.present(vc, animated: true, completion: nil)
         } else {
             let vc = PianoCustomViewController()
              vc.config(link: LocalVideoManager.shared.getURLVideoLocal(key: key),
-                       nameSong: "YouTube",
+                       nameSong: "",
                        typeCellInitViewController: TypeCell.CellYoutube)
              vc.modalTransitionStyle = .crossDissolve
              vc.modalPresentationStyle = .fullScreen
-             viewController?.present(vc, animated: true, completion: nil)
+            vc.youtubeModel = sectionModel?.dataModel
+            vc.detailSongModel = nil
+            viewController?.present(vc, animated: true, completion: nil)
         }
     }
 }

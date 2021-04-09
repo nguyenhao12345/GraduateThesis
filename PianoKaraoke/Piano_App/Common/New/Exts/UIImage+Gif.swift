@@ -11,6 +11,18 @@ import UIKit
 import ImageIO
 import Photos
 
+class ImageViewRound: UIImageView {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let radius: CGFloat = self.bounds.size.height / 2.0
+        self.layer.cornerRadius = radius
+    }
+    override func setNeedsLayout() {
+        super.setNeedsLayout()
+        
+    }
+}
+
 extension UIImageView {
     var contentClippingRect: CGRect {
         guard let image = image else { return bounds }

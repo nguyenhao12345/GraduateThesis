@@ -71,6 +71,7 @@ extension UIFont {
     public static let HelveticaNeueMedium14 : UIFont = UIFont(name:"HelveticaNeue-Medium", size: 14)!
     public static let HelveticaNeueMedium18 : UIFont = UIFont(name:"HelveticaNeue-Medium", size: 18)!
     public static let HelveticaNeueLight12 : UIFont = UIFont(name:"HelveticaNeue-Light", size: 12)!
+    public static let HelveticaNeueLight9 : UIFont = UIFont(name:"HelveticaNeue-Light", size: 9)!
 
 //    public static let HelveticaNeueMedium14 : UIFont = UIFont(name:"HelveticaNeue-Medium", size: 14)!
 

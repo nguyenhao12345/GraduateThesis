@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="Jjm-C9-Zvz" customClass="EditButtonRightCell" customModule="Piano_Karaoke" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="303" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Bv-YR-UPV">
+                <rect key="frame" x="0.0" y="0.0" width="303" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P8q-4s-fs6">
+                        <rect key="frame" x="0.0" y="0.0" width="303" height="72"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGb-YC-msh">
+                                <rect key="frame" x="282" y="-12" width="33" height="32.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="1tN-RP-Xos"/>
+                                </constraints>
+                                <state key="normal" image="edit-stall"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xGb-YC-msh" firstAttribute="top" secondItem="P8q-4s-fs6" secondAttribute="top" constant="-12" id="8AC-JJ-wXa"/>
+                            <constraint firstAttribute="trailing" secondItem="xGb-YC-msh" secondAttribute="trailing" constant="-12" id="hfh-XB-Nzk"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="P8q-4s-fs6" firstAttribute="leading" secondItem="4Bv-YR-UPV" secondAttribute="leading" id="DIa-An-5qg"/>
+                    <constraint firstItem="P8q-4s-fs6" firstAttribute="top" secondItem="4Bv-YR-UPV" secondAttribute="top" id="LWA-q7-WtQ"/>
+                    <constraint firstAttribute="bottom" secondItem="P8q-4s-fs6" secondAttribute="bottom" id="MC3-7B-ym0"/>
+                    <constraint firstAttribute="trailing" secondItem="P8q-4s-fs6" secondAttribute="trailing" id="foB-EN-hjy"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="303" height="72"/>
+            <point key="canvasLocation" x="321.01449275362319" y="99.107142857142847"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="edit-stall" width="32.5" height="32.5"/>
+    </resources>
+</document>

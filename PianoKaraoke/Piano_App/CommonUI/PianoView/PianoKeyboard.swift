@@ -9,8 +9,8 @@
 import UIKit
 
 @objc public protocol PianoKeyboardDelegate: class {
-    func pianoKeyUp(_ keyNumber: Int, view: PianoKeyboard)
-    func pianoKeyDown(_ keyNumber: Int, view: PianoKeyboard)
+    func pianoKeyUp(_ keyNumber: Int, view: PianoKeyboard, labelNote: String)
+    func pianoKeyDown(_ keyNumber: Int, view: PianoKeyboard, labelNote: String)
 }
 
 @IBDesignable public class PianoKeyboard: UIView {
@@ -188,10 +188,10 @@ import UIKit
         for index in 0 ..< _numberOfKeys {
             if keysArray[index]?.isDown != keyIsDownAt[index] {
                 if keyIsDownAt[index] {
-                    delegate?.pianoKeyDown(index, view: self)
+                    delegate?.pianoKeyDown(index, view: self, labelNote: keysArray[index]?.label ?? "")
                     keysArray[index]?.setImage(keyNum: index, isDown: true)
                 } else {
-                    delegate?.pianoKeyUp(index, view: self)
+                    delegate?.pianoKeyUp(index, view: self, labelNote: keysArray[index]?.label ?? "")
                     keysArray[index]?.setImage(keyNum: index, isDown: false)
                 }
                 keysArray[index]?.isDown = keyIsDownAt[index]
@@ -251,7 +251,7 @@ import UIKit
                 key.highlightLayer.backgroundColor = color.cgColor
                 key.resetsHighLight = resets
                 if play {
-                    delegate?.pianoKeyDown(key.noteNumber - octave, view: self)
+                    delegate?.pianoKeyDown(key.noteNumber - octave, view: self, labelNote: key.label)
                 }
             }
         }
@@ -264,7 +264,7 @@ import UIKit
                     key.highlightLayer.backgroundColor = UIColor.clear.cgColor
                 }
                 if didPlay {
-                    delegate?.pianoKeyUp(key.noteNumber - octave, view: self)
+                    delegate?.pianoKeyUp(key.noteNumber - octave, view: self, labelNote: key.label)
                 }
             }
         }

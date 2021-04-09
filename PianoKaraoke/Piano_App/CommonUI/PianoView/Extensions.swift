@@ -32,15 +32,25 @@ extension UIImage {
                     strokeColor1.setFill()
                     rectanglePath.fill()
 
-                    let border = size.width * 0.15
-                    let width = size.width * 0.7
-                    var topRectHeight = size.height * 0.86
+                    let border = size.width * 0.05
+                    let width = size.width*0.9
+                    var topRectHeight = size.height * 0.92
                     var bottomRectOffset = size.height * 0.875
                     let bottomRectHeight = size.height * 0.125
                     if keyDown {
-                        topRectHeight = size.height * 0.91
-                        bottomRectOffset = size.height * 0.925
+                        topRectHeight = size.height * 0.97
+                        bottomRectOffset = size.height * 0.97
                     }
+
+//                    let border = size.width * 0.15
+//                    let width = size.width * 0.7
+//                    var topRectHeight = size.height * 0.86
+//                    var bottomRectOffset = size.height * 0.875
+//                    let bottomRectHeight = size.height * 0.125
+//                    if keyDown {
+//                        topRectHeight = size.height * 0.91
+//                        bottomRectOffset = size.height * 0.925
+//                    }
 
                     let roundedRectangleRect = CGRect(x: frame.minX + border, y: frame.minY, width: width, height: topRectHeight)
                     let roundedRectanglePath = UIBezierPath(roundedRect: roundedRectangleRect, cornerRadius: keyCornerRadius)

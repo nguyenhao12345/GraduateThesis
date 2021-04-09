@@ -68,10 +68,12 @@ class LocalSongsYoutubeSectionController: SectionController<LocalSongsYoutubeSec
             let youtubeModel = cellModel.dataModel?.youtubeModel else { return }
         let vc = PianoCustomViewController()
         vc.config(link: LocalVideoManager.shared.getURLVideoLocal(key: youtubeModel.snippet.title),
-                   nameSong: "YouTube",
+                   nameSong: "",
                    typeCellInitViewController: TypeCell.CellYoutube)
          vc.modalTransitionStyle = .crossDissolve
          vc.modalPresentationStyle = .fullScreen
+        vc.youtubeModel = youtubeModel
+        vc.detailSongModel = nil
          viewController?.present(vc, animated: true, completion: nil)
     }
     
@@ -86,7 +88,7 @@ class LocalSongsYoutubeCellBuilder: CellBuilder {
         }
         addBlankSpace(12, width: nil, color: .clear)
         addSimpleText(Helper.getAttributesStringWithFontAndColor(
-            string: "Songs Youtube:", font: .HelveticaNeueBold16, color: .defaultText), height: nil, spaceWitdh: 30)
+            string: "Chưa kiểm duyệt", font: .HelveticaNeueBold16, color: .defaultText), height: nil, spaceWitdh: 30)
         addBlankSpace(12, width: nil, color: .clear)
         for i in dataModels {
             let cell = InstrumentSuggestCellModel()

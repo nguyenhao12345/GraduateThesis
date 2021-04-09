@@ -7,11 +7,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="KoHo-SemiBold.ttf">
-            <string>KoHo-SemiBold</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommentChangeAuthorsViewController" customModule="Piano_Karaoke" customModuleProvider="target">
             <connections>
@@ -68,8 +63,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chọn tư cách bình luận" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQj-06-CiT">
-                                                    <rect key="frame" x="18" y="10" width="178.5" height="30"/>
-                                                    <fontDescription key="fontDescription" name="KoHo-SemiBold" family="KoHo SemiBold" pointSize="17"/>
+                                                    <rect key="frame" x="18" y="10" width="201.5" height="30"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>

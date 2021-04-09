@@ -11,15 +11,18 @@ import ReplayKit
 import AVKit
 import AudioKit
 import AudioKitUI
+import YoutubeKit
 
-class PianoCustomViewController: UIViewController, RPPreviewViewControllerDelegate {
+class PianoCustomViewController: UIViewController, RPPreviewViewControllerDelegate, RPScreenRecorderDelegate {
+
     private let screenRecorder2 = ScreenRecorder2()
+    let recorder = ScreenRecordCoordinator()
+    
     let conductor = Conductor.sharedInstance
     let defaultOctave = 60
     var currentSound = 1
     let arrSoundName: [String] = [ "Brass", "LoTine81z", "Metalimba", "Pluck Bass" ]
     var tone: Tone = .Do
-
     @IBOutlet weak var key1: PianoKeyboard!
     @IBOutlet weak var key2: PianoKeyboard!
     @IBOutlet weak var key3: PianoKeyboard!
@@ -27,11 +30,58 @@ class PianoCustomViewController: UIViewController, RPPreviewViewControllerDelega
     @IBOutlet weak var videoView: CustomAVPlayer!
     @IBOutlet weak var displayContainer: UIView!
     @IBOutlet weak var nameToneLbl: UILabel!
-    @IBOutlet weak var btnRecord: UIButton!
+    @IBOutlet weak var noteIsPlayingLbl: UILabel!
+
+    var youtubeModel: SearchResult?
+    var detailSongModel: DetailInfoSong?
+
+    @IBOutlet weak var btnRecord: UIButton! {
+        didSet {
+            btnRecord.setImage(UIImage(named: "icons8-microphone-100")?.maskWithColor(color: .white), for: .normal)
+        }
+    }
+    @IBOutlet weak var btnToneChange: UIButton! {
+        didSet {
+            btnToneChange.setImage(UIImage(named: "icons8-music-notation-100")?.maskWithColor(color: .white), for: .normal)
+        }
+    }
+    @IBOutlet weak var btnSettingFilter: UIButton! {
+        didSet {
+            btnSettingFilter.setImage(UIImage(named: "icons8-adjust-100")?.maskWithColor(color: .white), for: .normal)
+        }
+    }
+
+    @IBOutlet weak var viewTone: UIView!
     
     private var linkMp4: String?
     private var nameSong: String?
     private var typeCellInitViewController: TypeCell?
+    
+    var isRecord: Bool = false
+    func startRecording() {
+        self.isRecord = true
+        self.btnRecord.setImage(UIImage(named: "icons8-microphone-100")?.maskWithColor(color: .red), for: .normal)
+        screenRecorder2.startRecording { _ in
+        }
+    }
+    func previewControllerDidFinish(_ previewController: RPPreviewViewController) {
+        dismiss(animated: true)
+    }
+
+    func stopRecording() {
+        self.isRecord = false
+        self.btnRecord.setImage(UIImage(named: "icons8-microphone-100")?.maskWithColor(color: .white), for: .normal)
+        screenRecorder2.stoprecording(errorHandler: { _ in
+            
+        }) {
+            DispatchQueue.main.async {
+                let vc = EditRecordViewController()
+                vc.detailSongModel = self.detailSongModel
+                vc.youtubeModel = self.youtubeModel
+                self.present(vc, animated: true, completion: nil)
+            }
+        }
+    }
     
     //MARK: Method
     func config(link: String?, nameSong: String?, typeCellInitViewController: TypeCell?) {
@@ -66,41 +116,29 @@ class PianoCustomViewController: UIViewController, RPPreviewViewControllerDelega
         }
     }
     
-    func record() {
-        if conductor.recorder?.isRecording ?? false {
-            conductor.recorder?.stop()
-            btnRecord.setTitle("Stop Record", for: .normal)
-            ASVideoPlayerController.sharedVideoPlayer.pauseForceCurrent()
-            let vc = EditRecordViewController()
-            self.present(vc, animated: true, completion: nil)
-
-        } else {
-            do {
-                try conductor.recorder?.record()
-                btnRecord.setTitle("Recording", for: .normal)
-            } catch {
-                AKLog("Couldn't record")
-            }
-        }
-    }
     
     //MARK: Action
-    @IBAction func clickStop(_ sender: Any) {
-        self.currentSound += 1
-        self.currentSound %= 4
-        self.conductor.useSound("TX " + self.arrSoundName[currentSound])
+    
+    @IBAction func clickShowMenu(_ sender: Any) {
+        viewMenuRound.isHidden = false
+        btnHiddenMenu.isHidden = false
+        UIView.animate(withDuration: 0.3, animations: {
+            self.viewMenuRound.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }) { _ in
+            
+        }
+        
     }
     
-    @IBAction func clickGhi(_ sender: Any) {
+    @IBOutlet weak var btnHiddenMenu: UIButton!
     
-    }
-    
-    @IBAction func clickSetting(_ sender: Any) {
-        let vc = SettingPianoViewController()
-        vc.config(tone: tone, currentSound: currentSound)
-        vc.delegate = self
-        vc.modalPresentationStyle = .overFullScreen
-        self.present(vc, animated: true, completion: nil)
+    @IBAction func clickHidenMenu(_ sender: Any) {
+        btnHiddenMenu.isHidden = true
+        UIView.animate(withDuration: 0.3, animations: {
+            self.viewMenuRound.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
+        }) { _ in
+            self.viewMenuRound.isHidden = true
+        }
     }
     
     @IBAction func clickBack(_ sender: Any?) {
@@ -120,15 +158,61 @@ class PianoCustomViewController: UIViewController, RPPreviewViewControllerDelega
         tone = tone.editTone(control: .Down)
         resetToneKeyboard()
     }
-        
-    @IBAction func clickRecord2(sender: Any?) {
-        record()
+    
+    
+    @IBAction func clickTone(sender: Any?) {
+        btnHiddenMenu.isHidden = true
+        UIView.animate(withDuration: 0.3, animations: {
+            self.viewMenuRound.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
+        }) { _ in
+            self.viewMenuRound.isHidden = true
+            PopupIGViewController.showAlert(viewController: self, title: "Chọn Tone", dataSource: self.tone.arrTone.map({ "\t\($0.getName(quang: ""))"}), hightLight: "\t\(self.tone.getName(quang: ""))", attributes: [NSAttributedString.Key.font : UIFont.HelveticaNeue16, NSAttributedString.Key.foregroundColor : UIColor.defaultText]) { (value, index) in
+                self.tone = self.tone.arrTone[index]
+                self.resetToneKeyboard()
+            }
+        }
     }
     
+    @IBAction func clickRecord(sender: Any?) {
+        btnHiddenMenu.isHidden = true
+        UIView.animate(withDuration: 0.3, animations: {
+            self.viewMenuRound.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
+        }) { _ in
+            if self.isRecord {
+                self.stopRecording()
+            } else {
+                self.startRecording()
+            }
+            self.viewMenuRound.isHidden = true
+        }
+    }
+    
+    @IBAction func clickGotoSetting(sender: Any?) {
+        btnHiddenMenu.isHidden = true
+        UIView.animate(withDuration: 0.3, animations: {
+            self.viewMenuRound.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
+        }) { _ in
+            self.viewMenuRound.isHidden = true
+            let vc = SettingPianoViewController()
+            vc.config(tone: self.tone, currentSound: self.currentSound)
+            vc.delegate = self
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+    
+    @IBOutlet weak var btnSetting: UIButton!
+    @IBOutlet weak var viewMenuRound: ViewRound!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLbl.text = nameSong
+        viewMenuRound.isHidden = true
+//        titleLbl.text = nameSong
+                titleLbl.text = ""
+        //        if nameSong == ""
+        self.viewMenuRound.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
+//        viewTone.isHidden = nameSong != ""
+        viewTone.isHidden = false
         playvideo(localOrOnline: typeCellInitViewController ?? TypeCell.CellLocal, link: linkMp4 ?? "")
         self.view.backgroundColor = UIColor.init(hexString: AppColor.shared.colorBackGround.value)
         key1.delegate = self
@@ -152,17 +236,44 @@ class PianoCustomViewController: UIViewController, RPPreviewViewControllerDelega
 }
 extension PianoCustomViewController: PianoKeyboardDelegate {
     
-    func pianoKeyUp(_ keyNumber: Int, view: PianoKeyboard) {
+    func pianoKeyUp(_ keyNumber: Int, view: PianoKeyboard, labelNote: String) {
         DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.4, animations: {
+                self.noteIsPlayingLbl.alpha = 0
+                self.noteIsPlayingLbl.transform = CGAffineTransform(scaleX: 1.1, y: 1.1).translatedBy(x: CGFloat.random(in: -10.0...10.0), y: CGFloat.random(in: -10.0...10.0))
+            }, completion: nil)
+//            self.noteIsPlayingLbl.text = ""
             let i = view.octave + keyNumber + 12
             self.conductor.stopNote(note: MIDINoteNumber(i), channel: 0)
         }
     }
     
-    func pianoKeyDown(_ keyNumber: Int, view: PianoKeyboard) {
+    func pianoKeyDown(_ keyNumber: Int, view: PianoKeyboard, labelNote: String) {
         DispatchQueue.main.async {
+            
+
             let i = view.octave + keyNumber + 12
             self.conductor.playNote(note: MIDINoteNumber(i), velocity: 100, channel: 0)
+            self.noteIsPlayingLbl.transform = .identity
+            self.noteIsPlayingLbl.alpha = 1
+            switch view {
+            case self.key1:
+                self.noteIsPlayingLbl.text = labelNote
+//                SRFacebookAnimation.animate(str: labelNote)
+            case self.key2:
+                self.noteIsPlayingLbl.text = labelNote + "2"
+//                SRFacebookAnimation.animate(str: labelNote + "2")
+
+            case self.key3:
+                self.noteIsPlayingLbl.text = labelNote + "3"
+//                SRFacebookAnimation.animate(str: labelNote + "3")
+
+            default: break
+
+            }
+//            SRFacebookAnimation.startPoint(CGPoint(x: 0,
+//                                                   y: 120))
+//            SRFacebookAnimation.isUptrust(false)
         }
     }
     
@@ -185,17 +296,17 @@ extension PianoCustomViewController: AKMIDIListener {
     // MIDI Controller input
     func receivedMIDIController(_ controller: MIDIByte, value: MIDIByte, channel: MIDIChannel) {
         AKLog("Channel: \(channel + 1) controller: \(controller) value: \(value)")
-//        conductor.controller(controller, value: value)
+        //        conductor.controller(controller, value: value)
     }
     
     // MIDI Pitch Wheel
     func receivedMIDIPitchWheel(_ pitchWheelValue: MIDIWord, channel: MIDIChannel) {
-//        conductor.pitchBend(pitchWheelValue)
+        //        conductor.pitchBend(pitchWheelValue)
     }
     
     // After touch
     func receivedMIDIAfterTouch(_ pressure: MIDIByte, channel: MIDIChannel) {
-//        conductor.afterTouch(pressure)
+        //        conductor.afterTouch(pressure)
     }
     
     func receivedMIDISystemCommand(_ data: [MIDIByte]) {

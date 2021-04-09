@@ -84,13 +84,23 @@
                                                 <color key="textColor" red="0.20000000000000001" green="0.27450980390000002" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXE-pF-yoG">
+                                                <rect key="frame" x="8" y="6.5" width="123.5" height="25"/>
+                                                <connections>
+                                                    <action selector="clickViewMoreUser:" destination="Jjm-C9-Zvz" eventType="touchUpInside" id="43m-57-n47"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="KpJ-x3-8rv" firstAttribute="leading" secondItem="BBy-fN-Fyh" secondAttribute="trailing" constant="4" id="EgT-Gn-XDh"/>
                                             <constraint firstAttribute="height" constant="38" id="JBO-bV-U45"/>
+                                            <constraint firstItem="fXE-pF-yoG" firstAttribute="leading" secondItem="BBy-fN-Fyh" secondAttribute="leading" id="N0z-uP-TEI"/>
                                             <constraint firstItem="KpJ-x3-8rv" firstAttribute="centerY" secondItem="BBy-fN-Fyh" secondAttribute="centerY" id="PE3-KJ-G9X"/>
                                             <constraint firstItem="BBy-fN-Fyh" firstAttribute="leading" secondItem="JfV-Jl-RBk" secondAttribute="leading" constant="8" id="Z1S-E3-sMq"/>
+                                            <constraint firstItem="fXE-pF-yoG" firstAttribute="trailing" secondItem="KpJ-x3-8rv" secondAttribute="trailing" id="c6F-ka-hzw"/>
+                                            <constraint firstItem="fXE-pF-yoG" firstAttribute="top" secondItem="BBy-fN-Fyh" secondAttribute="top" id="lMT-Dc-OAv"/>
+                                            <constraint firstItem="fXE-pF-yoG" firstAttribute="bottom" secondItem="BBy-fN-Fyh" secondAttribute="bottom" id="v2s-9O-NLz"/>
                                             <constraint firstItem="BBy-fN-Fyh" firstAttribute="centerY" secondItem="JfV-Jl-RBk" secondAttribute="centerY" id="vYn-eS-83j"/>
                                         </constraints>
                                     </view>

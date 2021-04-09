@@ -40,12 +40,7 @@ class ResetPasswdViewController: AziBaseViewController {
     }
     
     @IBAction func clickBack(_ sender: Any?) {
-        UIView.animate(withDuration: 0.5, animations: {
-//            self.viewContent.setAnchorPoint(CGPoint(x: 0, y: 0))
-            self.viewContent.transform = CGAffineTransform(scaleX: 1, y: 0.00001)
-        }) { _ in
-            self.dismiss(animated: false, completion: nil)
-        }
+        self.dismiss(animated: true, completion: nil)
     }
     
 
@@ -84,11 +79,11 @@ class ResetPasswdViewController: AziBaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //        self.viewContent.setAnchorPoint(CGPoint(x: 0, y: 0))
-        self.viewContent.transform = CGAffineTransform(scaleX: 1, y: 0.00001)
-
-        UIView.animate(withDuration: 0.5, animations: {
-            self.viewContent.transform = .identity
-        })
+//        self.viewContent.transform = CGAffineTransform(scaleX: 1, y: 0.00001)
+//
+//        UIView.animate(withDuration: 0.5, animations: {
+//            self.viewContent.transform = .identity
+//        })
     }
 
 }

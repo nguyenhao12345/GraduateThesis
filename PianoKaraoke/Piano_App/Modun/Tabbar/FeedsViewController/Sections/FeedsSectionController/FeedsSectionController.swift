@@ -78,7 +78,7 @@ extension FeedsSectionController: NewsFeedInfoCellDelegate {
             dataSource = ["\tVào trang cá nhân","\tXem bài viết","\tXoá bài"]
 
         }
-        PopupIGViewController.showAlert(viewController: viewController, title: "", dataSource: dataSource, hightLight: "", attributes: [NSAttributedString.Key.font : UIFont.HelveticaNeue16, NSAttributedString.Key.foregroundColor : UIColor.defaultText]) { (value) in
+        PopupIGViewController.showAlert(viewController: viewController, title: "", dataSource: dataSource, hightLight: "", attributes: [NSAttributedString.Key.font : UIFont.HelveticaNeue16, NSAttributedString.Key.foregroundColor : UIColor.defaultText]) { (value, _) in
             switch value{
             case "\tVào trang cá nhân":
                 if let userWall = viewController as? UserWallViewController {
@@ -94,8 +94,13 @@ extension FeedsSectionController: NewsFeedInfoCellDelegate {
             case "\tXem bài viết":
                 AppRouter.shared.gotoNewsFeedDetail(newsModel: self.sectionModel?.dataModel, viewController: viewController)
             case "\tXoá bài":
-                self.delegate?.removeNews(by: self.sectionModel!)
-                self.viewController?.showToast(string: "Đã xoá bài viết", duration: 2.0, position: .bottom)
+                guard let news = self.sectionModel?.dataModel else { return }
+                ServiceOnline.share.deleteNews(news: news) { (isRemove) in
+                    if isRemove {
+                        self.delegate?.removeNews(by: self.sectionModel!)
+                        self.viewController?.showToast(string: "Đã xoá bài viết", duration: 2.0, position: .bottom)
+                    }
+                }
             default: break
 
             }

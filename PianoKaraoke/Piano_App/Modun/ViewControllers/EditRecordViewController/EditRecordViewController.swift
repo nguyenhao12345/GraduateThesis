@@ -10,17 +10,81 @@ import UIKit
 import IGListKit
 import AudioKit
 import AVFoundation
+import Firebase
+import YoutubeKit
+import MobileCoreServices
+import PryntTrimmerView
+import FDWaveformView
 
 class EditRecordViewController: AziBaseViewController {
     let conductor = Conductor.sharedInstance
+    let storage = Storage.storage()
 
     //MARK: Outlets
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var trimmerView: TrimmerView!
+    @IBOutlet weak var waveform: FDWaveformView!
+    var player: AVPlayer?
+    var playbackTimeCheckerTimer: Timer?
+    var trimmerPositionChangedTimer: Timer?
 
     //MARK: Properties
-    private var isFetchingMore: Bool = false
-    var adapter: ListAdapter!
-    var dataSource: [AziBaseSectionModel] = []
+    var youtubeModel: SearchResult?
+    var detailSongModel: DetailInfoSong?
+    
+    @IBAction func clickExport(_ sender: Any?) {
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
+        let newVideoOutputURL = URL(fileURLWithPath: documentsPath.appendingPathComponent("Bến thượng hải.mp4"))
+        self.loadView(newVideoOutputURL: newVideoOutputURL)
+
+//        cropVideo(sourceURL1: newVideoOutputURL, statTime: Float((trimmerView.startTime?.seconds ?? 0)), endTime: Float((trimmerView.endTime?.seconds ?? 0)))
+    }
+    
+        func cropVideo(sourceURL1: URL, statTime:Float, endTime:Float) {
+        let manager = FileManager.default
+        
+        guard let documentDirectory = try? manager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true) else {return}
+        let mediaType = "mp4"
+        if mediaType == kUTTypeMovie as String || mediaType == "mp4" as String {
+            let asset = AVAsset(url: sourceURL1 as URL)
+            let length = Float(asset.duration.value) / Float(asset.duration.timescale)
+            print("video length: \(length) seconds")
+            let start = statTime
+            let end = endTime
+            var outputURL = documentDirectory.appendingPathComponent("WylerNewVideo2")
+            do {
+                try manager.createDirectory(at: outputURL, withIntermediateDirectories: true, attributes: nil)
+                outputURL = outputURL.appendingPathComponent("\(UUID().uuidString).\(mediaType)")
+            }catch let error {
+                print(error)
+            }
+            
+            //Remove existing file
+            _ = try? manager.removeItem(at: outputURL)
+            
+            
+            guard let exportSession = AVAssetExportSession(asset: asset, presetName: AVAssetExportPresetHighestQuality) else {return}
+            exportSession.outputURL = outputURL
+            exportSession.outputFileType = .mp4
+            let startTime = CMTime(seconds: Double(start ), preferredTimescale: asset.duration.timescale)
+            let endTime = CMTime(seconds: Double(end ), preferredTimescale: asset.duration.timescale)
+            let timeRange = CMTimeRange(start: startTime, end: endTime)
+            
+            exportSession.timeRange = timeRange
+            exportSession.exportAsynchronously{
+                switch exportSession.status {
+                case .completed:
+                    
+                    DispatchQueue.main.async {
+                        self.loadView(newVideoOutputURL: outputURL)
+                        print("exported at \(outputURL)")
+                    }
+                case .failed: break
+                case .cancelled: break
+                default: break
+                }
+            }
+        }
+    }
 
     //MARK: Init
     init() {
@@ -33,209 +97,182 @@ class EditRecordViewController: AziBaseViewController {
     
     override func initUIVariable() {
         super.initUIVariable()
-//        self.allowAutoPlay = true
-//        self.hidesNavigationbar = true
-//        self.hidesToolbar = true
-//        self.addPansGesture = true
-//        self.colorStatusBar = .black
     }
     
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewIsReady()
+        trimmerView.handleColor = UIColor.white
+        trimmerView.mainColor = UIColor.orange
+        trimmerView.positionBarColor = UIColor.white
+        trimmerView.minDuration = 1
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
+        let newVideoOutputURL = URL(fileURLWithPath: documentsPath.appendingPathComponent("Bến thượng hải.mp4"))
+        loadAsset(AVAsset(url: newVideoOutputURL))
+        waveform.alpha = 1
+        waveform.zoomSamples = 0 ..< waveform.totalSamples / 3
+        waveform.doesAllowScrubbing = true
+        waveform.doesAllowStretch = true
+        waveform.doesAllowScroll = true
+        waveform.audioURL = newVideoOutputURL
     }
     
+    func loadView(newVideoOutputURL: URL) {
+        trimmerView.asset = nil
+        trimmerView.layoutIfNeeded()
+        loadAsset(AVAsset(url: newVideoOutputURL))
+        waveform.audioURL = newVideoOutputURL
+    }
+    
+    func loadAsset(_ asset: AVAsset) {
+        trimmerView.asset = asset
+        trimmerView.delegate = self
+        addVideoPlayer(with: asset)
+    }
+
+    @IBOutlet weak var titleTF: UITextField!
+    @IBOutlet weak var contentTV: UITextView!
+
     @IBAction func clickPlay(_ sender: Any?) {
+
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
+        let newVideoOutputURL = URL(fileURLWithPath: documentsPath.appendingPathComponent("WylerNewVideo.mp4"))
+
+        
+        uploadTOFireBaseVideo(url: newVideoOutputURL, success: { (str) in
+            self.showToast(string: str, duration: 2.0, position: .top)
+        }) { _ in
+            self.showToast(string: "Lỗi", duration: 2.0, position: .top)
+        }
+
+    }
+    
+    //MARK: Method
+  
+    func uploadTOFireBaseVideo(url: URL,
+                                      success : @escaping (String) -> Void,
+                                      failure : @escaping (Error) -> Void) {
+        let timestamp = NSDate().timeIntervalSince1970
+
+        let name = (AppAccount.shared.getUserLogin()?.uid ?? "") + "-\(timestamp.int)" + ".mp4"
+        let path = NSTemporaryDirectory() + name
+
+        let data = NSData(contentsOf: url as URL)
+
         do {
-//            let player = try AKAudioPlayer(file: conductor.tape!)
-//            do {
-//                try player.reloadFile()
-//            } catch {
-//                AKLog("Couldn't reload file.")
-//            }
-            
-            //            let player2 = AKPlayer(url: conductor.recorder?.audioFile.)
-//            player2?.play()
-            // If the tape is not empty, we can play it !...
-//            if player.audioFile.duration ?? 0 > 0 {
-//                player.play()
-//
-//            } else {
-//            }
+
+            try data?.write(to: URL(fileURLWithPath: path), options: .atomic)
 
         } catch {
-            
+
+            print(error)
         }
-//        let asset = conductor.recorder?.audioFile?.avAsset
-//        let player = AVPlayer()
-//        let item = AVPlayerItem(asset: asset)
-//
 
-//        conductor.recorder?.audioFile?.exportAsynchronously(name: "HieuExPort", baseDir: .documents, exportFormat: .wav, callback: { (file, error) in
-//            guard let asset = file?.avAsset else { return }
-//            do {
-//                conductor.recorder?.audioFile?.url
-//                var player: AVAudioPlayer?
-//                player = try AVAudioPlayer(contentsOf: conductor.recorder?.audioFile?.url)
-//                guard let _player = player else { return }
-//
-//                _player.prepareToPlay()
-//                _player.play()
-//
-//            } catch let error as NSError {
-//                print(error.description)
-//            }
-//
-//        })
-//        guard let url = conductor.recorder?.audioFile?.url else { return }
-//        do {
-//
-//            var player: AVAudioPlayer?
-//            player = try AVAudioPlayer(contentsOf: url)
-//            guard let _player = player else { return }
-//
-//            _player.prepareToPlay()
-//            _player.play()
-//
-//        } catch let error as NSError {
-//            print(error.description)
-//        }
+        // Create file metadata including the content type
+        let metadata = StorageMetadata()
+        metadata.contentType = "video/mp4"
+
+        // Upload data and metadata
         
-//        guard let audioURL = conductor.recorder?.audioFile?.url else { return }
-//
-//        let fileMgr = FileManager.default
-//
-//        let dirPaths = fileMgr.urls(for: .documentDirectory,
-//                                    in: .userDomainMask)
-//
-//        let outputUrl = dirPaths[0].appendingPathComponent("audiosound.mp4")
-//
-//        let asset = AVAsset.init(url: audioURL)
-//
-//        let exportSession = AVAssetExportSession.init(asset: asset, presetName: AVAssetExportPresetHighestQuality)
-//
-//        // remove file if already exits
-//        let fileManager = FileManager.default
-//        do{
-//            try? fileManager.removeItem(at: outputUrl)
-//
-//        } catch{
-//            print("can't")
-//        }
-//
-//
-//        exportSession?.outputFileType = AVFileType.mp4
-//
-//        exportSession?.outputURL = outputUrl
-//
-//        exportSession?.metadata = asset.metadata
-//
-//        exportSession?.exportAsynchronously(completionHandler: {
-//            if (exportSession?.status == .completed)
-//            {
-//                print("AV export succeeded.")
-//                let play = AVPlayer(playerItem: AVPlayerItem(asset: AVAsset(url: outputUrl)))
-//               // outputUrl to post Audio on server
-//                play.seek(to: .zero)
-//                play.volume = 1
-//                play.isMuted = false
-//                play.play()
-//
-//            }
-//            else if (exportSession?.status == .cancelled)
-//            {
-//                print("AV export cancelled.")
-//            }
-//            else
-//            {
-//                print ("Error is \(String(describing: exportSession?.error))")
-//
-//            }
-//        })
-        video.config(localURL: LocalVideoManager.shared.getURLVideoLocal(key: "audioFile", file: "m4a"))
-        ASVideoPlayerController.sharedVideoPlayer.playVideo(withCustomAVPlayer: video)
-        
-//        let recordingSession = AVAudioSession.sharedInstance()
-//        do {
-//            // Set the audio session category, mode, and options.
-//            try recordingSession.setCategory(.playAndRecord, mode: .default, options: [.defaultToSpeaker])
-//            try recordingSession.setActive(true)
-//        } catch {
-//            print("Failed to set audio session category.")
-//        }
+        let storageRef = Storage.storage().reference().child("Mp3").child(name)
+        if let uploadData = data as Data? {
+            storageRef.putData(uploadData, metadata: metadata
+                , completion: { (metadata, error) in
+                    if let error = error {
+                        failure(error)
+                    }else{
+                        
+                        // Fetch the download URL
+                        
+                        storageRef.downloadURL { url, error in
+                          if let error = error {
+                            // TODO
+                          } else {
+                            guard let url = url else { return }
+                            ServiceOnline.share.createPostNews(title: self.titleTF.text ?? "", content: self.contentTV.text ?? "", urlMp3: url.absoluteString, youtubeModel: self.youtubeModel, detailSongModel: self.detailSongModel)
+                            
+//                            self.video.config(localURL: url.absoluteString)
+//                            ASVideoPlayerController.sharedVideoPlayer.playVideo(withCustomAVPlayer: self.video)
 
+                          }
+                            success("Thành công")
+                        }
+                    }
+            })
+        }
     }
-    
-    @IBOutlet weak var video: CustomAVPlayer!
-    //MARK: Method
-    func viewIsReady() {
-        adapter = ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 5)
-        adapter.collectionView = collectionView
-        adapter.dataSource = self
-        adapter.delegate = self
-        adapter.scrollViewDelegate = self
-        
-//        if let file = conductor.recorder?.audioFile {
-//            player = try? AKAudioPlayer(file: file)
-//        }
-//        player.looping = true
-//        player.completionHandler = playingEnded
+    //DetailSongSectionModel
+    //SearchResult
+    @IBAction func play(_ sender: Any) {
 
-        
+        guard let player = player else { return }
 
-
-
-    }
-    
-    override func loadMore() {
-        
-    }
-    
-    @objc override func handleRefresh(_ refreshControl: UIRefreshControl) {
-        refreshControl.endRefreshing()
-        
-    }
-    
-    override func getScrollView() -> UIScrollView? {
-        return collectionView
-    }
-    
-    override func getTypeAction() -> AziBaseViewController.TypeAction {
-        return .None
-    }
-    
-}
-
-//MARK: ListAdapterDataSource
-extension EditRecordViewController: ListAdapterDataSource {
-    
-    func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        return dataSource
-    }
-    
-    func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        return sectionBuilder.getSection(object: object, presenter: self)
-    }
-    
-    func emptyView(for listAdapter: ListAdapter) -> UIView? {
-        return nil
-    }
-    
-}
-
-//MARK: IGListAdapterDelegate
-extension EditRecordViewController: IGListAdapterDelegate {
-    
-    func listAdapter(_ listAdapter: ListAdapter, willDisplay object: Any, at index: Int) {
-        if dataSource.count < 1 { return }
-        if index >= dataSource.count - 1 && !isFetchingMore {
-            loadMore()
+        if !player.isPlaying {
+            player.play()
+            startPlaybackTimeChecker()
+        } else {
+            player.pause()
+            stopPlaybackTimeChecker()
         }
     }
     
-    func listAdapter(_ listAdapter: ListAdapter, didEndDisplaying object: Any, at index: Int) {
-        
+    private func addVideoPlayer(with asset: AVAsset) {
+        let playerItem = AVPlayerItem(asset: asset)
+        player = AVPlayer(playerItem: playerItem)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(itemDidFinishPlaying(_:)),
+                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: playerItem)
+
+    }
+
+    @objc func itemDidFinishPlaying(_ notification: Notification) {
+        if let startTime = trimmerView.startTime {
+            player?.seek(to: startTime)
+        }
     }
     
+    func startPlaybackTimeChecker() {
+
+        stopPlaybackTimeChecker()
+        playbackTimeCheckerTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self,
+                                                        selector:
+            #selector(onPlaybackTimeChecker), userInfo: nil, repeats: true)
+    }
+
+    func stopPlaybackTimeChecker() {
+
+        playbackTimeCheckerTimer?.invalidate()
+        playbackTimeCheckerTimer = nil
+    }
+
+    @objc func onPlaybackTimeChecker() {
+
+        guard let startTime = trimmerView.startTime, let endTime = trimmerView.endTime, let player = player else {
+            return
+        }
+
+        let playBackTime = player.currentTime()
+        trimmerView.seek(to: playBackTime)
+
+        if playBackTime >= endTime {
+            player.seek(to: startTime, toleranceBefore: CMTime.zero, toleranceAfter: CMTime.zero)
+            trimmerView.seek(to: startTime)
+        }
+    }
+}
+extension EditRecordViewController: TrimmerViewDelegate {
+    func positionBarStoppedMoving(_ playerTime: CMTime) {
+        player?.seek(to: playerTime, toleranceBefore: CMTime.zero, toleranceAfter: CMTime.zero)
+        player?.play()
+        startPlaybackTimeChecker()
+        print("====> start:\((trimmerView.startTime?.seconds ?? 0)*1000/60) - end: \((trimmerView.endTime?.seconds ?? 0)*1000/60)")
+    }
+
+    func didChangePositionBar(_ playerTime: CMTime) {
+        stopPlaybackTimeChecker()
+        player?.pause()
+        player?.seek(to: playerTime, toleranceBefore: CMTime.zero, toleranceAfter: CMTime.zero)
+//        let duration = (trimmerView.endTime! - trimmerView.startTime!).seconds
+        print("====> start:\((trimmerView.startTime?.seconds ?? 0)*1000/60) - end: \((trimmerView.endTime?.seconds ?? 0)*1000/60)")
+    }
 }
