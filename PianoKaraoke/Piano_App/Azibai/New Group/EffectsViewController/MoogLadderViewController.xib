@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoogLadderViewController" customModule="Piano_Karaoke" customModuleProvider="target">
+            <connections>
+                <outlet property="cutoffFrequncySlider" destination="6Cf-Dw-axC" id="l76-UL-pAm"/>
+                <outlet property="mixSlider" destination="Uma-fD-2p0" id="RA1-FK-Gos"/>
+                <outlet property="resonanceSlider" destination="BXD-Vb-yDd" id="K4C-td-oAq"/>
+                <outlet property="view" destination="X5l-QR-APk" id="bZC-Qm-9dw"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="X5l-QR-APk">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXD-Vb-yDd" customClass="AKSlider" customModule="AudioKitUI">
+                    <rect key="frame" x="20" y="265" width="374" height="90"/>
+                    <color key="backgroundColor" red="0.37143704300000002" green="0.70446354150000001" blue="0.61085367199999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="DDU-EK-0YI"/>
+                        <constraint firstAttribute="height" constant="90" id="hmu-9i-2xP"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="property" value="Resonance"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Cf-Dw-axC" customClass="AKSlider" customModule="AudioKitUI">
+                    <rect key="frame" x="20" y="99" width="374" height="90"/>
+                    <color key="backgroundColor" red="0.58762145040000002" green="0.86256819959999997" blue="0.67709666489999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="MkU-0Z-jAo"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="hjj-I7-uM6"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="property" value="Cutoff Frequency"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uma-fD-2p0" customClass="AKSlider" customModule="AudioKitUI">
+                    <rect key="frame" x="20" y="431" width="374" height="90"/>
+                    <color key="backgroundColor" red="0.33556698619999997" green="0.3438783091" blue="0.71088274510000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="FuD-29-mYp"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="Qug-RW-j0F"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="property" value="Mix"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="BXD-Vb-yDd" firstAttribute="leading" secondItem="X5l-QR-APk" secondAttribute="leading" constant="20" id="4fY-o9-bX7"/>
+                <constraint firstItem="6Cf-Dw-axC" firstAttribute="top" secondItem="e25-Df-cpr" secondAttribute="top" constant="55" id="CZW-zX-bSl"/>
+                <constraint firstAttribute="trailing" secondItem="BXD-Vb-yDd" secondAttribute="trailing" constant="20" id="Qvu-l1-bNc"/>
+                <constraint firstItem="BXD-Vb-yDd" firstAttribute="top" secondItem="6Cf-Dw-axC" secondAttribute="bottom" constant="76" id="Za6-gZ-M3X"/>
+                <constraint firstAttribute="trailing" secondItem="Uma-fD-2p0" secondAttribute="trailing" constant="20" id="fL3-FT-3im"/>
+                <constraint firstItem="Uma-fD-2p0" firstAttribute="leading" secondItem="X5l-QR-APk" secondAttribute="leading" constant="20" id="hqp-4p-fjy"/>
+                <constraint firstAttribute="trailing" secondItem="6Cf-Dw-axC" secondAttribute="trailing" constant="20" id="l0x-GG-0dL"/>
+                <constraint firstItem="Uma-fD-2p0" firstAttribute="top" secondItem="BXD-Vb-yDd" secondAttribute="bottom" constant="76" id="q7u-yq-jom"/>
+                <constraint firstItem="6Cf-Dw-axC" firstAttribute="leading" secondItem="X5l-QR-APk" secondAttribute="leading" constant="20" id="tPL-Ty-593"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="e25-Df-cpr"/>
+            <point key="canvasLocation" x="-2578" y="687"/>
+        </view>
+    </objects>
+</document>

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangeColorAppViewController" customModule="Piano_App" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangeColorAppViewController" customModule="Piano_Karaoke" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="iN0-l3-epB" id="0df-Fm-v3B"/>
                 <outlet property="view1" destination="JJV-7r-ePj" id="IA9-QR-3cq"/>
@@ -16,6 +16,7 @@
                 <outlet property="view3" destination="fud-Zc-GAb" id="PC7-an-uYc"/>
                 <outlet property="view4" destination="HhV-12-gQL" id="OAq-W2-G2u"/>
                 <outlet property="view5" destination="ASI-oK-hCp" id="tSB-zV-7Lo"/>
+                <outlet property="view6" destination="0Qg-eZ-Xg1" id="plk-gR-xni"/>
                 <outlet property="viewMess" destination="w2B-bl-c5c" id="fZ9-EY-OEa"/>
             </connections>
         </placeholder>
@@ -34,10 +35,10 @@
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2B-bl-c5c">
-                            <rect key="frame" x="40" y="222.5" width="334" height="128"/>
+                            <rect key="frame" x="9" y="222.5" width="396" height="128"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chọn màu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRg-Ww-ZTn">
-                                    <rect key="frame" x="12" y="18" width="310" height="24"/>
+                                    <rect key="frame" x="12" y="18" width="372" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="24" id="04L-7R-J7T"/>
                                     </constraints>
@@ -46,7 +47,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="uAz-D9-7tr">
-                                    <rect key="frame" x="18" y="60" width="298" height="50"/>
+                                    <rect key="frame" x="18" y="60" width="360" height="50"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JJV-7r-ePj">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -173,10 +174,39 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LcA-gi-jZP">
+                                            <rect key="frame" x="310" y="0.0" width="50" height="50"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Qg-eZ-Xg1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <connections>
+                                                        <action selector="clickView5:" destination="-1" eventType="touchUpInside" id="zCc-jJ-laC"/>
+                                                        <action selector="clickView6:" destination="-1" eventType="touchUpInside" id="9wF-71-O9V"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="0Qg-eZ-Xg1" firstAttribute="top" secondItem="LcA-gi-jZP" secondAttribute="top" id="9ay-Th-JIW"/>
+                                                <constraint firstAttribute="width" secondItem="LcA-gi-jZP" secondAttribute="height" multiplier="1:1" id="SKl-CM-LxC"/>
+                                                <constraint firstAttribute="bottom" secondItem="0Qg-eZ-Xg1" secondAttribute="bottom" id="USz-sD-I1P"/>
+                                                <constraint firstAttribute="trailing" secondItem="0Qg-eZ-Xg1" secondAttribute="trailing" id="e9D-eS-bKq"/>
+                                                <constraint firstAttribute="height" constant="50" id="g45-Qf-oqX"/>
+                                                <constraint firstItem="0Qg-eZ-Xg1" firstAttribute="leading" secondItem="LcA-gi-jZP" secondAttribute="leading" id="s0d-Af-QHi"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="LcA-gi-jZP" firstAttribute="width" secondItem="LcA-gi-jZP" secondAttribute="height" multiplier="1:1" id="6bK-x6-Qop"/>
+                                    </constraints>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="tRg-Ww-ZTn" firstAttribute="top" secondItem="w2B-bl-c5c" secondAttribute="top" constant="18" id="19x-BK-LTV"/>
                                 <constraint firstAttribute="bottom" secondItem="uAz-D9-7tr" secondAttribute="bottom" constant="18" id="4oN-gM-wmo"/>

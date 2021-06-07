@@ -26,8 +26,8 @@ public class UserModel: Object, Codable {
     @objc dynamic public var homeTown: String = ""
     @objc dynamic public var education: String = ""
     @objc dynamic public var birth: String = ""
-
-
+    @objc dynamic public var admin: Int = 0
+    @objc dynamic public var keyYoutube: String = ""
     
     public convenience required init(data: [String: Any]) {
         self.init()
@@ -47,7 +47,10 @@ public class UserModel: Object, Codable {
         self.isHiddenPhoneMail = data["isHiddenPhoneMail"] as? Int ?? 0
         self.sex = data["sex"] as? Int ?? 0
         self.job = data["job"] as? String ?? ""
+        self.admin = data["isAdmin"] as? Int ?? 0
+        self.keyYoutube = data["keyYoutube"] as? String ?? ""
     }
+    
     public override static func primaryKey() -> String? {
         return "id"
     }

@@ -10,11 +10,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PianoCustomViewController" customModule="Piano_Karaoke" customModuleProvider="target">
             <connections>
+                <outlet property="btnDown" destination="unv-wB-fM5" id="zA8-7b-6Vr"/>
                 <outlet property="btnHiddenMenu" destination="N2y-H4-Kr0" id="hmn-bN-6k6"/>
                 <outlet property="btnRecord" destination="rgN-Bc-enc" id="Aao-II-XGm"/>
                 <outlet property="btnSetting" destination="UqD-lL-Wke" id="Weq-b4-bgr"/>
                 <outlet property="btnSettingFilter" destination="C4y-3h-d06" id="VX6-OK-ykH"/>
                 <outlet property="btnToneChange" destination="oXH-Cd-J8e" id="UQl-9s-nQJ"/>
+                <outlet property="btnUp" destination="LZ9-oQ-IRE" id="NYx-Yi-1B8"/>
                 <outlet property="displayContainer" destination="ltd-uP-kuu" id="oxP-9P-cSe"/>
                 <outlet property="key1" destination="MPp-hI-Z3d" id="Fnt-Vi-ZhO"/>
                 <outlet property="key2" destination="2f9-0h-rwK" id="cYL-aM-s6z"/>
@@ -78,13 +80,13 @@
                                             <rect key="frame" x="42" y="0.0" width="316" height="48"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KkO-Vw-CvL">
-                                                    <rect key="frame" x="216" y="0.0" width="88" height="48"/>
+                                                    <rect key="frame" x="208" y="0.0" width="96" height="48"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unv-wB-fM5">
-                                                            <rect key="frame" x="0.0" y="9" width="30" height="30"/>
-                                                            <color key="backgroundColor" red="0.89794141054153442" green="0.89809560775756836" blue="0.89793163537979126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <rect key="frame" x="0.0" y="9" width="40" height="30"/>
+                                                            <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="unv-wB-fM5" secondAttribute="height" multiplier="1:1" id="4M9-DU-UvJ"/>
+                                                                <constraint firstAttribute="width" secondItem="unv-wB-fM5" secondAttribute="height" multiplier="1:1" constant="10" id="4M9-DU-UvJ"/>
                                                                 <constraint firstAttribute="height" constant="30" id="5Kl-mK-r3A"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
@@ -92,8 +94,8 @@
                                                                 <color key="titleColor" red="0.20000000000000001" green="0.27450980392156865" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="4"/>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                             <connections>
@@ -101,10 +103,10 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZ9-oQ-IRE">
-                                                            <rect key="frame" x="58" y="9" width="30" height="30"/>
+                                                            <rect key="frame" x="56" y="9" width="40" height="30"/>
                                                             <color key="backgroundColor" red="0.89794141054153442" green="0.89809560775756836" blue="0.89793163537979126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="LZ9-oQ-IRE" secondAttribute="height" multiplier="1:1" id="GF7-Xm-mda"/>
+                                                                <constraint firstAttribute="width" secondItem="LZ9-oQ-IRE" secondAttribute="height" multiplier="1:1" constant="10" id="GF7-Xm-mda"/>
                                                                 <constraint firstAttribute="height" constant="30" id="GhT-ry-p3Q"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
@@ -112,8 +114,8 @@
                                                                 <color key="titleColor" red="0.20000000000000001" green="0.27450980392156865" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="4"/>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                             <connections>
@@ -121,7 +123,7 @@
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqm-TX-oso">
-                                                            <rect key="frame" x="26" y="5" width="36" height="38"/>
+                                                            <rect key="frame" x="30" y="5" width="36" height="38"/>
                                                             <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="36" id="el7-Lh-bJT"/>
@@ -134,7 +136,7 @@
                                                                     <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="4"/>
+                                                                    <real key="value" value="18"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
@@ -144,10 +146,10 @@
                                                         <constraint firstItem="unv-wB-fM5" firstAttribute="centerY" secondItem="KkO-Vw-CvL" secondAttribute="centerY" id="3z3-n0-K9D"/>
                                                         <constraint firstAttribute="trailing" secondItem="LZ9-oQ-IRE" secondAttribute="trailing" id="7sg-i2-MJt"/>
                                                         <constraint firstItem="hqm-TX-oso" firstAttribute="top" secondItem="unv-wB-fM5" secondAttribute="top" constant="-4" id="C6y-aW-J91"/>
-                                                        <constraint firstItem="hqm-TX-oso" firstAttribute="leading" secondItem="unv-wB-fM5" secondAttribute="trailing" constant="-4" id="SgK-YJ-TQs"/>
+                                                        <constraint firstItem="hqm-TX-oso" firstAttribute="leading" secondItem="unv-wB-fM5" secondAttribute="trailing" constant="-10" id="SgK-YJ-TQs"/>
                                                         <constraint firstItem="hqm-TX-oso" firstAttribute="bottom" secondItem="unv-wB-fM5" secondAttribute="bottom" constant="4" id="a5r-Oz-8GS"/>
                                                         <constraint firstItem="LZ9-oQ-IRE" firstAttribute="centerY" secondItem="KkO-Vw-CvL" secondAttribute="centerY" id="eOu-Jx-D2m"/>
-                                                        <constraint firstItem="LZ9-oQ-IRE" firstAttribute="leading" secondItem="hqm-TX-oso" secondAttribute="trailing" constant="-4" id="eUQ-xk-CGL"/>
+                                                        <constraint firstItem="LZ9-oQ-IRE" firstAttribute="leading" secondItem="hqm-TX-oso" secondAttribute="trailing" constant="-10" id="eUQ-xk-CGL"/>
                                                         <constraint firstItem="unv-wB-fM5" firstAttribute="leading" secondItem="KkO-Vw-CvL" secondAttribute="leading" id="em7-VB-qYp"/>
                                                     </constraints>
                                                 </view>
@@ -236,8 +238,8 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </stackView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="357-GN-Mhd" customClass="ViewRound" customModule="Piano_Karaoke" customModuleProvider="target">
-                            <rect key="frame" x="192" y="-160" width="373" height="373"/>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="357-GN-Mhd" customClass="ViewRound" customModule="Piano_Karaoke" customModuleProvider="target">
+                            <rect key="frame" x="383" y="-160" width="182" height="288"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4y-3h-d06">
                                     <rect key="frame" x="171" y="308" width="36" height="36"/>
@@ -308,7 +310,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFK-LE-BBK">
-                            <rect key="frame" x="42" y="0.0" width="206" height="48"/>
+                            <rect key="frame" x="42" y="0.0" width="208" height="48"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                             <color key="textColor" red="0.20000000000000001" green="0.27450980390000002" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>

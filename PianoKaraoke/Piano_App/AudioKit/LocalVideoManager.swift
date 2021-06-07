@@ -91,16 +91,16 @@ class LocalVideoManager: NSObject, URLSessionDownloadDelegate {
         if let dictionary = NSMutableDictionary(contentsOf: url) {
             dictionary.setValue(NSDate().timeIntervalSince1970.int, forKey: str)
             if dictionary.count >= 10,
-                let dicMin = dictionary.min(by: { a, b in (a.value as? Int ?? 0) > (b.value as? Int ?? 0) }) {
-                dictionary.removeObject(forKey: dicMin.value)
+                let dicMin = dictionary.min(by: { a, b in (a.value as? Int ?? 0) < (b.value as? Int ?? 0) }) {
+                dictionary.removeObject(forKey: dicMin.key)
             }
             dictionary.write(to: url, atomically: true)
         } else {
             let dictionary = NSMutableDictionary(capacity: 0)
             dictionary.setValue(NSDate().timeIntervalSince1970.int, forKey: str)
             if dictionary.count >= 10,
-                let dicMin = dictionary.min(by: { a, b in (a.value as? Int ?? 0) > (b.value as? Int ?? 0) }) {
-                dictionary.removeObject(forKey: dicMin.value)
+                let dicMin = dictionary.min(by: { a, b in (a.value as? Int ?? 0) < (b.value as? Int ?? 0) }) {
+                dictionary.removeObject(forKey: dicMin.key)
             }
             dictionary.write(to: url, atomically: true)
         }
@@ -110,7 +110,8 @@ class LocalVideoManager: NSObject, URLSessionDownloadDelegate {
         var outPut: [String] = []
         let url = FileManager.getDocumentsDirectory().appendingPathComponent(keyLocalKeyWorkSearch)
         if let dictionary = NSMutableDictionary(contentsOf: url) {
-            for i in dictionary {
+           let dicSort = dictionary.sorted(by: { a, b in (a.value as? Int ?? 0) > (b.value as? Int ?? 0) })
+            for i in dicSort {
                 if let str = i.key as? String {
                     outPut.append(str)
                 }

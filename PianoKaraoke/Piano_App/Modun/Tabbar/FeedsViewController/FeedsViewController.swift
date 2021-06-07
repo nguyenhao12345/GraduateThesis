@@ -28,12 +28,6 @@ class FeedsViewController: AziBaseViewController {
     var dataSource: [AziBaseSectionModel] = [PostNewsSectionModel()]
 
     //MARK: Init
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 
     override func initUIVariable() {
         super.initUIVariable()
@@ -56,7 +50,7 @@ class FeedsViewController: AziBaseViewController {
     
     //MARK: Method
     func viewIsReady() {
-        let layout = SectionBackgroundCardLayout2()
+        let layout = SectionBackgroundCardViewLayoutDefault()
         collectionView.collectionViewLayout = layout
         collectionView.contentInset = UIEdgeInsets(top: 9, left: 16, bottom: 9, right: 16)
 

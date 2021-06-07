@@ -32,11 +32,7 @@ class UserWallViewController: AziBaseViewController {
     
     init(uidUser: String = "") {
         self.uidUser = uidUser
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    init() {
-        super.init(nibName: nil, bundle: nil)
+        super.init()
     }
     
     required init?(coder: NSCoder) {
@@ -62,7 +58,7 @@ class UserWallViewController: AziBaseViewController {
     
     //MARK: Method
     func viewIsReady() {
-        let layout = SectionBackgroundCardLayout2()
+        let layout = SectionBackgroundCardViewLayoutDefault()
         collectionView.collectionViewLayout = layout
         collectionView.contentInset = UIEdgeInsets(top: 9, left: 16, bottom: 9, right: 16)
         

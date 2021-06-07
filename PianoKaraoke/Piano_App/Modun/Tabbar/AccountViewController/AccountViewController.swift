@@ -25,13 +25,7 @@ class AccountViewController: AziBaseViewController {
     var dataSource: [AziBaseSectionModel] = [AccountSectionModel()]
 
     //MARK: Init
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
     
     override func initUIVariable() {
         super.initUIVariable()
@@ -70,6 +64,8 @@ class AccountViewController: AziBaseViewController {
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        nav.hiddenBtnCancel()
+        nav.delegate = self
         viewIsReady()
         nav.addShadow(location: .bottom)
         nav.hiddenBtnCancel()
@@ -145,7 +141,13 @@ extension AccountViewController: IGListAdapterDelegate {
 }
 extension AccountViewController: SearchNavigationViewDelegate {
     func clickSearch() {
-        AppRouter.shared.gotoSearchSongYoutube(viewController: self)
+        let vcOld = self
+        let vc = SearchSongYoutubeViewController()
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: false) {
+            vcOld.nav.hiddenBtnCancel()
+        }
     }
     
     func clickDismiss() {
@@ -270,3 +272,4 @@ private extension WavyView {
         shapeLayer.path = wave(at: elapsed)?.cgPath
     }
 }
+

@@ -32,21 +32,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setUpScreenNavigation() {
         window = UIWindow(frame: UIScreen.main.bounds)
         if let _ = AppAccount.shared.getUserLogin() {
-            let vc = TabbarViewController()
+//            let vc = TabbarViewController()
+            let vc = ManagerPaymentViewController()
+//            vc.configSelect(type: .History)
 //            let vc = EditRecordViewController()
             window?.rootViewController = vc
             window?.makeKeyAndVisible()
         } else {
             let vc = AuthenticateViewController()
+//            let vc = ManagerPaymentViewController()
+//            let vc = EditRecordViewController()
             window?.rootViewController = vc
             window?.makeKeyAndVisible()
         }
         
-        AppColor.shared.colorBackGround.subscribe(onNext: { (hex) in
-            UIView.animate(withDuration: 0.7) {
-                UIApplication.shared.statusBarView?.backgroundColor = UIColor.hexStringToUIColor(hex: hex, alpha: 1)
-            }
-        }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: rx.disposeBag)
+//        AppColor.shared.colorBackGround.subscribe(onNext: { (hex) in
+//            UserDefaults.standard.set(hex, forKey: "colorBackGround")
+//            UIView.animate(withDuration: 0.7) {
+//                UIApplication.shared.statusBarView?.backgroundColor = UIColor.hexStringToUIColor(hex: hex, alpha: 1)
+//            }
+//        }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: rx.disposeBag)
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -59,7 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         IQKeyboardManager.shared.toolbarDoneBarButtonItemImage = UIImage(named: "arrow_down_gray")
         
-        YoutubeKit.shared.setAPIKey(currentKeyAPIYoube)
+        YoutubeKit.shared.setAPIKey(AppAccount.shared.getUserLogin()?.keyYoutube ?? "")
 
         YoutubeKit.shared.setAccessToken("YOUR_ACCESS_TOKEN")
 
@@ -150,4 +155,5 @@ let keyAPIYoube = ["AIzaSyAHNKxx1sO5TncigKXZosIGe0JawzlyKho", "AIzaSyBHlgJLrt0E1
            "AIzaSyDm4OOro9OsSxnQ8zf8KdUXhPnHkZtkv84"
 ]
 var currentKeyAPIYoube = "AIzaSyAHNKxx1sO5TncigKXZosIGe0JawzlyKho"
+
 

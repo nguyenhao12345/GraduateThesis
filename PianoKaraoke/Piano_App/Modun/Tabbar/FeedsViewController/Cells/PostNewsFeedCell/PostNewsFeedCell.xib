@@ -45,9 +45,18 @@
                                             <constraint firstAttribute="height" constant="1" id="5rd-1q-dG8"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ptc-ih-erO">
+                                        <rect key="frame" x="0.0" y="0.0" width="409" height="95"/>
+                                        <connections>
+                                            <action selector="clickPostNews:" destination="Jjm-C9-Zvz" eventType="touchUpInside" id="jxW-va-H2Z"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ptc-ih-erO" secondAttribute="trailing" id="212-uc-rlo"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ptc-ih-erO" secondAttribute="bottom" id="ABT-X9-T3E"/>
+                                    <constraint firstItem="Ptc-ih-erO" firstAttribute="leading" secondItem="rLR-Cy-pGT" secondAttribute="leading" id="C1M-J7-pta"/>
                                     <constraint firstItem="gok-Xx-8yA" firstAttribute="leading" secondItem="rLR-Cy-pGT" secondAttribute="leading" constant="24" id="Fac-sR-vID"/>
                                     <constraint firstAttribute="bottom" secondItem="Inf-CG-GTw" secondAttribute="bottom" id="RXE-9Q-Sdp"/>
                                     <constraint firstItem="kos-P5-f6I" firstAttribute="leading" secondItem="gok-Xx-8yA" secondAttribute="trailing" constant="8" id="S67-hc-9lS"/>
@@ -56,6 +65,7 @@
                                     <constraint firstAttribute="trailing" secondItem="Inf-CG-GTw" secondAttribute="trailing" id="ctr-87-dpb"/>
                                     <constraint firstItem="Inf-CG-GTw" firstAttribute="centerX" secondItem="rLR-Cy-pGT" secondAttribute="centerX" id="hlD-we-Bgx"/>
                                     <constraint firstItem="kos-P5-f6I" firstAttribute="centerY" secondItem="gok-Xx-8yA" secondAttribute="centerY" id="oA6-Av-8ob"/>
+                                    <constraint firstItem="Ptc-ih-erO" firstAttribute="top" secondItem="rLR-Cy-pGT" secondAttribute="top" id="vdU-Yx-Bau"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ye0-rW-1dO">
@@ -80,11 +90,21 @@
                                                         <color key="textColor" red="0.20000000000000001" green="0.27450980390000002" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIA-eE-0Z0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="204.5" height="47.5"/>
+                                                        <connections>
+                                                            <action selector="clickHorizontalPiano:" destination="Jjm-C9-Zvz" eventType="touchUpInside" id="Q9M-NL-3jg"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="SIA-eE-0Z0" secondAttribute="trailing" id="Mmw-Sg-mGg"/>
                                                     <constraint firstItem="bKq-xm-IAa" firstAttribute="centerX" secondItem="5Rp-G0-o40" secondAttribute="centerX" id="V4C-WJ-WIv"/>
+                                                    <constraint firstAttribute="bottom" secondItem="SIA-eE-0Z0" secondAttribute="bottom" id="Zq0-9C-pYM"/>
+                                                    <constraint firstItem="SIA-eE-0Z0" firstAttribute="leading" secondItem="5Rp-G0-o40" secondAttribute="leading" id="jcR-vT-zKe"/>
                                                     <constraint firstItem="bKq-xm-IAa" firstAttribute="centerY" secondItem="5Rp-G0-o40" secondAttribute="centerY" id="s1m-Be-p8S"/>
+                                                    <constraint firstItem="SIA-eE-0Z0" firstAttribute="top" secondItem="5Rp-G0-o40" secondAttribute="top" id="xYI-fs-cXO"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Juf-qr-TRC">
@@ -96,10 +116,20 @@
                                                         <color key="textColor" red="0.20000000000000001" green="0.27450980390000002" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UV2-KQ-ASB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="204.5" height="47.5"/>
+                                                        <connections>
+                                                            <action selector="clickPostNews:" destination="Jjm-C9-Zvz" eventType="touchUpInside" id="JX8-P7-vCF"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="eQP-kL-RMX" firstAttribute="centerY" secondItem="Juf-qr-TRC" secondAttribute="centerY" id="CD3-bc-SZh"/>
+                                                    <constraint firstItem="UV2-KQ-ASB" firstAttribute="leading" secondItem="Juf-qr-TRC" secondAttribute="leading" id="K48-XZ-3rx"/>
+                                                    <constraint firstAttribute="trailing" secondItem="UV2-KQ-ASB" secondAttribute="trailing" id="Mt6-PY-yHl"/>
+                                                    <constraint firstItem="UV2-KQ-ASB" firstAttribute="top" secondItem="Juf-qr-TRC" secondAttribute="top" id="TRu-9P-nM2"/>
+                                                    <constraint firstAttribute="bottom" secondItem="UV2-KQ-ASB" secondAttribute="bottom" id="anh-Ho-FRB"/>
                                                     <constraint firstItem="eQP-kL-RMX" firstAttribute="centerX" secondItem="Juf-qr-TRC" secondAttribute="centerX" id="y3U-K1-4Vq"/>
                                                 </constraints>
                                             </view>

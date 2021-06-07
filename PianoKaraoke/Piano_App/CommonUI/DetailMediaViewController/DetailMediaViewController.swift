@@ -14,14 +14,7 @@ class DetailMediaViewController: AziBaseViewController {
     let areaDevice = (UIScreen.main.bounds.width*UIScreen.main.bounds.height)
     var originalImageCenter: CGPoint?
     var media: MediaModel?
-    //MARK: Init
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+ 
     
     override func initUIVariable() {
         super.initUIVariable()

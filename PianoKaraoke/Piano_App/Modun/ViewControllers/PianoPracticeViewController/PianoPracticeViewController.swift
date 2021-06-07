@@ -81,13 +81,6 @@ class PianoPracticeViewController: AziBaseViewController {
         case darkMode = "mockup_blackkeys"
     }
 
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 
     @IBAction func clickBack(_ sender: Any?) {
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {

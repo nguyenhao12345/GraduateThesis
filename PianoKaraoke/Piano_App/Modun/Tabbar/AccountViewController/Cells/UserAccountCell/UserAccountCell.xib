@@ -26,6 +26,13 @@
                                     <constraint firstAttribute="width" secondItem="pmD-KG-Sh8" secondAttribute="height" id="nod-SQ-s5j"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlX-PV-rMd">
+                                <rect key="frame" x="50.5" y="50.5" width="25.5" height="25.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xlX-PV-rMd" secondAttribute="height" multiplier="1:1" id="O1b-sU-YHq"/>
+                                </constraints>
+                                <state key="normal" image="icons8-crown-100"/>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oK-Ey-A9G">
                                 <rect key="frame" x="361" y="25" width="31" height="38"/>
                                 <constraints>
@@ -53,9 +60,13 @@
                             <constraint firstAttribute="bottom" secondItem="pmD-KG-Sh8" secondAttribute="bottom" constant="12" id="5J3-ph-c8c"/>
                             <constraint firstItem="S54-LI-CBJ" firstAttribute="top" secondItem="Tfe-gS-x6n" secondAttribute="bottom" constant="4" id="DxO-K5-B0i"/>
                             <constraint firstAttribute="trailing" secondItem="0oK-Ey-A9G" secondAttribute="trailing" constant="12" id="Ihb-Il-yMr"/>
+                            <constraint firstItem="xlX-PV-rMd" firstAttribute="width" secondItem="xlX-PV-rMd" secondAttribute="height" multiplier="1:1" id="LGT-LG-ntc"/>
+                            <constraint firstItem="xlX-PV-rMd" firstAttribute="height" secondItem="pmD-KG-Sh8" secondAttribute="height" multiplier="0.4" id="RjD-yv-InO"/>
                             <constraint firstItem="0oK-Ey-A9G" firstAttribute="leading" secondItem="Tfe-gS-x6n" secondAttribute="trailing" constant="8" id="SuL-zp-g2v"/>
+                            <constraint firstItem="xlX-PV-rMd" firstAttribute="bottom" secondItem="pmD-KG-Sh8" secondAttribute="bottom" id="To6-z9-Vw5"/>
                             <constraint firstItem="Tfe-gS-x6n" firstAttribute="top" secondItem="pmD-KG-Sh8" secondAttribute="top" constant="8" id="WJB-zq-zZy"/>
                             <constraint firstItem="S54-LI-CBJ" firstAttribute="trailing" secondItem="Tfe-gS-x6n" secondAttribute="trailing" id="aHp-Md-tjC"/>
+                            <constraint firstItem="xlX-PV-rMd" firstAttribute="trailing" secondItem="pmD-KG-Sh8" secondAttribute="trailing" id="jVW-te-D5w"/>
                             <constraint firstItem="Tfe-gS-x6n" firstAttribute="leading" secondItem="pmD-KG-Sh8" secondAttribute="trailing" constant="8" id="mFs-Es-RTS"/>
                             <constraint firstItem="pmD-KG-Sh8" firstAttribute="top" secondItem="XZh-Uq-bcL" secondAttribute="top" constant="12" id="mXb-mC-yON"/>
                             <constraint firstItem="0oK-Ey-A9G" firstAttribute="centerY" secondItem="XZh-Uq-bcL" secondAttribute="centerY" id="ofE-13-V0Z"/>
@@ -72,6 +83,7 @@
             </collectionViewCellContentView>
             <size key="customSize" width="404" height="88"/>
             <connections>
+                <outlet property="adminButton" destination="xlX-PV-rMd" id="6sl-Ko-3qB"/>
                 <outlet property="avataImg" destination="pmD-KG-Sh8" id="np2-9b-PhG"/>
                 <outlet property="nextBtn" destination="0oK-Ey-A9G" id="yuD-nT-aSI"/>
                 <outlet property="userNameLbl" destination="Tfe-gS-x6n" id="dg5-Bf-M5K"/>
@@ -80,6 +92,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="icons8-crown-100" width="50" height="50"/>
         <image name="mes-ico-back" width="20" height="20"/>
     </resources>
 </document>

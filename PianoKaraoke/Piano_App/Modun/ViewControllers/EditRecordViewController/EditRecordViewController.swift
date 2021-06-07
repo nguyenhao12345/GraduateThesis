@@ -21,8 +21,43 @@ class EditRecordViewController: AziBaseViewController {
     let storage = Storage.storage()
 
     //MARK: Outlets
+    @IBOutlet weak var adminButton: UIButton!
+    @IBOutlet weak var avataImg: ImageViewRound!
+    @IBOutlet weak var userNameLbl: UILabel!
     @IBOutlet weak var trimmerView: TrimmerView!
     @IBOutlet weak var waveform: FDWaveformView!
+    @IBOutlet weak var inputUrlImageTF: UITextField! {
+        didSet {
+            inputUrlImageTF.attributedPlaceholder = NSAttributedString(string: "Nhập URL hình",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+
+        }
+    }
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var backgroundimageView: UIImageView!
+    @IBOutlet weak var backgroundErhuimageView: UIImageView!
+
+    @IBOutlet weak var viewInputURL: UIView!
+    @IBAction func clickCancelURLInput(_ sender: Any?) {
+        viewInputURL.isHidden = true
+        self.view.endEditing(true)
+    }
+    
+    @IBAction func clickAcceptChangeImgae(_ sender: Any?) {
+        viewInputURL.isHidden = true
+        imageView.setImageURL(URL(string: inputUrlImageTF.text ?? ""))
+        backgroundimageView.setImageURL(URL(string: inputUrlImageTF.text ?? ""))
+        backgroundErhuimageView.setImageURL(URL(string: inputUrlImageTF.text ?? ""))
+    }
+    
+    @IBAction func clickChangeImage(_ sender: Any?) {
+        PopupIGViewController.showAlert(viewController: self, title: "Sửa ảnh xem trước", dataSource: ["\tChọn từ thư viện", "\tNhập từ URL"], hightLight: "\tNhập từ URL", attributes: [NSAttributedString.Key.font : UIFont.HelveticaNeue16, NSAttributedString.Key.foregroundColor : UIColor.defaultText]) { (value, index) in
+            if index == 1 {
+                self.viewInputURL.isHidden = false
+                self.inputUrlImageTF.becomeFirstResponder()
+            }
+        }
+    }
     var player: AVPlayer?
     var playbackTimeCheckerTimer: Timer?
     var trimmerPositionChangedTimer: Timer?
@@ -31,15 +66,17 @@ class EditRecordViewController: AziBaseViewController {
     var youtubeModel: SearchResult?
     var detailSongModel: DetailInfoSong?
     
-    @IBAction func clickExport(_ sender: Any?) {
+    func exportVideo(completion: @escaping ()->()) {
         let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
-        let newVideoOutputURL = URL(fileURLWithPath: documentsPath.appendingPathComponent("Bến thượng hải.mp4"))
-        self.loadView(newVideoOutputURL: newVideoOutputURL)
-
-//        cropVideo(sourceURL1: newVideoOutputURL, statTime: Float((trimmerView.startTime?.seconds ?? 0)), endTime: Float((trimmerView.endTime?.seconds ?? 0)))
+        let newVideoOutputURL = URL(fileURLWithPath: documentsPath.appendingPathComponent("WylerNewVideo.mp4"))
+        cropVideo(sourceURL1: newVideoOutputURL,
+                  statTime: Float((trimmerView.startTime?.seconds ?? 0)),
+                  endTime: Float((trimmerView.endTime?.seconds ?? 0))) {
+                    completion()
+        }
     }
     
-        func cropVideo(sourceURL1: URL, statTime:Float, endTime:Float) {
+    func cropVideo(sourceURL1: URL, statTime:Float, endTime:Float, completion: @escaping ()->()) {
         let manager = FileManager.default
         
         guard let documentDirectory = try? manager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true) else {return}
@@ -50,17 +87,10 @@ class EditRecordViewController: AziBaseViewController {
             print("video length: \(length) seconds")
             let start = statTime
             let end = endTime
-            var outputURL = documentDirectory.appendingPathComponent("WylerNewVideo2")
-            do {
-                try manager.createDirectory(at: outputURL, withIntermediateDirectories: true, attributes: nil)
-                outputURL = outputURL.appendingPathComponent("\(UUID().uuidString).\(mediaType)")
-            }catch let error {
-                print(error)
-            }
-            
+            let outputURL = documentDirectory.appendingPathComponent("WylerNewVideo.mp4")
+
             //Remove existing file
             _ = try? manager.removeItem(at: outputURL)
-            
             
             guard let exportSession = AVAssetExportSession(asset: asset, presetName: AVAssetExportPresetHighestQuality) else {return}
             exportSession.outputURL = outputURL
@@ -73,10 +103,9 @@ class EditRecordViewController: AziBaseViewController {
             exportSession.exportAsynchronously{
                 switch exportSession.status {
                 case .completed:
-                    
                     DispatchQueue.main.async {
-                        self.loadView(newVideoOutputURL: outputURL)
-                        print("exported at \(outputURL)")
+//                        self.loadView(newVideoOutputURL: outputURL)
+                        completion()
                     }
                 case .failed: break
                 case .cancelled: break
@@ -86,35 +115,46 @@ class EditRecordViewController: AziBaseViewController {
         }
     }
 
-    //MARK: Init
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
     
     override func initUIVariable() {
         super.initUIVariable()
     }
     
+    @IBAction func clickBack(_ sender: Any?) {
+        player?.pause()
+        self.dismiss()
+    }
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let userModel = AppAccount.shared.getUserLogin() else { return }
+        avataImg.setImageURL(URL(string: userModel.avata))
+        userNameLbl.text = userModel.name
         trimmerView.handleColor = UIColor.white
-        trimmerView.mainColor = UIColor.orange
+        trimmerView.mainColor = UIColor(hexString: AppColor.shared.colorBackGround.value) ?? .white
         trimmerView.positionBarColor = UIColor.white
         trimmerView.minDuration = 1
         let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
-        let newVideoOutputURL = URL(fileURLWithPath: documentsPath.appendingPathComponent("Bến thượng hải.mp4"))
+        let newVideoOutputURL = URL(fileURLWithPath: documentsPath.appendingPathComponent("WylerNewVideo.mp4"))
         loadAsset(AVAsset(url: newVideoOutputURL))
         waveform.alpha = 1
-        waveform.zoomSamples = 0 ..< waveform.totalSamples / 3
-        waveform.doesAllowScrubbing = true
-        waveform.doesAllowStretch = true
-        waveform.doesAllowScroll = true
+        waveform.doesAllowStretch = false
+        waveform.doesAllowScroll = false
+        waveform.progressColor = .lightGray
         waveform.audioURL = newVideoOutputURL
+        waveform.wavesColor = .white
+        adminButton.isHidden = userModel.admin != 1
+        if let urlYoutube = youtubeModel?.snippet.thumbnails.high.url {
+            imageView.setImageURL(URL(string: urlYoutube))
+            backgroundimageView.setImageURL(URL(string: urlYoutube))
+            backgroundErhuimageView.setImageURL(URL(string: urlYoutube))
+        } else if let url = detailSongModel?.imageSong {
+            imageView.setImageURL(URL(string: url))
+            backgroundimageView.setImageURL(URL(string: url))
+            backgroundErhuimageView.setImageURL(URL(string: url))
+        }
+        play(nil)
     }
     
     func loadView(newVideoOutputURL: URL) {
@@ -130,25 +170,38 @@ class EditRecordViewController: AziBaseViewController {
         addVideoPlayer(with: asset)
     }
 
-    @IBOutlet weak var titleTF: UITextField!
-    @IBOutlet weak var contentTV: UITextView!
+    @IBOutlet weak var titleTF: UITextField! {
+        didSet {
+            titleTF.attributedPlaceholder = NSAttributedString(string: "Tiêu đề",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
 
-    @IBAction func clickPlay(_ sender: Any?) {
-
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
-        let newVideoOutputURL = URL(fileURLWithPath: documentsPath.appendingPathComponent("WylerNewVideo.mp4"))
-
-        
-        uploadTOFireBaseVideo(url: newVideoOutputURL, success: { (str) in
-            self.showToast(string: str, duration: 2.0, position: .top)
-        }) { _ in
-            self.showToast(string: "Lỗi", duration: 2.0, position: .top)
         }
+    }
+    @IBOutlet weak var contentTV: UITextView!  {
+           didSet {
+               contentTV.delegate = self
+           }
+       }
 
+    @IBAction func clickPostNews(_ sender: Any?) {
+        self.view.endEditing(true)
+        LOADING_HELPER.show()
+        exportVideo {
+            let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
+            let newVideoOutputURL = URL(fileURLWithPath: documentsPath.appendingPathComponent("WylerNewVideo.mp4"))
+
+            self.uploadTOFireBaseVideo(url: newVideoOutputURL, success: { (str) in
+                LOADING_HELPER.dismiss()
+                LocalVideoManager.shared.removeFileLocal(name: "WylerNewVideo")
+                self.showToast(string: str, duration: 2.0, position: .top)
+                AppRouter.shared.backToRoot(viewController: self)
+            }) { _ in
+                self.showToast(string: "Lỗi", duration: 2.0, position: .top)
+            }
+        }
     }
     
     //MARK: Method
-  
     func uploadTOFireBaseVideo(url: URL,
                                       success : @escaping (String) -> Void,
                                       failure : @escaping (Error) -> Void) {
@@ -185,11 +238,17 @@ class EditRecordViewController: AziBaseViewController {
                         // Fetch the download URL
                         
                         storageRef.downloadURL { url, error in
-                          if let error = error {
+                            if error != nil {
                             // TODO
                           } else {
                             guard let url = url else { return }
-                            ServiceOnline.share.createPostNews(title: self.titleTF.text ?? "", content: self.contentTV.text ?? "", urlMp3: url.absoluteString, youtubeModel: self.youtubeModel, detailSongModel: self.detailSongModel)
+                                var textContent: String = ""
+                                if self.contentTV.text == "Mô tả" {
+                                    textContent = ""
+                                } else {
+                                    textContent = self.contentTV.text ?? ""
+                                }
+                                ServiceOnline.share.createPostNews(title: self.titleTF.text ?? "", content: textContent, urlMp3: url.absoluteString, urlThumnail: self.inputUrlImageTF.text ?? "", youtubeModel: self.youtubeModel, detailSongModel: self.detailSongModel)
                             
 //                            self.video.config(localURL: url.absoluteString)
 //                            ASVideoPlayerController.sharedVideoPlayer.playVideo(withCustomAVPlayer: self.video)
@@ -203,7 +262,7 @@ class EditRecordViewController: AziBaseViewController {
     }
     //DetailSongSectionModel
     //SearchResult
-    @IBAction func play(_ sender: Any) {
+    @IBAction func play(_ sender: Any?) {
 
         guard let player = player else { return }
 
@@ -246,7 +305,6 @@ class EditRecordViewController: AziBaseViewController {
     }
 
     @objc func onPlaybackTimeChecker() {
-
         guard let startTime = trimmerView.startTime, let endTime = trimmerView.endTime, let player = player else {
             return
         }
@@ -272,7 +330,28 @@ extension EditRecordViewController: TrimmerViewDelegate {
         stopPlaybackTimeChecker()
         player?.pause()
         player?.seek(to: playerTime, toleranceBefore: CMTime.zero, toleranceAfter: CMTime.zero)
-//        let duration = (trimmerView.endTime! - trimmerView.startTime!).seconds
         print("====> start:\((trimmerView.startTime?.seconds ?? 0)*1000/60) - end: \((trimmerView.endTime?.seconds ?? 0)*1000/60)")
     }
 }
+
+
+extension EditRecordViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+//        if textView.text == "" {
+//            textView.text = "Mô tả"
+//        }
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == "Mô tả" {
+            textView.text = ""
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text == "" {
+            textView.text = "Mô tả"
+        }
+    }
+}
+

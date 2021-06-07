@@ -14,6 +14,13 @@ public class AziBaseViewController: UIViewController {
         case LoadMoreAndRefresh
         case None
     }
+    public init() {
+        super.init(nibName: String(describing: Self.self), bundle: Bundle.init(for: Self.self))
+    }
+    
+    public required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     public let sectionBuilder = SectionBuilder()
     var lastContentOffset:  CGFloat = 0

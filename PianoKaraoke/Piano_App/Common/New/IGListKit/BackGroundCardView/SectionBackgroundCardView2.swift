@@ -45,7 +45,7 @@ public class SectionBackgroundCardView2: UICollectionReusableView {
     
     public override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
         super.apply(layoutAttributes)
-        if let attributes = layoutAttributes as? SectionBackgroundCardLayoutAttributes2 {
+        if let attributes = layoutAttributes as? SectionBackgroundCardLayoutAttributes {
             paddingHeight = attributes.paddingHeight
         }
     }

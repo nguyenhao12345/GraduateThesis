@@ -30,7 +30,7 @@ class Conductor {
     
     var tape: AKAudioFile? = nil
     var recorder: AKNodeRecorder? = nil
-
+    var c: AKPitchShifter?
     init() {
         // MIDI Configure
         midi.createVirtualPorts()

@@ -56,7 +56,13 @@ class PopupIGSectionController: SectionController<PopupIGSectionModel> {
     override func didSelectItem(at index: Int) {
         guard let cell = cellModelAtIndex(index) as? HeaderSimpleCellModel,
             let viewController = viewController as? PopupIGViewController else { return }
-        viewController.completionHandle?(cell.attributed?.string ?? "", sectionModel?.dataModels.firstIndex(of: cell.attributed?.string ?? "") ?? 0)
+        viewController.heightConst.constant = 0
+        UIView.animate(withDuration: 0.2, animations: {
+            viewController.view.layoutIfNeeded()
+        }) { _ in
+            viewController.completionHandle?(cell.attributed?.string ?? "", self.sectionModel?.dataModels.firstIndex(of: cell.attributed?.string ?? "") ?? 0)
+        }
+
     }
 
 }

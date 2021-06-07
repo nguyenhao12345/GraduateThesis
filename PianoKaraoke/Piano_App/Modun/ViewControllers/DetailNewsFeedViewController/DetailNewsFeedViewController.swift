@@ -27,6 +27,8 @@ class DetailNewsFeedViewController: AziBaseViewController {
     @IBOutlet weak private var durationLabel: UILabel!
 
     //MARK: Outlets
+    @IBOutlet weak var adminButton: UIButton!
+
     @IBOutlet weak var imgView: ImageViewRound!
     @IBOutlet weak var playView: ViewRound!
     @IBOutlet weak var navView: UIView!
@@ -105,7 +107,7 @@ class DetailNewsFeedViewController: AziBaseViewController {
     //MARK: Init
     init(newsModel: NewsFeedModel?) {
         self.newsModel = newsModel
-        super.init(nibName: nil, bundle: nil)
+        super.init()
     }
 
     required init?(coder: NSCoder) {
@@ -201,6 +203,7 @@ class DetailNewsFeedViewController: AziBaseViewController {
 //            self.imgView.removePixel(to: self.imgView.center, lineWidth: 48)
 //            self.backgroundBlur.globalFrame?.midX
         }
+        adminButton.isHidden = newsModel?.user?.admin != 1
         backgroundBlur.setImageURL(URL(string: newsModel?.media?.urlImage ?? ""))
         backgroundBlur2.setImageURL(URL(string: newsModel?.media?.urlImage ?? ""))
         avataImg.setImageURL(URL(string: newsModel?.user?.avata ?? ""))

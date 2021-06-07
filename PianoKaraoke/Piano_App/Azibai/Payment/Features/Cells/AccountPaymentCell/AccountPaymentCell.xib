@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="KoHo-Medium.ttf">
+            <string>KoHo-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="Jjm-C9-Zvz" customClass="AccountPaymentCell" customModule="Piano_Karaoke" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="396" height="156"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Bv-YR-UPV">
+                <rect key="frame" x="0.0" y="0.0" width="396" height="156"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80R-aT-czm">
+                        <rect key="frame" x="0.0" y="0.0" width="396" height="156"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Kt-9P-E3V">
+                                <rect key="frame" x="26" y="0.0" width="146" height="156"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Ngân hàng" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYf-9D-5bo">
+                                        <rect key="frame" x="0.0" y="0.0" width="146" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="KoHo-Medium" family="KoHo Medium" pointSize="14"/>
+                                        <color key="textColor" red="0.53725490200000003" green="0.53725490200000003" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="aYf-9D-5bo" firstAttribute="top" secondItem="8Kt-9P-E3V" secondAttribute="top" id="S45-eo-ueT"/>
+                                    <constraint firstAttribute="trailing" secondItem="aYf-9D-5bo" secondAttribute="trailing" id="Xri-4Y-Die"/>
+                                    <constraint firstItem="aYf-9D-5bo" firstAttribute="leading" secondItem="8Kt-9P-E3V" secondAttribute="leading" id="YkI-Zq-fk9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hoa-Ea-Tjy">
+                                <rect key="frame" x="172" y="0.0" width="212" height="156"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="3LC-Lk-pDe">
+                                        <rect key="frame" x="0.0" y="0.0" width="212" height="91.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01/08/2019 01 : 01 01/08/2019 01 : 01 01/08/2019 01 : 01 01/08/2019 01 : 01 01/08/2019 01 : 01" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKO-zF-BKc">
+                                                <rect key="frame" x="0.0" y="0.0" width="186" height="91.5"/>
+                                                <fontDescription key="fontDescription" name="KoHo-Medium" family="KoHo Medium" pointSize="14"/>
+                                                <color key="textColor" red="0.20000000000000001" green="0.25882352939999997" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hM-yX-bS0">
+                                                <rect key="frame" x="186" y="0.0" width="26" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="26" id="GoT-sq-K9r"/>
+                                                    <constraint firstAttribute="width" secondItem="2hM-yX-bS0" secondAttribute="height" multiplier="1:1" id="iiz-UK-R63"/>
+                                                </constraints>
+                                                <state key="normal" image="more_iconAds"/>
+                                                <connections>
+                                                    <action selector="clickEditBtn:" destination="Jjm-C9-Zvz" eventType="touchUpInside" id="LbG-2N-Otz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="3LC-Lk-pDe" firstAttribute="leading" secondItem="hoa-Ea-Tjy" secondAttribute="leading" id="FlY-pc-l80"/>
+                                    <constraint firstAttribute="trailing" secondItem="3LC-Lk-pDe" secondAttribute="trailing" id="Utw-No-wrC"/>
+                                    <constraint firstItem="3LC-Lk-pDe" firstAttribute="top" secondItem="hoa-Ea-Tjy" secondAttribute="top" id="qJM-V9-kGv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hoa-Ea-Tjy" firstAttribute="leading" secondItem="8Kt-9P-E3V" secondAttribute="trailing" id="7hB-Ua-58Y"/>
+                            <constraint firstItem="8Kt-9P-E3V" firstAttribute="leading" secondItem="80R-aT-czm" secondAttribute="leading" constant="26" id="C6C-5s-U9D"/>
+                            <constraint firstItem="hoa-Ea-Tjy" firstAttribute="top" secondItem="80R-aT-czm" secondAttribute="top" id="EDe-lN-TKE"/>
+                            <constraint firstItem="8Kt-9P-E3V" firstAttribute="top" secondItem="80R-aT-czm" secondAttribute="top" id="Tlb-mt-dVQ"/>
+                            <constraint firstAttribute="bottom" secondItem="hoa-Ea-Tjy" secondAttribute="bottom" id="XUJ-ed-tQV"/>
+                            <constraint firstItem="8Kt-9P-E3V" firstAttribute="width" secondItem="80R-aT-czm" secondAttribute="width" multiplier="0.45" constant="-32" id="gI6-Et-f0o"/>
+                            <constraint firstAttribute="trailing" secondItem="hoa-Ea-Tjy" secondAttribute="trailing" constant="12" id="hTe-zQ-hAx"/>
+                            <constraint firstAttribute="bottom" secondItem="8Kt-9P-E3V" secondAttribute="bottom" id="uwc-uk-MSI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="80R-aT-czm" firstAttribute="top" secondItem="4Bv-YR-UPV" secondAttribute="top" id="LyE-7b-Lvq"/>
+                    <constraint firstAttribute="trailing" secondItem="80R-aT-czm" secondAttribute="trailing" id="QRg-u4-pXQ"/>
+                    <constraint firstItem="80R-aT-czm" firstAttribute="leading" secondItem="4Bv-YR-UPV" secondAttribute="leading" id="pNu-u5-GQB"/>
+                    <constraint firstAttribute="bottom" secondItem="80R-aT-czm" secondAttribute="bottom" id="uL5-AA-z3F"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="396" height="156"/>
+            <connections>
+                <outlet property="contentLbl" destination="LKO-zF-BKc" id="tR6-Vl-nrI"/>
+                <outlet property="editBtn" destination="2hM-yX-bS0" id="fQE-w8-Xa4"/>
+                <outlet property="titleLbl" destination="aYf-9D-5bo" id="rM1-oQ-RpS"/>
+            </connections>
+            <point key="canvasLocation" x="457" y="127"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="more_iconAds" width="13" height="28"/>
+    </resources>
+</document>

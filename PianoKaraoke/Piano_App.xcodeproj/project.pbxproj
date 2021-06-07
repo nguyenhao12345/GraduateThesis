@@ -10,6 +10,29 @@
 		7B323B12345DEDDB4214FAED /* Pods_Piano_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95C325493C77F7089CAE81C /* Pods_Piano_App.framework */; };
 		9305ECA4254BFB7500E30F64 /* PlayButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9305ECA2254BFB7500E30F64 /* PlayButtonCell.xib */; };
 		9305ECA5254BFB7500E30F64 /* PlayButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305ECA3254BFB7500E30F64 /* PlayButtonCell.swift */; };
+		930932D9261FF5B200EFC39E /* ManagerPaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930932D7261FF5B200EFC39E /* ManagerPaymentViewController.xib */; };
+		930932DA261FF5B200EFC39E /* ManagerPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930932D8261FF5B200EFC39E /* ManagerPaymentViewController.swift */; };
+		930932DE261FF5DD00EFC39E /* NavigationViewPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930932DC261FF5DD00EFC39E /* NavigationViewPayment.swift */; };
+		930932DF261FF5DD00EFC39E /* NavigationViewPayment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930932DD261FF5DD00EFC39E /* NavigationViewPayment.xib */; };
+		930932E3262002C100EFC39E /* SectionBackgroundPaymentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930932E1262002C100EFC39E /* SectionBackgroundPaymentCardView.swift */; };
+		930932E4262002C100EFC39E /* SectionBackgroundPaymentCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930932E2262002C100EFC39E /* SectionBackgroundPaymentCardView.xib */; };
+		930932EB2620076800EFC39E /* SimpleShowSumMoneySectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930932EA2620076800EFC39E /* SimpleShowSumMoneySectionController.swift */; };
+		930932FC2620097700EFC39E /* ShowSumMoneyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930932F82620097700EFC39E /* ShowSumMoneyCell.swift */; };
+		930932FD2620097700EFC39E /* ShowSumMoneyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930932F92620097700EFC39E /* ShowSumMoneyCell.xib */; };
+		9309330B26202DE500EFC39E /* KoHo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 930932FF26202DE400EFC39E /* KoHo-Medium.ttf */; };
+		9309330C26202DE500EFC39E /* KoHo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9309330026202DE400EFC39E /* KoHo-SemiBold.ttf */; };
+		9309330D26202DE500EFC39E /* KoHo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9309330126202DE400EFC39E /* KoHo-Light.ttf */; };
+		9309330E26202DE500EFC39E /* KoHo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9309330226202DE400EFC39E /* KoHo-Bold.ttf */; };
+		9309330F26202DE500EFC39E /* KoHo-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9309330326202DE400EFC39E /* KoHo-ExtraLight.ttf */; };
+		9309331026202DE500EFC39E /* KoHo-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9309330426202DE400EFC39E /* KoHo-BoldItalic.ttf */; };
+		9309331126202DE500EFC39E /* KoHo-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9309330526202DE400EFC39E /* KoHo-ExtraLightItalic.ttf */; };
+		9309331226202DE500EFC39E /* KoHo-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9309330626202DE400EFC39E /* KoHo-MediumItalic.ttf */; };
+		9309331326202DE500EFC39E /* KoHo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9309330726202DE400EFC39E /* KoHo-Regular.ttf */; };
+		9309331426202DE500EFC39E /* KoHo-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9309330826202DE400EFC39E /* KoHo-SemiBoldItalic.ttf */; };
+		9309331526202DE500EFC39E /* KoHo-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9309330926202DE400EFC39E /* KoHo-LightItalic.ttf */; };
+		9309331626202DE500EFC39E /* KoHo-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9309330A26202DE400EFC39E /* KoHo-Italic.ttf */; };
+		9309331A2620346300EFC39E /* HeaderPaymentTextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930933182620346300EFC39E /* HeaderPaymentTextCollectionViewCell.swift */; };
+		9309331B2620346300EFC39E /* HeaderPaymentTextCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930933192620346300EFC39E /* HeaderPaymentTextCollectionViewCell.xib */; };
 		930EFEE5260C748100CEDF98 /* ResetPasswdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930EFEE3260C748000CEDF98 /* ResetPasswdViewController.swift */; };
 		930EFEE6260C748100CEDF98 /* ResetPasswdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930EFEE4260C748000CEDF98 /* ResetPasswdViewController.xib */; };
 		930F69A9253034B500DE4F79 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930F69A7253034B500DE4F79 /* TabbarViewController.swift */; };
@@ -38,18 +61,68 @@
 		930F6A012530A5EB00DE4F79 /* InstrumentSuggestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930F69FF2530A5EB00DE4F79 /* InstrumentSuggestCell.xib */; };
 		931287182616DC3C0022ACE9 /* DetailNewsFeedViewBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931287162616DC3C0022ACE9 /* DetailNewsFeedViewBottom.swift */; };
 		931287192616DC3C0022ACE9 /* DetailNewsFeedViewBottom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 931287172616DC3C0022ACE9 /* DetailNewsFeedViewBottom.xib */; };
+		9312E587264A5C8B00D622EC /* PaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9312E586264A5C8B00D622EC /* PaymentService.swift */; };
+		9312E58A264A696200D622EC /* BankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9312E589264A696200D622EC /* BankModel.swift */; };
 		9312E798261AEBC200076F8B /* ManagerModernAVPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9312E797261AEBC200076F8B /* ManagerModernAVPlayer.swift */; };
 		931507E92537017400444CD2 /* DetailSongSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931507E82537017400444CD2 /* DetailSongSectionController.swift */; };
 		931507F02537026300444CD2 /* DetailMediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931507EE2537026300444CD2 /* DetailMediaCell.swift */; };
 		931507F12537026300444CD2 /* DetailMediaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 931507EF2537026300444CD2 /* DetailMediaCell.xib */; };
+		9316A6E22667B2A6002D3BA0 /* PaymentFilterHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9316A6E12667B2A6002D3BA0 /* PaymentFilterHistory.swift */; };
 		9319B924260D7EF4009E56CC /* DefaultCustomAVPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319B922260D7EF4009E56CC /* DefaultCustomAVPlayer.swift */; };
 		9319B925260D7EF4009E56CC /* DefaultCustomAVPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9319B923260D7EF4009E56CC /* DefaultCustomAVPlayer.xib */; };
 		9319B928260D8E82009E56CC /* CustomAVPlayer2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319B926260D8E82009E56CC /* CustomAVPlayer2.swift */; };
 		9319B929260D8E82009E56CC /* CustomAVPlayer2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9319B927260D8E82009E56CC /* CustomAVPlayer2.xib */; };
 		9319B92C260D8F2A009E56CC /* SmallCustomAVPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9319B92A260D8F2A009E56CC /* SmallCustomAVPlayer.xib */; };
 		9319B92D260D8F2A009E56CC /* SmallCustomAVPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319B92B260D8F2A009E56CC /* SmallCustomAVPlayer.swift */; };
+		93217A9E265C9C4500332A80 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938BB98125FB3B9900AC664C /* AudioKit.framework */; };
+		93217AA1265C9C4600332A80 /* AudioKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938BB98225FB3B9900AC664C /* AudioKitUI.framework */; };
+		932249FA26292FE100BDE49A /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932249F826292FE100BDE49A /* ViewController2.swift */; };
+		932249FB26292FE100BDE49A /* ViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 932249F926292FE100BDE49A /* ViewController2.xib */; };
+		932249FE26293A5600BDE49A /* RoundSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932249FC26293A5600BDE49A /* RoundSlider.swift */; };
+		932249FF26293A5600BDE49A /* RoundSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 932249FD26293A5600BDE49A /* RoundSlider.xib */; };
+		93224A072629686600BDE49A /* SongProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93224A062629686500BDE49A /* SongProcessor.swift */; };
+		93224A092629698000BDE49A /* Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93224A082629698000BDE49A /* Effect.swift */; };
+		93224A0C26296D4D00BDE49A /* EffectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93224A0A26296D4D00BDE49A /* EffectsViewController.swift */; };
+		93224A0D26296D4D00BDE49A /* EffectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93224A0B26296D4D00BDE49A /* EffectsViewController.xib */; };
+		93224A142629714200BDE49A /* VariableDelayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93224A0F2629714200BDE49A /* VariableDelayViewController.swift */; };
+		93224A152629714200BDE49A /* CostelloReverbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93224A102629714200BDE49A /* CostelloReverbViewController.swift */; };
+		93224A162629714200BDE49A /* PitchShifterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93224A112629714200BDE49A /* PitchShifterViewController.swift */; };
+		93224A172629714200BDE49A /* BitCrusherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93224A122629714200BDE49A /* BitCrusherViewController.swift */; };
+		93224A182629714200BDE49A /* MoogLadderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93224A132629714200BDE49A /* MoogLadderViewController.swift */; };
+		93224A1A2629716600BDE49A /* BitCrusherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93224A192629716600BDE49A /* BitCrusherViewController.xib */; };
+		93224A1C2629717200BDE49A /* CostelloReverbViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93224A1B2629717200BDE49A /* CostelloReverbViewController.xib */; };
+		93224A1E2629717D00BDE49A /* MoogLadderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93224A1D2629717D00BDE49A /* MoogLadderViewController.xib */; };
+		93224A202629718800BDE49A /* PitchShifterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93224A1F2629718800BDE49A /* PitchShifterViewController.xib */; };
+		93224A222629719400BDE49A /* VariableDelayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93224A212629719400BDE49A /* VariableDelayViewController.xib */; };
+		932E78652624231300CFEDEA /* ManagerPaymentSectionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E78642624231300CFEDEA /* ManagerPaymentSectionFactory.swift */; };
+		932E786B2624309F00CFEDEA /* ShowSumMoneyHightLightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 932E78692624309F00CFEDEA /* ShowSumMoneyHightLightCell.xib */; };
+		932E786C2624309F00CFEDEA /* ShowSumMoneyHightLightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E786A2624309F00CFEDEA /* ShowSumMoneyHightLightCell.swift */; };
+		932E7871262430C800CFEDEA /* SearchDatePaymentSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E7870262430C800CFEDEA /* SearchDatePaymentSectionController.swift */; };
+		932E7875262430E300CFEDEA /* SearchDatePaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 932E7873262430E300CFEDEA /* SearchDatePaymentCell.xib */; };
+		932E7876262430E300CFEDEA /* SearchDatePaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E7874262430E300CFEDEA /* SearchDatePaymentCell.swift */; };
+		932E787C2624387E00CFEDEA /* HistoryPaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E787A2624387E00CFEDEA /* HistoryPaymentCell.swift */; };
+		932E787D2624387E00CFEDEA /* HistoryPaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 932E787B2624387E00CFEDEA /* HistoryPaymentCell.xib */; };
+		932E7882262438A000CFEDEA /* HistoryPaymentSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E7881262438A000CFEDEA /* HistoryPaymentSectionController.swift */; };
+		932E788826243EBD00CFEDEA /* AddAccountPaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 932E788626243EBD00CFEDEA /* AddAccountPaymentCell.xib */; };
+		932E788926243EBD00CFEDEA /* AddAccountPaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E788726243EBD00CFEDEA /* AddAccountPaymentCell.swift */; };
+		932E789226243EE000CFEDEA /* AddAccountPaymentSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E788F26243EE000CFEDEA /* AddAccountPaymentSectionController.swift */; };
+		932E789326243EE000CFEDEA /* AccountPaymentSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E789126243EE000CFEDEA /* AccountPaymentSectionController.swift */; };
+		932E7899262442E300CFEDEA /* AccountPaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E7897262442E300CFEDEA /* AccountPaymentCell.swift */; };
+		932E789A262442E300CFEDEA /* AccountPaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 932E7898262442E300CFEDEA /* AccountPaymentCell.xib */; };
+		932E789D2624606900CFEDEA /* BackroundClear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E789B2624606900CFEDEA /* BackroundClear.swift */; };
+		932E789E2624606900CFEDEA /* BackroundClear.xib in Resources */ = {isa = PBXBuildFile; fileRef = 932E789C2624606900CFEDEA /* BackroundClear.xib */; };
 		9331A15E261B0A25003B0BEC /* DetailMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9331A15D261B0A25003B0BEC /* DetailMediaViewController.swift */; };
 		9331A160261B0AB9003B0BEC /* DetailMediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9331A15F261B0AB9003B0BEC /* DetailMediaViewController.xib */; };
+		933EEA372632890000D0B434 /* ManagerUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 933EEA352632890000D0B434 /* ManagerUserViewController.xib */; };
+		933EEA382632890000D0B434 /* ManagerUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933EEA362632890000D0B434 /* ManagerUserViewController.swift */; };
+		933EEA3E26328BAD00D0B434 /* ManagerUserSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933EEA3D26328BAC00D0B434 /* ManagerUserSectionController.swift */; };
+		933EEA45263290EA00D0B434 /* UserInfoManagerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 933EEA43263290EA00D0B434 /* UserInfoManagerCell.xib */; };
+		933EEA46263290EA00D0B434 /* UserInfoManagerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933EEA44263290EA00D0B434 /* UserInfoManagerCell.swift */; };
+		933EEA4B2632A05000D0B434 /* ManagerUserSearchSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933EEA4A2632A05000D0B434 /* ManagerUserSearchSectionController.swift */; };
+		933EEA512632A08A00D0B434 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933EEA4F2632A08A00D0B434 /* SearchCell.swift */; };
+		933EEA522632A08A00D0B434 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 933EEA502632A08A00D0B434 /* SearchCell.xib */; };
+		9348D9C42636BE370045ED78 /* MiniVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9348D9C22636BE370045ED78 /* MiniVideo.swift */; };
+		9348D9C52636BE370045ED78 /* MiniVideo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9348D9C32636BE370045ED78 /* MiniVideo.xib */; };
 		93491B0A2537E86E00A49BDE /* LevelMediaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93491B082537E86D00A49BDE /* LevelMediaCell.xib */; };
 		93491B0B2537E86E00A49BDE /* LevelMediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93491B092537E86D00A49BDE /* LevelMediaCell.swift */; };
 		93491B112537EC5200A49BDE /* ReactionMusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93491B0F2537EC5200A49BDE /* ReactionMusicCell.xib */; };
@@ -76,11 +149,30 @@
 		936F5279260B23D000BDA614 /* PianoPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936F5277260B23CF00BDA614 /* PianoPracticeViewController.swift */; };
 		936F5286260B51F800BDA614 /* AuthenticateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936F5284260B51F800BDA614 /* AuthenticateViewController.swift */; };
 		936F5287260B51F800BDA614 /* AuthenticateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 936F5285260B51F800BDA614 /* AuthenticateViewController.xib */; };
+		937DC7CA264E203D0010BCE6 /* GradientViewPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937DC7C9264E203D0010BCE6 /* GradientViewPayment.swift */; };
+		937DC7D5264E21F40010BCE6 /* WithDrawalMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937DC7D3264E21F40010BCE6 /* WithDrawalMoneyViewController.swift */; };
+		937DC7D6264E21F40010BCE6 /* WithDrawalMoneyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 937DC7D4264E21F40010BCE6 /* WithDrawalMoneyViewController.xib */; };
+		937DC7DB264E64CF0010BCE6 /* MethodReceiveMoneySectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937DC7DA264E64CE0010BCE6 /* MethodReceiveMoneySectionController.swift */; };
+		937DC7E1264E66230010BCE6 /* TextFieldInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937DC7DF264E66230010BCE6 /* TextFieldInputCell.swift */; };
+		937DC7E2264E66230010BCE6 /* TextFieldInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 937DC7E0264E66230010BCE6 /* TextFieldInputCell.xib */; };
+		937DC7E9264E6CFC0010BCE6 /* DotSelectPaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 937DC7E7264E6CFB0010BCE6 /* DotSelectPaymentCell.xib */; };
+		937DC7EA264E6CFC0010BCE6 /* DotSelectPaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937DC7E8264E6CFB0010BCE6 /* DotSelectPaymentCell.swift */; };
+		937DC7EF264E79340010BCE6 /* MoneyNeedWithDrawalSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937DC7EE264E79340010BCE6 /* MoneyNeedWithDrawalSectionController.swift */; };
 		938BB98C25FB3CA300AC664C /* AKSampler+moreSFZ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938BB98925FB3CA300AC664C /* AKSampler+moreSFZ.swift */; };
 		938BB98D25FB3CA300AC664C /* ConductorTmp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938BB98A25FB3CA300AC664C /* ConductorTmp.swift */; };
 		938BB98E25FB3CA300AC664C /* FileManagerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938BB98B25FB3CA300AC664C /* FileManagerUtils.swift */; };
 		938F4299253580B300160DCA /* SearchNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938F4297253580B300160DCA /* SearchNavigationView.swift */; };
 		938F429A253580B300160DCA /* SearchNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 938F4298253580B300160DCA /* SearchNavigationView.xib */; };
+		93A466E0262552B70043FF0C /* CURDPaymentAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A466DE262552B70043FF0C /* CURDPaymentAccountViewController.xib */; };
+		93A466E1262552B70043FF0C /* CURDPaymentAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A466DF262552B70043FF0C /* CURDPaymentAccountViewController.swift */; };
+		93A466E72626911D0043FF0C /* PaymentNoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A466E52626911D0043FF0C /* PaymentNoteCell.xib */; };
+		93A466E82626911D0043FF0C /* PaymentNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A466E62626911D0043FF0C /* PaymentNoteCell.swift */; };
+		93A466ED2626935F0043FF0C /* PaymentNoteSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A466EC2626935F0043FF0C /* PaymentNoteSectionController.swift */; };
+		93A466F3262698EE0043FF0C /* PaymentTextFieldInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A466F1262698EE0043FF0C /* PaymentTextFieldInputCell.xib */; };
+		93A466F4262698EE0043FF0C /* PaymentTextFieldInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A466F2262698EE0043FF0C /* PaymentTextFieldInputCell.swift */; };
+		93A466F926269B970043FF0C /* CURDPaymentInputCellSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A466F826269B970043FF0C /* CURDPaymentInputCellSectionController.swift */; };
+		93A466FD2626D02D0043FF0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A466FB2626D02D0043FF0C /* ViewController.swift */; };
+		93A466FE2626D02D0043FF0C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A466FC2626D02D0043FF0C /* ViewController.xib */; };
 		93A6D41F261729230064498D /* NewsDetailNewsFeedHeaderSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A6D41E261729230064498D /* NewsDetailNewsFeedHeaderSectionController.swift */; };
 		93A6D42426172D2B0064498D /* NewsDetailNewsFeedCommentSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A6D42326172D2B0064498D /* NewsDetailNewsFeedCommentSectionController.swift */; };
 		93A6D42A261848890064498D /* PopupIGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A6D427261848890064498D /* PopupIGViewController.swift */; };
@@ -101,10 +193,6 @@
 		93ABA7162614515E00B73F63 /* HeaderUserWallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ABA7142614515E00B73F63 /* HeaderUserWallCell.swift */; };
 		93ABA71C2614653800B73F63 /* DetailNewsFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93ABA71A2614653800B73F63 /* DetailNewsFeedViewController.xib */; };
 		93ABA71D2614653800B73F63 /* DetailNewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ABA71B2614653800B73F63 /* DetailNewsFeedViewController.swift */; };
-		93B260B7260DE6F200100779 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938BB98125FB3B9900AC664C /* AudioKit.framework */; };
-		93B260B8260DE6F200100779 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 938BB98125FB3B9900AC664C /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		93B260BA260DE6F500100779 /* AudioKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938BB98225FB3B9900AC664C /* AudioKitUI.framework */; };
-		93B260BB260DE6F500100779 /* AudioKitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 938BB98225FB3B9900AC664C /* AudioKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		93C5BF1A2534003400DA172A /* VietSongsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C5BF182534003400DA172A /* VietSongsCell.xib */; };
 		93C5BF1B2534003400DA172A /* VietSongsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5BF192534003400DA172A /* VietSongsCell.swift */; };
 		93C5BF202534017A00DA172A /* VietSongsSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5BF1F2534017A00DA172A /* VietSongsSectionController.swift */; };
@@ -230,6 +318,7 @@
 		93DC283D25FA19EC0045F927 /* ScreenRecordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DC283A25FA19EC0045F927 /* ScreenRecordCoordinator.swift */; };
 		93DC283E25FA19EC0045F927 /* ScreenRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DC283B25FA19EC0045F927 /* ScreenRecorder.swift */; };
 		93DC283F25FA19EC0045F927 /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DC283C25FA19EC0045F927 /* FileUtil.swift */; };
+		93E23949262D2E840013104F /* RouterPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E23948262D2E840013104F /* RouterPayment.swift */; };
 		93E2DBB926171A7600C86495 /* MediaResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E2DBB826171A7600C86495 /* MediaResource.swift */; };
 		93E2DBBD26171A9700C86495 /* RemoteCommandExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E2DBBC26171A9700C86495 /* RemoteCommandExample.swift */; };
 		93E2DBBF26171AA700C86495 /* PlayerConfigurationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E2DBBE26171AA700C86495 /* PlayerConfigurationExample.swift */; };
@@ -255,6 +344,16 @@
 		93EFA338261C3AFB0025477A /* SendOutPutEditSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFA337261C3AFB0025477A /* SendOutPutEditSectionController.swift */; };
 		93EFA33E261C3B7D0025477A /* SendOutPutEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFA33C261C3B7C0025477A /* SendOutPutEditCell.swift */; };
 		93EFA33F261C3B7D0025477A /* SendOutPutEditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93EFA33D261C3B7C0025477A /* SendOutPutEditCell.xib */; };
+		93FB86042640FF3B001FBDC4 /* HistoryLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FB86022640FF3B001FBDC4 /* HistoryLabelCell.swift */; };
+		93FB86052640FF3B001FBDC4 /* HistoryLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93FB86032640FF3B001FBDC4 /* HistoryLabelCell.xib */; };
+		93FB860C26411BF7001FBDC4 /* PaymentFilterHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93FB860A26411BF6001FBDC4 /* PaymentFilterHistoryViewController.xib */; };
+		93FB860D26411BF7001FBDC4 /* PaymentFilterHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FB860B26411BF6001FBDC4 /* PaymentFilterHistoryViewController.swift */; };
+		93FB86132641215C001FBDC4 /* PaymentFilterBlockSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FB86122641215C001FBDC4 /* PaymentFilterBlockSectionController.swift */; };
+		93FB861A2641269E001FBDC4 /* PaymentBlockFilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93FB86182641269E001FBDC4 /* PaymentBlockFilterCell.xib */; };
+		93FB861B2641269E001FBDC4 /* PaymentBlockFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FB86192641269E001FBDC4 /* PaymentBlockFilterCell.swift */; };
+		93FB862026413C00001FBDC4 /* PaymentFilterDateSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FB861F26413C00001FBDC4 /* PaymentFilterDateSectionController.swift */; };
+		93FB862626413CC1001FBDC4 /* PaymentFilterDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FB862426413CC1001FBDC4 /* PaymentFilterDateCell.swift */; };
+		93FB862726413CC1001FBDC4 /* PaymentFilterDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93FB862526413CC1001FBDC4 /* PaymentFilterDateCell.xib */; };
 		CC00A7622235904900B261FE /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC00A7612235904900B261FE /* CustomSegmentedControl.swift */; };
 		CC3913B722417B12008B2E0D /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3913B622417B12008B2E0D /* ExtensionUIViewController.swift */; };
 		CC3913BA22417D70008B2E0D /* ExtensionUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3913B922417D70008B2E0D /* ExtensionUITextField.swift */; };
@@ -375,25 +474,33 @@
 		CCF4A9BF252F7A5800897ECF /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF4A950252F7A5800897ECF /* Localizable.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		93B260B9260DE6F200100779 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				93B260BB260DE6F500100779 /* AudioKitUI.framework in Embed Frameworks */,
-				93B260B8260DE6F200100779 /* AudioKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		6E46A6F8C463E060E1CF3EDA /* Pods-Piano_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piano_App.debug.xcconfig"; path = "Target Support Files/Pods-Piano_App/Pods-Piano_App.debug.xcconfig"; sourceTree = "<group>"; };
 		9305ECA2254BFB7500E30F64 /* PlayButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayButtonCell.xib; sourceTree = "<group>"; };
 		9305ECA3254BFB7500E30F64 /* PlayButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButtonCell.swift; sourceTree = "<group>"; };
+		930932D7261FF5B200EFC39E /* ManagerPaymentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManagerPaymentViewController.xib; sourceTree = "<group>"; };
+		930932D8261FF5B200EFC39E /* ManagerPaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerPaymentViewController.swift; sourceTree = "<group>"; };
+		930932DC261FF5DD00EFC39E /* NavigationViewPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewPayment.swift; sourceTree = "<group>"; };
+		930932DD261FF5DD00EFC39E /* NavigationViewPayment.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationViewPayment.xib; sourceTree = "<group>"; };
+		930932E1262002C100EFC39E /* SectionBackgroundPaymentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionBackgroundPaymentCardView.swift; sourceTree = "<group>"; };
+		930932E2262002C100EFC39E /* SectionBackgroundPaymentCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionBackgroundPaymentCardView.xib; sourceTree = "<group>"; };
+		930932EA2620076800EFC39E /* SimpleShowSumMoneySectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleShowSumMoneySectionController.swift; sourceTree = "<group>"; };
+		930932F82620097700EFC39E /* ShowSumMoneyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowSumMoneyCell.swift; sourceTree = "<group>"; };
+		930932F92620097700EFC39E /* ShowSumMoneyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowSumMoneyCell.xib; sourceTree = "<group>"; };
+		930932FF26202DE400EFC39E /* KoHo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KoHo-Medium.ttf"; sourceTree = "<group>"; };
+		9309330026202DE400EFC39E /* KoHo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KoHo-SemiBold.ttf"; sourceTree = "<group>"; };
+		9309330126202DE400EFC39E /* KoHo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KoHo-Light.ttf"; sourceTree = "<group>"; };
+		9309330226202DE400EFC39E /* KoHo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KoHo-Bold.ttf"; sourceTree = "<group>"; };
+		9309330326202DE400EFC39E /* KoHo-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KoHo-ExtraLight.ttf"; sourceTree = "<group>"; };
+		9309330426202DE400EFC39E /* KoHo-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KoHo-BoldItalic.ttf"; sourceTree = "<group>"; };
+		9309330526202DE400EFC39E /* KoHo-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KoHo-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		9309330626202DE400EFC39E /* KoHo-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KoHo-MediumItalic.ttf"; sourceTree = "<group>"; };
+		9309330726202DE400EFC39E /* KoHo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KoHo-Regular.ttf"; sourceTree = "<group>"; };
+		9309330826202DE400EFC39E /* KoHo-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KoHo-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		9309330926202DE400EFC39E /* KoHo-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KoHo-LightItalic.ttf"; sourceTree = "<group>"; };
+		9309330A26202DE400EFC39E /* KoHo-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KoHo-Italic.ttf"; sourceTree = "<group>"; };
+		930933182620346300EFC39E /* HeaderPaymentTextCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderPaymentTextCollectionViewCell.swift; sourceTree = "<group>"; };
+		930933192620346300EFC39E /* HeaderPaymentTextCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderPaymentTextCollectionViewCell.xib; sourceTree = "<group>"; };
 		930EFEE3260C748000CEDF98 /* ResetPasswdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswdViewController.swift; sourceTree = "<group>"; };
 		930EFEE4260C748000CEDF98 /* ResetPasswdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPasswdViewController.xib; sourceTree = "<group>"; };
 		930F69A7253034B500DE4F79 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
@@ -423,18 +530,66 @@
 		930F69FF2530A5EB00DE4F79 /* InstrumentSuggestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstrumentSuggestCell.xib; sourceTree = "<group>"; };
 		931287162616DC3C0022ACE9 /* DetailNewsFeedViewBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsFeedViewBottom.swift; sourceTree = "<group>"; };
 		931287172616DC3C0022ACE9 /* DetailNewsFeedViewBottom.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailNewsFeedViewBottom.xib; sourceTree = "<group>"; };
+		9312E586264A5C8B00D622EC /* PaymentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentService.swift; sourceTree = "<group>"; };
+		9312E589264A696200D622EC /* BankModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankModel.swift; sourceTree = "<group>"; };
 		9312E797261AEBC200076F8B /* ManagerModernAVPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerModernAVPlayer.swift; sourceTree = "<group>"; };
 		931507E82537017400444CD2 /* DetailSongSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailSongSectionController.swift; sourceTree = "<group>"; };
 		931507EE2537026300444CD2 /* DetailMediaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailMediaCell.swift; sourceTree = "<group>"; };
 		931507EF2537026300444CD2 /* DetailMediaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailMediaCell.xib; sourceTree = "<group>"; };
+		9316A6E12667B2A6002D3BA0 /* PaymentFilterHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFilterHistory.swift; sourceTree = "<group>"; };
 		9319B922260D7EF4009E56CC /* DefaultCustomAVPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCustomAVPlayer.swift; sourceTree = "<group>"; };
 		9319B923260D7EF4009E56CC /* DefaultCustomAVPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultCustomAVPlayer.xib; sourceTree = "<group>"; };
 		9319B926260D8E82009E56CC /* CustomAVPlayer2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAVPlayer2.swift; sourceTree = "<group>"; };
 		9319B927260D8E82009E56CC /* CustomAVPlayer2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAVPlayer2.xib; sourceTree = "<group>"; };
 		9319B92A260D8F2A009E56CC /* SmallCustomAVPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallCustomAVPlayer.xib; sourceTree = "<group>"; };
 		9319B92B260D8F2A009E56CC /* SmallCustomAVPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallCustomAVPlayer.swift; sourceTree = "<group>"; };
+		932249F826292FE100BDE49A /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		932249F926292FE100BDE49A /* ViewController2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController2.xib; sourceTree = "<group>"; };
+		932249FC26293A5600BDE49A /* RoundSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundSlider.swift; sourceTree = "<group>"; };
+		932249FD26293A5600BDE49A /* RoundSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundSlider.xib; sourceTree = "<group>"; };
+		93224A062629686500BDE49A /* SongProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongProcessor.swift; sourceTree = "<group>"; };
+		93224A082629698000BDE49A /* Effect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Effect.swift; sourceTree = "<group>"; };
+		93224A0A26296D4D00BDE49A /* EffectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsViewController.swift; sourceTree = "<group>"; };
+		93224A0B26296D4D00BDE49A /* EffectsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EffectsViewController.xib; sourceTree = "<group>"; };
+		93224A0F2629714200BDE49A /* VariableDelayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariableDelayViewController.swift; sourceTree = "<group>"; };
+		93224A102629714200BDE49A /* CostelloReverbViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CostelloReverbViewController.swift; sourceTree = "<group>"; };
+		93224A112629714200BDE49A /* PitchShifterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchShifterViewController.swift; sourceTree = "<group>"; };
+		93224A122629714200BDE49A /* BitCrusherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitCrusherViewController.swift; sourceTree = "<group>"; };
+		93224A132629714200BDE49A /* MoogLadderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoogLadderViewController.swift; sourceTree = "<group>"; };
+		93224A192629716600BDE49A /* BitCrusherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BitCrusherViewController.xib; sourceTree = "<group>"; };
+		93224A1B2629717200BDE49A /* CostelloReverbViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CostelloReverbViewController.xib; sourceTree = "<group>"; };
+		93224A1D2629717D00BDE49A /* MoogLadderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoogLadderViewController.xib; sourceTree = "<group>"; };
+		93224A1F2629718800BDE49A /* PitchShifterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PitchShifterViewController.xib; sourceTree = "<group>"; };
+		93224A212629719400BDE49A /* VariableDelayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VariableDelayViewController.xib; sourceTree = "<group>"; };
+		932E78642624231300CFEDEA /* ManagerPaymentSectionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerPaymentSectionFactory.swift; sourceTree = "<group>"; };
+		932E78692624309F00CFEDEA /* ShowSumMoneyHightLightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowSumMoneyHightLightCell.xib; sourceTree = "<group>"; };
+		932E786A2624309F00CFEDEA /* ShowSumMoneyHightLightCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowSumMoneyHightLightCell.swift; sourceTree = "<group>"; };
+		932E7870262430C800CFEDEA /* SearchDatePaymentSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDatePaymentSectionController.swift; sourceTree = "<group>"; };
+		932E7873262430E300CFEDEA /* SearchDatePaymentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchDatePaymentCell.xib; sourceTree = "<group>"; };
+		932E7874262430E300CFEDEA /* SearchDatePaymentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDatePaymentCell.swift; sourceTree = "<group>"; };
+		932E787A2624387E00CFEDEA /* HistoryPaymentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryPaymentCell.swift; sourceTree = "<group>"; };
+		932E787B2624387E00CFEDEA /* HistoryPaymentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryPaymentCell.xib; sourceTree = "<group>"; };
+		932E7881262438A000CFEDEA /* HistoryPaymentSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryPaymentSectionController.swift; sourceTree = "<group>"; };
+		932E788626243EBD00CFEDEA /* AddAccountPaymentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAccountPaymentCell.xib; sourceTree = "<group>"; };
+		932E788726243EBD00CFEDEA /* AddAccountPaymentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAccountPaymentCell.swift; sourceTree = "<group>"; };
+		932E788F26243EE000CFEDEA /* AddAccountPaymentSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAccountPaymentSectionController.swift; sourceTree = "<group>"; };
+		932E789126243EE000CFEDEA /* AccountPaymentSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPaymentSectionController.swift; sourceTree = "<group>"; };
+		932E7897262442E300CFEDEA /* AccountPaymentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPaymentCell.swift; sourceTree = "<group>"; };
+		932E7898262442E300CFEDEA /* AccountPaymentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountPaymentCell.xib; sourceTree = "<group>"; };
+		932E789B2624606900CFEDEA /* BackroundClear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackroundClear.swift; sourceTree = "<group>"; };
+		932E789C2624606900CFEDEA /* BackroundClear.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackroundClear.xib; sourceTree = "<group>"; };
 		9331A15D261B0A25003B0BEC /* DetailMediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMediaViewController.swift; sourceTree = "<group>"; };
 		9331A15F261B0AB9003B0BEC /* DetailMediaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailMediaViewController.xib; sourceTree = "<group>"; };
+		933EEA352632890000D0B434 /* ManagerUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManagerUserViewController.xib; sourceTree = "<group>"; };
+		933EEA362632890000D0B434 /* ManagerUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerUserViewController.swift; sourceTree = "<group>"; };
+		933EEA3D26328BAC00D0B434 /* ManagerUserSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerUserSectionController.swift; sourceTree = "<group>"; };
+		933EEA43263290EA00D0B434 /* UserInfoManagerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoManagerCell.xib; sourceTree = "<group>"; };
+		933EEA44263290EA00D0B434 /* UserInfoManagerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoManagerCell.swift; sourceTree = "<group>"; };
+		933EEA4A2632A05000D0B434 /* ManagerUserSearchSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerUserSearchSectionController.swift; sourceTree = "<group>"; };
+		933EEA4F2632A08A00D0B434 /* SearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		933EEA502632A08A00D0B434 /* SearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		9348D9C22636BE370045ED78 /* MiniVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniVideo.swift; sourceTree = "<group>"; };
+		9348D9C32636BE370045ED78 /* MiniVideo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiniVideo.xib; sourceTree = "<group>"; };
 		93491B082537E86D00A49BDE /* LevelMediaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelMediaCell.xib; sourceTree = "<group>"; };
 		93491B092537E86D00A49BDE /* LevelMediaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelMediaCell.swift; sourceTree = "<group>"; };
 		93491B0F2537EC5200A49BDE /* ReactionMusicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReactionMusicCell.xib; sourceTree = "<group>"; };
@@ -461,6 +616,15 @@
 		936F5277260B23CF00BDA614 /* PianoPracticeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PianoPracticeViewController.swift; sourceTree = "<group>"; };
 		936F5284260B51F800BDA614 /* AuthenticateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticateViewController.swift; sourceTree = "<group>"; };
 		936F5285260B51F800BDA614 /* AuthenticateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthenticateViewController.xib; sourceTree = "<group>"; };
+		937DC7C9264E203D0010BCE6 /* GradientViewPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewPayment.swift; sourceTree = "<group>"; };
+		937DC7D3264E21F40010BCE6 /* WithDrawalMoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithDrawalMoneyViewController.swift; sourceTree = "<group>"; };
+		937DC7D4264E21F40010BCE6 /* WithDrawalMoneyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WithDrawalMoneyViewController.xib; sourceTree = "<group>"; };
+		937DC7DA264E64CE0010BCE6 /* MethodReceiveMoneySectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodReceiveMoneySectionController.swift; sourceTree = "<group>"; };
+		937DC7DF264E66230010BCE6 /* TextFieldInputCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldInputCell.swift; sourceTree = "<group>"; };
+		937DC7E0264E66230010BCE6 /* TextFieldInputCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldInputCell.xib; sourceTree = "<group>"; };
+		937DC7E7264E6CFB0010BCE6 /* DotSelectPaymentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DotSelectPaymentCell.xib; sourceTree = "<group>"; };
+		937DC7E8264E6CFB0010BCE6 /* DotSelectPaymentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotSelectPaymentCell.swift; sourceTree = "<group>"; };
+		937DC7EE264E79340010BCE6 /* MoneyNeedWithDrawalSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyNeedWithDrawalSectionController.swift; sourceTree = "<group>"; };
 		938BB98125FB3B9900AC664C /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
 		938BB98225FB3B9900AC664C /* AudioKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKitUI.framework; sourceTree = "<group>"; };
 		938BB98925FB3CA300AC664C /* AKSampler+moreSFZ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AKSampler+moreSFZ.swift"; sourceTree = "<group>"; };
@@ -468,6 +632,16 @@
 		938BB98B25FB3CA300AC664C /* FileManagerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerUtils.swift; sourceTree = "<group>"; };
 		938F4297253580B300160DCA /* SearchNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationView.swift; sourceTree = "<group>"; };
 		938F4298253580B300160DCA /* SearchNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchNavigationView.xib; sourceTree = "<group>"; };
+		93A466DE262552B70043FF0C /* CURDPaymentAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CURDPaymentAccountViewController.xib; sourceTree = "<group>"; };
+		93A466DF262552B70043FF0C /* CURDPaymentAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CURDPaymentAccountViewController.swift; sourceTree = "<group>"; };
+		93A466E52626911D0043FF0C /* PaymentNoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentNoteCell.xib; sourceTree = "<group>"; };
+		93A466E62626911D0043FF0C /* PaymentNoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentNoteCell.swift; sourceTree = "<group>"; };
+		93A466EC2626935F0043FF0C /* PaymentNoteSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentNoteSectionController.swift; sourceTree = "<group>"; };
+		93A466F1262698EE0043FF0C /* PaymentTextFieldInputCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentTextFieldInputCell.xib; sourceTree = "<group>"; };
+		93A466F2262698EE0043FF0C /* PaymentTextFieldInputCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTextFieldInputCell.swift; sourceTree = "<group>"; };
+		93A466F826269B970043FF0C /* CURDPaymentInputCellSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CURDPaymentInputCellSectionController.swift; sourceTree = "<group>"; };
+		93A466FB2626D02D0043FF0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		93A466FC2626D02D0043FF0C /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		93A6D41E261729230064498D /* NewsDetailNewsFeedHeaderSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailNewsFeedHeaderSectionController.swift; sourceTree = "<group>"; };
 		93A6D42326172D2B0064498D /* NewsDetailNewsFeedCommentSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailNewsFeedCommentSectionController.swift; sourceTree = "<group>"; };
 		93A6D427261848890064498D /* PopupIGViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupIGViewController.swift; sourceTree = "<group>"; };
@@ -614,6 +788,7 @@
 		93DC283A25FA19EC0045F927 /* ScreenRecordCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenRecordCoordinator.swift; sourceTree = "<group>"; };
 		93DC283B25FA19EC0045F927 /* ScreenRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenRecorder.swift; sourceTree = "<group>"; };
 		93DC283C25FA19EC0045F927 /* FileUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
+		93E23948262D2E840013104F /* RouterPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterPayment.swift; sourceTree = "<group>"; };
 		93E2DBB826171A7600C86495 /* MediaResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaResource.swift; sourceTree = "<group>"; };
 		93E2DBBC26171A9700C86495 /* RemoteCommandExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCommandExample.swift; sourceTree = "<group>"; };
 		93E2DBBE26171AA700C86495 /* PlayerConfigurationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerConfigurationExample.swift; sourceTree = "<group>"; };
@@ -639,6 +814,16 @@
 		93EFA337261C3AFB0025477A /* SendOutPutEditSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendOutPutEditSectionController.swift; sourceTree = "<group>"; };
 		93EFA33C261C3B7C0025477A /* SendOutPutEditCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendOutPutEditCell.swift; sourceTree = "<group>"; };
 		93EFA33D261C3B7C0025477A /* SendOutPutEditCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendOutPutEditCell.xib; sourceTree = "<group>"; };
+		93FB86022640FF3B001FBDC4 /* HistoryLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryLabelCell.swift; sourceTree = "<group>"; };
+		93FB86032640FF3B001FBDC4 /* HistoryLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryLabelCell.xib; sourceTree = "<group>"; };
+		93FB860A26411BF6001FBDC4 /* PaymentFilterHistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentFilterHistoryViewController.xib; sourceTree = "<group>"; };
+		93FB860B26411BF6001FBDC4 /* PaymentFilterHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFilterHistoryViewController.swift; sourceTree = "<group>"; };
+		93FB86122641215C001FBDC4 /* PaymentFilterBlockSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFilterBlockSectionController.swift; sourceTree = "<group>"; };
+		93FB86182641269E001FBDC4 /* PaymentBlockFilterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentBlockFilterCell.xib; sourceTree = "<group>"; };
+		93FB86192641269E001FBDC4 /* PaymentBlockFilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentBlockFilterCell.swift; sourceTree = "<group>"; };
+		93FB861F26413C00001FBDC4 /* PaymentFilterDateSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFilterDateSectionController.swift; sourceTree = "<group>"; };
+		93FB862426413CC1001FBDC4 /* PaymentFilterDateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFilterDateCell.swift; sourceTree = "<group>"; };
+		93FB862526413CC1001FBDC4 /* PaymentFilterDateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentFilterDateCell.xib; sourceTree = "<group>"; };
 		A95C325493C77F7089CAE81C /* Pods_Piano_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Piano_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4BD7F963C1452793738AABB /* Pods-Piano_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piano_App.release.xcconfig"; path = "Target Support Files/Pods-Piano_App/Pods-Piano_App.release.xcconfig"; sourceTree = "<group>"; };
 		CC00A7612235904900B261FE /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
@@ -652,7 +837,7 @@
 		CCAC39CC2215AAE800D89162 /* ServiceFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFirebase.swift; sourceTree = "<group>"; };
 		CCC5574C21739E7C0021844A /* ExtensionUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIButton.swift; sourceTree = "<group>"; };
 		CCC557632173CD8E0021844A /* ExtensionCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionCollection.swift; sourceTree = "<group>"; };
-		CCC881CD21711D5F00DC6CB7 /* Piano Karaoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Piano Karaoke.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCC881CD21711D5F00DC6CB7 /* Piano Kara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Piano Kara.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCC881D721711D6000DC6CB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCC881DA21711D6000DC6CB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCC881DC21711D6000DC6CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -769,8 +954,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93B260BA260DE6F500100779 /* AudioKitUI.framework in Frameworks */,
-				93B260B7260DE6F200100779 /* AudioKit.framework in Frameworks */,
+				93217AA1265C9C4600332A80 /* AudioKitUI.framework in Frameworks */,
+				93217A9E265C9C4500332A80 /* AudioKit.framework in Frameworks */,
 				7B323B12345DEDDB4214FAED /* Pods_Piano_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -804,6 +989,102 @@
 				9305ECA3254BFB7500E30F64 /* PlayButtonCell.swift */,
 			);
 			path = PlayButtonCell;
+			sourceTree = "<group>";
+		};
+		930932CF261FF51500EFC39E /* Azibai */ = {
+			isa = PBXGroup;
+			children = (
+				93A466FA2626CD830043FF0C /* New Group */,
+				930932FE26202DE400EFC39E /* KoHo */,
+				930932D3261FF56900EFC39E /* Payment */,
+			);
+			path = Azibai;
+			sourceTree = "<group>";
+		};
+		930932D3261FF56900EFC39E /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				9312E588264A692F00D622EC /* Models */,
+				9312E585264A5C7F00D622EC /* API */,
+				93FB860626411BD1001FBDC4 /* Features */,
+				93E23947262D2E780013104F /* RouterPayment */,
+				930932E0262002AA00EFC39E /* SupportLayouts */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		930932D6261FF5B200EFC39E /* ManagerPaymentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				930932D7261FF5B200EFC39E /* ManagerPaymentViewController.xib */,
+				930932D8261FF5B200EFC39E /* ManagerPaymentViewController.swift */,
+			);
+			path = ManagerPaymentViewController;
+			sourceTree = "<group>";
+		};
+		930932DB261FF5B500EFC39E /* NavView */ = {
+			isa = PBXGroup;
+			children = (
+				930933172620343F00EFC39E /* Cell */,
+				930932DC261FF5DD00EFC39E /* NavigationViewPayment.swift */,
+				930932DD261FF5DD00EFC39E /* NavigationViewPayment.xib */,
+			);
+			path = NavView;
+			sourceTree = "<group>";
+		};
+		930932E0262002AA00EFC39E /* SupportLayouts */ = {
+			isa = PBXGroup;
+			children = (
+				937DC7CF264E21230010BCE6 /* SectionBackgroundPaymentCardView */,
+				930932DB261FF5B500EFC39E /* NavView */,
+				937DC7C9264E203D0010BCE6 /* GradientViewPayment.swift */,
+			);
+			path = SupportLayouts;
+			sourceTree = "<group>";
+		};
+		930932E92620076800EFC39E /* SimpleShowSumMoneySectionController */ = {
+			isa = PBXGroup;
+			children = (
+				930932EA2620076800EFC39E /* SimpleShowSumMoneySectionController.swift */,
+			);
+			path = SimpleShowSumMoneySectionController;
+			sourceTree = "<group>";
+		};
+		930932F72620097700EFC39E /* ShowSumMoneyCell */ = {
+			isa = PBXGroup;
+			children = (
+				930932F82620097700EFC39E /* ShowSumMoneyCell.swift */,
+				930932F92620097700EFC39E /* ShowSumMoneyCell.xib */,
+			);
+			path = ShowSumMoneyCell;
+			sourceTree = "<group>";
+		};
+		930932FE26202DE400EFC39E /* KoHo */ = {
+			isa = PBXGroup;
+			children = (
+				930932FF26202DE400EFC39E /* KoHo-Medium.ttf */,
+				9309330026202DE400EFC39E /* KoHo-SemiBold.ttf */,
+				9309330126202DE400EFC39E /* KoHo-Light.ttf */,
+				9309330226202DE400EFC39E /* KoHo-Bold.ttf */,
+				9309330326202DE400EFC39E /* KoHo-ExtraLight.ttf */,
+				9309330426202DE400EFC39E /* KoHo-BoldItalic.ttf */,
+				9309330526202DE400EFC39E /* KoHo-ExtraLightItalic.ttf */,
+				9309330626202DE400EFC39E /* KoHo-MediumItalic.ttf */,
+				9309330726202DE400EFC39E /* KoHo-Regular.ttf */,
+				9309330826202DE400EFC39E /* KoHo-SemiBoldItalic.ttf */,
+				9309330926202DE400EFC39E /* KoHo-LightItalic.ttf */,
+				9309330A26202DE400EFC39E /* KoHo-Italic.ttf */,
+			);
+			path = KoHo;
+			sourceTree = "<group>";
+		};
+		930933172620343F00EFC39E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				930933182620346300EFC39E /* HeaderPaymentTextCollectionViewCell.swift */,
+				930933192620346300EFC39E /* HeaderPaymentTextCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		930EFEE2260C748000CEDF98 /* ResetPasswdViewController */ = {
@@ -968,6 +1249,23 @@
 			path = DetailNewsFeed;
 			sourceTree = "<group>";
 		};
+		9312E585264A5C7F00D622EC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9312E586264A5C8B00D622EC /* PaymentService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		9312E588264A692F00D622EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9312E589264A696200D622EC /* BankModel.swift */,
+				9316A6E12667B2A6002D3BA0 /* PaymentFilterHistory.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		931507E42537015300444CD2 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
@@ -1009,6 +1307,100 @@
 			path = DetailMediaCell;
 			sourceTree = "<group>";
 		};
+		93224A0E262970B700BDE49A /* EffectsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				93224A122629714200BDE49A /* BitCrusherViewController.swift */,
+				93224A102629714200BDE49A /* CostelloReverbViewController.swift */,
+				93224A132629714200BDE49A /* MoogLadderViewController.swift */,
+				93224A112629714200BDE49A /* PitchShifterViewController.swift */,
+				93224A0F2629714200BDE49A /* VariableDelayViewController.swift */,
+				93224A192629716600BDE49A /* BitCrusherViewController.xib */,
+				93224A1B2629717200BDE49A /* CostelloReverbViewController.xib */,
+				93224A1D2629717D00BDE49A /* MoogLadderViewController.xib */,
+				93224A1F2629718800BDE49A /* PitchShifterViewController.xib */,
+				93224A212629719400BDE49A /* VariableDelayViewController.xib */,
+			);
+			path = EffectsViewController;
+			sourceTree = "<group>";
+		};
+		932E78682624309F00CFEDEA /* ShowSumMoneyHightLightCell */ = {
+			isa = PBXGroup;
+			children = (
+				932E78692624309F00CFEDEA /* ShowSumMoneyHightLightCell.xib */,
+				932E786A2624309F00CFEDEA /* ShowSumMoneyHightLightCell.swift */,
+			);
+			path = ShowSumMoneyHightLightCell;
+			sourceTree = "<group>";
+		};
+		932E786F262430C800CFEDEA /* SearchDatePaymentSectionController */ = {
+			isa = PBXGroup;
+			children = (
+				932E7870262430C800CFEDEA /* SearchDatePaymentSectionController.swift */,
+			);
+			path = SearchDatePaymentSectionController;
+			sourceTree = "<group>";
+		};
+		932E7872262430E300CFEDEA /* SearchDatePaymentCell */ = {
+			isa = PBXGroup;
+			children = (
+				932E7873262430E300CFEDEA /* SearchDatePaymentCell.xib */,
+				932E7874262430E300CFEDEA /* SearchDatePaymentCell.swift */,
+			);
+			path = SearchDatePaymentCell;
+			sourceTree = "<group>";
+		};
+		932E78792624387E00CFEDEA /* HistoryPaymentCell */ = {
+			isa = PBXGroup;
+			children = (
+				932E787A2624387E00CFEDEA /* HistoryPaymentCell.swift */,
+				932E787B2624387E00CFEDEA /* HistoryPaymentCell.xib */,
+			);
+			path = HistoryPaymentCell;
+			sourceTree = "<group>";
+		};
+		932E7880262438A000CFEDEA /* HistoryPaymentSectionController */ = {
+			isa = PBXGroup;
+			children = (
+				932E7881262438A000CFEDEA /* HistoryPaymentSectionController.swift */,
+			);
+			path = HistoryPaymentSectionController;
+			sourceTree = "<group>";
+		};
+		932E788526243EBD00CFEDEA /* AddAccountPaymentCell */ = {
+			isa = PBXGroup;
+			children = (
+				932E788626243EBD00CFEDEA /* AddAccountPaymentCell.xib */,
+				932E788726243EBD00CFEDEA /* AddAccountPaymentCell.swift */,
+			);
+			path = AddAccountPaymentCell;
+			sourceTree = "<group>";
+		};
+		932E788E26243EDF00CFEDEA /* AddAccountPaymentSectionController */ = {
+			isa = PBXGroup;
+			children = (
+				932E788F26243EE000CFEDEA /* AddAccountPaymentSectionController.swift */,
+			);
+			path = AddAccountPaymentSectionController;
+			sourceTree = "<group>";
+		};
+		932E789026243EE000CFEDEA /* AccountPaymentSectionController */ = {
+			isa = PBXGroup;
+			children = (
+				932E789126243EE000CFEDEA /* AccountPaymentSectionController.swift */,
+			);
+			path = AccountPaymentSectionController;
+			sourceTree = "<group>";
+		};
+		932E7896262442E300CFEDEA /* AccountPaymentCell */ = {
+			isa = PBXGroup;
+			children = (
+				932E7897262442E300CFEDEA /* AccountPaymentCell.swift */,
+				932E7898262442E300CFEDEA /* AccountPaymentCell.xib */,
+			);
+			path = AccountPaymentCell;
+			sourceTree = "<group>";
+		};
 		9331A15C261B0A16003B0BEC /* DetailMediaViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1016,6 +1408,78 @@
 				9331A15F261B0AB9003B0BEC /* DetailMediaViewController.xib */,
 			);
 			path = DetailMediaViewController;
+			sourceTree = "<group>";
+		};
+		933EEA342632890000D0B434 /* ManagerUserViewController */ = {
+			isa = PBXGroup;
+			children = (
+				933EEA3F263290B500D0B434 /* Cells */,
+				933EEA3926328B9100D0B434 /* Sections */,
+				933EEA352632890000D0B434 /* ManagerUserViewController.xib */,
+				933EEA362632890000D0B434 /* ManagerUserViewController.swift */,
+			);
+			path = ManagerUserViewController;
+			sourceTree = "<group>";
+		};
+		933EEA3926328B9100D0B434 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				933EEA492632A05000D0B434 /* ManagerUserSearchSectionController */,
+				933EEA3C26328BAC00D0B434 /* ManagerUserSectionController */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		933EEA3C26328BAC00D0B434 /* ManagerUserSectionController */ = {
+			isa = PBXGroup;
+			children = (
+				933EEA3D26328BAC00D0B434 /* ManagerUserSectionController.swift */,
+			);
+			path = ManagerUserSectionController;
+			sourceTree = "<group>";
+		};
+		933EEA3F263290B500D0B434 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				933EEA4E2632A08A00D0B434 /* SearchCell */,
+				933EEA42263290EA00D0B434 /* UserInfoManagerCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		933EEA42263290EA00D0B434 /* UserInfoManagerCell */ = {
+			isa = PBXGroup;
+			children = (
+				933EEA43263290EA00D0B434 /* UserInfoManagerCell.xib */,
+				933EEA44263290EA00D0B434 /* UserInfoManagerCell.swift */,
+			);
+			path = UserInfoManagerCell;
+			sourceTree = "<group>";
+		};
+		933EEA492632A05000D0B434 /* ManagerUserSearchSectionController */ = {
+			isa = PBXGroup;
+			children = (
+				933EEA4A2632A05000D0B434 /* ManagerUserSearchSectionController.swift */,
+			);
+			path = ManagerUserSearchSectionController;
+			sourceTree = "<group>";
+		};
+		933EEA4E2632A08A00D0B434 /* SearchCell */ = {
+			isa = PBXGroup;
+			children = (
+				933EEA4F2632A08A00D0B434 /* SearchCell.swift */,
+				933EEA502632A08A00D0B434 /* SearchCell.xib */,
+			);
+			path = SearchCell;
+			sourceTree = "<group>";
+		};
+		9348D9C12636BE220045ED78 /* MiniVideo */ = {
+			isa = PBXGroup;
+			children = (
+				9348D9C22636BE370045ED78 /* MiniVideo.swift */,
+				9348D9C32636BE370045ED78 /* MiniVideo.xib */,
+			);
+			path = MiniVideo;
 			sourceTree = "<group>";
 		};
 		93491B072537E86D00A49BDE /* LevelMediaCell */ = {
@@ -1074,6 +1538,7 @@
 		935D7DD32536DC8C0076C7F7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				933EEA342632890000D0B434 /* ManagerUserViewController */,
 				93EFA30D261C1F9B0025477A /* InfoUserViewController */,
 				93EEDDFE2614808B0071E807 /* EditRecordViewController */,
 				93ABA7192614653800B73F63 /* DetailNewsFeedViewController */,
@@ -1174,6 +1639,108 @@
 			path = AuthenticateViewController;
 			sourceTree = "<group>";
 		};
+		937DC7CB264E20850010BCE6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				937DC7D2264E21F40010BCE6 /* WithDrawalMoneyViewController */,
+				93FB860926411BF6001FBDC4 /* PaymentFilterHistoryViewController */,
+				930932D6261FF5B200EFC39E /* ManagerPaymentViewController */,
+				93A466DD262552B70043FF0C /* CURDPaymentAccountViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		937DC7CC264E208A0010BCE6 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				937DC7ED264E79340010BCE6 /* MoneyNeedWithDrawalSectionController */,
+				937DC7D9264E64CE0010BCE6 /* MethodReceiveMoneySectionController */,
+				93FB861E26413C00001FBDC4 /* PaymentFilterDateSectionController */,
+				93FB86112641215C001FBDC4 /* PaymentFilterBlockSectionController */,
+				93A466F726269B970043FF0C /* CURDPaymentInputCellSectionController */,
+				93A466EB2626935F0043FF0C /* PaymentNoteSectionController */,
+				932E789026243EE000CFEDEA /* AccountPaymentSectionController */,
+				932E788E26243EDF00CFEDEA /* AddAccountPaymentSectionController */,
+				932E7880262438A000CFEDEA /* HistoryPaymentSectionController */,
+				932E786F262430C800CFEDEA /* SearchDatePaymentSectionController */,
+				930932E92620076800EFC39E /* SimpleShowSumMoneySectionController */,
+				932E78642624231300CFEDEA /* ManagerPaymentSectionFactory.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		937DC7CD264E20920010BCE6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				937DC7E6264E6CFB0010BCE6 /* DotSelectPaymentCell */,
+				937DC7DE264E66230010BCE6 /* TextFieldInputCell */,
+				93FB862326413CC1001FBDC4 /* PaymentFilterDateCell */,
+				93FB86172641269E001FBDC4 /* PaymentBlockFilterCell */,
+				93FB86012640FF3B001FBDC4 /* HistoryLabelCell */,
+				93A466F0262698EE0043FF0C /* PaymentTextFieldInputCell */,
+				93A466E42626911D0043FF0C /* PaymentNoteCell */,
+				932E7896262442E300CFEDEA /* AccountPaymentCell */,
+				932E788526243EBD00CFEDEA /* AddAccountPaymentCell */,
+				932E78792624387E00CFEDEA /* HistoryPaymentCell */,
+				932E7872262430E300CFEDEA /* SearchDatePaymentCell */,
+				932E78682624309F00CFEDEA /* ShowSumMoneyHightLightCell */,
+				930932F72620097700EFC39E /* ShowSumMoneyCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		937DC7CF264E21230010BCE6 /* SectionBackgroundPaymentCardView */ = {
+			isa = PBXGroup;
+			children = (
+				930932E1262002C100EFC39E /* SectionBackgroundPaymentCardView.swift */,
+				930932E2262002C100EFC39E /* SectionBackgroundPaymentCardView.xib */,
+			);
+			path = SectionBackgroundPaymentCardView;
+			sourceTree = "<group>";
+		};
+		937DC7D2264E21F40010BCE6 /* WithDrawalMoneyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				937DC7D3264E21F40010BCE6 /* WithDrawalMoneyViewController.swift */,
+				937DC7D4264E21F40010BCE6 /* WithDrawalMoneyViewController.xib */,
+			);
+			path = WithDrawalMoneyViewController;
+			sourceTree = "<group>";
+		};
+		937DC7D9264E64CE0010BCE6 /* MethodReceiveMoneySectionController */ = {
+			isa = PBXGroup;
+			children = (
+				937DC7DA264E64CE0010BCE6 /* MethodReceiveMoneySectionController.swift */,
+			);
+			path = MethodReceiveMoneySectionController;
+			sourceTree = "<group>";
+		};
+		937DC7DE264E66230010BCE6 /* TextFieldInputCell */ = {
+			isa = PBXGroup;
+			children = (
+				937DC7DF264E66230010BCE6 /* TextFieldInputCell.swift */,
+				937DC7E0264E66230010BCE6 /* TextFieldInputCell.xib */,
+			);
+			path = TextFieldInputCell;
+			sourceTree = "<group>";
+		};
+		937DC7E6264E6CFB0010BCE6 /* DotSelectPaymentCell */ = {
+			isa = PBXGroup;
+			children = (
+				937DC7E7264E6CFB0010BCE6 /* DotSelectPaymentCell.xib */,
+				937DC7E8264E6CFB0010BCE6 /* DotSelectPaymentCell.swift */,
+			);
+			path = DotSelectPaymentCell;
+			sourceTree = "<group>";
+		};
+		937DC7ED264E79340010BCE6 /* MoneyNeedWithDrawalSectionController */ = {
+			isa = PBXGroup;
+			children = (
+				937DC7EE264E79340010BCE6 /* MoneyNeedWithDrawalSectionController.swift */,
+			);
+			path = MoneyNeedWithDrawalSectionController;
+			sourceTree = "<group>";
+		};
 		938BB98825FB3C6100AC664C /* AudioKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1192,6 +1759,67 @@
 				938F4298253580B300160DCA /* SearchNavigationView.xib */,
 			);
 			path = SearchNavigation;
+			sourceTree = "<group>";
+		};
+		93A466DD262552B70043FF0C /* CURDPaymentAccountViewController */ = {
+			isa = PBXGroup;
+			children = (
+				93A466DE262552B70043FF0C /* CURDPaymentAccountViewController.xib */,
+				93A466DF262552B70043FF0C /* CURDPaymentAccountViewController.swift */,
+			);
+			path = CURDPaymentAccountViewController;
+			sourceTree = "<group>";
+		};
+		93A466E42626911D0043FF0C /* PaymentNoteCell */ = {
+			isa = PBXGroup;
+			children = (
+				93A466E52626911D0043FF0C /* PaymentNoteCell.xib */,
+				93A466E62626911D0043FF0C /* PaymentNoteCell.swift */,
+			);
+			path = PaymentNoteCell;
+			sourceTree = "<group>";
+		};
+		93A466EB2626935F0043FF0C /* PaymentNoteSectionController */ = {
+			isa = PBXGroup;
+			children = (
+				93A466EC2626935F0043FF0C /* PaymentNoteSectionController.swift */,
+			);
+			path = PaymentNoteSectionController;
+			sourceTree = "<group>";
+		};
+		93A466F0262698EE0043FF0C /* PaymentTextFieldInputCell */ = {
+			isa = PBXGroup;
+			children = (
+				93A466F1262698EE0043FF0C /* PaymentTextFieldInputCell.xib */,
+				93A466F2262698EE0043FF0C /* PaymentTextFieldInputCell.swift */,
+			);
+			path = PaymentTextFieldInputCell;
+			sourceTree = "<group>";
+		};
+		93A466F726269B970043FF0C /* CURDPaymentInputCellSectionController */ = {
+			isa = PBXGroup;
+			children = (
+				93A466F826269B970043FF0C /* CURDPaymentInputCellSectionController.swift */,
+			);
+			path = CURDPaymentInputCellSectionController;
+			sourceTree = "<group>";
+		};
+		93A466FA2626CD830043FF0C /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				93224A0E262970B700BDE49A /* EffectsViewController */,
+				93224A082629698000BDE49A /* Effect.swift */,
+				93224A062629686500BDE49A /* SongProcessor.swift */,
+				93A466FB2626D02D0043FF0C /* ViewController.swift */,
+				93A466FC2626D02D0043FF0C /* ViewController.xib */,
+				932249F826292FE100BDE49A /* ViewController2.swift */,
+				932249F926292FE100BDE49A /* ViewController2.xib */,
+				932249FC26293A5600BDE49A /* RoundSlider.swift */,
+				932249FD26293A5600BDE49A /* RoundSlider.xib */,
+				93224A0A26296D4D00BDE49A /* EffectsViewController.swift */,
+				93224A0B26296D4D00BDE49A /* EffectsViewController.xib */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		93A6D41A261728F90064498D /* Sections */ = {
@@ -1629,6 +2257,8 @@
 				93CCB9D42612DB3F003889AE /* SectionBackgroundCardLayout2.swift */,
 				93CCB9D32612DB3F003889AE /* SectionBackgroundCardView2.swift */,
 				93CCB9D52612DB3F003889AE /* SectionBackgroundCardView2.xib */,
+				932E789B2624606900CFEDEA /* BackroundClear.swift */,
+				932E789C2624606900CFEDEA /* BackroundClear.xib */,
 			);
 			path = BackGroundCardView;
 			sourceTree = "<group>";
@@ -1699,6 +2329,7 @@
 		93D0B01B25FF650300394BE8 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				9348D9C12636BE220045ED78 /* MiniVideo */,
 				93EFA2FF261C1E150025477A /* SoftUIView */,
 				9331A15C261B0A16003B0BEC /* DetailMediaViewController */,
 				93A6D4252618483F0064498D /* PopUpIG */,
@@ -1803,6 +2434,14 @@
 				93DC283B25FA19EC0045F927 /* ScreenRecorder.swift */,
 			);
 			path = ScreenRecorder;
+			sourceTree = "<group>";
+		};
+		93E23947262D2E780013104F /* RouterPayment */ = {
+			isa = PBXGroup;
+			children = (
+				93E23948262D2E840013104F /* RouterPayment.swift */,
+			);
+			path = RouterPayment;
 			sourceTree = "<group>";
 		};
 		93E2DBB726171A6800C86495 /* ModernAVPlayer */ = {
@@ -1951,6 +2590,68 @@
 			path = SendOutPutEditCell;
 			sourceTree = "<group>";
 		};
+		93FB86012640FF3B001FBDC4 /* HistoryLabelCell */ = {
+			isa = PBXGroup;
+			children = (
+				93FB86022640FF3B001FBDC4 /* HistoryLabelCell.swift */,
+				93FB86032640FF3B001FBDC4 /* HistoryLabelCell.xib */,
+			);
+			path = HistoryLabelCell;
+			sourceTree = "<group>";
+		};
+		93FB860626411BD1001FBDC4 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				937DC7CD264E20920010BCE6 /* Cells */,
+				937DC7CC264E208A0010BCE6 /* Sections */,
+				937DC7CB264E20850010BCE6 /* ViewControllers */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		93FB860926411BF6001FBDC4 /* PaymentFilterHistoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				93FB860A26411BF6001FBDC4 /* PaymentFilterHistoryViewController.xib */,
+				93FB860B26411BF6001FBDC4 /* PaymentFilterHistoryViewController.swift */,
+			);
+			path = PaymentFilterHistoryViewController;
+			sourceTree = "<group>";
+		};
+		93FB86112641215C001FBDC4 /* PaymentFilterBlockSectionController */ = {
+			isa = PBXGroup;
+			children = (
+				93FB86122641215C001FBDC4 /* PaymentFilterBlockSectionController.swift */,
+			);
+			path = PaymentFilterBlockSectionController;
+			sourceTree = "<group>";
+		};
+		93FB86172641269E001FBDC4 /* PaymentBlockFilterCell */ = {
+			isa = PBXGroup;
+			children = (
+				93FB86182641269E001FBDC4 /* PaymentBlockFilterCell.xib */,
+				93FB86192641269E001FBDC4 /* PaymentBlockFilterCell.swift */,
+			);
+			path = PaymentBlockFilterCell;
+			sourceTree = "<group>";
+		};
+		93FB861E26413C00001FBDC4 /* PaymentFilterDateSectionController */ = {
+			isa = PBXGroup;
+			children = (
+				93FB861F26413C00001FBDC4 /* PaymentFilterDateSectionController.swift */,
+			);
+			path = PaymentFilterDateSectionController;
+			sourceTree = "<group>";
+		};
+		93FB862326413CC1001FBDC4 /* PaymentFilterDateCell */ = {
+			isa = PBXGroup;
+			children = (
+				93FB862426413CC1001FBDC4 /* PaymentFilterDateCell.swift */,
+				93FB862526413CC1001FBDC4 /* PaymentFilterDateCell.xib */,
+			);
+			path = PaymentFilterDateCell;
+			sourceTree = "<group>";
+		};
 		CC3913B522417AFF008B2E0D /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2072,7 +2773,7 @@
 		CCC881CE21711D5F00DC6CB7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CCC881CD21711D5F00DC6CB7 /* Piano Karaoke.app */,
+				CCC881CD21711D5F00DC6CB7 /* Piano Kara.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2080,6 +2781,7 @@
 		CCC881CF21711D5F00DC6CB7 /* Piano_App */ = {
 			isa = PBXGroup;
 			children = (
+				930932CF261FF51500EFC39E /* Azibai */,
 				93EFA302261C1E570025477A /* REALM */,
 				93EFA2F8261C1D760025477A /* Application */,
 				93EFA2F6261C09380025477A /* Sounds */,
@@ -2447,7 +3149,6 @@
 				CCC881CA21711D5F00DC6CB7 /* Frameworks */,
 				CCC881CB21711D5F00DC6CB7 /* Resources */,
 				73879419130A31C558FFEA33 /* [CP] Embed Pods Frameworks */,
-				93B260B9260DE6F200100779 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2455,7 +3156,7 @@
 			);
 			name = Piano_App;
 			productName = Piano_App;
-			productReference = CCC881CD21711D5F00DC6CB7 /* Piano Karaoke.app */;
+			productReference = CCC881CD21711D5F00DC6CB7 /* Piano Kara.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -2501,6 +3202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9309330B26202DE500EFC39E /* KoHo-Medium.ttf in Resources */,
 				9319B929260D8E82009E56CC /* CustomAVPlayer2.xib in Resources */,
 				93EFA2F7261C09380025477A /* Sounds in Resources */,
 				93CCBA0B2612E798003889AE /* NewsFeedReactionCell.xib in Resources */,
@@ -2511,12 +3213,15 @@
 				936F5278260B23D000BDA614 /* PianoPracticeViewController.xib in Resources */,
 				935D7DD92536DCC50076C7F7 /* DetailSongViewController.xib in Resources */,
 				93ABA7082614483300B73F63 /* UserWallViewController.xib in Resources */,
+				9309331B2620346300EFC39E /* HeaderPaymentTextCollectionViewCell.xib in Resources */,
 				930F69F325304D5C00DE4F79 /* FeedHeaderSlidePageCell.xib in Resources */,
 				93CCBA092612E798003889AE /* NewsFeedMeCommentCell.xib in Resources */,
 				93EFA33F261C3B7D0025477A /* SendOutPutEditCell.xib in Resources */,
 				93CCB9C82612D7FA003889AE /* PianoCustomViewController.xib in Resources */,
 				93491B23253805C500A49BDE /* CommentBackgroundCardCell.xib in Resources */,
 				CCF4A9B7252F7A5800897ECF /* BottomCompactCell.xib in Resources */,
+				937DC7E9264E6CFC0010BCE6 /* DotSelectPaymentCell.xib in Resources */,
+				93A466E72626911D0043FF0C /* PaymentNoteCell.xib in Resources */,
 				93C5BF4F25345F2300DA172A /* TopMusicCell.xib in Resources */,
 				93ABA7152614515E00B73F63 /* HeaderUserWallCell.xib in Resources */,
 				930F69C52530378900DE4F79 /* AccountViewController.xib in Resources */,
@@ -2532,56 +3237,98 @@
 				9305ECA4254BFB7500E30F64 /* PlayButtonCell.xib in Resources */,
 				93D0B01F25FF656100394BE8 /* ProcessView.xib in Resources */,
 				93CCB9AA2612D52C003889AE /* SearchKeyWordCell.xib in Resources */,
+				93224A202629718800BDE49A /* PitchShifterViewController.xib in Resources */,
 				931507F12537026300444CD2 /* DetailMediaCell.xib in Resources */,
 				936F52572609D3A500BDA614 /* MeCommentCell.xib in Resources */,
 				93A6D42E261848DE0064498D /* CommentChangeAuthorsViewController.xib in Resources */,
+				93FB860C26411BF7001FBDC4 /* PaymentFilterHistoryViewController.xib in Resources */,
 				CCC881D821711D6000DC6CB7 /* Assets.xcassets in Resources */,
+				932E786B2624309F00CFEDEA /* ShowSumMoneyHightLightCell.xib in Resources */,
+				9309330D26202DE500EFC39E /* KoHo-Light.ttf in Resources */,
 				93CCB9B22612D52C003889AE /* SearchSongsViewController.xib in Resources */,
+				9348D9C52636BE370045ED78 /* MiniVideo.xib in Resources */,
+				933EEA45263290EA00D0B434 /* UserInfoManagerCell.xib in Resources */,
 				930EFEE6260C748100CEDF98 /* ResetPasswdViewController.xib in Resources */,
 				930F6A012530A5EB00DE4F79 /* InstrumentSuggestCell.xib in Resources */,
 				93C5C0B0253473C800DA172A /* SegmentedMenuView.xib in Resources */,
+				932249FB26292FE100BDE49A /* ViewController2.xib in Resources */,
+				932E789E2624606900CFEDEA /* BackroundClear.xib in Resources */,
 				93C5BF1A2534003400DA172A /* VietSongsCell.xib in Resources */,
+				9309331226202DE500EFC39E /* KoHo-MediumItalic.ttf in Resources */,
+				93A466F3262698EE0043FF0C /* PaymentTextFieldInputCell.xib in Resources */,
 				9319B925260D7EF4009E56CC /* DefaultCustomAVPlayer.xib in Resources */,
+				930932E4262002C100EFC39E /* SectionBackgroundPaymentCardView.xib in Resources */,
 				938F429A253580B300160DCA /* SearchNavigationView.xib in Resources */,
+				932E7875262430E300CFEDEA /* SearchDatePaymentCell.xib in Resources */,
 				CCF4A9A5252F7A5800897ECF /* SingleLineCell.xib in Resources */,
+				9309331626202DE500EFC39E /* KoHo-Italic.ttf in Resources */,
 				93C5C0C82534BD1D00DA172A /* MixMusicBackgroundCard.xib in Resources */,
+				9309331126202DE500EFC39E /* KoHo-ExtraLightItalic.ttf in Resources */,
 				9331A160261B0AB9003B0BEC /* DetailMediaViewController.xib in Resources */,
 				93ABA71C2614653800B73F63 /* DetailNewsFeedViewController.xib in Resources */,
 				93C5BF342534215F00DA172A /* LoadingSongCell.xib in Resources */,
+				93FB862726413CC1001FBDC4 /* PaymentFilterDateCell.xib in Resources */,
 				93CCBA0D2612E798003889AE /* NewsFeedInfoCell.xib in Resources */,
 				CCF4A9AD252F7A5800897ECF /* TopCompactCell.xib in Resources */,
+				9309331426202DE500EFC39E /* KoHo-SemiBoldItalic.ttf in Resources */,
+				93224A0D26296D4D00BDE49A /* EffectsViewController.xib in Resources */,
 				93ABA6FE2613792600B73F63 /* PostNewsFeedCell.xib in Resources */,
 				93C5C0C325349E4100DA172A /* SectionBackgroundCardView.xib in Resources */,
 				93ABA6F126133EA800B73F63 /* MediaDefaultCell.xib in Resources */,
 				CCF4A9A9252F7A5800897ECF /* BlankSpaceCell.xib in Resources */,
 				93D0B01025FF1FAE00394BE8 /* LocalSongsViewController.xib in Resources */,
+				937DC7E2264E66230010BCE6 /* TextFieldInputCell.xib in Resources */,
 				93C5C0BE253499CA00DA172A /* SearchGlobalCell.xib in Resources */,
+				93FB86052640FF3B001FBDC4 /* HistoryLabelCell.xib in Resources */,
 				93CCB9B42612D52C003889AE /* SearchSongYoutubeViewController.xib in Resources */,
+				93224A1A2629716600BDE49A /* BitCrusherViewController.xib in Resources */,
+				932E788826243EBD00CFEDEA /* AddAccountPaymentCell.xib in Resources */,
 				930F69F925304EAF00DE4F79 /* FeedHeaderDetailFSPagerCell.xib in Resources */,
 				93EFA332261C34A00025477A /* EditButtonRightCell.xib in Resources */,
 				93491B112537EC5200A49BDE /* ReactionMusicCell.xib in Resources */,
 				CCF4A9AC252F7A5800897ECF /* ManualLoadingCell.xib in Resources */,
 				931287192616DC3C0022ACE9 /* DetailNewsFeedViewBottom.xib in Resources */,
+				9309330E26202DE500EFC39E /* KoHo-Bold.ttf in Resources */,
+				933EEA372632890000D0B434 /* ManagerUserViewController.xib in Resources */,
+				93224A222629719400BDE49A /* VariableDelayViewController.xib in Resources */,
 				93C5BF5C25346EC500DA172A /* HeaderMixMusicCell.xib in Resources */,
 				CCF4A9B4252F7A5800897ECF /* ProcessViewCell.xib in Resources */,
+				93A466E0262552B70043FF0C /* CURDPaymentAccountViewController.xib in Resources */,
+				930932DF261FF5DD00EFC39E /* NavigationViewPayment.xib in Resources */,
+				9309331026202DE500EFC39E /* KoHo-BoldItalic.ttf in Resources */,
+				9309330C26202DE500EFC39E /* KoHo-SemiBold.ttf in Resources */,
+				93A466FE2626D02D0043FF0C /* ViewController.xib in Resources */,
 				93CCB9D82612DB3F003889AE /* SectionBackgroundCardView2.xib in Resources */,
 				CCF4A9B1252F7A5800897ECF /* HeaderSimpleCell.xib in Resources */,
 				CCF4A996252F7A5800897ECF /* CustomAVPlayer.xib in Resources */,
 				CCF4A9A3252F7A5800897ECF /* LoadingCellShimmer.xib in Resources */,
 				93CCBA072612E798003889AE /* NewsFeedMediaCell.xib in Resources */,
+				933EEA522632A08A00D0B434 /* SearchCell.xib in Resources */,
 				93491B0A2537E86E00A49BDE /* LevelMediaCell.xib in Resources */,
 				93EEDE012614808B0071E807 /* EditRecordViewController.xib in Resources */,
 				93C5C0AE253473C800DA172A /* SegmentedMenuCell.xib in Resources */,
 				93491B1E2537FD1900A49BDE /* HeaderCommentDetailSongCell.xib in Resources */,
 				9319B92C260D8F2A009E56CC /* SmallCustomAVPlayer.xib in Resources */,
+				9309331526202DE500EFC39E /* KoHo-LightItalic.ttf in Resources */,
 				936F526A260AF47D00BDA614 /* DefaultIconTextCell.xib in Resources */,
+				9309330F26202DE500EFC39E /* KoHo-ExtraLight.ttf in Resources */,
+				930932FD2620097700EFC39E /* ShowSumMoneyCell.xib in Resources */,
+				9309331326202DE500EFC39E /* KoHo-Regular.ttf in Resources */,
+				930932D9261FF5B200EFC39E /* ManagerPaymentViewController.xib in Resources */,
 				93CCB9C42612D7BE003889AE /* SettingPianoViewController.xib in Resources */,
 				93C5C0B72534800900DA172A /* MusicSimpleCell.xib in Resources */,
+				932E787D2624387E00CFEDEA /* HistoryPaymentCell.xib in Resources */,
 				936F5287260B51F800BDA614 /* AuthenticateViewController.xib in Resources */,
+				93224A1E2629717D00BDE49A /* MoogLadderViewController.xib in Resources */,
 				93491B2A25380B2600A49BDE /* CommentUserCell.xib in Resources */,
+				937DC7D6264E21F40010BCE6 /* WithDrawalMoneyViewController.xib in Resources */,
+				932E789A262442E300CFEDEA /* AccountPaymentCell.xib in Resources */,
 				CCF4A9B5252F7A5800897ECF /* BlockShadowCell.xib in Resources */,
 				93CCB9AC2612D52C003889AE /* HotKeyWordCell.xib in Resources */,
+				93224A1C2629717200BDE49A /* CostelloReverbViewController.xib in Resources */,
+				93FB861A2641269E001FBDC4 /* PaymentBlockFilterCell.xib in Resources */,
 				93EFA311261C1F9B0025477A /* InfoUserViewController.xib in Resources */,
+				932249FF26293A5600BDE49A /* RoundSlider.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2635,6 +3382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93C5C0A9253473C800DA172A /* SegmentedMenuProtocol.swift in Sources */,
+				93224A0C26296D4D00BDE49A /* EffectsViewController.swift in Sources */,
 				CCF4A958252F7A5800897ECF /* TimeInterval.swift in Sources */,
 				93C5BF1B2534003400DA172A /* VietSongsCell.swift in Sources */,
 				CCF4A954252F7A5800897ECF /* String.swift in Sources */,
@@ -2643,6 +3391,7 @@
 				CCF4A9B9252F7A5800897ECF /* BlankSection.swift in Sources */,
 				CCF4A99E252F7A5800897ECF /* SectionController.swift in Sources */,
 				93491B0B2537E86E00A49BDE /* LevelMediaCell.swift in Sources */,
+				930932EB2620076800EFC39E /* SimpleShowSumMoneySectionController.swift in Sources */,
 				93ABA70126141A7500B73F63 /* YoutubeService.swift in Sources */,
 				93CCBA0C2612E798003889AE /* NewsFeedInfoCell.swift in Sources */,
 				93C5C0D02535459F00DA172A /* ExtensionHUIImageView.swift in Sources */,
@@ -2653,6 +3402,7 @@
 				93CCB9C32612D7BE003889AE /* SettingPianoViewController.swift in Sources */,
 				93CCB92E2612D45E003889AE /* ModelSearch.swift in Sources */,
 				93C5C0D32535459F00DA172A /* ExtensionGestureRecognizerDelegate.swift in Sources */,
+				93FB86042640FF3B001FBDC4 /* HistoryLabelCell.swift in Sources */,
 				CCC557642173CD8E0021844A /* ExtensionCollection.swift in Sources */,
 				9305ECA5254BFB7500E30F64 /* PlayButtonCell.swift in Sources */,
 				CCF4A967252F7A5800897ECF /* UITableViewCell.swift in Sources */,
@@ -2661,6 +3411,7 @@
 				CCF4A99A252F7A5800897ECF /* ASVideoContainer.swift in Sources */,
 				93CCB92B2612D45E003889AE /* ModelSongLocal.swift in Sources */,
 				93CCB9282612D45E003889AE /* Enum.swift in Sources */,
+				93A466E82626911D0043FF0C /* PaymentNoteCell.swift in Sources */,
 				CCF4A983252F7A5800897ECF /* extensionFile.swift in Sources */,
 				CCF4A9BF252F7A5800897ECF /* Localizable.swift in Sources */,
 				CCF4A987252F7A5800897ECF /* UIView-Helper.swift in Sources */,
@@ -2669,45 +3420,58 @@
 				CCF4A988252F7A5800897ECF /* DataResponse+Exts.swift in Sources */,
 				93C5C0C425349E4100DA172A /* SectionBackgroundCardLayout.swift in Sources */,
 				CCF4A964252F7A5800897ECF /* UIScreen+Ext.swift in Sources */,
+				933EEA4B2632A05000D0B434 /* ManagerUserSearchSectionController.swift in Sources */,
 				93491B1D2537FD1900A49BDE /* HeaderCommentDetailSongCell.swift in Sources */,
+				93A466ED2626935F0043FF0C /* PaymentNoteSectionController.swift in Sources */,
 				93D0B01225FF1FAE00394BE8 /* LocalSongsViewController.swift in Sources */,
 				CCF4A96A252F7A5800897ECF /* UIStackview+Ext.swift in Sources */,
 				CCF4A95C252F7A5800897ECF /* UIView.swift in Sources */,
 				936F526B260AF47D00BDA614 /* DefaultIconTextCell.swift in Sources */,
 				93ABA6F3261352E300B73F63 /* NewsFeed.swift in Sources */,
 				CCF4A979252F7A5800897ECF /* Data.swift in Sources */,
+				93A466F926269B970043FF0C /* CURDPaymentInputCellSectionController.swift in Sources */,
 				93EFA308261C1EAA0025477A /* UserModel.swift in Sources */,
 				938BB98E25FB3CA300AC664C /* FileManagerUtils.swift in Sources */,
 				CCF4A97B252F7A5800897ECF /* NSObject+Rx.swift in Sources */,
+				937DC7EA264E6CFC0010BCE6 /* DotSelectPaymentCell.swift in Sources */,
 				93E2DBBF26171AA700C86495 /* PlayerConfigurationExample.swift in Sources */,
 				93ABA7072614483300B73F63 /* UserWallViewController.swift in Sources */,
 				93CCB9B32612D52C003889AE /* SearchSongYoutubeViewController.swift in Sources */,
 				93D0B01D25FF655300394BE8 /* ProcessView.swift in Sources */,
+				9309331A2620346300EFC39E /* HeaderPaymentTextCollectionViewCell.swift in Sources */,
 				CCF4A95E252F7A5800897ECF /* UIFont+Ext.swift in Sources */,
+				937DC7EF264E79340010BCE6 /* MoneyNeedWithDrawalSectionController.swift in Sources */,
 				CCF4A989252F7A5800897ECF /* UIScrollView-Extension.swift in Sources */,
 				93ABA7162614515E00B73F63 /* HeaderUserWallCell.swift in Sources */,
+				93FB862626413CC1001FBDC4 /* PaymentFilterDateCell.swift in Sources */,
 				93D0B089260308BE00394BE8 /* FlatToggleStyleKit.swift in Sources */,
+				93224A142629714200BDE49A /* VariableDelayViewController.swift in Sources */,
 				CC39791822271F1F003496CD /* GetFrameUIScreen.swift in Sources */,
 				936F5286260B51F800BDA614 /* AuthenticateViewController.swift in Sources */,
 				CCF4A97A252F7A5800897ECF /* NSAttributedString.swift in Sources */,
 				93CCB9B12612D52C003889AE /* SearchSongsViewController.swift in Sources */,
 				93C5C0AD253473C800DA172A /* SegmentedMenuInteractor.swift in Sources */,
+				937DC7CA264E203D0010BCE6 /* GradientViewPayment.swift in Sources */,
 				93C5BF3B253439FC00DA172A /* TopMussicSectionController.swift in Sources */,
+				933EEA512632A08A00D0B434 /* SearchCell.swift in Sources */,
 				93DC283D25FA19EC0045F927 /* ScreenRecordCoordinator.swift in Sources */,
 				CCF4A96C252F7A5800897ECF /* UIImageView.swift in Sources */,
 				CCF4A960252F7A5800897ECF /* UINavigationItem.swift in Sources */,
+				93224A182629714200BDE49A /* MoogLadderViewController.swift in Sources */,
 				93C5C0D12535459F00DA172A /* HImageViewDelegate.swift in Sources */,
 				CCCC0D70223D615800E49096 /* ExtensionUISearchBar.swift in Sources */,
 				938F4299253580B300160DCA /* SearchNavigationView.swift in Sources */,
 				93C5BF5525346D2900DA172A /* MixMusicSectionController.swift in Sources */,
 				9319B92D260D8F2A009E56CC /* SmallCustomAVPlayer.swift in Sources */,
 				CCF4A9A7252F7A5800897ECF /* FullLineCell.swift in Sources */,
+				932E7899262442E300CFEDEA /* AccountPaymentCell.swift in Sources */,
 				CCF4A97C252F7A5800897ECF /* URL.swift in Sources */,
 				931507E92537017400444CD2 /* DetailSongSectionController.swift in Sources */,
 				CCF4A99C252F7A5800897ECF /* SectionControllerInterface.swift in Sources */,
 				93CCB9BF2612D6AB003889AE /* NoteNameLayer.swift in Sources */,
 				CCF4A96D252F7A5800897ECF /* UILabel.swift in Sources */,
 				930F6A002530A5EB00DE4F79 /* InstrumentSuggestCell.swift in Sources */,
+				93A466E1262552B70043FF0C /* CURDPaymentAccountViewController.swift in Sources */,
 				CC00A7622235904900B261FE /* CustomSegmentedControl.swift in Sources */,
 				93CCB9302612D45E003889AE /* ModelListSongPiano.swift in Sources */,
 				93D0B082260308BE00394BE8 /* Fatten.swift in Sources */,
@@ -2730,20 +3494,26 @@
 				93D0B0372601DD3F00394BE8 /* LocalSongsYoutubeSectionController.swift in Sources */,
 				CCF4A9AE252F7A5800897ECF /* TopCompactCell.swift in Sources */,
 				93EFA306261C1E8B0025477A /* AppAccount.swift in Sources */,
+				930932E3262002C100EFC39E /* SectionBackgroundPaymentCardView.swift in Sources */,
 				93CCB9B02612D52C003889AE /* HotKeyWordSearchSectionController.swift in Sources */,
+				9348D9C42636BE370045ED78 /* MiniVideo.swift in Sources */,
 				CCF4A952252F7A5800897ECF /* Sequence.swift in Sources */,
 				CCC882A8217272C900DC6CB7 /* Tangent.swift in Sources */,
 				936F525C260AEDB000BDA614 /* AccountSectionController.swift in Sources */,
+				932E787C2624387E00CFEDEA /* HistoryPaymentCell.swift in Sources */,
+				93FB862026413C00001FBDC4 /* PaymentFilterDateSectionController.swift in Sources */,
 				93CCB9C92612D7FA003889AE /* PianoCustomViewController.swift in Sources */,
 				CCF4A997252F7A5800897ECF /* CustomAVPlayer.swift in Sources */,
 				CCAC39CD2215AAE800D89162 /* ServiceFirebase.swift in Sources */,
 				CCF4A9A1252F7A5800897ECF /* CellBuilder.swift in Sources */,
+				932E789226243EE000CFEDEA /* AddAccountPaymentSectionController.swift in Sources */,
 				93491B122537EC5200A49BDE /* ReactionMusicCell.swift in Sources */,
 				930F69F225304D5C00DE4F79 /* FeedHeaderSlidePageCell.swift in Sources */,
 				CCF4A9B3252F7A5800897ECF /* ProcessViewCell.swift in Sources */,
 				93D0B08D260308BE00394BE8 /* RadioButton.swift in Sources */,
 				93C5C0BD253499CA00DA172A /* SearchGlobalCell.swift in Sources */,
 				93EFA317261C23000025477A /* InfoUserSectionController.swift in Sources */,
+				932E7871262430C800CFEDEA /* SearchDatePaymentSectionController.swift in Sources */,
 				CCF4A981252F7A5800897ECF /* Int-Extension.swift in Sources */,
 				93C5BF2E253415A400DA172A /* LoadingSuggestCell.swift in Sources */,
 				CCC5574D21739E7C0021844A /* ExtensionUIButton.swift in Sources */,
@@ -2768,12 +3538,18 @@
 				CCF4A96E252F7A5800897ECF /* UIApplication.swift in Sources */,
 				93EFA33E261C3B7D0025477A /* SendOutPutEditCell.swift in Sources */,
 				93EFA310261C1F9B0025477A /* InfoUserViewController.swift in Sources */,
+				932E7876262430E300CFEDEA /* SearchDatePaymentCell.swift in Sources */,
+				932E789326243EE000CFEDEA /* AccountPaymentSectionController.swift in Sources */,
+				93224A152629714200BDE49A /* CostelloReverbViewController.swift in Sources */,
 				CCF4A9BE252F7A5800897ECF /* FullTextContentSection.swift in Sources */,
 				930F69EB25304D3D00DE4F79 /* FSPagerViewObjcCompat.m in Sources */,
+				9316A6E22667B2A6002D3BA0 /* PaymentFilterHistory.swift in Sources */,
 				CC63C2B82219CEBD00780259 /* LoadImage.swift in Sources */,
 				93CCBA082612E798003889AE /* NewsFeedMeCommentCell.swift in Sources */,
+				93224A072629686600BDE49A /* SongProcessor.swift in Sources */,
 				93D0B01A25FF318F00394BE8 /* LocalSongsSectionController.swift in Sources */,
 				93CCB9AE2612D52C003889AE /* ResultSearchYoutubeSectionController.swift in Sources */,
+				930932FC2620097700EFC39E /* ShowSumMoneyCell.swift in Sources */,
 				93D0B07F260308BE00394BE8 /* UILabel+Rotate.swift in Sources */,
 				93D0B094260308BE00394BE8 /* MIDILearnable.swift in Sources */,
 				93CCB9CA2612D7FA003889AE /* StopVideoRecordingWindow.swift in Sources */,
@@ -2785,12 +3561,14 @@
 				93CCB92A2612D45E003889AE /* ModelNhacTrungQuoc.swift in Sources */,
 				CCF4A994252F7A5800897ECF /* AzibaseViewController.swift in Sources */,
 				93CCB9BE2612D6AB003889AE /* PianoKeyboard.swift in Sources */,
+				93A466FD2626D02D0043FF0C /* ViewController.swift in Sources */,
 				93C5BF27253403E300DA172A /* VietSongDetailCell.swift in Sources */,
 				CCF4A9BC252F7A5800897ECF /* LoadingSection.swift in Sources */,
 				93CCB9DD2612DE48003889AE /* FeedsSectionController.swift in Sources */,
 				93D0B081260308BE00394BE8 /* Conductor.swift in Sources */,
 				930F69FA25304EAF00DE4F79 /* FeedHeaderDetailFSPagerCell.swift in Sources */,
 				CCF4A959252F7A5800897ECF /* Float.swift in Sources */,
+				9312E58A264A696200D622EC /* BankModel.swift in Sources */,
 				CCF4A9B6252F7A5800897ECF /* BlockShadowCell.swift in Sources */,
 				CCF4A9A0252F7A5800897ECF /* AziBaseCellModel.swift in Sources */,
 				93D0B080260308BE00394BE8 /* Double+Extensions.swift in Sources */,
@@ -2798,9 +3576,11 @@
 				93A6D42A261848890064498D /* PopupIGViewController.swift in Sources */,
 				930F69E725304D3D00DE4F79 /* FSPagerViewCell.swift in Sources */,
 				936F5272260B1B7900BDA614 /* ChangeColorAppViewController.swift in Sources */,
+				93224A162629714200BDE49A /* PitchShifterViewController.swift in Sources */,
 				930F69D825304B5400DE4F79 /* FeedHeaderSectionController.swift in Sources */,
 				93D0B097260308BE00394BE8 /* Knob.swift in Sources */,
 				93CCB92F2612D45E003889AE /* ModelNhacOnline.swift in Sources */,
+				937DC7D5264E21F40010BCE6 /* WithDrawalMoneyViewController.swift in Sources */,
 				938BB98C25FB3CA300AC664C /* AKSampler+moreSFZ.swift in Sources */,
 				93D0B087260308BE00394BE8 /* TopUIButtonStyleKit.swift in Sources */,
 				CC3913B722417B12008B2E0D /* ExtensionUIViewController.swift in Sources */,
@@ -2811,10 +3591,14 @@
 				93ABA71D2614653800B73F63 /* DetailNewsFeedViewController.swift in Sources */,
 				CCF4A9BD252F7A5800897ECF /* DefaultSectionController.swift in Sources */,
 				CCF4A95D252F7A5800897ECF /* UIGestureRecognizer.swift in Sources */,
+				932E786C2624309F00CFEDEA /* ShowSumMoneyHightLightCell.swift in Sources */,
 				93C5BF4125344CCE00DA172A /* TopMusicsCell.swift in Sources */,
 				CCF4A9AB252F7A5800897ECF /* ManualLoadingCell.swift in Sources */,
 				930F69C62530378900DE4F79 /* AccountViewController.swift in Sources */,
 				CCF4A97D252F7A5800897ECF /* UserDefaults.swift in Sources */,
+				93A466F4262698EE0043FF0C /* PaymentTextFieldInputCell.swift in Sources */,
+				93FB860D26411BF7001FBDC4 /* PaymentFilterHistoryViewController.swift in Sources */,
+				930932DE261FF5DD00EFC39E /* NavigationViewPayment.swift in Sources */,
 				93C5C0AF253473C800DA172A /* SegmentedMenuRouter.swift in Sources */,
 				CCF4A969252F7A5800897ECF /* UIViewController.swift in Sources */,
 				93C5BF352534215F00DA172A /* LoadingSongCell.swift in Sources */,
@@ -2822,15 +3606,20 @@
 				930F69E625304D3D00DE4F79 /* FSPageViewTransformer.swift in Sources */,
 				CCF4A9AA252F7A5800897ECF /* BlankSpaceCell.swift in Sources */,
 				93D0B092260308BE00394BE8 /* MIDIButton.swift in Sources */,
+				932E789D2624606900CFEDEA /* BackroundClear.swift in Sources */,
 				CCF4A9A6252F7A5800897ECF /* SingleLineCell.swift in Sources */,
 				CCF4A986252F7A5800897ECF /* String-Extension.swift in Sources */,
 				930F69D725304B5400DE4F79 /* FeedStyleInstrumentSectionController.swift in Sources */,
 				CCF4A97F252F7A5800897ECF /* UserStore.swift in Sources */,
 				CCF4A999252F7A5800897ECF /* ASVideoPlayerController.swift in Sources */,
+				93FB86132641215C001FBDC4 /* PaymentFilterBlockSectionController.swift in Sources */,
 				93CCB9032612D34B003889AE /* Level.swift in Sources */,
+				93224A092629698000BDE49A /* Effect.swift in Sources */,
 				CCF4A957252F7A5800897ECF /* Bool.swift in Sources */,
+				93E23949262D2E840013104F /* RouterPayment.swift in Sources */,
 				CCF4A953252F7A5800897ECF /* Int.swift in Sources */,
 				93491B22253805C500A49BDE /* CommentBackgroundCardCell.swift in Sources */,
+				933EEA3E26328BAD00D0B434 /* ManagerUserSectionController.swift in Sources */,
 				93CCB9D62612DB3F003889AE /* SectionBackgroundCardView2.swift in Sources */,
 				CCF4A9B8252F7A5800897ECF /* BottomCompactCell.swift in Sources */,
 				93C5C0D42535459F00DA172A /* HImageViewConfigure.swift in Sources */,
@@ -2838,11 +3627,14 @@
 				93EFA328261C274F0025477A /* InfoUserAddressSectionController.swift in Sources */,
 				93A6D42B261848890064498D /* PopupIGSectionController.swift in Sources */,
 				93D0B08A260308BE00394BE8 /* SynthUIButton.swift in Sources */,
+				932E7882262438A000CFEDEA /* HistoryPaymentSectionController.swift in Sources */,
 				93491B172537FC6400A49BDE /* CommentDetailSongSectionController.swift in Sources */,
 				93D0B095260308BE00394BE8 /* FlatKnob.swift in Sources */,
 				CCF4A951252F7A5800897ECF /* Array.swift in Sources */,
+				933EEA382632890000D0B434 /* ManagerUserViewController.swift in Sources */,
 				CCF4A97E252F7A5800897ECF /* NSObject+Ext.swift in Sources */,
 				93D0B086260308BE00394BE8 /* SynthKeyboard.swift in Sources */,
+				93224A172629714200BDE49A /* BitCrusherViewController.swift in Sources */,
 				CCF4A99D252F7A5800897ECF /* AziBaseSectionModel.swift in Sources */,
 				93CCB9AD2612D52C003889AE /* HotKeyWordCell.swift in Sources */,
 				930F69C72530378900DE4F79 /* PracticeViewController.swift in Sources */,
@@ -2850,10 +3642,13 @@
 				9312E798261AEBC200076F8B /* ManagerModernAVPlayer.swift in Sources */,
 				938BB98D25FB3CA300AC664C /* ConductorTmp.swift in Sources */,
 				93D0B084260308BE00394BE8 /* FilterSection.swift in Sources */,
+				937DC7DB264E64CF0010BCE6 /* MethodReceiveMoneySectionController.swift in Sources */,
 				93CCB9312612D45E003889AE /* ModelCategory.swift in Sources */,
 				93CCBA0A2612E798003889AE /* NewsFeedReactionCell.swift in Sources */,
 				93D0B08C260308BE00394BE8 /* LedButton.swift in Sources */,
 				93A6D41F261729230064498D /* NewsDetailNewsFeedHeaderSectionController.swift in Sources */,
+				932E788926243EBD00CFEDEA /* AddAccountPaymentCell.swift in Sources */,
+				93FB861B2641269E001FBDC4 /* PaymentBlockFilterCell.swift in Sources */,
 				93EFA304261C1E620025477A /* RealmHelper.swift in Sources */,
 				93CCB9BD2612D6AB003889AE /* Note.swift in Sources */,
 				93C5BF5025345F2300DA172A /* TopMusicCell.swift in Sources */,
@@ -2870,6 +3665,7 @@
 				93CCB92C2612D45E003889AE /* ProtocolModel.swift in Sources */,
 				CCF4A985252F7A5800897ECF /* UIApplication-Helper.swift in Sources */,
 				CCF4A972252F7A5800897ECF /* Color.swift in Sources */,
+				932249FA26292FE100BDE49A /* ViewController2.swift in Sources */,
 				93EFA333261C34A00025477A /* EditButtonRightCell.swift in Sources */,
 				93C5C0D52535459F00DA172A /* HUIImageView.swift in Sources */,
 				CCF4A961252F7A5800897ECF /* UISearchBar.swift in Sources */,
@@ -2888,9 +3684,11 @@
 				93EEDE022614808B0071E807 /* EditRecordViewController.swift in Sources */,
 				CCF4A9A2252F7A5800897ECF /* AziBaseModel.swift in Sources */,
 				930F69EC25304D3D00DE4F79 /* FSPagerCollectionView.swift in Sources */,
+				933EEA46263290EA00D0B434 /* UserInfoManagerCell.swift in Sources */,
 				9331A15E261B0A25003B0BEC /* DetailMediaViewController.swift in Sources */,
 				935D7DDA2536DCC50076C7F7 /* DetailSongViewController.swift in Sources */,
 				93CCBA062612E798003889AE /* NewsFeedMediaCell.swift in Sources */,
+				932249FE26293A5600BDE49A /* RoundSlider.swift in Sources */,
 				931287182616DC3C0022ACE9 /* DetailNewsFeedViewBottom.swift in Sources */,
 				CCF4A96B252F7A5800897ECF /* UINavigationBar.swift in Sources */,
 				93E2DBBD26171A9700C86495 /* RemoteCommandExample.swift in Sources */,
@@ -2899,6 +3697,7 @@
 				CCF4A95B252F7A5800897ECF /* CALayer.swift in Sources */,
 				93E2DBB926171A7600C86495 /* MediaResource.swift in Sources */,
 				93D0B08F260308BE00394BE8 /* Stepper.swift in Sources */,
+				932E78652624231300CFEDEA /* ManagerPaymentSectionFactory.swift in Sources */,
 				93ABA6F026133EA800B73F63 /* MediaDefaultCell.swift in Sources */,
 				93EFA2FC261C1DC70025477A /* AppRouter.swift in Sources */,
 				93D0B00325FF096C00394BE8 /* LocalVideoManager.swift in Sources */,
@@ -2908,11 +3707,14 @@
 				CCF4A98A252F7A5800897ECF /* FileManager.swift in Sources */,
 				CCF4A963252F7A5800897ECF /* UIAlertController+Customization.swift in Sources */,
 				93EFA32B261C274F0025477A /* InfoUserEducationSectionController.swift in Sources */,
+				9312E587264A5C8B00D622EC /* PaymentService.swift in Sources */,
+				937DC7E1264E66230010BCE6 /* TextFieldInputCell.swift in Sources */,
 				9319B928260D8E82009E56CC /* CustomAVPlayer2.swift in Sources */,
 				CCF4A974252F7A5800897ECF /* UINavigationController.swift in Sources */,
 				93C5C0AB253473C800DA172A /* SegmentedMenuView.swift in Sources */,
 				CCC882862172375400DC6CB7 /* KeyButton.swift in Sources */,
 				CCF4A96F252F7A5800897ECF /* UISegmentedControl.swift in Sources */,
+				930932DA261FF5B200EFC39E /* ManagerPaymentViewController.swift in Sources */,
 				CCF4A99B252F7A5800897ECF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3053,7 +3855,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E46A6F8C463E060E1CF3EDA /* Pods-Piano_App.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconChiThien;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_ENTITLEMENTS = Piano_App/Piano_App.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -3069,7 +3871,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hieunguyen.PianoKaraoke2;
-				PRODUCT_NAME = "Piano Karaoke";
+				PRODUCT_NAME = "Piano Kara";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3080,7 +3882,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B4BD7F963C1452793738AABB /* Pods-Piano_App.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconChiThien;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_ENTITLEMENTS = Piano_App/Piano_App.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: HAPPY ALL SERVICES COMPANY LIMITED (4XB4SZ6RM3)";
 				CODE_SIGN_STYLE = Manual;
@@ -3096,7 +3898,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hieunguyen.PianoKaraoke2;
-				PRODUCT_NAME = "Piano Karaoke";
+				PRODUCT_NAME = "Piano Kara";
 				PROVISIONING_PROFILE_SPECIFIER = piano_adhoc_pro;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

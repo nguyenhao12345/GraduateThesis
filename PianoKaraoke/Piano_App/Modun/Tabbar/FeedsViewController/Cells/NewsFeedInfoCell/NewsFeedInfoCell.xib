@@ -59,16 +59,26 @@
                                 <color key="textColor" red="0.20000000000000001" green="0.27450980390000002" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mc-Vh-7yl">
+                                <rect key="frame" x="38" y="37" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="MxQ-ws-StB"/>
+                                    <constraint firstAttribute="width" secondItem="9mc-Vh-7yl" secondAttribute="height" multiplier="1:1" id="cFU-Ik-pPc"/>
+                                </constraints>
+                                <state key="normal" image="icons8-crown-100"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YSc-x8-wd7" firstAttribute="top" secondItem="7LJ-KO-1og" secondAttribute="top" constant="4" id="Uf4-7d-hGR"/>
                             <constraint firstItem="7LJ-KO-1og" firstAttribute="leading" secondItem="QMG-s4-R7X" secondAttribute="leading" constant="12" id="Uta-Zs-ZQh"/>
+                            <constraint firstItem="9mc-Vh-7yl" firstAttribute="bottom" secondItem="7LJ-KO-1og" secondAttribute="bottom" constant="2" id="WdD-GB-tWg"/>
                             <constraint firstAttribute="trailing" secondItem="bMf-gx-DNH" secondAttribute="trailing" constant="4" id="XSg-Vp-yC5"/>
                             <constraint firstItem="bMf-gx-DNH" firstAttribute="leading" secondItem="YSc-x8-wd7" secondAttribute="trailing" constant="8" id="XXf-J7-ecR"/>
                             <constraint firstItem="jm1-F2-p8x" firstAttribute="trailing" secondItem="YSc-x8-wd7" secondAttribute="trailing" id="YOk-f8-tgp"/>
                             <constraint firstItem="bMf-gx-DNH" firstAttribute="top" secondItem="7LJ-KO-1og" secondAttribute="top" constant="-8" id="fVY-ps-Mqc"/>
                             <constraint firstItem="jm1-F2-p8x" firstAttribute="leading" secondItem="YSc-x8-wd7" secondAttribute="leading" id="oTD-y2-B58"/>
+                            <constraint firstItem="9mc-Vh-7yl" firstAttribute="trailing" secondItem="7LJ-KO-1og" secondAttribute="trailing" constant="3" id="q7j-AL-jCP"/>
                             <constraint firstItem="jm1-F2-p8x" firstAttribute="top" secondItem="YSc-x8-wd7" secondAttribute="bottom" id="rxK-Am-EbO"/>
                             <constraint firstItem="7LJ-KO-1og" firstAttribute="top" secondItem="QMG-s4-R7X" secondAttribute="top" constant="12" id="teR-uA-iBm"/>
                             <constraint firstItem="YSc-x8-wd7" firstAttribute="leading" secondItem="7LJ-KO-1og" secondAttribute="trailing" constant="8" id="uW6-ii-aXk"/>
@@ -84,6 +94,7 @@
             </collectionViewCellContentView>
             <size key="customSize" width="586" height="144"/>
             <connections>
+                <outlet property="adminButton" destination="9mc-Vh-7yl" id="FWg-cg-yMb"/>
                 <outlet property="avtUserImg" destination="7LJ-KO-1og" id="vFY-dZ-BNO"/>
                 <outlet property="dateLbl" destination="jm1-F2-p8x" id="nfK-hO-Ueh"/>
                 <outlet property="userNameLbl" destination="YSc-x8-wd7" id="BQ9-L9-xmD"/>
@@ -93,6 +104,7 @@
     </objects>
     <resources>
         <image name="backgroundGreen" width="852" height="480"/>
+        <image name="icons8-crown-100" width="50" height="50"/>
         <image name="more_vertical_white" width="30.5" height="30.5"/>
     </resources>
 </document>

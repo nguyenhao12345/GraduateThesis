@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="KoHo-Medium.ttf">
+            <string>KoHo-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Jjm-C9-Zvz" customClass="PaymentNoteCell" customModule="Piano_Karaoke" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="312" height="158"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Bv-YR-UPV">
+                <rect key="frame" x="0.0" y="0.0" width="312" height="158"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uc-pZ-1C9">
+                        <rect key="frame" x="0.0" y="0.0" width="312" height="158"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbo-tn-LIe">
+                                <rect key="frame" x="26" y="26" width="260" height="106"/>
+                                <fontDescription key="fontDescription" name="KoHo-Medium" family="KoHo Medium" pointSize="16"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.25882352939999997" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.98182723935075189" blue="0.95855688189121846" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Cbo-tn-LIe" secondAttribute="trailing" constant="26" id="QiS-gl-3w5"/>
+                            <constraint firstAttribute="bottom" secondItem="Cbo-tn-LIe" secondAttribute="bottom" constant="26" id="a6M-b2-az9"/>
+                            <constraint firstItem="Cbo-tn-LIe" firstAttribute="top" secondItem="1uc-pZ-1C9" secondAttribute="top" constant="26" id="gc8-EZ-qkP"/>
+                            <constraint firstItem="Cbo-tn-LIe" firstAttribute="leading" secondItem="1uc-pZ-1C9" secondAttribute="leading" constant="26" id="jWl-k5-gT3"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="1uc-pZ-1C9" secondAttribute="trailing" id="9WH-5E-5oa"/>
+                    <constraint firstItem="1uc-pZ-1C9" firstAttribute="top" secondItem="4Bv-YR-UPV" secondAttribute="top" id="f2g-Q0-eV1"/>
+                    <constraint firstItem="1uc-pZ-1C9" firstAttribute="leading" secondItem="4Bv-YR-UPV" secondAttribute="leading" id="h45-0z-f6y"/>
+                    <constraint firstAttribute="bottom" secondItem="1uc-pZ-1C9" secondAttribute="bottom" id="xJ6-wg-QMJ"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="312" height="158"/>
+            <connections>
+                <outlet property="mesLbl" destination="Cbo-tn-LIe" id="ZdY-Td-yXW"/>
+            </connections>
+            <point key="canvasLocation" x="327.536231884058" y="127.90178571428571"/>
+        </collectionViewCell>
+    </objects>
+</document>

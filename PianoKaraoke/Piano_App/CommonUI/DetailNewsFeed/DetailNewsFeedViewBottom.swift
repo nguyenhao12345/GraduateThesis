@@ -32,9 +32,11 @@ class DetailNewsFeedViewBottom: BaseView {
     }
     
     func sendComment(comment: BaseCommentModel) {
-        dataSource.append(NewsDetailNewsFeedCommentSectionModel(comment: comment, newsFeedModel: newsFeedModel))
+        dataSource.removeIf({ $0 is EmptyDataSectionModel})
+        let comment = NewsDetailNewsFeedCommentSectionModel(comment: comment, newsFeedModel: newsFeedModel)
+        dataSource.append(comment)
         adapter.performUpdates(animated: true) { _ in
-            self.scrollToBottom(animated: true)
+            self.adapter.scroll(to: comment, supplementaryKinds: nil, scrollDirection: .horizontal, scrollPosition: .bottom, animated: true)
         }
     }
     

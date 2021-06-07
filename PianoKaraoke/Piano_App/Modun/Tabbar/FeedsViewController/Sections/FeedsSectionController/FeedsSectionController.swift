@@ -172,6 +172,7 @@ class FeedsCellBuilder: CellBuilder {
         cell.dateStr = sectionModel.dataModel?.timeAgoSinceNow ?? ""
         cell.avataStr = sectionModel.dataModel?.user?.avata ?? ""
         cell.id = sectionModel.dataModel?.user?.uid ?? ""
+        cell.admin = sectionModel.dataModel?.user?.admin ?? 0
         appendCell(cell)
     }
     

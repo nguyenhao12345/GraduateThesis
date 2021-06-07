@@ -41,6 +41,17 @@ class PostNewsFeedCell: CellModelView<PostNewsFeedCellModel> {
         //TODO
     }
     
+    @IBAction func clickPostNews(_ sender: Any?) {
+        guard let vc = parentViewController else { return }
+        AppRouter.shared.gotoLocalSongs(viewController: vc)
+    }
+    
+    @IBAction func clickHorizontalPiano(_ sender: Any?) {
+        guard let vc = parentViewController else { return }
+        AppRouter.shared.gotoPianoPractice(viewController: vc)
+    }
+
+    
 }
 
 

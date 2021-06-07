@@ -108,6 +108,13 @@
                                     <action selector="clickAvt:" destination="Jjm-C9-Zvz" eventType="touchUpInside" id="QyU-0u-zvd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RlF-7Q-hTH">
+                                <rect key="frame" x="47" y="35" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RlF-7Q-hTH" secondAttribute="height" multiplier="1:1" id="eeI-jw-ad0"/>
+                                </constraints>
+                                <state key="normal" image="icons8-crown-100"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -117,6 +124,7 @@
                             <constraint firstItem="77h-Fu-9oE" firstAttribute="leading" secondItem="x9q-Nu-gDM" secondAttribute="leading" constant="12" id="6Y2-rY-caf"/>
                             <constraint firstAttribute="trailing" secondItem="NSS-U4-556" secondAttribute="trailing" constant="10" id="JNl-wm-aqS"/>
                             <constraint firstItem="NSS-U4-556" firstAttribute="leading" secondItem="iHf-KS-Noa" secondAttribute="trailing" priority="999" constant="15" id="SyN-T8-ZcL"/>
+                            <constraint firstItem="RlF-7Q-hTH" firstAttribute="trailing" secondItem="Gee-bE-gVa" secondAttribute="trailing" id="T45-HU-SiM"/>
                             <constraint firstItem="NSS-U4-556" firstAttribute="bottom" secondItem="iHf-KS-Noa" secondAttribute="bottom" id="TrH-Ob-hUE"/>
                             <constraint firstAttribute="trailing" secondItem="iHf-KS-Noa" secondAttribute="trailing" priority="998" constant="20" id="cj6-CL-W3R"/>
                             <constraint firstItem="iHf-KS-Noa" firstAttribute="top" secondItem="x9q-Nu-gDM" secondAttribute="top" constant="12" id="eGx-xR-Ji4"/>
@@ -124,7 +132,9 @@
                             <constraint firstItem="77h-Fu-9oE" firstAttribute="top" secondItem="x9q-Nu-gDM" secondAttribute="top" id="gwR-f9-w7X"/>
                             <constraint firstAttribute="bottom" secondItem="iHf-KS-Noa" secondAttribute="bottom" constant="10" id="iG3-jV-ouT"/>
                             <constraint firstItem="p6s-91-t2L" firstAttribute="bottom" secondItem="Gee-bE-gVa" secondAttribute="bottom" id="jTH-4m-jqi"/>
+                            <constraint firstItem="RlF-7Q-hTH" firstAttribute="bottom" secondItem="Gee-bE-gVa" secondAttribute="bottom" id="pRj-YO-wnE"/>
                             <constraint firstAttribute="trailing" secondItem="77h-Fu-9oE" secondAttribute="trailing" constant="12" id="q8c-cY-xMt"/>
+                            <constraint firstItem="RlF-7Q-hTH" firstAttribute="height" secondItem="Gee-bE-gVa" secondAttribute="height" multiplier="0.4" id="ua0-8O-iF3"/>
                             <constraint firstItem="p6s-91-t2L" firstAttribute="leading" secondItem="Gee-bE-gVa" secondAttribute="leading" id="vSY-Pn-pJc"/>
                             <constraint firstItem="p6s-91-t2L" firstAttribute="trailing" secondItem="Gee-bE-gVa" secondAttribute="trailing" id="w5A-GJ-MvR"/>
                         </constraints>
@@ -139,6 +149,7 @@
             </collectionViewCellContentView>
             <size key="customSize" width="261" height="173"/>
             <connections>
+                <outlet property="adminButton" destination="RlF-7Q-hTH" id="LVP-K4-F7J"/>
                 <outlet property="avtImg" destination="Gee-bE-gVa" id="TPM-Uv-Gau"/>
                 <outlet property="btnSendMess" destination="NSS-U4-556" id="IgP-5s-8aV"/>
                 <outlet property="marginRightViewBackgroundTextView" destination="cj6-CL-W3R" id="cvB-IS-MT3"/>
@@ -150,6 +161,7 @@
     </objects>
     <resources>
         <image name="backgroundGreen" width="852" height="480"/>
+        <image name="icons8-crown-100" width="50" height="50"/>
         <image name="send-1" width="18" height="18"/>
         <image name="smileIcon" width="170.66667175292969" height="170.66667175292969"/>
     </resources>

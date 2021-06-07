@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="KoHo-Medium.ttf">
+            <string>KoHo-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CURDPaymentAccountViewController" customModule="Piano_Kara" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomBtn" destination="rNp-DZ-KCb" id="Dh8-Ty-2UQ"/>
+                <outlet property="collectionView" destination="Zwr-Lo-yHS" id="2Ab-vD-FJc"/>
+                <outlet property="navView" destination="XGA-Ds-bcM" id="5xG-yb-bOj"/>
+                <outlet property="view" destination="iN0-l3-epB" id="dlh-ZZ-qfJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GradientViewPayment" customModule="Piano_Kara" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Zwr-Lo-yHS">
+                    <rect key="frame" x="0.0" y="112" width="414" height="700"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Z2-s8-NTL">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGA-Ds-bcM" customClass="NavigationViewPayment" customModule="Piano_Kara" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="68"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="68" id="hr2-Lu-Zq5"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8JK-wV-FWJ">
+                    <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNp-DZ-KCb">
+                            <rect key="frame" x="20" y="3" width="374" height="44"/>
+                            <color key="backgroundColor" red="0.78823529410000004" green="0.6588235294" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="3V1-lv-sqU"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KoHo-Medium" family="KoHo Medium" pointSize="14"/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="22"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="clickBottomButton:" destination="-1" eventType="touchUpInside" id="Zrb-c8-4hI"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="rNp-DZ-KCb" firstAttribute="centerY" secondItem="8JK-wV-FWJ" secondAttribute="centerY" id="QU0-pF-IzY"/>
+                        <constraint firstAttribute="height" constant="50" id="Sgd-tw-1k2"/>
+                        <constraint firstItem="rNp-DZ-KCb" firstAttribute="centerX" secondItem="8JK-wV-FWJ" secondAttribute="centerX" id="gET-yn-cAN"/>
+                        <constraint firstItem="rNp-DZ-KCb" firstAttribute="leading" secondItem="8JK-wV-FWJ" secondAttribute="leading" constant="20" id="n5c-8A-mcc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="XGA-Ds-bcM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="DnW-pF-dFJ"/>
+                <constraint firstItem="XGA-Ds-bcM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Epx-KU-xr6"/>
+                <constraint firstItem="Zwr-Lo-yHS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Gq5-Ty-KxC"/>
+                <constraint firstItem="8JK-wV-FWJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Hyu-2e-aZo"/>
+                <constraint firstItem="Zwr-Lo-yHS" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Pe1-XA-Z0h"/>
+                <constraint firstItem="8JK-wV-FWJ" firstAttribute="top" secondItem="Zwr-Lo-yHS" secondAttribute="bottom" id="SnP-2p-wR9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XGA-Ds-bcM" secondAttribute="trailing" id="Y4z-oc-cde"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8JK-wV-FWJ" secondAttribute="trailing" id="dWh-hB-efK"/>
+                <constraint firstItem="Zwr-Lo-yHS" firstAttribute="top" secondItem="XGA-Ds-bcM" secondAttribute="bottom" id="iou-4X-GhH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8JK-wV-FWJ" secondAttribute="bottom" id="yrC-QH-SB4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </view>
+    </objects>
+</document>

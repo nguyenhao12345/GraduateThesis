@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="KoHo-Medium.ttf">
+            <string>KoHo-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="Jjm-C9-Zvz" customClass="HistoryLabelCell" customModule="Piano_Kara" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="422" height="102"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Bv-YR-UPV">
+                <rect key="frame" x="0.0" y="0.0" width="422" height="102"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMi-g7-hg8" customClass="ViewRound" customModule="Piano_Kara" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="422" height="102"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hET-Cq-LGN">
+                                <rect key="frame" x="328" y="36.5" width="70" height="29"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <state key="normal" title="Xem tất cả">
+                                    <color key="titleColor" red="0.78823529410000004" green="0.6588235294" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickBtn:" destination="Jjm-C9-Zvz" eventType="touchUpInside" id="T2f-5i-VZv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKf-Va-IeB">
+                                <rect key="frame" x="24" y="42" width="103" height="18.5"/>
+                                <string key="text">Lịch sử giao dịch
+</string>
+                                <fontDescription key="fontDescription" name="KoHo-Medium" family="KoHo Medium" pointSize="14"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.25882352941176467" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZKf-Va-IeB" firstAttribute="leading" secondItem="qMi-g7-hg8" secondAttribute="leading" constant="24" id="2CC-2u-lJW"/>
+                            <constraint firstItem="hET-Cq-LGN" firstAttribute="centerY" secondItem="qMi-g7-hg8" secondAttribute="centerY" id="HcT-IJ-Wb4"/>
+                            <constraint firstItem="ZKf-Va-IeB" firstAttribute="centerY" secondItem="qMi-g7-hg8" secondAttribute="centerY" id="x0H-r2-upu"/>
+                            <constraint firstAttribute="trailing" secondItem="hET-Cq-LGN" secondAttribute="trailing" constant="24" id="yo0-qv-xzK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="qMi-g7-hg8" firstAttribute="leading" secondItem="4Bv-YR-UPV" secondAttribute="leading" id="9n9-Sb-mx2"/>
+                    <constraint firstItem="qMi-g7-hg8" firstAttribute="top" secondItem="4Bv-YR-UPV" secondAttribute="top" id="EcN-Sz-ead"/>
+                    <constraint firstAttribute="bottom" secondItem="qMi-g7-hg8" secondAttribute="bottom" id="ZHw-JP-hqZ"/>
+                    <constraint firstAttribute="trailing" secondItem="qMi-g7-hg8" secondAttribute="trailing" id="sRV-r3-PFW"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="422" height="102"/>
+            <connections>
+                <outlet property="containerView" destination="qMi-g7-hg8" id="qFJ-dR-zSf"/>
+            </connections>
+            <point key="canvasLocation" x="407.24637681159425" y="109.15178571428571"/>
+        </collectionViewCell>
+    </objects>
+</document>

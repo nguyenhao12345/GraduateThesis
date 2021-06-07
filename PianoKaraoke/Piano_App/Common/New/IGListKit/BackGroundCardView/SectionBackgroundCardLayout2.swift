@@ -6,32 +6,32 @@
 //  Copyright © 2020 CocoaPods. All rights reserved.
 //
 import IGListKit
+public class SectionBackgroundCardViewLayoutDefault: SectionBackgroundCardViewLayout<SectionBackgroundCardView2> {
+    
+}
 
-public class SectionBackgroundCardLayoutAttributes2: UICollectionViewLayoutAttributes {
+public class SectionBackgroundCardLayoutAttributes: UICollectionViewLayoutAttributes {
     public var paddingHeight: CGFloat = 0
     
     public override func copy(with zone: NSZone? = nil) -> Any {
-        let obj = super.copy(with: zone) as! SectionBackgroundCardLayoutAttributes2
+        let obj = super.copy(with: zone) as! SectionBackgroundCardLayoutAttributes
         obj.paddingHeight = self.paddingHeight
         return obj
     }
 }
 
 
-public class SectionBackgroundCardLayout2: UICollectionViewFlowLayout {
+public class SectionBackgroundCardViewLayout<T: UICollectionReusableView>: UICollectionViewFlowLayout {
     var itemAttributes: [UICollectionViewLayoutAttributes] = []
-    let a: String = ""
-    let decorationViewOfKind = "SectionBackgroundCardView2"
+    let decorationViewOfKind = T.className
     public var topPaddings: [CGFloat] = []
+
     override public func prepare() {
         super.prepare()
-//        self.minimumLineSpacing = 10
-//        self.minimumInteritemSpacing = 10
         itemAttributes = []
-        guard let collectionView = self.collectionView else{
+        guard let collectionView = self.collectionView else {
             return
         }
-//        let delegate: UICollectionViewDelegateFlowLayout? = collectionView.delegate as? UICollectionViewDelegateFlowLayout
         let numberOfSection = collectionView.numberOfSections
         for section in  0..<numberOfSection{
             let lastIndex = collectionView.numberOfItems(inSection: section) - 1
@@ -59,20 +59,26 @@ public class SectionBackgroundCardLayout2: UICollectionViewFlowLayout {
             if let dt = collectionView.dataSource as? ListAdapter,
                 let _ = dt.object(atSection: section) as? SectionBackGroundCardLayoutInterface
             {
-                let attributes = SectionBackgroundCardLayoutAttributes2(forDecorationViewOfKind: decorationViewOfKind, with: IndexPath(row: 0, section: section))
+                let attributes = SectionBackgroundCardLayoutAttributes(forDecorationViewOfKind: decorationViewOfKind, with: IndexPath(row: 0, section: section))
                 attributes.paddingHeight = topPaddings.objectAtIndex(section) ?? 0
                 attributes.zIndex = -1;
                 attributes.frame = frame;
                 itemAttributes.append(attributes)
-                self.register(UINib(nibName: decorationViewOfKind, bundle: Bundle(for: SectionBackgroundCardView2.self)), forDecorationViewOfKind: decorationViewOfKind)
+                self.register(UINib(nibName: decorationViewOfKind, bundle: Bundle(for: T.self)), forDecorationViewOfKind: decorationViewOfKind)
+            } else {
+                let attributes = SectionBackgroundCardLayoutAttributes(forDecorationViewOfKind: "BackroundClear", with: IndexPath(row: 0, section: section))
+                attributes.zIndex = -1;
+                attributes.frame = frame;
+                itemAttributes.append(attributes)
+                self.register(UINib(nibName: "BackroundClear", bundle: Bundle(for: BackroundClear.self)), forDecorationViewOfKind: "BackroundClear")
             }
         }
     }
     
     override public func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         var attributes = super.layoutAttributesForElements(in: rect)
-        
-        for attribute in itemAttributes{
+
+        for attribute in itemAttributes {
             if (!rect.intersects(attribute.frame)){
                 continue
             }
@@ -81,11 +87,7 @@ public class SectionBackgroundCardLayout2: UICollectionViewFlowLayout {
         
         return attributes
     }
-    
-//    public override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-//        return itemAttributes.objectAtIndex(indexPath.item)
-//    }
-//
+
 
     public override func layoutAttributesForDecorationView(ofKind elementKind: String, at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         
@@ -93,27 +95,7 @@ public class SectionBackgroundCardLayout2: UICollectionViewFlowLayout {
             return data
         }
         
-        return self.itemAttributes.objectAtIndex(indexPath.section - 1)
-    }
-}
-
-
-
-public class AppBundle: NSObject {
-    public static let shared: AppBundle = AppBundle()
-    static let bundle: Bundle = AppBundle.shared._bundle
-    var _bundle: Bundle
-    private override init() {
-        self._bundle = Bundle(for: type(of: self))
-        super.init()
-    }
-    
-    
-    public func getBundle() -> Bundle? {
-        return _bundle
-//        let fwBundle = Bundle(for: AppBundle.self)
-//        let path = fwBundle.path(forResource: "BaseIGListKit", ofType: "bundle")
-//        let resourcesBundle = Bundle(url: URL(fileURLWithPath: path!))
-//        return resourcesBundle
+        return nil
+//            self.itemAttributes.objectAtIndex(indexPath.section - 1)
     }
 }

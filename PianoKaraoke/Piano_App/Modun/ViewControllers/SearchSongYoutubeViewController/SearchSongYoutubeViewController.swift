@@ -75,7 +75,7 @@ class SearchSongYoutubeViewController: SearchSongsViewController {
                 LocalVideoManager.shared.cacheLocalKeyWorkSearch(str: key)
                 completion(response.items)
             case .failed(let error):
-                self.showToast(string: "Key đã hết hạn, vui lòng đổi Key", duration: 3.0, position: .top)
+                self.showToast(string: "Key đã hết hạn, vui lòng liên hệ Admin để gia hạn key", duration: 3.0, position: .top)
                 print(error)
             }
         }

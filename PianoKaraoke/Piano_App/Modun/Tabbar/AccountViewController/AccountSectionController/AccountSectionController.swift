@@ -57,16 +57,24 @@ class AccountSectionController: SectionController<AccountSectionModel>, ChangeCo
             AppRouter.shared.gotoLocalSongs(viewController: viewController)
         case .ChangeColor:
             AppRouter.shared.gotoChangeColor(viewController: viewController, delegate: self)
+        case .TestVoice:
+            let vc = ViewController()
+            self.viewController?.present(vc, withNavigation: false)
         case .InfoSupport:
             break
         case .Rule:
-            break
+            let vc = EffectsViewController()
+            self.viewController?.present(vc, withNavigation: false)
         case .Login:
             break
         case .Logout:
             guard let viewController = viewController else { return }
-            REALM_HELPER.deleteDatabase()
-            AppRouter.shared.gotoLogin(viewController: viewController)
+            viewController.showDialogBottom(title: nil, message: "Bạn có chắc chắn muốn đăng xuất không?", buttonTitles: ["Có"], highlightedButtonIndex: nil) { (index) in
+                if index == 0 {
+                    REALM_HELPER.deleteDatabase()
+                    AppRouter.shared.gotoLogin(viewController: viewController)
+                }
+            }
         case .ChangeInfoUser:
             guard let viewController = viewController,
                 let uidUser = AppAccount.shared.getUserLogin()?.uid else { return }
@@ -85,7 +93,9 @@ class AccountSectionController: SectionController<AccountSectionModel>, ChangeCo
                 currentKeyAPIYoube = keyAPIYoube[index]
                 YoutubeKit.shared.setAPIKey(currentKeyAPIYoube)
             }
-        @unknown default:
+        case .ManagerUser:
+            AppRouter.shared.gotoManagerUser(viewController: viewController)
+        default:
             break
         }
     }
@@ -122,18 +132,28 @@ class AccountCellBuilder: CellBuilder {
         appendCell(cellPractice)
         addSingleLine(true)
 
-//        let cellSearchYoutube = DefaultIconTextCellModel(att:  Helper.getAttributesStringWithFontAndColor(string: "Tìm kiếm", font: .HelveticaNeueMedium18, color: .defaultText), iconStr: "search_icon_groupshop", type: .SearchYoutube)
-//        appendCell(cellSearchYoutube)
-//        addSingleLine(true)
-
-        let cellKey = DefaultIconTextCellModel(att: Helper.getAttributesStringWithFontAndColor(string: "Mở khoá", font: .HelveticaNeueMedium18, color: .defaultText), iconStr: "door-white-key", type: .ActiveKey)
-        appendCell(cellKey)
-        addSingleLine(true)
+        if AppAccount.shared.getUserLogin()?.admin == 1 {
+            let cellManagerUser = DefaultIconTextCellModel(att:  Helper.getAttributesStringWithFontAndColor(string: "Quản lý thành viên", font: .HelveticaNeueMedium18, color: .defaultText), iconStr: "icons8-member-skin-type-7-48", type: .ManagerUser)
+            appendCell(cellManagerUser)
+            addSingleLine(true)
+            
+            let cellKey = DefaultIconTextCellModel(att: Helper.getAttributesStringWithFontAndColor(string: "Mở khoá", font: .HelveticaNeueMedium18, color: .defaultText), iconStr: "door-white-key", type: .ActiveKey)
+            appendCell(cellKey)
+            addSingleLine(true)
+            
+            let cellTestVoice = DefaultIconTextCellModel(att: Helper.getAttributesStringWithFontAndColor(string: "Test Voice", font: .HelveticaNeueMedium18, color: .defaultText), iconStr: "infoIc", type: .TestVoice)
+            appendCell(cellTestVoice)
+            addSingleLine(true)
+            
+            let cellInfoSupport2 = DefaultIconTextCellModel(att: Helper.getAttributesStringWithFontAndColor(string: "ViewController2", font: .HelveticaNeueMedium18, color: .defaultText), iconStr: "infoIc", type: .Rule)
+            appendCell(cellInfoSupport2)
+            addSingleLine(true)
+        }
         
         let cellInfoSupport = DefaultIconTextCellModel(att: Helper.getAttributesStringWithFontAndColor(string: "Thông tin về chúng tôi", font: .HelveticaNeueMedium18, color: .defaultText), iconStr: "infoIc", type: .InfoSupport)
         appendCell(cellInfoSupport)
         addSingleLine(true)
-
+        
         let cellLogout = DefaultIconTextCellModel(att: Helper.getAttributesStringWithFontAndColor(string: "Đăng xuất", font: .HelveticaNeueMedium18, color: .defaultText), iconStr: "ic_admin_logout", type: .Logout)
         appendCell(cellLogout)
 

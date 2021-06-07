@@ -45,6 +45,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPM-hM-4nX">
+                                <rect key="frame" x="35" y="35" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FPM-hM-4nX" secondAttribute="height" multiplier="1:1" id="kEC-j9-qC2"/>
+                                </constraints>
+                                <state key="normal" image="icons8-crown-100"/>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAv-of-w0m">
                                 <rect key="frame" x="58" y="12" width="317" height="342"/>
                                 <subviews>
@@ -97,13 +104,16 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ZAv-of-w0m" secondAttribute="trailing" constant="12" id="1y0-yZ-H7p"/>
+                            <constraint firstItem="FPM-hM-4nX" firstAttribute="height" secondItem="D2r-57-AJV" secondAttribute="height" multiplier="0.4" id="EbS-oX-cnU"/>
                             <constraint firstItem="POg-Dk-DvJ" firstAttribute="top" secondItem="Kcs-NM-aXs" secondAttribute="top" constant="12" id="KC1-RN-72m"/>
                             <constraint firstItem="AII-59-RSL" firstAttribute="leading" secondItem="1V7-4X-6gr" secondAttribute="leading" id="PIP-QP-b62"/>
                             <constraint firstItem="POg-Dk-DvJ" firstAttribute="leading" secondItem="Kcs-NM-aXs" secondAttribute="leading" constant="12" id="WYl-xv-22d"/>
+                            <constraint firstItem="FPM-hM-4nX" firstAttribute="bottom" secondItem="D2r-57-AJV" secondAttribute="bottom" id="g9D-np-wZW"/>
                             <constraint firstItem="AII-59-RSL" firstAttribute="top" secondItem="ZAv-of-w0m" secondAttribute="bottom" constant="5" id="ks5-2y-MbR"/>
                             <constraint firstAttribute="bottom" secondItem="ZAv-of-w0m" secondAttribute="bottom" constant="32" id="oIM-Qd-2kz"/>
                             <constraint firstItem="ZAv-of-w0m" firstAttribute="leading" secondItem="POg-Dk-DvJ" secondAttribute="trailing" constant="8" id="rZM-F1-uc5"/>
                             <constraint firstItem="ZAv-of-w0m" firstAttribute="top" secondItem="D2r-57-AJV" secondAttribute="top" id="tCB-Ui-AyY"/>
+                            <constraint firstItem="FPM-hM-4nX" firstAttribute="trailing" secondItem="D2r-57-AJV" secondAttribute="trailing" id="xOi-Jc-zLe"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -116,6 +126,7 @@
             </collectionViewCellContentView>
             <size key="customSize" width="387" height="386"/>
             <connections>
+                <outlet property="adminButton" destination="FPM-hM-4nX" id="Nqn-NB-0jj"/>
                 <outlet property="avtImg" destination="D2r-57-AJV" id="cXK-3B-16j"/>
                 <outlet property="commentLabel" destination="1V7-4X-6gr" id="ZGk-vc-3DG"/>
                 <outlet property="containerViewComment" destination="ZAv-of-w0m" id="66p-Op-8mu"/>
@@ -128,5 +139,6 @@
     </objects>
     <resources>
         <image name="Ảnh chụp Màn hình 2018-10-12 lúc 22.01.06-1" width="960" height="600"/>
+        <image name="icons8-crown-100" width="50" height="50"/>
     </resources>
 </document>

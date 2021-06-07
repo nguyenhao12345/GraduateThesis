@@ -31,7 +31,17 @@ class PianoCustomViewController: UIViewController, RPPreviewViewControllerDelega
     @IBOutlet weak var displayContainer: UIView!
     @IBOutlet weak var nameToneLbl: UILabel!
     @IBOutlet weak var noteIsPlayingLbl: UILabel!
-
+    @IBOutlet weak var btnUp: UIButton! {
+        didSet {
+            btnUp.roundCorners([.topRight, .bottomRight], radius: 8)
+        }
+    }
+    @IBOutlet weak var btnDown: UIButton! {
+        didSet {
+            btnDown.roundCorners([.bottomLeft, .topLeft], radius: 8)
+        }
+    }
+    
     var youtubeModel: SearchResult?
     var detailSongModel: DetailInfoSong?
 
@@ -75,10 +85,7 @@ class PianoCustomViewController: UIViewController, RPPreviewViewControllerDelega
             
         }) {
             DispatchQueue.main.async {
-                let vc = EditRecordViewController()
-                vc.detailSongModel = self.detailSongModel
-                vc.youtubeModel = self.youtubeModel
-                self.present(vc, animated: true, completion: nil)
+                AppRouter.shared.gotoEditViewController(viewController: self, youtubeModel: self.youtubeModel, detailSongModel: self.detailSongModel)
             }
         }
     }
@@ -343,7 +350,5 @@ extension PianoCustomViewController: CustomAVPlayerDelegate {
     }
     
     func finishedPlayingVideo() {
-        let vc = EditRecordViewController()
-        self.present(vc, animated: true, completion: nil)
     }
 }

@@ -124,24 +124,24 @@ class CustomAVPlayer: UIView, ASAutoPlayVideoLayerContainer  {
     }
     
     @IBAction func zoomButtonTapped(_ sender: Any) {
-//        NotificationCenter.default.addObserver(self, selector: #selector(dismissAVPlayerViewController), name: Constants.NotificationName.kAVPlayerViewControllerDismissingNotification, object: nil)
-//        if let parentVC = parentViewController {
-//            let playerController = AVPlayerViewController()
-//            playerController.player = self.videoLayer.player
-//            parentVC.present(playerController, animated: true) { [weak self] in
-//                guard let this = self else { return }
-//                playerController.player?.isMuted = this._isMuted
-//                this._isPlaying ? playerController.player?.play() : playerController.player?.pause()
-//            }
-//        }
+        NotificationCenter.default.addObserver(self, selector: #selector(dismissAVPlayerViewController), name: Constants.NotificationName.kAVPlayerViewControllerDismissingNotification, object: nil)
+        if let parentVC = parentViewController {
+            let playerController = AVPlayerViewController()
+            playerController.player = self.videoLayer.player
+            parentVC.present(playerController, animated: true) { [weak self] in
+                guard let this = self else { return }
+                playerController.player?.isMuted = this._isMuted
+                this._isPlaying ? playerController.player?.play() : playerController.player?.pause()
+            }
+        }
     }
     
     @objc func dismissAVPlayerViewController() {
-//        NotificationCenter.default.removeObserver(self, name: Constants.NotificationName.kAVPlayerViewControllerDismissingNotification, object: nil)
-//        if let player = self.videoLayer.player {
-//            _isMuted = player.isMuted
-//            _isPlaying = player.isPlaying
-//        }
+        NotificationCenter.default.removeObserver(self, name: Constants.NotificationName.kAVPlayerViewControllerDismissingNotification, object: nil)
+        if let player = self.videoLayer.player {
+            _isMuted = player.isMuted
+            _isPlaying = player.isPlaying
+        }
         
     }
     

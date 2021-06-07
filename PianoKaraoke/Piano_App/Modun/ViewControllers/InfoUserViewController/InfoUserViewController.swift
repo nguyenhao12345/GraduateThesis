@@ -47,13 +47,6 @@ class InfoUserViewController: AziBaseViewController {
     var dataSource: [AziBaseSectionModel] = [LoadingSectionModel()]
     var uidUser: String = ""
     //MARK: Init
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     override func initUIVariable() {
         super.initUIVariable()
@@ -74,7 +67,7 @@ class InfoUserViewController: AziBaseViewController {
     //MARK: Method
     func viewIsReady() {
         nav.addShadow(location: .bottom)
-        let layout = SectionBackgroundCardLayout2()
+        let layout = SectionBackgroundCardViewLayoutDefault()
         collectionView.collectionViewLayout = layout
         collectionView.contentInset = UIEdgeInsets(top: 9, left: 16, bottom: 9, right: 16)
         adapter = ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 5)

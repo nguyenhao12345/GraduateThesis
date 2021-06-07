@@ -15,6 +15,34 @@ import IQKeyboardManagerSwift
 class AppRouter: NSObject {
     static let shared = AppRouter()
     
+    func backToRoot(viewController: UIViewController) {
+        guard let vc = viewController.presentingViewController else { return }
+
+        while (vc.presentingViewController != nil) {
+            vc.dismiss(animated: false, completion: nil)
+        }
+
+    }
+    
+    func gotoManagerUser(viewController: UIViewController?) {
+        let vc = ManagerUserViewController()
+        present(viewController: viewController!, toViewController: vc, animation: true)
+    }
+    
+    func gotoEditViewController(viewController: UIViewController?, youtubeModel: SearchResult?, detailSongModel: DetailInfoSong?) {
+        let vc = EditRecordViewController()
+        vc.detailSongModel = detailSongModel
+        vc.youtubeModel = youtubeModel
+        present(viewController: viewController!, toViewController: vc, animation: true)
+    }
+    
+    func gotoPostNews(viewController: UIViewController?) {
+        let vc = PianoCustomViewController()
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .fullScreen
+        viewController?.present(vc, animated: true, completion: nil)
+    }
+    
     func gotoPianoPractice(viewController: UIViewController?) {
         if #available(iOS 13.0, *) {
             let vc = PianoPracticeViewController()

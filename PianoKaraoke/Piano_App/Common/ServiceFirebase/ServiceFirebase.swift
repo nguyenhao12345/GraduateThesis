@@ -20,6 +20,32 @@ class ServiceOnline {
     static var share = ServiceOnline()
     var ref = Database.database().reference()
     
+    func editKeyYoutube(user: UserModel, keyYoutube: String) {
+        ref.child("User").child(user.uid).child("keyYoutube").setValue(keyYoutube)
+    }
+    
+    func removeUser(user: UserModel) {
+        ref.child("User").child(user.uid).removeValue()
+    }
+    
+    func getAllUser(completion: @escaping ([UserModel])->()) {
+        ref.child("User").observeSingleEvent(of: .value) { (snapShot) in
+            guard let value = snapShot.value else {
+                DispatchQueue.main.async {
+                    completion([])
+                }
+                return
+            }
+            DispatchQueue.main.async {
+                var outPut: [UserModel] = []
+                for (_, s) in (snapShot.children.allObjects as! [DataSnapshot]).enumerated() {
+                    outPut.append(UserModel(data: s.value as! [String: Any]))
+                }
+                completion(outPut)
+            }
+        }
+    }
+    
     func pushDataSearch(text: String, key: String) {
         let dic = ["key": key, "name": text] as [String : Any]
         ref.child("Search").child(text).setValue(dic)
@@ -48,17 +74,19 @@ class ServiceOnline {
         }
 
     }
-    func createPostNews(title: String, content: String, urlMp3: String, youtubeModel: SearchResult?, detailSongModel: DetailInfoSong?) {
+    func createPostNews(title: String, content: String, urlMp3: String, urlThumnail: String, youtubeModel: SearchResult?, detailSongModel: DetailInfoSong?) {
         
         let timestamp = NSDate().timeIntervalSince1970
         guard let uidUser = AppAccount.shared.getUserLogin()?.uid else { return }
         let idNews: String = "\(timestamp.int)-\(uidUser)"
         
-        var urlImage: String = ""
-        if let _youtubeModel = youtubeModel {
-            urlImage = _youtubeModel.snippet.thumbnails.high.url ?? ""
-        } else if let _detailSongModel = detailSongModel {
-            urlImage = _detailSongModel.imageSong
+        var urlImage: String = urlThumnail
+        if urlImage == "" {
+            if let _youtubeModel = youtubeModel {
+                urlImage = _youtubeModel.snippet.thumbnails.high.url ?? ""
+            } else if let _detailSongModel = detailSongModel {
+                urlImage = _detailSongModel.imageSong
+            }
         }
         
         
@@ -72,8 +100,6 @@ class ServiceOnline {
             "content": content,
             "user": AppAccount.shared.getUserLogin().asDictionary() ?? [:]
         ]
-//        let dicPost: [String : Any] = ["\(idNews)": dic]
-//        ref.child("NewsFeed").setValue(dicPost)
         ref.child("NewsFeed").child(idNews).setValue(dic)
         ref.child("UserWalls").child(uidUser).child(idNews).setValue(dic)
     }

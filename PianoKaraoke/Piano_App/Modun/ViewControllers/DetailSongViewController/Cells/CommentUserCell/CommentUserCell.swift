@@ -60,6 +60,7 @@ class CommentUserCell: CellModelView<CommentUserCellModel> {
     @IBOutlet weak var userNameLbl: UILabel!
     @IBOutlet weak var timeLbl: UILabel!
     @IBOutlet weak var trailingConst: NSLayoutConstraint!
+    @IBOutlet weak var adminButton: UIButton!
 
     @IBOutlet weak var containerViewComment: UIView!
     override func setCustomDelegate(_ section: Any) {
@@ -78,6 +79,7 @@ class CommentUserCell: CellModelView<CommentUserCellModel> {
     override func bindCellModel(_ cellModel: CommentUserCellModel) {
         super.bindCellModel(cellModel)
         //TODO
+        adminButton.isHidden = cellModel.commentModel?.baseComment?.user?.admin != 1
         commentLabel.attributedString = cellModel.attributed
         commentLabel.truncationString = cellModel.truncationString
         commentLabel.numberOfLines = cellModel.numberOfLine

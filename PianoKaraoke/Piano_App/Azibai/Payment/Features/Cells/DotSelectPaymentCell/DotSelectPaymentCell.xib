@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="KoHo-Medium.ttf">
+            <string>KoHo-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Jjm-C9-Zvz" customClass="DotSelectPaymentCell" customModule="Piano_Kara" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="288" height="49"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Bv-YR-UPV">
+                <rect key="frame" x="0.0" y="0.0" width="288" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEn-Ue-N08">
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="49"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PaymentActive" translatesAutoresizingMaskIntoConstraints="NO" id="DFI-vM-yj0">
+                                <rect key="frame" x="18" y="17" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="db2-lf-I5S"/>
+                                    <constraint firstAttribute="width" secondItem="DFI-vM-yj0" secondAttribute="height" multiplier="1:1" id="iP6-Es-EUQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RN-48-SFh">
+                                <rect key="frame" x="41" y="15.5" width="239" height="18.5"/>
+                                <fontDescription key="fontDescription" name="KoHo-Medium" family="KoHo Medium" pointSize="14"/>
+                                <color key="textColor" red="0.27058823529411763" green="0.27058823529411763" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwL-Yv-Hm5">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="49"/>
+                                <connections>
+                                    <action selector="click:" destination="Jjm-C9-Zvz" eventType="touchUpInside" id="76h-gH-y4G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1RN-48-SFh" firstAttribute="centerY" secondItem="EEn-Ue-N08" secondAttribute="centerY" id="Cgt-Ab-SaL"/>
+                            <constraint firstItem="DFI-vM-yj0" firstAttribute="leading" secondItem="EEn-Ue-N08" secondAttribute="leading" constant="18" id="Xtq-Bd-cXl"/>
+                            <constraint firstItem="YwL-Yv-Hm5" firstAttribute="centerX" secondItem="EEn-Ue-N08" secondAttribute="centerX" id="dDW-lt-wH5"/>
+                            <constraint firstItem="YwL-Yv-Hm5" firstAttribute="centerY" secondItem="EEn-Ue-N08" secondAttribute="centerY" id="j51-st-dBl"/>
+                            <constraint firstItem="YwL-Yv-Hm5" firstAttribute="width" secondItem="EEn-Ue-N08" secondAttribute="width" id="rY9-xh-3tf"/>
+                            <constraint firstItem="1RN-48-SFh" firstAttribute="leading" secondItem="DFI-vM-yj0" secondAttribute="trailing" constant="8" id="sQG-vS-epK"/>
+                            <constraint firstItem="YwL-Yv-Hm5" firstAttribute="height" secondItem="EEn-Ue-N08" secondAttribute="height" id="vS1-FX-VpS"/>
+                            <constraint firstAttribute="trailing" secondItem="1RN-48-SFh" secondAttribute="trailing" constant="8" id="w4f-Nz-ODI"/>
+                            <constraint firstItem="DFI-vM-yj0" firstAttribute="centerY" secondItem="EEn-Ue-N08" secondAttribute="centerY" id="zuF-Fi-3sd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="EEn-Ue-N08" secondAttribute="bottom" id="Vcx-lm-1kK"/>
+                    <constraint firstAttribute="trailing" secondItem="EEn-Ue-N08" secondAttribute="trailing" id="ac9-5I-CYK"/>
+                    <constraint firstItem="EEn-Ue-N08" firstAttribute="leading" secondItem="4Bv-YR-UPV" secondAttribute="leading" id="bdb-Fd-Avk"/>
+                    <constraint firstItem="EEn-Ue-N08" firstAttribute="top" secondItem="4Bv-YR-UPV" secondAttribute="top" id="he5-7a-Xvc"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="288" height="49"/>
+            <connections>
+                <outlet property="imageViewDot" destination="DFI-vM-yj0" id="7M9-d4-GfS"/>
+                <outlet property="lbl" destination="1RN-48-SFh" id="ybe-y9-SuR"/>
+            </connections>
+            <point key="canvasLocation" x="310.14492753623193" y="91.40625"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="PaymentActive" width="15" height="15"/>
+    </resources>
+</document>

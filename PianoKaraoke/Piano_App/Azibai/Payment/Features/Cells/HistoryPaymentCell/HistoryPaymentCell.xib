@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="KoHo-Italic.ttf">
+            <string>KoHo-Italic</string>
+        </array>
+        <array key="KoHo-Medium.ttf">
+            <string>KoHo-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Jjm-C9-Zvz" customClass="HistoryPaymentCell" customModule="Piano_Karaoke" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="139"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Bv-YR-UPV">
+                <rect key="frame" x="0.0" y="0.0" width="413" height="139"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Uo-Ca-72t">
+                        <rect key="frame" x="0.0" y="0.0" width="413" height="139"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="#123456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQB-yd-Wgx">
+                                <rect key="frame" x="28" y="23" width="56.5" height="18.5"/>
+                                <fontDescription key="fontDescription" name="KoHo-Medium" family="KoHo Medium" pointSize="14"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.25882352941176467" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01/08/2019 01 : 01" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWE-4b-F8F">
+                                <rect key="frame" x="88.5" y="23" width="306.5" height="18.5"/>
+                                <fontDescription key="fontDescription" name="KoHo-Medium" family="KoHo Medium" pointSize="14"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.25882352939999997" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chuyển tiền từ đơn hàng #123456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lk-Fn-R5W">
+                                <rect key="frame" x="28" y="59.5" width="357" height="18.5"/>
+                                <fontDescription key="fontDescription" name="KoHo-Medium" family="KoHo Medium" pointSize="14"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.25882352939999997" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="+ 500.000 VNĐ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFM-Xn-lSb">
+                                <rect key="frame" x="28" y="96" width="261" height="18.5"/>
+                                <fontDescription key="fontDescription" name="KoHo-Medium" family="KoHo Medium" pointSize="14"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.25882352939999997" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đang chuyển tiền" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzf-Ml-jAl">
+                                <rect key="frame" x="289" y="96" width="106" height="18.5"/>
+                                <fontDescription key="fontDescription" name="KoHo-Italic" family="KoHo" pointSize="14"/>
+                                <color key="textColor" red="0.53725490196078429" green="0.53725490196078429" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qWE-4b-F8F" firstAttribute="top" secondItem="yQB-yd-Wgx" secondAttribute="top" id="3JY-U5-itE"/>
+                            <constraint firstItem="yQB-yd-Wgx" firstAttribute="leading" secondItem="5Uo-Ca-72t" secondAttribute="leading" constant="28" id="4T3-BI-8eK"/>
+                            <constraint firstItem="uFM-Xn-lSb" firstAttribute="top" secondItem="3lk-Fn-R5W" secondAttribute="bottom" constant="18" id="A8y-2s-cbD"/>
+                            <constraint firstItem="uFM-Xn-lSb" firstAttribute="leading" secondItem="3lk-Fn-R5W" secondAttribute="leading" id="Aw1-am-gCI"/>
+                            <constraint firstItem="3lk-Fn-R5W" firstAttribute="top" secondItem="yQB-yd-Wgx" secondAttribute="bottom" constant="18" id="J4w-pU-1uA"/>
+                            <constraint firstItem="3lk-Fn-R5W" firstAttribute="leading" secondItem="yQB-yd-Wgx" secondAttribute="leading" id="Jgn-KN-4VZ"/>
+                            <constraint firstItem="nzf-Ml-jAl" firstAttribute="leading" secondItem="uFM-Xn-lSb" secondAttribute="trailing" id="MdO-6e-pIl"/>
+                            <constraint firstItem="3lk-Fn-R5W" firstAttribute="centerX" secondItem="5Uo-Ca-72t" secondAttribute="centerX" id="WJN-yy-zZv"/>
+                            <constraint firstAttribute="trailing" secondItem="qWE-4b-F8F" secondAttribute="trailing" constant="18" id="aLI-qr-AVN"/>
+                            <constraint firstItem="nzf-Ml-jAl" firstAttribute="trailing" secondItem="qWE-4b-F8F" secondAttribute="trailing" id="rYi-Eh-aHa"/>
+                            <constraint firstItem="yQB-yd-Wgx" firstAttribute="top" secondItem="5Uo-Ca-72t" secondAttribute="top" constant="23" id="wli-FY-Fkx"/>
+                            <constraint firstItem="nzf-Ml-jAl" firstAttribute="top" secondItem="uFM-Xn-lSb" secondAttribute="top" id="wzC-B0-juq"/>
+                            <constraint firstItem="qWE-4b-F8F" firstAttribute="leading" secondItem="yQB-yd-Wgx" secondAttribute="trailing" constant="4" id="xjf-gA-DCw"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5Uo-Ca-72t" firstAttribute="leading" secondItem="4Bv-YR-UPV" secondAttribute="leading" id="4js-AB-wnD"/>
+                    <constraint firstAttribute="trailing" secondItem="5Uo-Ca-72t" secondAttribute="trailing" id="Hlx-nx-6ik"/>
+                    <constraint firstItem="5Uo-Ca-72t" firstAttribute="top" secondItem="4Bv-YR-UPV" secondAttribute="top" id="LIq-Ak-B5l"/>
+                    <constraint firstAttribute="bottom" secondItem="5Uo-Ca-72t" secondAttribute="bottom" id="myV-PA-P4H"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="413" height="139"/>
+            <point key="canvasLocation" x="381.8840579710145" y="120.87053571428571"/>
+        </collectionViewCell>
+    </objects>
+</document>

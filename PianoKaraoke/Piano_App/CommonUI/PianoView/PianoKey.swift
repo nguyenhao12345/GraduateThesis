@@ -51,6 +51,8 @@ public final class PianoKey {
             }
             
             highlightLayer.compositingFilter = "darkenBlendMode"
+            imageLayer.roundCorners([.bottomRight, .bottomLeft], radius: 7)
+
         } else {
             upImage = UIImage.keyImage(CGSize(width: blackKeyWidth, height: blackKeyHeight), blackKey: true, keyDown: false, keyCornerRadius: cornerRadius, noteNumber: noteNumber) ?? UIImage()
             downImage = UIImage.keyImage(CGSize(width: blackKeyWidth, height: blackKeyHeight), blackKey: true, keyDown: true, keyCornerRadius: cornerRadius, noteNumber: noteNumber) ?? UIImage()

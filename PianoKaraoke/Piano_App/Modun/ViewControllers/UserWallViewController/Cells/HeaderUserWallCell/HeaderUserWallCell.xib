@@ -170,20 +170,31 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSy-6i-zpf">
+                        <rect key="frame" x="253.5" y="92" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="OSy-6i-zpf" secondAttribute="height" multiplier="1:1" id="5Hc-hT-mdh"/>
+                        </constraints>
+                        <state key="normal" image="icons8-crown-100"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="U1X-T6-DFR" secondAttribute="bottom" id="3JM-uo-i2g"/>
+                    <constraint firstItem="OSy-6i-zpf" firstAttribute="trailing" secondItem="Zkp-pl-epc" secondAttribute="trailing" id="5l3-sQ-Oik"/>
                     <constraint firstItem="Zkp-pl-epc" firstAttribute="top" secondItem="AwB-qc-Wwb" secondAttribute="top" id="9Ru-E9-8R8"/>
                     <constraint firstItem="U1X-T6-DFR" firstAttribute="top" secondItem="4Bv-YR-UPV" secondAttribute="top" id="EeI-lm-u9X"/>
                     <constraint firstItem="Zkp-pl-epc" firstAttribute="bottom" secondItem="AwB-qc-Wwb" secondAttribute="bottom" id="GmF-CW-IEm"/>
                     <constraint firstItem="Zkp-pl-epc" firstAttribute="leading" secondItem="AwB-qc-Wwb" secondAttribute="leading" id="Qqj-vk-8VG"/>
+                    <constraint firstItem="OSy-6i-zpf" firstAttribute="height" secondItem="FWs-NW-wjV" secondAttribute="height" multiplier="0.4" id="Rn3-nK-QMg"/>
                     <constraint firstAttribute="trailing" secondItem="U1X-T6-DFR" secondAttribute="trailing" id="cOz-OA-Khy"/>
                     <constraint firstItem="Zkp-pl-epc" firstAttribute="trailing" secondItem="AwB-qc-Wwb" secondAttribute="trailing" id="gC6-Jx-MKo"/>
                     <constraint firstItem="U1X-T6-DFR" firstAttribute="leading" secondItem="4Bv-YR-UPV" secondAttribute="leading" id="hVA-y4-K5I"/>
+                    <constraint firstItem="OSy-6i-zpf" firstAttribute="bottom" secondItem="Zkp-pl-epc" secondAttribute="bottom" id="zI0-1v-W5H"/>
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="483" height="358"/>
             <connections>
+                <outlet property="adminButton" destination="OSy-6i-zpf" id="Xup-wK-ZgB"/>
                 <outlet property="avtImg" destination="Uzj-Cd-Rye" id="ldO-tF-If5"/>
                 <outlet property="introLbl" destination="fgI-GT-cfP" id="iRg-aP-6Z4"/>
                 <outlet property="nameLbl" destination="86a-QF-qNo" id="juN-ON-ucK"/>
@@ -194,6 +205,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="icons8-crown-100" width="50" height="50"/>
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
 </document>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="KoHo-Regular.ttf">
+            <string>KoHo-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HeaderPaymentTextCollectionViewCell" customModule="Piano_Karaoke" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="231" height="102"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="231" height="102"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smQ-VN-bTU">
+                        <rect key="frame" x="0.0" y="0.0" width="231" height="102"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WY-hM-HWY">
+                                <rect key="frame" x="0.0" y="0.0" width="231" height="102"/>
+                                <fontDescription key="fontDescription" name="KoHo-Regular" family="KoHo" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5WY-hM-HWY" firstAttribute="top" secondItem="smQ-VN-bTU" secondAttribute="top" id="VLJ-VG-39V"/>
+                            <constraint firstAttribute="bottom" secondItem="5WY-hM-HWY" secondAttribute="bottom" id="eox-4W-jrN"/>
+                            <constraint firstItem="5WY-hM-HWY" firstAttribute="leading" secondItem="smQ-VN-bTU" secondAttribute="leading" id="oqD-mL-VBG"/>
+                            <constraint firstAttribute="trailing" secondItem="5WY-hM-HWY" secondAttribute="trailing" id="uiq-H2-8cZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="smQ-VN-bTU" secondAttribute="trailing" id="Lvj-bS-D0N"/>
+                <constraint firstItem="smQ-VN-bTU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Z92-40-UJG"/>
+                <constraint firstItem="smQ-VN-bTU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pQ3-k6-wOE"/>
+                <constraint firstAttribute="bottom" secondItem="smQ-VN-bTU" secondAttribute="bottom" id="qrO-7S-hbf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="231" height="102"/>
+            <connections>
+                <outlet property="containerView" destination="smQ-VN-bTU" id="xwZ-hB-RVg"/>
+                <outlet property="titleLbl" destination="5WY-hM-HWY" id="Khg-1z-OId"/>
+            </connections>
+            <point key="canvasLocation" x="268.84057971014494" y="101.78571428571428"/>
+        </collectionViewCell>
+    </objects>
+</document>

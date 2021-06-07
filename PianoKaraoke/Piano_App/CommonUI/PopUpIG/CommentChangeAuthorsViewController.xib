@@ -29,7 +29,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgl-bM-LvA">
+                <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgl-bM-LvA">
                     <rect key="frame" x="0.0" y="622" width="414" height="74"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </view>
@@ -163,6 +163,7 @@
                 <constraint firstItem="BUr-0V-mTN" firstAttribute="centerX" secondItem="S1t-ye-0tP" secondAttribute="centerX" id="tXF-Tw-bsr"/>
                 <constraint firstItem="dgl-bM-LvA" firstAttribute="bottom" secondItem="9yY-hT-hYf" secondAttribute="bottom" id="vZm-6E-o4t"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="S1t-ye-0tP"/>
             <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
         </view>

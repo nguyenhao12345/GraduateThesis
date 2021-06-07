@@ -42,7 +42,8 @@ class HeaderUserWallCell: CellModelView<HeaderUserWallCellModel> {
     @IBOutlet weak var viewMoreLbl: UILabel!
     @IBOutlet weak var introLbl: UILabel!
     @IBOutlet weak var avtImg: HImageView!
-    
+    @IBOutlet weak var adminButton: UIButton!
+
     override func setCustomDelegate(_ section: Any) {
         self.delegate = section as? HeaderUserWallCellDelegate
     }
@@ -72,6 +73,7 @@ class HeaderUserWallCell: CellModelView<HeaderUserWallCellModel> {
         super.bindCellModel(cellModel)
         //TODO
         // border
+        adminButton.isHidden = cellModel.user?.admin != 1
         avtImg.setImageURL(URL(string: cellModel.user?.avata ?? ""))
         nameLbl.text = cellModel.user?.name
         let introText = """

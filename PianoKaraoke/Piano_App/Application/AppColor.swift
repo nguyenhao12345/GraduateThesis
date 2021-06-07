@@ -10,15 +10,18 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-
+//F28C8F
 class AppColor: NSObject {
     static let shared = AppColor()
-    var arrColor: [String] = ["CEA69D", "C6C96B" ,"70C3C7", "7BBFBC", "F28C8F"]
-    var colorBackGround: BehaviorRelay<String> = BehaviorRelay(value: "F28C8F")
+    var arrColor: [String] = ["8FDEEA", "D9718B" ,"F8BB7C", "F2E189", "C9D080", "FF9C9F"]
+    var colorBackGround: BehaviorRelay<String> = BehaviorRelay(value: UserDefaults.standard.string(forKey: "colorBackGround") ?? "F28C8F")
     
     func getColor() -> String {
         let object = arrColor.removeFirst()
         arrColor.append(object)
+
         return object
     }
+    
 }
+

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BitCrusherViewController" customModule="Piano_Karaoke" customModuleProvider="target">
+            <connections>
+                <outlet property="bitDepthSlider" destination="Vw7-uZ-XQH" id="8uT-lo-Cve"/>
+                <outlet property="mixSlider" destination="7XE-PB-kf2" id="WLh-3J-In1"/>
+                <outlet property="sampleRateSlider" destination="sHA-c5-e7V" id="fMt-ms-a7J"/>
+                <outlet property="view" destination="PCy-fj-Ncq" id="G28-eU-8Hd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="PCy-fj-Ncq">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vw7-uZ-XQH" customClass="AKSlider" customModule="AudioKitUI">
+                    <rect key="frame" x="0.0" y="99" width="414" height="90"/>
+                    <color key="backgroundColor" red="0.58762145040000002" green="0.86256819959999997" blue="0.67709666489999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="gFP-aD-dAY"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="qhc-pX-Mlt"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="property" value="Bit Depth"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="sliderColor">
+                            <color key="value" red="0.49299604609999997" green="0.72509512409999999" blue="0.5702453529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="value">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sHA-c5-e7V" customClass="AKSlider" customModule="AudioKitUI">
+                    <rect key="frame" x="0.0" y="265" width="414" height="90"/>
+                    <color key="backgroundColor" red="0.37143704300000002" green="0.70446354150000001" blue="0.61085367199999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="l5M-uH-6ud"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="ljd-qS-dku"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="property" value="Sample Rate"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="sliderColor">
+                            <color key="value" red="0.26095715019999999" green="0.5" blue="0.43840177419999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="value">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="format" value="%0.1f Hz"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7XE-PB-kf2" customClass="AKSlider" customModule="AudioKitUI">
+                    <rect key="frame" x="0.0" y="431" width="414" height="90"/>
+                    <color key="backgroundColor" red="0.33556698619999997" green="0.3438783091" blue="0.71088274510000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="Ko4-VE-WUw"/>
+                        <constraint firstAttribute="height" constant="90" id="rJj-Yq-ZWS"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="property" value="Mix"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="sliderColor">
+                            <color key="value" red="0.25318011639999999" green="0.25881332159999998" blue="0.53295999770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="value">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="sHA-c5-e7V" firstAttribute="top" secondItem="Vw7-uZ-XQH" secondAttribute="bottom" constant="76" id="9G3-FP-7Yl"/>
+                <constraint firstItem="Vw7-uZ-XQH" firstAttribute="leading" secondItem="PCy-fj-Ncq" secondAttribute="leading" id="Cfe-xn-0qg"/>
+                <constraint firstAttribute="trailing" secondItem="Vw7-uZ-XQH" secondAttribute="trailing" id="Dqh-6b-oF0"/>
+                <constraint firstAttribute="trailing" secondItem="7XE-PB-kf2" secondAttribute="trailing" id="EKg-GU-Glc"/>
+                <constraint firstItem="Vw7-uZ-XQH" firstAttribute="top" secondItem="qzo-Vr-Ybf" secondAttribute="top" constant="55" id="Itp-B8-4ZR"/>
+                <constraint firstItem="sHA-c5-e7V" firstAttribute="top" secondItem="Vw7-uZ-XQH" secondAttribute="bottom" constant="76" id="KLO-Hn-1jG"/>
+                <constraint firstItem="sHA-c5-e7V" firstAttribute="leading" secondItem="PCy-fj-Ncq" secondAttribute="leading" id="O9E-UP-GGZ"/>
+                <constraint firstItem="7XE-PB-kf2" firstAttribute="leading" secondItem="PCy-fj-Ncq" secondAttribute="leading" id="Rzs-Pj-oHO"/>
+                <constraint firstAttribute="trailing" secondItem="sHA-c5-e7V" secondAttribute="trailing" id="lGH-Sa-z4t"/>
+                <constraint firstItem="7XE-PB-kf2" firstAttribute="top" secondItem="sHA-c5-e7V" secondAttribute="bottom" constant="76" id="wUS-u2-bas"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="qzo-Vr-Ybf"/>
+            <point key="canvasLocation" x="139" y="107"/>
+        </view>
+    </objects>
+</document>

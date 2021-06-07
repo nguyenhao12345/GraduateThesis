@@ -21,6 +21,7 @@ class NewsFeedInfoCellModel: AziBaseCellModel {
     var dateStr: String = "Hôm nay"
     var avataStr: String = ""
     var id: String = ""
+    var admin: Int = 0
     func heightNameUser(maxW: CGFloat) -> CGFloat {
         let heightText = heightForView(textAtt: Helper.getAttributesStringWithFontAndColor(string: userName, font: .HelveticaNeueBold16, color: .clear), width: maxW, numberOfline: 0)
 
@@ -44,7 +45,7 @@ class NewsFeedInfoCell: CellModelView<NewsFeedInfoCellModel> {
     @IBOutlet weak var userNameLbl: UILabel!
     @IBOutlet weak var avtUserImg: ImageViewRound!
     @IBOutlet weak var dateLbl: UILabel!
-    
+    @IBOutlet weak var adminButton: UIButton!
 
     override func setCustomDelegate(_ section: Any) {
         self.delegate = section as? NewsFeedInfoCellDelegate
@@ -65,6 +66,7 @@ class NewsFeedInfoCell: CellModelView<NewsFeedInfoCellModel> {
     override func bindCellModel(_ cellModel: NewsFeedInfoCellModel) {
         super.bindCellModel(cellModel)
         //TODO
+        adminButton.isHidden = cellModel.admin != 1
         userNameLbl.text = cellModel.userName
         dateLbl.text = cellModel.dateStr
         avtUserImg.setImageURL(URL(string: cellModel.avataStr))

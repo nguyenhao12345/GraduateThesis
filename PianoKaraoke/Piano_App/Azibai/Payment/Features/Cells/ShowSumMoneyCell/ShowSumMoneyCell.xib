@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="KoHo-Bold.ttf">
+            <string>KoHo-Bold</string>
+        </array>
+        <array key="KoHo-Medium.ttf">
+            <string>KoHo-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Jjm-C9-Zvz" customClass="ShowSumMoneyCell" customModule="Piano_Kara" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Bv-YR-UPV">
+                <rect key="frame" x="0.0" y="0.0" width="415" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7BU-JS-a1l">
+                        <rect key="frame" x="0.0" y="0.0" width="415" height="200"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Foz-2C-v4V">
+                                <rect key="frame" x="18" y="16" width="379" height="22.5"/>
+                                <fontDescription key="fontDescription" name="KoHo-Medium" family="KoHo Medium" pointSize="17"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.25882352939999997" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9.999.000đ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgb-wd-OMW">
+                                <rect key="frame" x="8" y="52.5" width="399" height="47"/>
+                                <fontDescription key="fontDescription" name="KoHo-Bold" family="KoHo" pointSize="36"/>
+                                <color key="textColor" red="0.83456927540000003" green="0.716538012" blue="0.47962540390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdv-t7-0KU">
+                                <rect key="frame" x="168" y="107.5" width="79" height="33"/>
+                                <fontDescription key="fontDescription" name="KoHo-Medium" family="KoHo Medium" pointSize="16"/>
+                                <state key="normal" title="Chi tiết &gt;&gt;&gt;">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.25882352941176467" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickBtn:" destination="Jjm-C9-Zvz" eventType="touchUpInside" id="n0a-uV-xaX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kdv-t7-0KU" firstAttribute="top" secondItem="Cgb-wd-OMW" secondAttribute="bottom" constant="8" id="7ia-73-Xvf"/>
+                            <constraint firstItem="Foz-2C-v4V" firstAttribute="top" secondItem="7BU-JS-a1l" secondAttribute="top" constant="16" id="Jg4-Fz-bUe"/>
+                            <constraint firstAttribute="trailing" secondItem="Cgb-wd-OMW" secondAttribute="trailing" constant="8" id="MFc-Dk-rXc"/>
+                            <constraint firstItem="Foz-2C-v4V" firstAttribute="leading" secondItem="7BU-JS-a1l" secondAttribute="leading" constant="18" id="awN-xi-azF"/>
+                            <constraint firstItem="Cgb-wd-OMW" firstAttribute="top" secondItem="Foz-2C-v4V" secondAttribute="bottom" constant="14" id="e6L-9G-lZu"/>
+                            <constraint firstItem="Cgb-wd-OMW" firstAttribute="leading" secondItem="7BU-JS-a1l" secondAttribute="leading" constant="8" id="iEL-f5-bj1"/>
+                            <constraint firstItem="kdv-t7-0KU" firstAttribute="centerX" secondItem="7BU-JS-a1l" secondAttribute="centerX" id="ij5-lI-cOy"/>
+                            <constraint firstItem="Foz-2C-v4V" firstAttribute="centerX" secondItem="7BU-JS-a1l" secondAttribute="centerX" id="x8M-Hg-WYb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="7BU-JS-a1l" secondAttribute="trailing" id="2nE-lR-MfA"/>
+                    <constraint firstItem="7BU-JS-a1l" firstAttribute="top" secondItem="4Bv-YR-UPV" secondAttribute="top" id="dc6-XP-mgP"/>
+                    <constraint firstAttribute="bottom" secondItem="7BU-JS-a1l" secondAttribute="bottom" id="iLr-3Z-YSF"/>
+                    <constraint firstItem="7BU-JS-a1l" firstAttribute="leading" secondItem="4Bv-YR-UPV" secondAttribute="leading" id="puO-Xl-hCD"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="415" height="200"/>
+            <connections>
+                <outlet property="btn" destination="kdv-t7-0KU" id="CSI-a1-4Zt"/>
+                <outlet property="moneyLbl" destination="Cgb-wd-OMW" id="zMg-ot-FVP"/>
+                <outlet property="titleLbl" destination="Foz-2C-v4V" id="RAp-yP-hiY"/>
+            </connections>
+            <point key="canvasLocation" x="394.92753623188406" y="137.27678571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>

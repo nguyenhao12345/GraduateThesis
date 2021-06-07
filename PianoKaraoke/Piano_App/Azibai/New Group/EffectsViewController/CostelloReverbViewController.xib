@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CostelloReverbViewController" customModule="Piano_Karaoke" customModuleProvider="target">
+            <connections>
+                <outlet property="feedbackSlider" destination="FRF-u4-Lq9" id="qa2-nA-U9x"/>
+                <outlet property="mixSlider" destination="zyQ-SW-eYy" id="zvR-Gy-hNn"/>
+                <outlet property="view" destination="XF1-na-hgl" id="mDR-Jw-P5E"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="XF1-na-hgl">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zyQ-SW-eYy" customClass="AKSlider" customModule="AudioKitUI">
+                    <rect key="frame" x="20" y="265" width="374" height="90"/>
+                    <color key="backgroundColor" red="0.37143704300000002" green="0.70446354150000001" blue="0.61085367199999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="7Hx-db-8dr"/>
+                        <constraint firstAttribute="height" constant="90" id="DDE-h3-TnJ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="property" value="Mix"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FRF-u4-Lq9" customClass="AKSlider" customModule="AudioKitUI">
+                    <rect key="frame" x="20" y="99" width="374" height="90"/>
+                    <color key="backgroundColor" red="0.58762145040000002" green="0.86256819959999997" blue="0.67709666489999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="POQ-1V-nio"/>
+                        <constraint firstAttribute="height" constant="90" id="cMc-d8-Rle"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="property" value="Feedback"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="zyQ-SW-eYy" firstAttribute="top" secondItem="FRF-u4-Lq9" secondAttribute="bottom" constant="76" id="AQl-v9-QFy"/>
+                <constraint firstItem="FRF-u4-Lq9" firstAttribute="leading" secondItem="XF1-na-hgl" secondAttribute="leading" constant="20" id="LLg-IS-CTi"/>
+                <constraint firstItem="FRF-u4-Lq9" firstAttribute="top" secondItem="TvI-JZ-POr" secondAttribute="top" constant="55" id="Nue-Y5-azM"/>
+                <constraint firstAttribute="trailing" secondItem="FRF-u4-Lq9" secondAttribute="trailing" constant="20" id="lF8-fo-flY"/>
+                <constraint firstAttribute="trailing" secondItem="zyQ-SW-eYy" secondAttribute="trailing" constant="20" id="oIM-dq-1li"/>
+                <constraint firstItem="zyQ-SW-eYy" firstAttribute="leading" secondItem="XF1-na-hgl" secondAttribute="leading" constant="20" id="wB8-Ad-Plx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="TvI-JZ-POr"/>
+            <point key="canvasLocation" x="267" y="192"/>
+        </view>
+    </objects>
+</document>

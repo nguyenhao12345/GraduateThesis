@@ -37,6 +37,7 @@ class MeCommentCell: CellModelView<MeCommentCellModel> {
     @IBOutlet private weak var viewBackgroundTextView: UIView!
     @IBOutlet private weak var uitextView: UITextView!
     @IBOutlet private weak var avtImg: ImageViewRound!
+    @IBOutlet weak var adminButton: UIButton!
 
     override func setCustomDelegate(_ section: Any) {
         self.delegate = section as? MeCommentCellDelegate
@@ -55,6 +56,7 @@ class MeCommentCell: CellModelView<MeCommentCellModel> {
         super.bindCellModel(cellModel)
         //TODO
         
+        adminButton.isHidden = AppAccount.shared.getUserLogin()?.admin != 1
         if cellModel.nameText == "" {
             cellModel.nameText = Const.plahoderComment
         }

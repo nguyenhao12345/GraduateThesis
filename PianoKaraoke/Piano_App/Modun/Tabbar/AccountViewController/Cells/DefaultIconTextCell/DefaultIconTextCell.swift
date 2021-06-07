@@ -24,6 +24,8 @@ enum DefaultIconTextKey {
     case SearchYoutube
     case ActiveKey
     case Practice
+    case ManagerUser
+    case TestVoice
     case NONE
 }
 class DefaultIconTextCellModel: AziBaseCellModel {

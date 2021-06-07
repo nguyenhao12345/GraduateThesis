@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="KoHo-Regular.ttf">
+            <string>KoHo-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Jjm-C9-Zvz" customClass="TextFieldInputCell" customModule="Piano_Kara" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="284" height="81"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Bv-YR-UPV">
+                <rect key="frame" x="0.0" y="0.0" width="284" height="81"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UC8-SK-Rqa">
+                        <rect key="frame" x="0.0" y="0.0" width="284" height="81"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUu-xG-hQO">
+                                <rect key="frame" x="18" y="0.0" width="248" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeR-vK-wxB">
+                                        <rect key="frame" x="206" y="0.0" width="34" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="KeR-vK-wxB" secondAttribute="height" multiplier="1:1" id="1sT-KY-Dv9"/>
+                                        </constraints>
+                                        <state key="normal" image="arrow_down_gray"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập tên" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PrG-02-ciL">
+                                        <rect key="frame" x="12" y="0.0" width="194" height="34"/>
+                                        <fontDescription key="fontDescription" name="KoHo-Regular" family="KoHo" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8AM-HK-ssh">
+                                        <rect key="frame" x="12" y="0.0" width="236" height="34"/>
+                                        <connections>
+                                            <action selector="clickDropDown:" destination="Jjm-C9-Zvz" eventType="touchUpInside" id="3o2-NP-X92"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="PrG-02-ciL" secondAttribute="bottom" id="25y-Lh-q7B"/>
+                                    <constraint firstAttribute="trailing" secondItem="8AM-HK-ssh" secondAttribute="trailing" id="2MO-Pm-FLL"/>
+                                    <constraint firstItem="PrG-02-ciL" firstAttribute="top" secondItem="jUu-xG-hQO" secondAttribute="top" id="F94-TQ-sg3"/>
+                                    <constraint firstItem="KeR-vK-wxB" firstAttribute="leading" secondItem="PrG-02-ciL" secondAttribute="trailing" id="GKB-5d-w4M"/>
+                                    <constraint firstAttribute="bottom" secondItem="KeR-vK-wxB" secondAttribute="bottom" id="a6l-PP-JcI"/>
+                                    <constraint firstItem="8AM-HK-ssh" firstAttribute="leading" secondItem="PrG-02-ciL" secondAttribute="leading" id="cd4-6b-2Ca"/>
+                                    <constraint firstAttribute="trailing" secondItem="KeR-vK-wxB" secondAttribute="trailing" constant="8" id="cdu-gE-phV"/>
+                                    <constraint firstItem="KeR-vK-wxB" firstAttribute="top" secondItem="jUu-xG-hQO" secondAttribute="top" id="hvd-ui-Acy"/>
+                                    <constraint firstItem="PrG-02-ciL" firstAttribute="leading" secondItem="jUu-xG-hQO" secondAttribute="leading" constant="12" id="iZT-tz-MpE"/>
+                                    <constraint firstItem="8AM-HK-ssh" firstAttribute="top" secondItem="PrG-02-ciL" secondAttribute="top" id="nDr-wX-iVr"/>
+                                    <constraint firstAttribute="height" constant="34" id="pf2-YY-rUd"/>
+                                    <constraint firstItem="8AM-HK-ssh" firstAttribute="bottom" secondItem="PrG-02-ciL" secondAttribute="bottom" id="s9f-SD-SNN"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.78823529410000004" green="0.6588235294" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="jUu-xG-hQO" secondAttribute="bottom" id="N8f-yo-ll3"/>
+                            <constraint firstItem="jUu-xG-hQO" firstAttribute="leading" secondItem="UC8-SK-Rqa" secondAttribute="leading" constant="18" id="mCc-FD-z5y"/>
+                            <constraint firstAttribute="trailing" secondItem="jUu-xG-hQO" secondAttribute="trailing" constant="18" id="nE8-cv-WIh"/>
+                            <constraint firstItem="jUu-xG-hQO" firstAttribute="top" secondItem="UC8-SK-Rqa" secondAttribute="top" id="zBd-XQ-rpv"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="UC8-SK-Rqa" firstAttribute="leading" secondItem="4Bv-YR-UPV" secondAttribute="leading" id="YKf-Zg-h5x"/>
+                    <constraint firstAttribute="trailing" secondItem="UC8-SK-Rqa" secondAttribute="trailing" id="nNU-Zi-U19"/>
+                    <constraint firstAttribute="bottom" secondItem="UC8-SK-Rqa" secondAttribute="bottom" id="p7U-cx-MqB"/>
+                    <constraint firstItem="UC8-SK-Rqa" firstAttribute="top" secondItem="4Bv-YR-UPV" secondAttribute="top" id="zi9-Gq-Kw9"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="284" height="81"/>
+            <connections>
+                <outlet property="btnTapDrop" destination="8AM-HK-ssh" id="abp-e6-bwD"/>
+                <outlet property="dropDownBtn" destination="KeR-vK-wxB" id="WGF-Oq-s8Z"/>
+                <outlet property="inputTextField" destination="PrG-02-ciL" id="mTC-9n-pFn"/>
+            </connections>
+            <point key="canvasLocation" x="269.56521739130437" y="102.12053571428571"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="arrow_down_gray" width="15" height="15"/>
+    </resources>
+</document>

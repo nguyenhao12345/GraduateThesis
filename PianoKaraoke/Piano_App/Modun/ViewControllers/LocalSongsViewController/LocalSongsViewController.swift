@@ -22,13 +22,7 @@ class LocalSongsViewController: AziBaseViewController {
     @IBOutlet weak var navView: UIView!
     @IBOutlet weak var navLbl: UILabel!
     //MARK: Init
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
     
     override func initUIVariable() {
         super.initUIVariable()

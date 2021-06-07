@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="KoHo-Medium.ttf">
+            <string>KoHo-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WithDrawalMoneyViewController" customModule="Piano_Kara" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="Zwr-Lo-yHS" id="2Ab-vD-FJc"/>
+                <outlet property="navView" destination="Odr-99-bdS" id="fNe-c7-SOm"/>
+                <outlet property="view" destination="iN0-l3-epB" id="dlh-ZZ-qfJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Zwr-Lo-yHS">
+                    <rect key="frame" x="0.0" y="112" width="414" height="700"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Z2-s8-NTL">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xWC-K9-Ukb">
+                    <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ws-Bh-W6n">
+                            <rect key="frame" x="20" y="3" width="374" height="44"/>
+                            <color key="backgroundColor" red="0.78823529410000004" green="0.6588235294" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="2uc-1e-gHT"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KoHo-Medium" family="KoHo Medium" pointSize="14"/>
+                            <state key="normal" title="Rút tiền">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="22"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="clickWithDrawalMoney:" destination="-1" eventType="touchUpInside" id="66f-lj-ExX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="1Ws-Bh-W6n" firstAttribute="leading" secondItem="xWC-K9-Ukb" secondAttribute="leading" constant="20" id="6LC-Ph-hP7"/>
+                        <constraint firstItem="1Ws-Bh-W6n" firstAttribute="centerY" secondItem="xWC-K9-Ukb" secondAttribute="centerY" id="EgC-eL-pd0"/>
+                        <constraint firstAttribute="height" constant="50" id="Wj0-ew-IIL"/>
+                        <constraint firstItem="1Ws-Bh-W6n" firstAttribute="centerX" secondItem="xWC-K9-Ukb" secondAttribute="centerX" id="p31-KI-Tt2"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Odr-99-bdS" customClass="NavigationViewPayment" customModule="Piano_Kara" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="68"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="68" id="qQH-uF-cFb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Odr-99-bdS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2YT-7I-1wu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xWC-K9-Ukb" secondAttribute="bottom" id="6q0-3o-nT4"/>
+                <constraint firstItem="xWC-K9-Ukb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="99A-QB-3cB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Zwr-Lo-yHS" secondAttribute="trailing" id="RMu-WM-3Zh"/>
+                <constraint firstAttribute="trailing" secondItem="xWC-K9-Ukb" secondAttribute="trailing" id="UGW-dB-WxB"/>
+                <constraint firstAttribute="trailing" secondItem="Odr-99-bdS" secondAttribute="trailing" id="bcq-Yv-v3z"/>
+                <constraint firstItem="xWC-K9-Ukb" firstAttribute="top" secondItem="Zwr-Lo-yHS" secondAttribute="bottom" id="esV-MS-rCg"/>
+                <constraint firstItem="Odr-99-bdS" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="fN7-1f-Igd"/>
+                <constraint firstItem="Zwr-Lo-yHS" firstAttribute="top" secondItem="Odr-99-bdS" secondAttribute="bottom" id="qQ7-Cw-dnY"/>
+                <constraint firstItem="Zwr-Lo-yHS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yAX-aW-aI7"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </view>
+    </objects>
+</document>

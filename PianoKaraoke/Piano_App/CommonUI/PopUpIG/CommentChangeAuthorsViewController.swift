@@ -12,7 +12,7 @@ import Mapper
 import SwiftyJSON
 
 protocol CommentChangeAuthorsDelegate: class {
-//    func changeAuthorComment(object: UserShop)
+    //    func changeAuthorComment(object: UserShop)
 }
 
 class CommentChangeAuthorsViewController: UIViewController {
@@ -25,7 +25,7 @@ class CommentChangeAuthorsViewController: UIViewController {
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var viewTitle: UIView!
     @IBOutlet weak var viewTmp: UIView!
-
+    
     
     //MARK: Properties
     let MAX_HEIGHT: CGFloat = Const.heightScreen*0.9
@@ -44,13 +44,13 @@ class CommentChangeAuthorsViewController: UIViewController {
     var delegate: CommentChangeAuthorsDelegate?
     private var isFetchingMore: Bool = false
     var adapter: ListAdapter!
-//    var object: UserShop?
+    //    var object: UserShop?
     var dataSource: [AziBaseSectionModel] = []
     let sectionBuilder = SectionBuilder()
     private var nearestIndex: CGFloat = 0.0
     var panCls: UIPanGestureRecognizer!
     var titlePop: String = "Chọn tư cách bình luận"
-
+    
     //MARK: Init
     init() {
         super.init(nibName: "CommentChangeAuthorsViewController", bundle: nil)
@@ -64,88 +64,29 @@ class CommentChangeAuthorsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewIsReady()
-        viewTmp.roundCorners([.topRight, .topLeft], radius: 20)
         self.titleLbl.text = titlePop
         viewTitle.isHidden = titlePop == ""
-//        if titlePop == "" {
-//            collectionView.cornerRadius = 20
-////            collectionView.roundCorners([.topRight, .topLeft], radius: 10)
-//        }
+//        collectionView.isScrollEnabled = false
     }
     
     //MARK: Method
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+        super.viewDidAppear(animated)
+        viewTmp.roundCorners([.topRight, .topLeft], radius: 20)
         let h = adapter.collectionView?.collectionViewLayout.collectionViewContentSize.height
         heightConst.constant = min(MIN_HEIGHT, ((h ?? MIN_HEIGHT) + extraHeight))
-        MIN_HEIGHT = heightConst.constant
+        MIN_HEIGHT = min(MIN_HEIGHT, ((h ?? MIN_HEIGHT) + extraHeight))
+        
+        print("viewDidAppear MIN_HEIGHT \(MIN_HEIGHT)")
+        print("viewDidAppear heightConst.constant \(heightConst.constant)")
         UIView.animate(withDuration: 0.2, animations: {
             self.view.layoutIfNeeded()
         })
     }
     func initGesture() {
-        let pan = UIPanGestureRecognizer(target: self, action: #selector(panGestureHandle(_:)))
-        view.addGestureRecognizer(pan)
-        
-        panCls = UIPanGestureRecognizer(target: self, action: #selector(panGestureHandle(_:)))
-        panCls.delegate = self
-        collectionView.addGestureRecognizer(panCls)
     }
-    var lastConstraint: CGFloat = 0
     var startPanLocationY: CGFloat = 0
-    
-    @objc func panGestureHandle(_ sender: UIPanGestureRecognizer) {
-        let currentLocation = sender.location(in: self.view)
-        switch sender.state {
-        case .changed:
-            let a = Float(currentLocation.y)
-            let b = Float(startPanLocationY)
-            if a > b {
-                let distance = a - b
-                if heightConst.constant < 0 {}
-                else { self.heightConst.constant -= CGFloat(distance) }
-            }
-            else {
-                if heightConst.constant < MAX_HEIGHT {
-                    let distance = b - a
-                    self.heightConst.constant += CGFloat(distance)
-                }
-                else {
-                    if panCls.isEnabled {
-                        collectionView.setContentOffset(.init(x: 0, y: collectionView.contentOffset.y + CGFloat(b - a)), animated: false)
-                    }
-                }
-            }
-            self.startPanLocationY = currentLocation.y
-            self.lastConstraint = heightConst.constant
-
-        case .began:
-            startPanLocationY = currentLocation.y
-        case .ended:
-            if heightConst.constant >= MEDIUM_HEIGHT {
-                self.heightConst.constant = MAX_HEIGHT
-                panCls.isEnabled = false
-                UIView.animate(withDuration: 0.2, animations: {
-                    self.view.layoutIfNeeded()
-                })
-            }
-            else {
-                if heightConst.constant >= MIN_HEIGHT {
-                    heightConst.constant = MIN_HEIGHT
-                    panCls.isEnabled = true
-                    UIView.animate(withDuration: 0.2, animations: {
-                        self.view.layoutIfNeeded()
-                    })
-                }
-                else {
-                    tapToDismiss()
-                }
-            }
-            startPanLocationY = 0
-        default: break
-        }
-    }
     
     @objc func tapToDismiss() {
         
@@ -167,6 +108,7 @@ class CommentChangeAuthorsViewController: UIViewController {
         initGesture()
     }
     
+    var isScroll: Bool = false
 }
 
 //MARK: ListAdapterDataSource
@@ -202,27 +144,125 @@ extension CommentChangeAuthorsViewController: IGListAdapterDelegate {
 //MARK: UIScrollViewDelegate
 extension CommentChangeAuthorsViewController: UIScrollViewDelegate {
     
-    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
-        panCls.isEnabled = true
-    }
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        //        print(scrollView.contentOffset)
+
+        let currentLocation = scrollView.panGestureRecognizer.location(in: self.view)
+
+        print("currentLocation \(currentLocation.y)")
+//        if startPanLocationY == 0 {
+//            startPanLocationY = currentLocation.y
+//        }
+//
+//        if (collectionView.contentOffset.y <= 0 && scrollView.panGestureRecognizer.direction == .down) ||
+//            (scrollView.panGestureRecognizer.direction == .up && collectionView.contentOffset.y > 0)
+//            {
+//            if !isScroll {
+//                isScroll = true
+//                scrollView.setContentOffset(.zero, animated: false)
+//                return
+//            }
+//
+//            if isScroll {
+//                scrollView.setContentOffset(.zero, animated: false)
+//                let end = Float(currentLocation.y)
+//                let start = Float(startPanLocationY)
+//                self.heightConst.constant += CGFloat(start - end)
+//                self.startPanLocationY = currentLocation.y
+//            }
+//        }
         
-        if scrollView.panGestureRecognizer.direction == .down && collectionView.isAtTop {
-            panCls.isEnabled = true
+
+        //////////////
+        if collectionView.contentOffset.y <= 0 {
+            if scrollView.panGestureRecognizer.direction == .down {
+                isScroll = true
+                if startPanLocationY == 0 {
+                    startPanLocationY = currentLocation.y
+                    scrollView.setContentOffset(.zero, animated: false)
+                    return
+                }
+
+                if isScroll {
+                    scrollView.setContentOffset(.zero, animated: false)
+                    let end = Float(currentLocation.y)
+                    let start = Float(startPanLocationY)
+                    self.heightConst.constant += CGFloat(start - end)
+                }
+                self.startPanLocationY = currentLocation.y
+
+            }
+
+        } else {    //lon hon 0
+            if scrollView.panGestureRecognizer.direction == .up {
+                if heightConst.constant == MIN_HEIGHT {
+                    isScroll = true
+                    if startPanLocationY == 0 {
+                        startPanLocationY = currentLocation.y
+                        heightConst.constant = MIN_HEIGHT
+                        scrollView.setContentOffset(.zero, animated: false)
+                        return
+                    }
+                }
+                if heightConst.constant >= MAX_HEIGHT {
+                    heightConst.constant = MAX_HEIGHT
+                    return
+                }
+
+                if isScroll {
+                    scrollView.setContentOffset(.zero, animated: false)
+                    let end = Float(currentLocation.y)
+                    let start = Float(startPanLocationY)
+                    self.heightConst.constant += CGFloat(start - end)
+                }
+                self.startPanLocationY = currentLocation.y
+
+            }
         }
+
+    }
+
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        print("================================")
+
+        startPanLocationY = 0
+        isScroll = false
+        
+        if heightConst.constant >= MEDIUM_HEIGHT - 50 {
+            self.heightConst.constant = MAX_HEIGHT
+            UIView.animate(withDuration: 0.2, animations: {
+                self.view.layoutIfNeeded()
+            })
+//            print("heightConst.constant >= MEDIUM_HEIGHT \(heightConst.constant)")
+        }
+        else {
+            if heightConst.constant >= MIN_HEIGHT {
+                heightConst.constant = MIN_HEIGHT
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.view.layoutIfNeeded()
+                })
+//                print("heightConst.constant >= MIN_HEIGHT \(heightConst.constant)")
+            }
+            else {
+//                print("heightConst.constant \(heightConst.constant)")
+//                print("MIN_HEIGHT \(MIN_HEIGHT)")
+//                print("dissmiss")
+                tapToDismiss()
+            }
+        }
+        
+
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        
+    
     }
 }
 
 extension CommentChangeAuthorsViewController : UIGestureRecognizerDelegate {
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool{
-
+        
         print("gestureRecognizer: \(gestureRecognizer) -------- otherGestureRecognizer: \(otherGestureRecognizer)")
         return false
     }

@@ -20,7 +20,8 @@ class ChangeColorAppViewController: AziBaseViewController {
     @IBOutlet weak var view3: UIView!
     @IBOutlet weak var view4: UIView!
     @IBOutlet weak var view5: UIView!
-    
+    @IBOutlet weak var view6: UIView!
+
     @IBOutlet weak var viewMess: UIView!
     
     @IBAction func clickView1(_ sender: Any?) {
@@ -48,6 +49,11 @@ class ChangeColorAppViewController: AziBaseViewController {
         clickBack(nil)
     }
     
+    @IBAction func clickView6(_ sender: Any?) {
+        delegate?.updateColor(hex: view6.backgroundColor?.hexString ?? "")
+        clickBack(nil)
+    }
+    
     @IBAction func clickBack(_ sender: Any?) {
         self.viewMess.transform = .identity
         UIView.animate(withDuration: 0.2, animations: {
@@ -59,13 +65,6 @@ class ChangeColorAppViewController: AziBaseViewController {
     }
     
     //MARK: Init
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 //
 //    override func initUIVariable() {
 //        super.initUIVariable()
@@ -98,7 +97,8 @@ class ChangeColorAppViewController: AziBaseViewController {
         view3.backgroundColor = UIColor(hexString: AppColor.shared.arrColor[2])
         view4.backgroundColor = UIColor(hexString: AppColor.shared.arrColor[3])
         view5.backgroundColor = UIColor(hexString: AppColor.shared.arrColor[4])
-        
+        view6.backgroundColor = UIColor(hexString: AppColor.shared.arrColor[5])
+
 //        for i in
 //        if
     }

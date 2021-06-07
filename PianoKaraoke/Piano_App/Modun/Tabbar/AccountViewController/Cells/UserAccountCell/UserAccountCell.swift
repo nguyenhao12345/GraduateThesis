@@ -32,6 +32,7 @@ class UserAccountCell: CellModelView<UserAccountCellModel> {
     @IBOutlet weak var userNameLbl: UILabel!
     @IBOutlet weak var nextBtn: UIButton!
 
+    @IBOutlet weak var adminButton: UIButton!
     override func setCustomDelegate(_ section: Any) {
         self.delegate = section as? UserAccountCellDelegate
     }
@@ -51,6 +52,7 @@ class UserAccountCell: CellModelView<UserAccountCellModel> {
     override func bindCellModel(_ cellModel: UserAccountCellModel) {
         super.bindCellModel(cellModel)
         //TODO
+        adminButton.isHidden = cellModel.user?.admin != 1
         avataImg.setImageURL(URL(string: cellModel.user?.avata ?? ""))
         userNameLbl.text = cellModel.user?.name
         nextBtn.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))

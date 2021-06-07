@@ -291,13 +291,11 @@ open class CellModelView<T:CellModelInterface>: UICollectionViewCell, CellModelV
         
         if cellModel?.bottomMargin == Margin_Default && cellModel?.topMargin == Margin_Default {
             layoutIfNeeded()
-//            self.contentView.subviews.first?.roundCorners([.bottomLeft,
-//                                                           .bottomRight,
-//                                                           .topRight,
-//                                                           .topLeft], radius: CornerRadius_CardView)
+            self.contentView.subviews.first?.cornerRadius = CornerRadius_CardView
         } else {
             layoutIfNeeded()
             if cellModel?.bottomMargin == Margin_Default {
+                layoutIfNeeded()
                 self.contentView.subviews.first?.roundCorners([.bottomLeft,
                                                                .bottomRight], radius: CornerRadius_CardView)
                 

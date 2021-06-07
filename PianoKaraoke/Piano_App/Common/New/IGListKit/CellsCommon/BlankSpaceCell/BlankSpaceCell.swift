@@ -18,7 +18,7 @@ class BlankSpaceCell: CellModelView<BlankSpaceCellModel> {
     
     override func bindCellModel(_ cellModel: BlankSpaceCellModel) {
         super.bindCellModel(cellModel)
-        self.backgroundColor = cellModel.color
+//        self.backgroundColor = cellModel.color
         self.backView.backgroundColor = cellModel.color
     }
     
